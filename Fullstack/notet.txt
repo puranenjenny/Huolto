@@ -1,0 +1,25 @@
+huomioi aikaa varatessa: 
+backend Ani
+front end Johanna
+
+tänään ke 26.4. valitkaa kumpi toimeksianto
+
+jos valitsette LAMBS torstaina miettikää perjantaiksi 28.4. klo 10.00 valmiita kysymyksiä toimeksiantajalle LAMBS 
+
+sprintit 
+
+1. 26.4.-3.5 - suunnittelu + ulkoasu + muuta? 
+product backlog 
+työn jakaminen
+github
+
+2. 4.5.-10.5. - backend + frontend toimivuus?
+
+3. 11.5.-19.5. - puuttuvien settien rakentelu ja viimeistely
+
+
+sprinttien jälkeen tapaamiset keskiviikkoisin opettajien kanssa jossa käydään läpi tehdyt setit ja miten menny
+
+saa käyttää mielikuvitusta!!!
+
+
