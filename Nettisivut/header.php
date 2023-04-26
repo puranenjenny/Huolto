@@ -29,7 +29,7 @@
       <div class="row">
               <div class="col-lg-12">
                 <nav class="navbar navbar-expand-lg mt-0 ml-0">
-                  <a href="index.php" title="etusivu"><img class="logo" src="img/logo.png" alt="Logo">
+                  <a href="index.php" title="etusivu"><img class="logo" src="img/logo_header.png" alt="Logo">
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                           <span class="navbar-toggler-icon"></span>
