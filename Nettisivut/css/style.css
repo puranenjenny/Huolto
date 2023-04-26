@@ -1,0 +1,123 @@
+   
+body{
+    font-family: 'Rubik', sans-serif;
+    }
+
+.container-fluid{
+    width: 80%;
+}
+    
+.navbar-nav {
+    padding-left: 0;
+    }
+
+.nav-item {
+    margin: 0.1em;
+    font-size: 1.2em;
+
+}
+        
+.navbar .navbar-nav .nav-link {
+    font-weight: 700;  
+    color: black;
+    text-decoration: none;
+    padding: 0.6em 0,3em 0.6em 0,3em;
+    border-radius: 0.5em;
+    }
+        
+.dropdown-item {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+
+    border-radius: 0.5em;
+
+    }
+        
+.navbar .navbar-nav .nav-link:hover{
+    background-color: #00b6c5;
+    text-decoration: underline;
+    color: white;
+    border-radius: 0.5em;
+    }
+        
+.dropdown-item:hover{
+    background-color: #00b6c5;
+    text-decoration: underline;
+    color: white;
+    }
+
+.dropdown-toggle:hover{
+    background-color: #00b6c5 !important;
+    text-decoration: underline !important;
+    color: white !important;
+}
+        
+.dropdown-menu {
+    background-color: #144279;
+    margin-top: 15px;
+    padding: 1em;
+    border-radius: 0.8em;
+    }
+
+.dropdown .dropdown-menu {
+    display: none;
+    }
+
+/* alasvetovalikko näkyviin kun hiiri on päällä ja tämä pois jos haluaa klikkauksen päälle*/  
+/* .dropdown:hover .dropdown-menu {
+    display: block;
+    } */
+   
+/* js lisää tämän luokan ja alasvetovalikko tulee näkyviin klikattaessa */
+.show {
+    display: block !important;
+    }
+
+/* alasvetovalikko näkyviin kun hiiri on päällä */    
+.dropdown-toggle {   
+    background-color: transparent !important;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    border: none;
+}
+
+/* nuoli pois alasveto laatikota*/
+
+        
+/* kehys pois hampurilaisesta */
+.navbar-toggler {
+    color: transparent !important;
+    border-color: transparent !important;
+    }
+        
+/* hampurilaisen muotoilua */    
+.navbar-toggler-icon {
+    background-color: #00b6c5;
+    padding: 1.4em;
+    margin-right: 0.2em;
+    }
+                
+.dropdown-item {
+    text-align:start;
+    }
+        
+.logo {
+    width: 200px;
+    height: 200px;
+    }
+     
+/* nuoli alasvetovalikkoon laatikon päälle */    
+.bubble:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 18px 25px 0;
+    border-color: #144279 transparent;
+    top: -15px;
+    left: 35px;
+    rotate: 180deg;
+     }
