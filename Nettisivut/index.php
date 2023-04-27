@@ -1,56 +1,10 @@
 
 
-<!--header alkaa-->
-<div class="container-fluid p-0 text-center">
-  <div style="background: url(img/bannerkuva.jpeg)" class="bg-cover text-white">
-    <div class="container-fluid">
 
-        <div class="row">
-            <div class="col-1">  <img src="img/logo.png" alt="logo" style="width: auto;;height:70px; float: left;"></div>
-            <div class="col"></div>
-            <div class="col-5">
-
-<!--läpinäkyvä navigointipalkki-->
-        <nav class="navbar navbar-expand-sm navbar-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" ></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">HOME</a>
-                  </li> 
-        <!--dropdown valikko navigoinnissa-->        
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">ARTWORK</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="artwork.html">CREATION</a></li>
-                      <li><a class="dropdown-item" href="gallery.html">GALLERY</a></li>
-                    </ul>
-                  </li>
-
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html">ABOUT</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="connect.html">CONNECT</a>
-                  </li>  
-                 
-                </ul>
-              </div>
-            </div>
-          </nav>
-            </div>
-        </div> 
-<!--navigointi loppuu-->  
 
 <!--otsikko-->
-<div class="row otsikko1">
-                            <h4>Creations of</h4> </div>
-<div class="row otsikko2">  <h1>LUNA MARIA</h1> </div>           
-      </div>
+
+<div class="row otsikko2">  <h1>R. Autio Oy</h1> </div>           <!--otsikko-->
   </div>
 </div>
 <!--header loppuu-->
@@ -66,7 +20,7 @@
      <div class="row esittely text-center">
         <div class="col-3 d-none d-lg-block"></div>
         <div class="col">
-              <h3>Textile artist & jeweler based in southern Finland.</h3><br>
+              <h3>Kiinteistöhuoltoa Suomesta!</h3><br>
               <p>Luna Maria is the artist, creator, and woman behind the meadow. She has been creating art pieces since a very 
                 young age and now specializes in crafting jewelry, weaving, and combining different mediums fueled by curiosity. </p> <br>
                 <p><i>All photography provided by Luna Maria.</i></p>
