@@ -4,7 +4,7 @@ include 'header.php';?>
 
 
 <!--tästä alkaa sivun kontentti-->
-<div class="container" id="kontentti">
+<!-- <div class="container" id="kontentti"> -->
 
   <div class="row">
   <div class="col-12">
@@ -43,7 +43,7 @@ Kiitos, että valitsit R. Autio Oy:n. Odotamme innolla, että saamme auttaa sinu
 <div class="row text-center map"> <!--tästä alkaa kartta-->
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3969.3073163004588!2d24.94992996954563!3d60.16991229737253!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bb6c7c63f09%3A0x2cc8f72b46f1ae57!2sTorikorttelit!5e0!3m2!1sen!2sfi!4v1682606611704!5m2!1sen!2sfi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-</div>
+<!-- </div> -->
 
 
 <!--kontentti loppuu-->
@@ -52,7 +52,7 @@ Kiitos, että valitsit R. Autio Oy:n. Odotamme innolla, että saamme auttaa sinu
 
 <!--väliaikenen footer-->
 
-<div class="container" id="footer">
+<div id="footer">
   <div class="row text-center"> <p>Kestävää kiinteistöhuoltoa ja huolenpitoa vuosikymmenten kokemuksella.</p> </div>
   <div class="row text-center"> 
   <!-- <div class="col-5"></div>
@@ -60,7 +60,7 @@ Kiitos, että valitsit R. Autio Oy:n. Odotamme innolla, että saamme auttaa sinu
   <div class="col-5"></div> -->
   <div class="row text-center"><p>2023 © R. Autio Oy &nbsp;&nbsp;&nbsp; Y-tunnus: 3675028-7</p></div>
 </div>
-
+</div> 
 </body>
 
 </html>
