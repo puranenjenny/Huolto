@@ -8,11 +8,11 @@ vaalee harmaa: #F2F2F2 */
 
 body{
     font-family: 'Rubik', sans-serif;
-    width: 100%;
+    width: 100% ;
 }
 
 .container-fluid{
-    width: 80%; 
+    width: 100%; 
     padding: 0%;
 }
     
@@ -139,7 +139,7 @@ body{
 } 
      
 .ylapalkki {
-    width: auto;
+    /* width: auto; */
     height: auto;
     background-color: #144673;
     padding: 0.5em;
