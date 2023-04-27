@@ -8,7 +8,7 @@ vaalee harmaa: #F2F2F2 */
 
 body{
     font-family: 'Rubik', sans-serif;
-    width: 100%;
+    width: 100%!important;
 }
 
 .container-fluid{
@@ -57,7 +57,7 @@ body{
     color: white;
     }
 
-.dropdown-toggle:hover{
+.dropdown-toggle:hover {
     background-color: #00b6c5 !important;
     text-decoration: underline !important;
     color: white !important;
@@ -210,7 +210,7 @@ body{
 
 #kontentti {
     background-color: #F2F2F2;
-    padding: 1em;
+    /* padding: 1em; */
     width: 100%;
 }
 
@@ -221,9 +221,9 @@ h3 {
     padding: auto;
 }
 
- img {
+/* img {
     padding: 0.8em;
-}
+} */
 
 .repair4 {
     border-radius: 1em;

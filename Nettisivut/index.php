@@ -8,36 +8,45 @@ include 'header.php';?>
 
   <div class="row">
   <div class="col-12">
-            <img src="img/helsinki1.jpg" class="img-fluid helsinki1" alt="helsinki1">
-        </div></div>
+      <img src="img/helsinki1.jpg" class="img-fluid helsinki1" alt="helsinki1">
+  </div></div>
 
-     <div class="row esittely text-center">
-     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <img src="img/repair4.jpg" class="img-fluid repair4 img-rounded" alt="repair4">
-        </div>
-        <div class="col-1 d-none d-lg-block"></div>
-        <div class="col esittelytausta">
-        <div class="row vali"></div>
-              <h3>Kestävää kiinteistöhuoltoa ja huolenpitoa vuosikymmenten kokemuksella!</h3><br>
+  <div class="row vali"></div>
 
-              <p class="esittely">Tervetuloa R. Autio Oy-sivustolle! Olemme perheyritys, joka on tarjonnut laadukasta kiinteistöhuoltoa vuodesta 1934. Olemme ylpeitä siitä, että olemme palvelleet asiakkaitamme jo yli 89-vuotta. Olemme kokeneet monet haasteet ja muutokset alallamme vuosien varrella, mutta yksi asia on pysynyt muuttumattomana: sitoutumisemme tarjota korkealaatuisia kiinteistönhuoltopalveluita asiakkaillemme.<br><br>
-Meillä on pitkä kokemus ja ammattitaito, joka on aina auttanut meitä löytämään parhaat ratkaisut asiakkaidemme tarpeisiin. Olemme kehittäneet vahvan maineen luotettavana ja rehellisenä kiinteistönhuoltopalveluiden tarjoajana, ja olemme ylpeitä siitä, että suurin osa asiakkaistamme tulee meille suosittelujen perusteella.<br><br>
-Meiltä löydät laajan valikoiman kiinteistönhuoltopalveluita, jotka kattavat kaikki tarpeesi. Olitpa sitten asukas, isännöitsijä tai yritysasiakas, voit luottaa meihin huolehtimaan kiinteistöstäsi ammattitaidolla ja huolella.
-Kiitos, että valitsit R. Autio Oy:n. Odotamme innolla, että saamme auttaa sinua kiinteistönhuoltoasioissa!</i></p>
-        </div>
-        <div class="col-1 d-none d-lg-block"></div> 
-    </div>
-
-    <div class="row vali"></div>
-    <div class="row vali"></div>
-
- <div class="row kommentti text-center">
-  <h2>"Me hoidamme kiinteistösi niin kuin omamme, jotta sinä voit keskittyä elämiseen."</h2>
-
+  <div class="row kommentti text-center">
+  <h2>"Me hoidamme kiinteistösi kuin omamme, jotta sinä voit keskittyä olennaiseen."</h2>
  </div>  
 
-    <div class="row vali"></div>
-    <div class="row vali"></div>
+  <div class="row esittely text-center">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <img src="img/repair4.jpg" class="img-fluid repair4 img-rounded" alt="repair4">
+    </div>
+    <div class="col-1 d-none d-lg-block"></div>
+    <div class="col esittelytausta">
+      <div class="row vali"></div>
+          
+        <h3>Kestävää kiinteistöhuoltoa ja huolenpitoa vuosikymmenten kokemuksella!</h3><br>
+
+        <p class="esittely">Tervetuloa R. Autio Oy-sivustolle! Olemme perheyritys, joka on tarjonnut laadukasta kiinteistöhuoltoa vuodesta 1934. Olemme ylpeitä siitä, että olemme palvelleet asiakkaitamme jo yli 89-vuotta. Olemme kokeneet monet haasteet ja muutokset alallamme vuosien varrella, mutta yksi asia on pysynyt muuttumattomana: sitoutumisemme tarjota korkealaatuisia kiinteistönhuoltopalveluita asiakkaillemme.<br><br>
+        Meillä on pitkä kokemus ja ammattitaito, joka on aina auttanut meitä löytämään parhaat ratkaisut asiakkaidemme tarpeisiin. Olemme kehittäneet vahvan maineen luotettavana ja rehellisenä kiinteistönhuoltopalveluiden tarjoajana, ja olemme ylpeitä siitä, että suurin osa asiakkaistamme tulee meille suosittelujen perusteella.<br><br>
+        Meiltä löydät laajan valikoiman kiinteistönhuoltopalveluita, jotka kattavat kaikki tarpeesi. Olitpa sitten asukas, isännöitsijä tai yritysasiakas, voit luottaa meihin huolehtimaan kiinteistöstäsi ammattitaidolla ja huolella.
+        Kiitos, että valitsit R. Autio Oy:n. Odotamme innolla, että saamme auttaa sinua kiinteistönhuoltoasioissa!</i></p>
+    </div>
+
+    <div class="col-1 d-none d-lg-block"></div> 
+
+  </div>
+
+  <div class="row vali"></div>
+  <div class="row vali"></div>
+
+  <div class="row yhteystiedot text-center">
+  <h2>Yhteystiedot</h2>
+  <p></p>
+  </div>  
+
+  <div class="row vali"></div>
+  <div class="row vali"></div>
 
 <div class="row text-center sijaintikartalla"><div class="col"></div><div class="col-3">Sijaintimme kartalla:</div> <div class="col"></div> </div>
 <div class="row text-center map"> <!--tästä alkaa kartta-->
@@ -50,17 +59,4 @@ Kiitos, että valitsit R. Autio Oy:n. Odotamme innolla, että saamme auttaa sinu
 
 
 
-<!--väliaikenen footer-->
-
-<div class="container" id="footer">
-  <div class="row text-center"> <p>Kestävää kiinteistöhuoltoa ja huolenpitoa vuosikymmenten kokemuksella.</p> </div>
-  <div class="row text-center"> 
-  <!-- <div class="col-5"></div>
-  <div class="col-2"><a href="connect.html" class="btn btn1">Ota yhteyttä</a><br></div>
-  <div class="col-5"></div> -->
-  <div class="row text-center"><p>2023 © R. Autio Oy &nbsp;&nbsp;&nbsp; Y-tunnus: 3675028-7</p></div>
-</div>
-
-</body>
-
-</html>
+<?php include 'footer.php';?>
