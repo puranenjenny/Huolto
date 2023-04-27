@@ -27,7 +27,7 @@
   <body class="justify-content-center"> <!-- poistin tästä d-lg-flex t.jenny -->
     
 
-    <!--lisäpalkki tiedoille--> 
+    <!-- lisäpalkki tiedoille 
     <div class="container">
     <div class="row ylapalkki">
         <div class="col minikuva1"><img class="puhelin minikuva" src="img/puhelin.png" alt="puhelin">09 4545 669</div>
@@ -35,12 +35,20 @@
         <div class="col"><img class="email minikuva" src="img/email.png" alt="email">toimisto@rautio.fi</div>
         <div class="col-7"></div>
     </div>
-</div>
+</div> -->
 
 
    <div class="container-fluid">
-      <div class="row">
-              <div class="col-lg-12">
+   <div class="row">
+    <div class="col-lg-12 ylapalkki">
+        <div class="col minikuva1"><img class="puhelin minikuva" src="img/puhelin.png" alt="puhelin">09 4545 669</div>
+        <div class="col"><img class="sijainti minikuva" src="img/sijainti.png" alt="sijainti">Sofiankatu 4</div>
+        <div class="col"><img class="email minikuva" src="img/email.png" alt="email">toimisto@rautio.fi</div>
+        <div class="col-7"></div>
+    </div>
+</div>
+      <div class="row rowHeader d-lg-flex justify-content-center">
+              <div class="col-lg-10">
                 <nav class="navbar navbar-expand-lg mt-0 ml-0">
                   <a href="index.php" title="etusivu"><img class="logo" src="img/logo_header.png" alt="Logo">
                         </a>
@@ -92,6 +100,6 @@
                      </nav>
                 </div>
       </div>
-  </div>  
+    
 <!--nappi joka vie sivun ylälaitaan-->
 <button onclick="topFunction()" id="btn_ylos" title="Go to top">Ylös</button>
