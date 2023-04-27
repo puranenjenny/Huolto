@@ -1,6 +1,6 @@
   
 /* värikoodit: 
-tumma sini: 144673 
+tumma sini: #144673 
 muted sini: #88A5BF
 turkoosi: #04BFBF
 vaalee turkoosi: #7ED9D9 
@@ -8,10 +8,12 @@ vaalee harmaa: #F2F2F2 */
 
 body{
     font-family: 'Rubik', sans-serif;
-    }
+    width: 100%;
+}
 
 .container-fluid{
-    width: 80%;
+    width: 80%; 
+    padding: 0%;
 }
     
 .navbar-nav {
@@ -129,6 +131,162 @@ body{
     rotate: 180deg;
      }
 
+/* jennyn setit */
+.container{
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+} 
+     
+.ylapalkki {
+    width: auto;
+    height: auto;
+    background-color: #144673;
+    padding: 0.5em;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.mini {
+    width: 20px;
+    height: 20px;
+    padding: 0%;
+    margin: 0%;
+}
+
+.minikuva{
+    width: auto;
+    height: 16px;
+    padding: 0%;
+    margin-right: 0.5em;
+}
+
+.minikuva1 {
+    margin-left: 10px;
+}
+
+#btn_ylos {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #144673;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+#btn_ylos:hover {
+    background-color: #04BFBF;
+}
+
+
+/*sivun sisällön säädöt*/
+
+/* .btn1 {
+    background-color: #04BFBF;
+    color: white;
+    border-color: #04BFBF;
+    font-family: 'Rubik', sans-serif;
+    margin: 0.6em;
+}
+
+.btn1:hover {
+    background-color: #7ED9D9;
+    border-color: #7ED9D9;
+} */
+
+.vali{
+    height: 40px;
+}
+
+#kontentti {
+    background-color: #F2F2F2;
+    padding: 1em;
+    width: 100%;
+}
+
+h3 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    color: #144279;
+    padding: auto;
+}
+
+ img {
+    padding: 0.8em;
+}
+
+.repair4 {
+    border-radius: 1em;
+} 
+
+.esittelytausta {
+    background-color: #7ED9D9;
+    padding: 3em; 
+    border-radius: 0.8em; 
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.esittely {
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-top: 3em;
+}
+
+
+.kommentti {
+    background-color: #144279;
+    padding: 0; 
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    margin: 0;
+}    
+
+h2{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    color: white;
+    padding: auto;
+    text-align: center;
+}
+
+
+/*kartta*/
+.sijaintikartalla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map {
+    border: solid 4px white;
+    border-width: 12px 0px;
+    margin: 0.5em 3em 3em 3em;
+    background-color: white;
+}
 
 
 
+/*väliaikanen footer*/
+#footer {
+    background-color: #144673;
+    padding: 2em;
+    color: white;
+    text-align: center;
+    width: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }

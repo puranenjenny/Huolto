@@ -1,118 +1,64 @@
 
+<?php
+include 'header.php';?>
 
-
-
-<!--otsikko-->
-
-<div class="row otsikko2">  <h1>R. Autio Oy</h1> </div>           <!--otsikko-->
-  </div>
-</div>
-<!--header loppuu-->
-
-<!--loin rivin 'väli' jota käytän luomaan tilaa elementtien väliin nopeasti ja helposti-->
-<div class="row vali"></div>
 
 <!--tästä alkaa sivun kontentti-->
-<div class="container-fluid mt-3" id="kontentti">
+<div class="container" id="kontentti">
 
-    <div class="row vali"></div>
+  <div class="row">
+  <div class="col-12">
+            <img src="img/helsinki1.jpg" class="img-fluid helsinki1" alt="helsinki1">
+        </div></div>
 
      <div class="row esittely text-center">
-        <div class="col-3 d-none d-lg-block"></div>
-        <div class="col">
-              <h3>Parasta kiinteistöhuoltoa Suomesta!</h3><br>
-              <p>Luna Maria is the artist, creator, and woman behind the meadow. She has been creating art pieces since a very 
-                young age and now specializes in crafting jewelry, weaving, and combining different mediums fueled by curiosity. </p> <br>
-                <p><i>All photography provided by Luna Maria.</i></p>
+     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <img src="img/repair4.jpg" class="img-fluid repair4 img-rounded" alt="repair4">
         </div>
-        <div class="col-3 d-none d-lg-block"></div> 
+        <div class="col-1 d-none d-lg-block"></div>
+        <div class="col esittelytausta">
+        <div class="row vali"></div>
+              <h3>Kestävää kiinteistöhuoltoa ja huolenpitoa vuosikymmenten kokemuksella!</h3><br>
+
+              <p class="esittely">Tervetuloa R. Autio Oy-sivustolle! Olemme perheyritys, joka on tarjonnut laadukasta kiinteistöhuoltoa vuodesta 1934. Olemme ylpeitä siitä, että olemme palvelleet asiakkaitamme jo yli 89-vuotta. Olemme kokeneet monet haasteet ja muutokset alallamme vuosien varrella, mutta yksi asia on pysynyt muuttumattomana: sitoutumisemme tarjota korkealaatuisia kiinteistönhuoltopalveluita asiakkaillemme.<br><br>
+Meillä on pitkä kokemus ja ammattitaito, joka on aina auttanut meitä löytämään parhaat ratkaisut asiakkaidemme tarpeisiin. Olemme kehittäneet vahvan maineen luotettavana ja rehellisenä kiinteistönhuoltopalveluiden tarjoajana, ja olemme ylpeitä siitä, että suurin osa asiakkaistamme tulee meille suosittelujen perusteella.<br><br>
+Meiltä löydät laajan valikoiman kiinteistönhuoltopalveluita, jotka kattavat kaikki tarpeesi. Olitpa sitten asukas, isännöitsijä tai yritysasiakas, voit luottaa meihin huolehtimaan kiinteistöstäsi ammattitaidolla ja huolella.
+Kiitos, että valitsit R. Autio Oy:n. Odotamme innolla, että saamme auttaa sinua kiinteistönhuoltoasioissa!</i></p>
+        </div>
+        <div class="col-1 d-none d-lg-block"></div> 
     </div>
 
     <div class="row vali"></div>
     <div class="row vali"></div>
 
-    <div class="row text-center rivi4">
-        <div class="col-2 d-none d-lg-block"></div>
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 tekstikentta">
-            <h6 class="otsikko3">ABOUT</h6><br>
-            <p class="teksti3">Find out more about the artist.</p><br>
-            <a href="about.html" class="btn btn-success nappi2">LEARN MORE</a>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-            <img src="img/luna3.jpeg" class="img-fluid luna3" alt="luna3">
-        </div>
-        <div class="col-2 d-none d-lg-block"></div>
-    </div>
+ <div class="row kommentti text-center">
+  <h2>"Me hoidamme kiinteistösi niin kuin omamme, jotta sinä voit keskittyä elämiseen."</h2>
+
+ </div>  
 
     <div class="row vali"></div>
     <div class="row vali"></div>
 
-    <div class="row text-center rivi4">
-        <div class="col-2 d-none d-lg-block"></div>
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-<!-- karuselli -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+<div class="row text-center sijaintikartalla"><div class="col"></div><div class="col-3">Sijaintimme kartalla:</div> <div class="col"></div> </div>
+<div class="row text-center map"> <!--tästä alkaa kartta-->
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3969.3073163004588!2d24.94992996954563!3d60.16991229737253!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bb6c7c63f09%3A0x2cc8f72b46f1ae57!2sTorikorttelit!5e0!3m2!1sen!2sfi!4v1682606611704!5m2!1sen!2sfi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-  
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="img/image1.jpeg" alt="kuva-korut1" class="d-block image1" style="width:100%"></div>
-    <div class="carousel-item">
-      <img src="img/image7.jpeg" alt="kuva-korut2" class="d-block image7" style="width:100%"></div>
-    <div class="carousel-item">
-      <img src="img/image8.jpg" alt="kuva-korut3" class="d-block image8" style="width:100%"></div>
-  </div>
-  
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
 </div>
-<!--karuselli loppuu-->
 
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 tekstikentta">
-            <h6 class="otsikko3">ARTWORK</h6><br>
-            <p class="teksti3">Take a closer look at the artwork of Luna Maria.</p><br>
-            <a href="gallery.html" class="btn btn-success nappi2">TO GALLERY</a>
-        </div>
-        <div class="col-2 d-none d-lg-block"></div>
-    </div>
 
-    <div class="row vali"></div>
-    <div class="row vali"></div>
-    <div class="row vali"></div>
-
-    <div class="row">
-      <div class="col-3"></div>
-      <div class="col text-center"><p><b>Follow my latest work at</b><a href="https://www.instagram.com/mahtavajenny/" target="_blank" id="thislink">
-        <img src="img/instagram.png" class="insta" alt="insta">
-      </a></p></div>
-      <div class="col-3"></div> 
-    </div>
-
-</div>
 <!--kontentti loppuu-->
 
 
 
-<!--footer-->
+<!--väliaikenen footer-->
 
-<div class="container-fluid" id="footer">
-<div class="row text-center">   <p class="footernote1">Interested in commissioning me for an art project? I am currently available for assignments worldwide.</p> </div>
-
-<div class="row text-center"> 
-<div class="col-5"></div>
-<div class="col-2"><a href="connect.html" class="btn btn-success nappi1">Get in touch</a></div>
-<div class="col-5"></div>
-<div class="row text-center"><p class="footernote2"><i>Copyright © 2023 Luna Maria</i></p></div>
+<div class="container" id="footer">
+  <div class="row text-center"> <p>Kestävää kiinteistöhuoltoa ja huolenpitoa vuosikymmenten kokemuksella.</p> </div>
+  <div class="row text-center"> 
+  <!-- <div class="col-5"></div>
+  <div class="col-2"><a href="connect.html" class="btn btn1">Ota yhteyttä</a><br></div>
+  <div class="col-5"></div> -->
+  <div class="row text-center"><p>2023 © R. Autio Oy &nbsp;&nbsp;&nbsp; Y-tunnus: 3675028-7</p></div>
 </div>
 
 </body>
