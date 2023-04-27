@@ -38,15 +38,14 @@
 </div> -->
 
 
-   <div class="container-fluid">
+<div class="container-fluid">
    <div class="row">
-    <div class="col-lg-12 ylapalkki">
-        <div class="col minikuva1"><img class="puhelin minikuva" src="img/puhelin.png" alt="puhelin">09 4545 669</div>
-        <div class="col"><img class="sijainti minikuva" src="img/sijainti.png" alt="sijainti">Sofiankatu 4</div>
-        <div class="col"><img class="email minikuva" src="img/email.png" alt="email">toimisto@rautio.fi</div>
-        <div class="col-7"></div>
+    <div class="ylapalkki d-block d-md-flex">
+        <div class="col-12 col-md-3 col-lg-2 minikuva1"><img class="puhelin minikuva" src="img/puhelin.png" alt="puhelin">09 4545 669</div>
+        <div class="col-12 col-md-3 col-lg-2"><img class="sijainti minikuva" src="img/sijainti.png" alt="sijainti">Sofiankatu 4</div>
+        <div class="col-12 col-md-3 col-lg-2"><img class="email minikuva" src="img/email.png" alt="email">toimisto@rautio.fi</div>
     </div>
-</div>
+    </div>
       <div class="row rowHeader d-lg-flex justify-content-center">
               <div class="col-lg-10">
                 <nav class="navbar navbar-expand-lg mt-0 ml-0">
@@ -72,6 +71,7 @@
                                                 <li class="nav-item">
                                                     <a class="nav-link"  href="#">OTA YHTEYTTÄ</a>
                                                 </li>
+                                                <!--alasvetovalikko hover -->
                                                 <!-- <li class="nav-item dropdown">
                                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         KIRJAUDU
@@ -82,19 +82,18 @@
                                                                 <a class="dropdown-item" href="#">ASIAKAS</a>
                                                                 <a class="dropdown-item" href="#">TYÖNTEKIJÄ</a>
                                                             </div>
-                                                </li> -->
+                                                </li>  -->
 
                                                 <!-- alasvetovalikko klikkaamalla -->
-
-                                                 <div class="dropdown">
-                                                    <button class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" onclick="showDropDown()" class="dropbtn">KIRJAUDU</button>
-                                                    <div id="myDropdown" class="dropdown-menu bubble">
-                                                        <a class="dropdown-item" href="#home">ASUKAS</a>
-                                                        <a class="dropdown-item" href="#about">ISÄNNÖITSIJÄ</a>
-                                                        <a class="dropdown-item" href="#contact">ASIAKAS</a>
-                                                        <a class="dropdown-item" href="#contact">TYÖNTEKIJÄ</a>
+                                                <div class="dropdown">
+                                                    <button onclick="showDropDown()" class="dropbtn nav-link">KIRJAUDU </button>
+                                                    <div id="myDropdown" class="dropdown-content bubble">
+                                                            <a  href="#">ASUKAS</a>
+                                                            <a  href="#">ISÄNNÖITSIJÄ</a>
+                                                            <a  href="#">ASIAKAS</a>
+                                                            <a  href="#">TYÖNTEKIJÄ</a>
                                                     </div>
-                                                </div> 
+                                                </div>
                                     </ul>
                           </div>
                      </nav>
