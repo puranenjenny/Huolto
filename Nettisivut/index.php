@@ -20,7 +20,7 @@
      <div class="row esittely text-center">
         <div class="col-3 d-none d-lg-block"></div>
         <div class="col">
-              <h3>Kiinteistöhuoltoa Suomesta!</h3><br>
+              <h3>Parasta kiinteistöhuoltoa Suomesta!</h3><br>
               <p>Luna Maria is the artist, creator, and woman behind the meadow. She has been creating art pieces since a very 
                 young age and now specializes in crafting jewelry, weaving, and combining different mediums fueled by curiosity. </p> <br>
                 <p><i>All photography provided by Luna Maria.</i></p>
