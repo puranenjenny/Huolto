@@ -23,79 +23,163 @@ body{
 .nav-item {
     margin: 0.1em;
     font-size: 1.2em;
+}
 
+@media (max-width:992px){
+    .nav-link {
+        text-align: center;
+        padding: 0 !important;
+        font-size: 1.3em;
+        border-radius: 0 !important;
+    }
+
+    .dropdown {
+        font-size: 1.3em;
+        color: black;
+        border-radius: 0 !important;
+
+    }
+
+    .dropbtn {
+        width: 100%;
+        border-radius: 0 !important;
+    }
+
+    .dropdown-content {
+        position: relative !important;
+        margin-top: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    .dropdown-content a {
+        padding: 0 !important;
+        text-align: center !important;
+        border-radius: 0 !important;
+    }
+
+    .bubble:after {
+        display: none;
+    }
 }
         
 .navbar .navbar-nav .nav-link {
     font-weight: 700;  
     color: black;
     text-decoration: none;
-    padding: 0.6em 0,3em 0.6em 0,3em;
+    padding: 0.6em 0.3em 0.6em 0.3em;
     border-radius: 0.5em;
     }
-        
-.dropdown-item {
-    font-weight: 700;
-    font-size: 1.2em;
-    color: white;
-    text-decoration: none;
-
-    border-radius: 0.5em;
-
-    }
-        
+             
 .navbar .navbar-nav .nav-link:hover{
     background-color: #00b6c5;
     text-decoration: underline;
     color: white;
     border-radius: 0.5em;
     }
-        
-.dropdown-item:hover{
-    background-color: #00b6c5;
-    text-decoration: underline;
-    color: white;
+
+                /*alasvetovalikko klikkaamalla */
+                .dropbtn {
+                    background-color: transparent !important;
+                    font-size: 1.2em;
+                    font-weight: 700;
+                    color: black;
+                    text-decoration: none;
+                    border: none;
+                }
+                
+                .dropbtn:hover {
+                    background-color: #00b6c5 !important;
+                    text-decoration: underline !important;
+                    color: white !important;
+                }
+                
+                .dropdown {
+                    position: relative;
+                    display: inline-block;
+                }
+                
+                .dropdown-content {
+                    background-color: #144279;
+                    margin-top: 15px;
+                    padding: 0.6em;
+                    border-radius: 0.8em;
+                    display: none;
+                    position: absolute;
+                    z-index: 1;
+                }
+                
+                .dropdown-content a {
+                    text-align:start;
+                    font-size: 1.2em;
+                    font-weight: 700;
+                    color: white;
+                    padding: 0.6em;
+                    border-radius: 0.8em;
+                    text-decoration: none;
+                    display: block;
+                }
+                
+                .dropdown a:hover {
+                    background-color: #00b6c5;
+                    text-decoration: underline;
+                    color: white;
+                }
+
+                /* js lisää tämän luokan ja alasvetovalikko tulee näkyviin klikattaessa */
+                .show {
+                    display: block !important;
+                    }
+
+                                        /* alasvetovalikko näkyviin kun hiiri on päällä */  
+                                        .dropdown-menu {
+                                            background-color: #144279;
+                                            margin-top: 15px;
+                                            padding: 1em;
+                                            border-radius: 0.8em;
+                                            }
+
+                                        .dropdown .dropdown-menu {
+                                            display: none;
+                                            }
+
+                                        .dropdown:hover .dropdown-menu {
+                                            display: block;
+                                            } 
+
+                                        .dropdown-toggle {   
+                                            background-color: transparent !important;
+                                            font-weight: 700;
+                                            color: black;
+                                            text-decoration: none;
+                                            border: none;
+                                        }
+
+                                        .dropdown-toggle:hover {
+                                            background-color: #00b6c5 !important;
+                                            text-decoration: underline !important;
+                                            color: white !important;
+                                        }
+                                        
+                                        .dropdown-item {
+                                            font-weight: 700;
+                                            font-size: 1.2em;
+                                            color: white;
+                                            text-decoration: none;
+                                            border-radius: 0.5em;
+                                            text-align:start;
+                                            }
+
+/* nuoli alasvetovalikkoon laatikon päälle */    
+.bubble:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 18px 25px 0;
+    border-color: #144279 transparent;
+    top: -15px;
+    left: 35px;
+    rotate: 180deg;
     }
-
-.dropdown-toggle:hover {
-    background-color: #00b6c5 !important;
-    text-decoration: underline !important;
-    color: white !important;
-}
-        
-.dropdown-menu {
-    background-color: #144279;
-    margin-top: 15px;
-    padding: 1em;
-    border-radius: 0.8em;
-    }
-
-.dropdown .dropdown-menu {
-    display: none;
-    }
-
-/* alasvetovalikko näkyviin kun hiiri on päällä ja tämä pois jos haluaa klikkauksen päälle*/  
-/* .dropdown:hover .dropdown-menu {
-    display: block;
-    } */
-   
-/* js lisää tämän luokan ja alasvetovalikko tulee näkyviin klikattaessa */
-.show {
-    display: block !important;
-    }
-
-/* alasvetovalikko näkyviin kun hiiri on päällä */    
-.dropdown-toggle {   
-    background-color: transparent !important;
-    font-size: 1.2em;
-    font-weight: 700;
-    color: black;
-    text-decoration: none;
-    border: none;
-}
-
-/* nuoli pois alasveto laatikota*/
-
         
 /* kehys pois hampurilaisesta */
 .navbar-toggler {
@@ -109,28 +193,12 @@ body{
     padding: 1.4em;
     margin-right: 0.2em;
     }
-                
-.dropdown-item {
-    text-align:start;
-    }
         
 .logo {
     width: 200px;
     height: 200px;
     }
-     
-/* nuoli alasvetovalikkoon laatikon päälle */    
-.bubble:after {
-    content: '';
-    position: absolute;
-    border-style: solid;
-    border-width: 18px 25px 0;
-    border-color: #144279 transparent;
-    top: -15px;
-    left: 35px;
-    rotate: 180deg;
-     }
-
+    
 /* jennyn setit */
 .container{
     width: 100%;
@@ -157,6 +225,10 @@ body{
     margin: 0%;
 }
 
+.minikuva1 {
+    margin-left: 2em;
+}
+
 .minikuva{
     width: auto;
     height: 16px;
@@ -164,23 +236,29 @@ body{
     margin-right: 0.5em;
 }
 
-.minikuva1 {
-    margin-left: 10px;
+@media (max-width:991px){
+    .minikuva{margin-left: 2em;}
+
+    .minikuva1 {
+        margin-left: 0;
+    }
 }
 
+
+/* testasin vaan, saa muuttaa -Antti- */
 #btn_ylos {
     display: none;
     position: fixed;
     bottom: 50px;
     right: 30px;
     z-index: 99;
-    border: none;
+    border: solid  #04BFBF 0.2em;
     outline: none;
     background-color: #144673;
     color: white;
     cursor: pointer;
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 35%;
     font-size: 18px;
 }
 
@@ -290,3 +368,4 @@ h2{
     width: auto;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
+
