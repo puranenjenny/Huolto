@@ -445,7 +445,7 @@ h2{
     width: 100%;
   }
   
-  .lomake_tausta {
+.lomake_tausta {
     padding: 8em 8em 8em 8em;
     background-color: rgba(20, 70, 115, 0.8);
     color: white;
@@ -453,9 +453,9 @@ h2{
     height: auto;
     width: auto;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
+}
   
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .lomake_tausta {
       padding: 2em 2em 2em 2em;
     }
