@@ -6,9 +6,10 @@
     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Mira Hosio, Antti Kortelainen, Jenny Puranen">
 
     <!--Välilehden logo-->    
-    <link rel="icon" href="img/logo_small.png">
+    <link rel="icon" href="img/logo_small2.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU" crossorigin="anonymous">
     <!-- Fontit -->
@@ -24,19 +25,8 @@
    
     
   </head>
-  <body class="justify-content-center"> <!-- poistin tästä d-lg-flex t.jenny -->
+  <body class="justify-content-center"> 
     
-
-    <!-- lisäpalkki tiedoille 
-    <div class="container">
-    <div class="row ylapalkki">
-        <div class="col minikuva1"><img class="puhelin minikuva" src="img/puhelin.png" alt="puhelin">09 4545 669</div>
-        <div class="col"><img class="sijainti minikuva" src="img/sijainti.png" alt="sijainti">Sofiankatu 4</div>
-        <div class="col"><img class="email minikuva" src="img/email.png" alt="email">toimisto@rautio.fi</div>
-        <div class="col-7"></div>
-    </div>
-</div> -->
-
 
 <div class="container-fluid">
    <div class="row">
@@ -60,16 +50,16 @@
                                                     <a class="nav-link" href="index.php">KOTI</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link"  href="#">PALVELUT</a>
+                                                    <a class="nav-link"  href="palvelut.php">PALVELUT</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link"  href="#">ASIAKKAAMME</a>
+                                                    <a class="nav-link"  href="referenssit.php">ASIAKKAAMME</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="#">YHTEYSTIEDOT</a>
+                                                    <a class="nav-link" href="yhteystiedot.php">YHTEYSTIEDOT</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link"  href="#">OTA YHTEYTTÄ</a>
+                                                    <a class="nav-link"  href="connect.php">OTA YHTEYTTÄ</a>
                                                 </li>
                                                 <!--alasvetovalikko hover -->
                                                 <!-- <li class="nav-item dropdown">

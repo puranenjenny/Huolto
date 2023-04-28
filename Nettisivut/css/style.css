@@ -192,6 +192,7 @@ body{
     background-color: #00b6c5;
     padding: 1.4em;
     margin-right: 0.2em;
+    border-radius: 0.5em; /*pyöristin vähä reunoja t.jenny*/
     }
         
 .logo {
@@ -199,7 +200,7 @@ body{
     height: 200px;
     }
     
-/* jennyn setit */
+
 .container{
     width: 100%;
     padding: 0%;
@@ -245,14 +246,13 @@ body{
 }
 
 
-/* testasin vaan, saa muuttaa -Antti- */
 #btn_ylos {
     display: none;
     position: fixed;
     bottom: 50px;
     right: 30px;
     z-index: 99;
-    border: solid  #04BFBF 0.2em;
+    border: solid  white 0.2em;
     outline: none;
     background-color: #144673;
     color: white;
@@ -269,18 +269,19 @@ body{
 
 /*sivun sisällön säädöt*/
 
-/* .btn1 {
+ .btn1 {
     background-color: #04BFBF;
     color: white;
     border-color: #04BFBF;
     font-family: 'Rubik', sans-serif;
     margin: 0.6em;
+    border: solid  #04BFBF 0.2em;
 }
 
 .btn1:hover {
-    background-color: #7ED9D9;
-    border-color: #7ED9D9;
-} */
+    border: solid  white 0.2em;
+    background-color: #04BFBF;
+} 
 
 .vali{
     height: 40px;
@@ -288,7 +289,11 @@ body{
 
 #kontentti {
     background-color: #F2F2F2;
-    /* padding: 1em; */
+    width: 100%;
+}
+
+.kontentti {
+    background-color: #F2F2F2;
     width: 100%;
 }
 
@@ -304,24 +309,35 @@ h3 {
 } */
 
 .repair4 {
-    border-radius: 1em;
+    border-radius: 5em;
+    border: solid white 0.5em;
+    margin: 0.5em;
+    height: auto;
+    width: 500px;
 } 
 
 .esittelytausta {
-    background-color: #7ED9D9;
     padding: 3em; 
     border-radius: 0.8em; 
     width: 100%;
     justify-content: center;
     align-items: center;
     font-weight: bolder;
+    padding-right: 30px;
 }
 
 .esittely {
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding-top: 3em;
+    /* background-color: #aeffff;  */
+    background-color: #F2F2F2; 
 }
 
+
+
+p {
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 .kommentti {
     background-color: #144279;
@@ -343,6 +359,29 @@ h2{
 }
 
 
+.yhteystiedot {
+    background-color: #144279;
+    height: auto;
+    padding: 3em;  
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.yhteystiedot p {
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+.repair2 {
+    border-radius: 1em;
+    width: auto;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    border: solid white 0.5em;
+}
+
 /*kartta*/
 .sijaintikartalla{
     display: flex;
@@ -359,7 +398,7 @@ h2{
 
 
 
-/*väliaikanen footer*/
+/*footer säädöt*/
 #footer {
     background-color: #144673;
     padding: 2em;
@@ -369,3 +408,84 @@ h2{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
+.logo2 {
+    width: 130px;
+    height: auto;
+    padding: 0%;
+    margin: 5px;
+    }
+    
+.luotettava {
+    width: 180px;
+    height: auto;
+    padding: 0%;
+    margin: 5px;
+    }
+
+
+
+/*connect sivun säädöt*/
+
+.connect_tausta { 
+    background-color: #F2F2F2;
+    padding: 0;
+    margin: 0;
+    color: black;
+    text-align: center;
+    width: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+.helsinki13 {
+    width: auto;
+    height: auto;
+    padding: 0%;
+}
+
+.container1 {
+    width: 100%;
+  }
+  
+.lomake_tausta {
+    padding: 8em 8em 8em 8em;
+    background-color: rgba(20, 70, 115, 0.8);
+    color: white;
+    text-align: center;
+    height: auto;
+    width: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+  
+@media screen and (max-width: 768px) {
+    .lomake_tausta {
+      padding: 2em 2em 2em 2em;
+    }
+  }
+  
+.kommentti2 {
+    background-color: #7ED9D9;
+    padding: 0; 
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    margin: 0;
+}
+
+/*yhteystiedot sivun säädöt*/
+
+.container2 {
+    width: 100%;
+    height: auto;
+    padding: 4em;
+    background-color: #F2F2F2;
+  }
+
+  .tyontekijat img {
+    width: 300px;
+    height: auto;
+    border-radius: 4em; 
+    border: solid white 0.5em;
+
+  }
