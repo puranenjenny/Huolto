@@ -6,6 +6,10 @@ turkoosi: #04BFBF
 vaalee turkoosi: #7ED9D9 
 vaalee harmaa: #F2F2F2 */  
 
+* {
+    box-sizing: border-box;
+  }
+
 body{
     font-family: 'Rubik', sans-serif;
     width: 100% ;
@@ -14,6 +18,7 @@ body{
 .container-fluid{
     width: 100%; 
     padding: 0%;
+    margin: 0%;
 }
     
 .navbar-nav {
@@ -208,15 +213,21 @@ body{
 } 
      
 .ylapalkki {
-    /* width: auto; */
+    width: 100%;
     height: auto;
     background-color: #144673;
-    padding: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0px;
+    padding-right: 0px;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin: 0px;
+    box-sizing: content-box;
+
 }
 
 .mini {
@@ -227,7 +238,7 @@ body{
 }
 
 .minikuva1 {
-    margin-left: 2em;
+    margin-left: 3em;
 }
 
 .minikuva{
@@ -324,6 +335,7 @@ h3 {
     align-items: center;
     font-weight: bolder;
     padding-right: 30px;
+    margin: 0px;
 }
 
 .esittely {
@@ -331,6 +343,7 @@ h3 {
     padding-top: 3em;
     /* background-color: #aeffff;  */
     background-color: #F2F2F2; 
+    margin: 0px;
 }
 
 
@@ -367,6 +380,7 @@ h2{
     justify-content: center;
     align-items: center;
     color: white;
+    margin: 0px;
 }
 
 .yhteystiedot p {
@@ -462,7 +476,7 @@ h2{
     }
   }
   
-.kommentti2 {
+.kommentti2 .kommentti3 {
     background-color: #7ED9D9;
     padding: 0; 
     width: 100%;
