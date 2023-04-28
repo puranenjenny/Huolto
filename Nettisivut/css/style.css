@@ -303,27 +303,31 @@ h3 {
 } */
 
 .repair4 {
-    border-radius: 1em;
+    border-radius: 5em;
+    border: solid white 0.5em;
     margin: 0.5em;
     height: auto;
     width: 500px;
 } 
 
 .esittelytausta {
-    background-color: #88A5BF;
     padding: 3em; 
     border-radius: 0.8em; 
     width: 100%;
     justify-content: center;
     align-items: center;
     font-weight: bolder;
+    padding-right: 30px;
 }
 
 .esittely {
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding-top: 3em;
-    
+    /* background-color: #aeffff;  */
+    background-color: #F2F2F2; 
 }
+
+
 
 p {
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -351,7 +355,7 @@ h2{
 
 .yhteystiedot {
     background-color: #144279;
-    height: 760px;
+    height: auto;
     padding: 3em;  
     width: 100%;
     justify-content: center;
@@ -369,6 +373,7 @@ h2{
     height: 400px;
     justify-content: center;
     align-items: center;
+    border: solid white 0.5em;
 }
 
 /*kartta*/

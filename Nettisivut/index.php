@@ -13,15 +13,15 @@ include 'header.php';?>
 
   <div class="row vali"></div>
 
-  <div class="row kommentti text-center">
-  <h2>"Me hoidamme kiinteistösi kuin omamme, jotta sinä voit keskittyä olennaiseen."</h2>
- </div>  
+<div class="row kommentti text-center">
+    <h2>"Me hoidamme kiinteistösi kuin omamme, jotta sinä voit keskittyä olennaiseen."</h2>
+</div>  
 
-  <div class="row esittely text-center">
+<div class="row esittely text-center">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <img src="img/repair4.jpg" class="img-fluid repair4 img-rounded" alt="repair4">
     </div>
-    <div class="col-1 d-none d-lg-block"></div>
+    <!-- <div class="col-1 d-none d-lg-block"></div> -->
     <div class="col esittelytausta">
       <div class="row vali"></div>
           
@@ -33,14 +33,20 @@ include 'header.php';?>
         Kiitos, että valitsit R. Autio Oy:n. Odotamme innolla, että saamme auttaa sinua kiinteistönhuoltoasioissa!</i></p>
     </div>
 
-    <div class="col-1 d-none d-lg-block"></div> 
-
-  </div>
+    <div class="col-2 d-none d-lg-block"></div> 
 
   <div class="row vali"></div>
   <div class="row vali"></div>
 
-  <div class="row yhteystiedot text-center">
+</div>
+
+
+
+<div class="row yhteystiedot text-center">
+  
+<div class="row vali"></div>
+<div class="row vali"></div>
+
   <div class="row"> 
     <div class="col-md-6 order-md-1"><h2>Yhteystiedot</h2><br>
       <p>Voit ottaa yhteyttä asiakaspalveluumme kaikissa kiinteistön ylläpitoon liittyvissä kysymyksissä. Toimimme ammattitaitoisesti ja iloisella mielellä, jotta voimme tarjota sinulle parhaan mahdollisen asiakaspalvelukokemuksen.</p>
@@ -54,6 +60,8 @@ include 'header.php';?>
     </div>
     <div class="col-md-6 order-md-2"><img src="img/repair2.png" class="img-fluid repair2 img-rounded" alt="repair2"></div>
   </div>
+  <div class="row vali"></div>
+  <div class="row vali"></div>
 </div>
 
  

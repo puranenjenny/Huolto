@@ -24,19 +24,8 @@
    
     
   </head>
-  <body class="justify-content-center"> <!-- poistin tästä d-lg-flex t.jenny -->
+  <body class="justify-content-center"> 
     
-
-    <!-- lisäpalkki tiedoille 
-    <div class="container">
-    <div class="row ylapalkki">
-        <div class="col minikuva1"><img class="puhelin minikuva" src="img/puhelin.png" alt="puhelin">09 4545 669</div>
-        <div class="col"><img class="sijainti minikuva" src="img/sijainti.png" alt="sijainti">Sofiankatu 4</div>
-        <div class="col"><img class="email minikuva" src="img/email.png" alt="email">toimisto@rautio.fi</div>
-        <div class="col-7"></div>
-    </div>
-</div> -->
-
 
 <div class="container-fluid">
    <div class="row">
