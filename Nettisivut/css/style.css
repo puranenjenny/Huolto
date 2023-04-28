@@ -423,29 +423,42 @@ h2{
 
 
 
-/*connect ja vikailmoitus -säädöt*/
+/*connect säädöt*/
 
-.connect_tausta { /*miksi ei toimi?*/
+.connect_tausta { 
     background-color: #F2F2F2;
-    padding: 2em;
+    padding: 0;
+    margin: 0;
     color: black;
     text-align: center;
     width: auto;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
-.helsinki10 {
-    width: 2000px;
+.helsinki13 {
+    width: auto;
     height: auto;
     padding: 0%;
 }
 
-.lomake_tausta {
+.container1 {
+    width: 100%;
+  }
+  
+  .lomake_tausta {
+    padding: 8em 8em 8em 8em;
     background-color: rgba(20, 70, 115, 0.8);
-    padding: 2em 8em 2em 8em;
     color: white;
     text-align: center;
+    height: auto;
     width: auto;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+  }
+  
+  @media screen and (max-width: 768px) {
+    .lomake_tausta {
+      padding: 2em 2em 2em 2em;
+    }
+  }
+  
 
