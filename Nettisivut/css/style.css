@@ -199,7 +199,7 @@ body{
     height: 200px;
     }
     
-/* jennyn setit */
+
 .container{
     width: 100%;
     padding: 0%;
@@ -245,14 +245,13 @@ body{
 }
 
 
-/* testasin vaan, saa muuttaa -Antti- */
 #btn_ylos {
     display: none;
     position: fixed;
     bottom: 50px;
     right: 30px;
     z-index: 99;
-    border: solid  #04BFBF 0.2em;
+    border: solid  white 0.2em;
     outline: none;
     background-color: #144673;
     color: white;
@@ -266,21 +265,35 @@ body{
     background-color: #04BFBF;
 }
 
+.logo2 {
+    width: 130px;
+    height: auto;
+    padding: 0%;
+    margin: 0%;
+}
+
+.luotettava {
+    width: 180px;
+    height: auto;
+    padding: 0%;
+    margin: 0%;
+}
 
 /*sivun sisällön säädöt*/
 
-/* .btn1 {
+ .btn1 {
     background-color: #04BFBF;
     color: white;
     border-color: #04BFBF;
     font-family: 'Rubik', sans-serif;
     margin: 0.6em;
+    border: solid  #04BFBF 0.2em;
 }
 
 .btn1:hover {
-    background-color: #7ED9D9;
-    border-color: #7ED9D9;
-} */
+    border: solid  white 0.2em;
+    background-color: #04BFBF;
+} 
 
 .vali{
     height: 40px;
@@ -288,7 +301,6 @@ body{
 
 #kontentti {
     background-color: #F2F2F2;
-    /* padding: 1em; */
     width: 100%;
 }
 
@@ -305,10 +317,13 @@ h3 {
 
 .repair4 {
     border-radius: 1em;
+    margin: 0.5em;
+    height: auto;
+    width: 500px;
 } 
 
 .esittelytausta {
-    background-color: #7ED9D9;
+    background-color: #88A5BF;
     padding: 3em; 
     border-radius: 0.8em; 
     width: 100%;
@@ -320,8 +335,12 @@ h3 {
 .esittely {
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding-top: 3em;
+    
 }
 
+p {
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 .kommentti {
     background-color: #144279;
@@ -342,6 +361,28 @@ h2{
     text-align: center;
 }
 
+
+.yhteystiedot {
+    background-color: #144279;
+    height: 760px;
+    padding: 3em;  
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.yhteystiedot p {
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+.repair2 {
+    border-radius: 1em;
+    width: auto;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+}
 
 /*kartta*/
 .sijaintikartalla{

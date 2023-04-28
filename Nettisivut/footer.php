@@ -1,13 +1,27 @@
 
-<div  id="footer">
-  <div class="row text-center"> <p>Kestävää kiinteistöhuoltoa ja huolenpitoa vuosikymmenten kokemuksella.</p> </div>
-  <!-- <div class="row text-center">  -->
-  <!-- <div class="col-5"></div>
-  <div class="col-2"><a href="connect.html" class="btn btn1">Ota yhteyttä</a><br></div>
-  <div class="col-5"></div> -->
-  <div class="row text-center"><p>2023 © R. Autio Oy &nbsp;&nbsp;&nbsp; Y-tunnus: 3675028-7</p></div>
+<div id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <a href="index.php" title="etusivu"><img class="logo2" src="img/logo_eitaustaa2.png" alt="Logo2"></a>
+      </div>
+      <div class="col-md-2">
+      <a href="https://www.vastuugroup.fi/fi-fi/palvelut/luotettava-kumppani" title="luotettavakumppani"><img class="luotettava" src="img/luotettava.jpg" alt="luotettava"></a>
+      </div>
+      <div class="col-md-8">
+        <div class="row text-center">
+          <div class="col">
+            <p><br>Kestävää kiinteistöhuoltoa ja huolenpitoa vuosikymmenten kokemuksella.<br>
+            2023 © R. Autio Oy &nbsp;&nbsp;&nbsp; Y-tunnus: 3675028-7</p>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </div>
-</div>
+
 
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: Bootstrap Bundle with Popper -->

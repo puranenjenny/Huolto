@@ -4,7 +4,7 @@ include 'header.php';?>
 
 
 <!--tästä alkaa sivun kontentti-->
-<!-- <div class="container" id="kontentti"> -->
+ <div id="kontentti"> 
 
   <div class="row">
   <div class="col-12">
@@ -41,18 +41,34 @@ include 'header.php';?>
   <div class="row vali"></div>
 
   <div class="row yhteystiedot text-center">
-  <h2>Yhteystiedot</h2>
-  <p></p>
-  </div>  
+  <div class="row"> 
+    <div class="col-md-6 order-md-1"><h2>Yhteystiedot</h2><br>
+      <p>Voit ottaa yhteyttä asiakaspalveluumme kaikissa kiinteistön ylläpitoon liittyvissä kysymyksissä. Toimimme ammattitaitoisesti ja iloisella mielellä, jotta voimme tarjota sinulle parhaan mahdollisen asiakaspalvelukokemuksen.</p>
+      <p>Päivystys 24/7 040 123 4567<br><br>
+      Toimisto 09 4545 6699<br>
+      Osoite Sofiankatu 4, 00170 Helsinki<br>
+      Sähköposti toimisto@rautio.fi</p>
+      <p>Asiakaspalvelu avoinna 8.00-16.00<br>
+      Kello 16.00 jälkeen puhelu ohjautuu päivystykseen.</p>
+      <p><a href="connect.php" class="btn btn1">Ota yhteyttä</a></p>
+    </div>
+    <div class="col-md-6 order-md-2"><img src="img/repair2.png" class="img-fluid repair2 img-rounded" alt="repair2"></div>
+  </div>
+</div>
+
+ 
 
   <div class="row vali"></div>
   <div class="row vali"></div>
-
-<div class="row text-center sijaintikartalla"><div class="col"></div><div class="col-3">Sijaintimme kartalla:</div> <div class="col"></div> </div>
-<div class="row text-center map"> <!--tästä alkaa kartta-->
+ 
+<!--tästä alkaa kartta-->
+<div class="row text-center sijaintikartalla"><div class="col"></div><div class="col-3"><p><b>Sijaintimme kartalla</b></p></div> <div class="col"></div> </div>
+<div class="row text-center map"> 
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3969.3073163004588!2d24.94992996954563!3d60.16991229737253!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bb6c7c63f09%3A0x2cc8f72b46f1ae57!2sTorikorttelit!5e0!3m2!1sen!2sfi!4v1682606611704!5m2!1sen!2sfi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-<!-- </div> -->
+  <div class="row vali"></div>
+  <div class="row vali"></div>
+</div>
 
 
 <!--kontentti loppuu-->
