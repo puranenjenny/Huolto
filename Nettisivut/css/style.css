@@ -291,6 +291,11 @@ body{
     width: 100%;
 }
 
+.kontentti {
+    background-color: #F2F2F2;
+    width: 100%;
+}
+
 h3 {
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
@@ -415,3 +420,32 @@ h2{
     padding: 0%;
     margin: 5px;
     }
+
+
+
+/*connect ja vikailmoitus -säädöt*/
+
+.connect_tausta { /*miksi ei toimi?*/
+    background-color: #F2F2F2;
+    padding: 2em;
+    color: black;
+    text-align: center;
+    width: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+.helsinki10 {
+    width: 2000px;
+    height: auto;
+    padding: 0%;
+}
+
+.lomake_tausta {
+    background-color: rgba(20, 70, 115, 0.8);
+    padding: 2em 8em 2em 8em;
+    color: white;
+    text-align: center;
+    width: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+

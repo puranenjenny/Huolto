@@ -6,6 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Mira Hosio, Antti Kortelainen, Jenny Puranen">
 
     <!--Välilehden logo-->    
     <link rel="icon" href="img/logo_small2.png">
@@ -58,7 +59,7 @@
                                                     <a class="nav-link" href="#">YHTEYSTIEDOT</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link"  href="#">OTA YHTEYTTÄ</a>
+                                                    <a class="nav-link"  href="connect.php">OTA YHTEYTTÄ</a>
                                                 </li>
                                                 <!--alasvetovalikko hover -->
                                                 <!-- <li class="nav-item dropdown">

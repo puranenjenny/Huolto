@@ -21,7 +21,6 @@ include 'header.php';?>
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <img src="img/repair4.jpg" class="img-fluid repair4 img-rounded" alt="repair4">
     </div>
-    <!-- <div class="col-1 d-none d-lg-block"></div> -->
     <div class="col esittelytausta">
       <div class="row vali"></div>
           
