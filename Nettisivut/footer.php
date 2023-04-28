@@ -2,13 +2,13 @@
 <div id="footer">
   <div class="container">
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-12 col-md-12 col-lg-2">
         <a href="index.php" title="etusivu"><img class="logo2" src="img/logo_eitaustaa2.png" alt="Logo2"></a>
       </div>
-      <div class="col-md-2">
+      <div class="col-12 col-md-12 col-lg-2">
       <a href="https://www.vastuugroup.fi/fi-fi/palvelut/luotettava-kumppani" title="luotettavakumppani"><img class="luotettava" src="img/luotettava.jpg" alt="luotettava"></a>
       </div>
-      <div class="col-md-8">
+      <div class="col-12 col-md-12 col-lg-8">
         <div class="row text-center">
           <div class="col">
             <p><br>Kestävää kiinteistöhuoltoa ja huolenpitoa vuosikymmenten kokemuksella.<br>
@@ -16,7 +16,6 @@
             </p>
           </div>
         </div>
-
       </div>
     </div>
   </div>

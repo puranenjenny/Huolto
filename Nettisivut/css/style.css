@@ -265,19 +265,6 @@ body{
     background-color: #04BFBF;
 }
 
-.logo2 {
-    width: 130px;
-    height: auto;
-    padding: 0%;
-    margin: 0%;
-}
-
-.luotettava {
-    width: 180px;
-    height: auto;
-    padding: 0%;
-    margin: 0%;
-}
 
 /*sivun sisällön säädöt*/
 
@@ -400,7 +387,7 @@ h2{
 
 
 
-/*väliaikanen footer*/
+/*footer säädöt*/
 #footer {
     background-color: #144673;
     padding: 2em;
@@ -410,3 +397,16 @@ h2{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
+.logo2 {
+    width: 130px;
+    height: auto;
+    padding: 0%;
+    margin: 5px;
+    }
+    
+.luotettava {
+    width: 180px;
+    height: auto;
+    padding: 0%;
+    margin: 5px;
+    }
