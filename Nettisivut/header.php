@@ -50,13 +50,13 @@
                                                     <a class="nav-link" href="index.php">KOTI</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link"  href="#">PALVELUT</a>
+                                                    <a class="nav-link"  href="palvelut.php">PALVELUT</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link"  href="#">ASIAKKAAMME</a>
+                                                    <a class="nav-link"  href="referenssit.php">ASIAKKAAMME</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="#">YHTEYSTIEDOT</a>
+                                                    <a class="nav-link" href="yhteystiedot.php">YHTEYSTIEDOT</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link"  href="connect.php">OTA YHTEYTTÄ</a>

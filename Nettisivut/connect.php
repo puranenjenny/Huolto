@@ -1,9 +1,9 @@
-<?php
-include 'header.php';?>
+<?php include 'header.php';?>
 
 
 <div class="connect_tausta">
 
+<div class="row vali"></div>
 <div class="row vali"></div>
 
 
@@ -18,6 +18,7 @@ include 'header.php';?>
     <div class="col text-center"> <p><b>Täytä alla oleva lomake niin otamme teihin yhteyttä mahdollisimman pian. <br>Yhdessä voimme luoda parhaan mahdollisen palvelupaketin taloyhtiönne tarpeiden mukaisesti.</b></p></div>
     <div class="col-1"></div> 
 
+<div class="row vali"></div>
 <div class="row vali"></div>
 
 <div style="background: url(img/helsinki13.jpg)" class="bg-cover text-white d-flex align-items-center">
@@ -47,7 +48,12 @@ include 'header.php';?>
     </div>
   </div>
 </div>
+<div class="row vali"></div>
+<div class="row vali"></div>
 
+<div class="row kommentti2 text-center">
+    <h3>Kun tarvitset kokeneita ja ammattitaitoisia kiinteistöhuoltajia, voit aina luottaa R.Autio Oy:hyn.</h3>
+</div> 
 
   <div class="row vali"></div>
   <div class="row vali"></div>

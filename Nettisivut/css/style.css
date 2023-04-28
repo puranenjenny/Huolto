@@ -423,7 +423,7 @@ h2{
 
 
 
-/*connect säädöt*/
+/*connect sivun säädöt*/
 
 .connect_tausta { 
     background-color: #F2F2F2;
@@ -461,4 +461,13 @@ h2{
     }
   }
   
-
+.kommentti2 {
+    background-color: #7ED9D9;
+    padding: 0; 
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    margin: 0;
+}

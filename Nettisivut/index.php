@@ -1,6 +1,5 @@
 
-<?php
-include 'header.php';?>
+<?php include 'header.php';?>
 
 
 <!--tästä alkaa sivun kontentti-->
@@ -56,6 +55,8 @@ include 'header.php';?>
       <p>Asiakaspalvelu avoinna 8.00-16.00<br>
       Kello 16.00 jälkeen puhelu ohjautuu päivystykseen.</p>
       <p><a href="connect.php" class="btn btn1">Ota yhteyttä</a></p>
+      <!-- <p>Oman huoltomiehesi yhteystiedot löytyy</p>
+      <p><a href="yhteystiedot.php" class="btn btn1">Täältä</a></p> -->
     </div>
     <div class="col-md-6 order-md-2"><img src="img/repair2.png" class="img-fluid repair2 img-rounded" alt="repair2"></div>
   </div>
