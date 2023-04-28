@@ -192,6 +192,7 @@ body{
     background-color: #00b6c5;
     padding: 1.4em;
     margin-right: 0.2em;
+    border-radius: 0.5em; /*pyöristin vähä reunoja t.jenny*/
     }
         
 .logo {
@@ -471,3 +472,20 @@ h2{
     font-weight: bolder;
     margin: 0;
 }
+
+/*yhteystiedot sivun säädöt*/
+
+.container2 {
+    width: 100%;
+    height: auto;
+    padding: 4em;
+    background-color: #F2F2F2;
+  }
+
+  .tyontekijat img {
+    width: 300px;
+    height: auto;
+    border-radius: 4em; 
+    border: solid white 0.5em;
+
+  }

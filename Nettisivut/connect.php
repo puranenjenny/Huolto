@@ -52,7 +52,7 @@
 <div class="row vali"></div>
 
 <div class="row kommentti2 text-center">
-    <h3>Kun tarvitset kokeneita ja ammattitaitoisia kiinteistöhuoltajia, voit aina luottaa R.Autio Oy:hyn.</h3>
+    <h3>Kun tarvitset kokeneita ja ammattitaitoisia kiinteistöhuoltajia, voit aina luottaa R. Autio Oy:hyn.</h3>
 </div> 
 
   <div class="row vali"></div>
