@@ -5,23 +5,23 @@
 <!--tästä alkaa sivun kontentti-->
  <div id="kontentti"> 
 
-  <div class="row">
-  <div class="col-12">
+  <div class="row mx-0">
+  <div class="col-12 p-0">
       <img src="img/helsinki1.jpg" class="img-fluid helsinki1" alt="helsinki1">
   </div></div>
 
-  <div class="row vali"></div>
+  <div class="row vali mx-0"></div>
 
-<div class="row kommentti text-center">
+<div class="row kommentti text-center mx-0">
     <h2>"Me hoidamme kiinteistösi kuin omamme, jotta sinä voit keskittyä olennaiseen."</h2>
 </div>  
 
-<div class="row esittely text-center">
+<div class="row esittely text-center mx-0">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <img src="img/repair4.jpg" class="img-fluid repair4 img-rounded" alt="repair4">
     </div>
     <div class="col esittelytausta">
-      <div class="row vali"></div>
+      <div class="row vali mx-0"></div>
           
         <h3>Kestävää kiinteistöhuoltoa ja huolenpitoa vuosikymmenten kokemuksella!</h3><br>
 
@@ -33,19 +33,19 @@
 
     <div class="col-2 d-none d-lg-block"></div> 
 
-  <div class="row vali"></div>
-  <div class="row vali"></div>
+  <div class="row vali mx-0"></div>
+  <div class="row vali mx-0"></div>
 
 </div>
 
 
 
-<div class="row yhteystiedot text-center">
+<div class="row yhteystiedot text-center mx-0">
   
-<div class="row vali"></div>
-<div class="row vali"></div>
+<div class="row vali mx-0"></div>
+<div class="row vali mx-0"></div>
 
-  <div class="row"> 
+  <div class="row mx-0"> 
     <div class="col-md-6 order-md-1"><h2>Yhteystiedot</h2><br>
       <p>Voit ottaa yhteyttä asiakaspalveluumme kaikissa kiinteistön ylläpitoon liittyvissä kysymyksissä. Toimimme ammattitaitoisesti ja iloisella mielellä, jotta voimme tarjota sinulle parhaan mahdollisen asiakaspalvelukokemuksen.</p>
       <p>Päivystys 24/7 040 123 4567<br><br>
@@ -60,22 +60,22 @@
     </div>
     <div class="col-md-6 order-md-2"><img src="img/repair2.png" class="img-fluid repair2 img-rounded" alt="repair2"></div>
   </div>
-  <div class="row vali"></div>
-  <div class="row vali"></div>
+  <div class="row vali mx-0"></div>
+  <div class="row vali mx-0"></div>
 </div>
 
  
 
-  <div class="row vali"></div>
-  <div class="row vali"></div>
+  <div class="row vali mx-0"></div>
+  <div class="row vali mx-0"></div>
  
 <!--tästä alkaa kartta-->
-<div class="row text-center sijaintikartalla"><div class="col"></div><div class="col-3"><p><b>Sijaintimme kartalla</b></p></div> <div class="col"></div> </div>
-<div class="row text-center map"> 
+<div class="row text-center sijaintikartalla mx-0"><div class="col"></div><div class="col-3"><p><b>Sijaintimme kartalla</b></p></div> <div class="col"></div> </div>
+<div class="row text-center map mx-0"> 
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3969.3073163004588!2d24.94992996954563!3d60.16991229737253!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bb6c7c63f09%3A0x2cc8f72b46f1ae57!2sTorikorttelit!5e0!3m2!1sen!2sfi!4v1682606611704!5m2!1sen!2sfi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-  <div class="row vali"></div>
-  <div class="row vali"></div>
+  <div class="row vali mx-0"></div>
+  <div class="row vali mx-0"></div>
 </div>
 
 
