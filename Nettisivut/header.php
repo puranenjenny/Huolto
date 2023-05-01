@@ -29,14 +29,14 @@
     
 
 <div class="container-fluid">
-   <div class="row">
+   <div class="row mx-0">
     <div class="ylapalkki d-block d-md-flex">
         <div class="col-12 col-md-3 col-lg-2 minikuva1"><img class="puhelin minikuva" src="img/puhelin.png" alt="puhelin">09 4545 669</div>
         <div class="col-12 col-md-3 col-lg-2"><img class="sijainti minikuva" src="img/sijainti.png" alt="sijainti">Sofiankatu 4</div>
         <div class="col-12 col-md-3 col-lg-2"><img class="email minikuva" src="img/email.png" alt="email">toimisto@rautio.fi</div>
     </div>
     </div>
-      <div class="row rowHeader d-lg-flex justify-content-center">
+      <div class="row rowHeader d-lg-flex justify-content-center mx-0">
               <div class="col-lg-10">
                 <nav class="navbar navbar-expand-lg mt-0 ml-0">
                   <a href="index.php" title="etusivu"><img class="logo" src="img/logo_header.png" alt="Logo">
