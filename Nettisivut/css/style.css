@@ -208,7 +208,7 @@ body{
 } 
      
 .ylapalkki {
-    /* width: auto; */
+    width: 100%;
     height: auto;
     background-color: #144673;
     padding: 0.5em;
