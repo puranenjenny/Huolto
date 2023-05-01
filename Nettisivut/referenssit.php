@@ -48,7 +48,7 @@
     <div class="row vali mx-0"></div>
 
 <div class="row kommentti3 text-center mx-0">
-    <h3>Tarjoamme ystävällistä ja asiakaslähtöistä palvelua, joka tuo lisäarvoa kiinteistöillesi.</h3>
+    <h3>Asiakkaidemme viihtyvyys on sydämenasiamme.</h3>
 </div>
  
 
