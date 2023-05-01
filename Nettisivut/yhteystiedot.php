@@ -50,7 +50,7 @@
 </div>
 
 
-<div class="row yhteystiedot text-center">
+<!-- <div class="row yhteystiedot text-center">
     <div class="row vali"></div>
     <div class="row vali"></div>
 
@@ -64,19 +64,17 @@
         <p>Asiakaspalvelu avoinna 8.00-16.00<br>
         Kello 16.00 jälkeen puhelu ohjautuu päivystykseen.</p>
         <p><a href="connect.php" class="btn btn1">Ota yhteyttä</a></p>
-        <!-- <p>Oman huoltomiehesi yhteystiedot löytyy</p>
-        <p><a href="yhteystiedot.php" class="btn btn1">Täältä</a></p> -->
         </div>
         <div class="col-md-6 order-md-2"><img src="img/repair2.png" class="img-fluid repair2 img-rounded" alt="repair2"></div>
     </div>
     <div class="row vali"></div>
     <div class="row vali"></div>
-    </div>
+    </div> -->
     
     <div class="row vali"></div>
     <div class="row vali"></div>
 
-<div class="row kommentti2 text-center">
+<div class="row kommentti3 text-center">
     <h3>Tarjoamme ystävällistä ja asiakaslähtöistä palvelua, joka tuo lisäarvoa kiinteistöillesi.</h3>
 </div>
  
