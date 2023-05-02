@@ -14,7 +14,7 @@
   </div>
 
   <div class="row  mx-0 text-center">
-    <div class="col text-center"> <p><b>Kirjautuneena käyttäjänä pääset jättämään vikailmoituksen kiireettömistä ongelmista, jotka käsitellään ja korjataan normaalina työaikana klo 08.00-16.00 <br>
+    <div class="col text-center"> <p><b>Kirjautuneena käyttäjänä pääset jättämään vikailmoituksen kiireettömistä ongelmista, jotka käsitellään ja korjataan normaalina työaikana klo 08.00-16.00 <br><br>
     Jos tilanne vaatii välitöntä huomiotamme - kuten vesivuodot, viemäritukokset tai sähköviat - soita 24/7 päivystysnumeroomme 040 4545 669</b></p></div>
 
 
