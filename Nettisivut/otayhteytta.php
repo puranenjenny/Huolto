@@ -9,15 +9,12 @@
 
 
   <div class="row  mx-0">
-      <div class="col-1"></div>
       <div class="col text-center"> <h3>Kiinnostuitko?<br><br></h3></div>
-      <div class="col-1"></div> 
   </div>
 
   <div class="row  mx-0">
-    <div class="col-1"></div>
-    <div class="col text-center"> <p><b>Täytä alla oleva lomake niin otamme teihin yhteyttä mahdollisimman pian. <br>Yhdessä voimme luoda parhaan mahdollisen palvelupaketin taloyhtiönne tarpeiden mukaisesti.</b></p></div>
-    <div class="col-1"></div> 
+    <div class="col text-center"> <p><b>Täytä alla oleva lomake niin otamme teihin yhteyttä mahdollisimman pian. <br>Yhdessä voimme luoda parhaan mahdollisen palvelupaketin taloyhtiönne tarpeiden mukaisesti.</b></p>
+  </div>
 
 <div class="row vali  mx-0"></div>
 <div class="row vali  mx-0"></div>
