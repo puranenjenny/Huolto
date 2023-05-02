@@ -9,12 +9,13 @@
 
 
   <div class="row  mx-0 text-center">
-      <div class="col text-center"> <h3>Hei asiakas! Ole hyvä ja kirjadu!<br><br></h3></div>
+      <div class="col text-center"> <h3>Hei asiakas! Ole hyvä ja kirjaudu!<br><br></h3></div>
 
   </div>
 
   <div class="row  mx-0 text-center">
-    <div class="col text-center"> <p><b>Kirjautuneena käyttäjänä pääset jättämään vikailmoituksen ja tarkastelemaan jättämiesi vikailmoitusten tilaa.</b></p></div>
+    <div class="col text-center"> <p><b>Kirjautuneena käyttäjänä pääset jättämään vikailmoituksen kiireettömistä ongelmista. <br>
+        Jos tilanne vaatii välitöntä huomiotamme - kuten vesivuodot, viemäritukokset tai sähköviat - soita 24/7 päivystysnumeroomme 040 4545 669</b></p></div>
 
 
 <div class="row vali  mx-0"></div>
