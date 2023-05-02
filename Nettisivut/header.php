@@ -62,7 +62,7 @@
                                                     <a class="nav-link" href="yhteystiedot.php">YHTEYSTIEDOT</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link"  href="connect.php">OTA YHTEYTTÄ</a>
+                                                    <a class="nav-link"  href="otayhteytta.php">OTA YHTEYTTÄ</a>
                                                 </li>
                                                 <!--alasvetovalikko hover -->
                                                 <!-- <li class="nav-item dropdown">
@@ -83,7 +83,7 @@
                                                     <div id="myDropdown" class="dropdown-content bubble">
                                                             <a  href="#">ASUKAS</a>
                                                             <a  href="#">ISÄNNÖITSIJÄ</a>
-                                                            <a  href="#">ASIAKAS</a>
+                                                            <a  href="kirjaudu_asiakas.php">ASIAKAS</a>
                                                             <a  href="#">TYÖNTEKIJÄ</a>
                                                     </div>
                                                 </div>

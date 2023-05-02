@@ -508,3 +508,11 @@ h2{
     border: solid white 0.5em;
 }
 
+/*kirjautumisten säädöt*/
+
+.container3 {
+    width: 100%;
+    height: auto;
+    padding: 4em;
+}
+

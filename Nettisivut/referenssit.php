@@ -13,10 +13,8 @@
     <div class="row vali mx-0"></div>
 
     <div class="row text-center d-flex justify-content-center mx-0">
-        <div class="col-12 col-md-8"><p><b>Tässä osiossa ääneen pääsevät R.Autio Oy:n asiakkaat. <br>
-        Omista kokemuksistaan kanssamme kertovat ne kaikista<br> 
-        tärkeimmät - he, keitä varten täällä ollaan ja keiden tyytyväisyys<br>
-         on sydämenasiamme - eli kohteidemme asukkaat.</b></p></div>
+        <div class="col-12 col-md-8"><p><b>Tässä osiossa ääneen pääsevät R.Autio Oy:n asiakkaat. Omista kokemuksistaan kanssamme kertovat ne kaikista
+        tärkeimmät - he, keitä varten täällä olemme ja keiden tyytyväisyys on meidän sydämenasiamme - eli kohteidemme asukkaat.</b></p></div>
     </div>
     <div class="row vali mx-0"></div>
     <div class="row vali mx-0"></div>
