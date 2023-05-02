@@ -519,13 +519,23 @@ h2{
 }
 
 .lomake_tausta2 {
-    padding: 8em 8em 8em 8em;
+    padding: 8em;
     background-color: rgba(20, 70, 115, 0.8);
     color: white;
     text-align: center;
     height: auto;
     width: auto;
     font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width:700px){
+    .container3 {
+        height: auto;
+    }
+
+    .lomake_tausta2 {
+        padding: 2em;
+    }
 }
 
 #taustakuva2 {
