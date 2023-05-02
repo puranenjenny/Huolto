@@ -9,7 +9,7 @@
 
 
   <div class="row  mx-0 text-center">
-      <div class="col text-center"> <h3>Hei asiakas! Ole hyvä ja kirjaudu!<br><br></h3></div>
+      <div class="col text-center"> <h3>Hei asukas! Ole hyvä ja kirjaudu!<br><br></h3></div>
 
   </div>
 
@@ -25,7 +25,7 @@
   <div class="container3">
     <div class="row justify-content-center">
       <div class="text-center lomake_tausta2">
-        <form method="POST" action="php/asiakas_kirjautumiskoodi.php" class="form">
+        <form method="POST" action="php/asukas_kirjautumiskoodi.php" class="form">
           <div class="form-group">
             <label for="tunnus">Tunnus *</label>
             <input id="tunnus" type="tunnus" name="tunnus" required class="form-control text-center" placeholder="mmeikalainen"><br>

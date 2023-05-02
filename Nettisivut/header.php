@@ -81,7 +81,7 @@
                                                 <div class="dropdown">
                                                     <button onclick="showDropDown()" class="dropbtn nav-link">KIRJAUDU </button>
                                                     <div id="myDropdown" class="dropdown-content bubble">
-                                                            <a  href="#">ASUKAS</a>
+                                                            <a  href="kirjaudu_asukas.php">ASUKAS</a>
                                                             <a  href="#">ISÄNNÖITSIJÄ</a>
                                                             <a  href="kirjaudu_asiakas.php">ASIAKAS</a>
                                                             <a  href="#">TYÖNTEKIJÄ</a>

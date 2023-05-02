@@ -1,6 +1,7 @@
 
 <?php include 'header.php';?>
 
+<?php  echo "Hei " . $_SESSION['tunnus'] . "!"; //tulostetaan Hei käyttäjänimi?>
 
 <!--tästä alkaa sivun kontentti-->
  <div id="kontentti"> 
