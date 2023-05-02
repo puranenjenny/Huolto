@@ -26,7 +26,7 @@
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2"><img src="img/henkilot/henkilo2.jpg" class="img-fluid henkilo2 rounded-circle" alt="henkilo2">
         <p><br>Sari Lahti<br>
             puh 045 344 8999<br>
-           <b>Huoltohenkilö</b></p></div>
+           <b>Työnjohtaja</b></p></div>
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2"><img src="img/henkilot/henkilo3.jpg" class="img-fluid henkilo3 rounded-circle" alt="henkilo3">
         <p><br>Juho Nieminenn<br>
             puh 040 111 7689<br>
@@ -71,16 +71,11 @@
     <div class="row vali mx-0"></div>
     </div> -->
     
-    <div class="row vali mx-0"></div>
-    <div class="row vali mx-0"></div>
 
 <div class="row kommentti3 text-center mx-0">
-    <h3>Tarjoamme ystävällistä ja asiakaslähtöistä palvelua, joka tuo lisäarvoa kiinteistöillesi.</h3>
+    <h3>Tarjoamme ystävällistä ja asiakaslähtöistä palvelua, joka tuo lisäarvoa kiinteistöllesi.</h3>
 </div>
  
-
-    <div class="row vali mx-0"></div>
-    <div class="row vali mx-0"></div>
 
 
 <?php include 'footer.php';?>

@@ -57,16 +57,11 @@
     </div>
 </div>
     
-    <div class="row vali mx-0"></div>
-    <div class="row vali mx-0"></div>
 
 <div class="row kommentti3 text-center mx-0">
     <h3>Kiinteistönhuoltoa kaikkiin tarpeisiin laadusta tinkimättä.</h3>
 </div>
- 
 
-    <div class="row vali mx-0"></div>
-    <div class="row vali mx-0"></div>
 
 <!--kontentti loppuu-->
 
