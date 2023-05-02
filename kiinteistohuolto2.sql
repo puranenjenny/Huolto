@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 02.05.2023 klo 10:22
+-- Generation Time: 02.05.2023 klo 12:09
 -- Palvelimen versio: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -39,7 +39,7 @@ CREATE TABLE `asukkaat` (
 --
 
 INSERT INTO `asukkaat` (`asukas_id`, `etunimi`, `sukunimi`, `kayttaja_id`) VALUES
-(5, 'Mira', 'H', 2);
+(5, 'Mira', 'Hosio', 5);
 
 -- --------------------------------------------------------
 
@@ -62,7 +62,9 @@ CREATE TABLE `isannoitsijat` (
 
 INSERT INTO `isannoitsijat` (`isannoitsija_id`, `etunimi`, `sukunimi`, `email`, `puhelin`, `kayttaja_id`) VALUES
 (4, 'Jouni', 'Meikäläinen', 'jouni.meikalainen@isanta.fi', '0400 456 123', 4),
-(5, 'Kari', 'Jaartinen', 'kari.jaartinen@isanta.fi', '050 467 832', 4);
+(5, 'Kari', 'Jaartinen', 'kari.jaartinen@isanta.fi', '050 467 832', 4),
+(6, 'Tuula', 'Toimistotäti', 'tuula.toimisto@jotain.fi', '044 456789', 4),
+(7, 'Hannu', 'Hosari', 'hannu.hosari@jotain.fi', '045 2381892', 4);
 
 -- --------------------------------------------------------
 
@@ -82,10 +84,9 @@ CREATE TABLE `kayttajat` (
 --
 
 INSERT INTO `kayttajat` (`kayttaja_id`, `tunnus`, `salasana`, `kayttaja`) VALUES
-(1, 'test', 'test', ''),
-(2, 'test1', 'test1', ''),
+(1, 'taloyhtio', 'taloyhtio', 'Taloyhtio'),
 (3, 'tyontekija', 'tyontekija', 'Työntekijä'),
-(4, 'isannoitsija', 'isannoitsija', 'isännöitsijä'),
+(4, 'isannoitsija', 'isannoitsija', 'Isännöitsijä'),
 (5, 'asukas', 'asukas', 'Asukas');
 
 -- --------------------------------------------------------
@@ -109,7 +110,9 @@ CREATE TABLE `taloyhtiot` (
 --
 
 INSERT INTO `taloyhtiot` (`taloyhtio_id`, `osoite`, `kaupunki`, `postinumero`, `nimi`, `isannoitsija_id`, `kayttaja_id`) VALUES
-(3, 'Nallekarhuntie 65', 'Helsinki', 170, 'asunto-osakeyhtiö Karhunpesä', NULL, 4);
+(3, 'Nallekarhuntie 65', 'Helsinki', 1700, 'asunto-osakeyhtiö Karhunpesä', NULL, 1),
+(4, 'Lumikontie 58', 'Helsinki', 170, 'Omakotitalo, Hannu', 7, 1),
+(5, 'Toimistotie 79 ', 'Helsinki', 170, 'Tuulan Toimistotilat Oy', 6, 1);
 
 -- --------------------------------------------------------
 
@@ -169,6 +172,13 @@ CREATE TABLE `tehtavat` (
   `tehtavan_tilanne_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Vedos taulusta `tehtavat`
+--
+
+INSERT INTO `tehtavat` (`tehtava_id`, `kuvaus`, `korjaustoimenpide`, `tila`, `tyyppi`, `tila_id`, `yleisavaimen_kaytto`, `tehtavan_tyyppi_id`, `tyontekija_id`, `tehtavan_tilanne_id`) VALUES
+(2, 'testitestitesti toimiiko.', 'testitestitesti toimiiko.', NULL, NULL, 5, 1, 2, NULL, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -181,6 +191,13 @@ CREATE TABLE `tilat` (
   `taloyhtio_id` int(11) NOT NULL,
   `asukas_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Vedos taulusta `tilat`
+--
+
+INSERT INTO `tilat` (`tila_id`, `nimi`, `taloyhtio_id`, `asukas_id`) VALUES
+(5, 'Eteisaula', 5, NULL);
 
 -- --------------------------------------------------------
 
@@ -237,12 +254,19 @@ INSERT INTO `tyontekijat` (`tyontekija_id`, `etunimi`, `sukunimi`, `puhelin`, `e
 --
 
 CREATE TABLE `yhteydenottopyynnot` (
-  `yhteydenottopyynto_id` int(11) DEFAULT NULL,
+  `yhteydenottopyynto_id` int(11) NOT NULL,
   `yp_nimi` varchar(20) NOT NULL,
   `yp_email` varchar(30) NOT NULL,
   `yp_numero` int(20) NOT NULL,
   `yp_viesti` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Vedos taulusta `yhteydenottopyynnot`
+--
+
+INSERT INTO `yhteydenottopyynnot` (`yhteydenottopyynto_id`, `yp_nimi`, `yp_email`, `yp_numero`, `yp_viesti`) VALUES
+(1, 'Testiyhteidenotto', 'testi.yhteydenotto@jotain.fi', 401234567, 'Testataan miltä tämä yhteydenottopyyntöhässäkkä näyttää ja toimiiko. ');
 
 --
 -- Indexes for dumped tables
@@ -319,6 +343,12 @@ ALTER TABLE `tyontekijat`
   ADD KEY `tyontekijan_tilanne_id` (`tyontekijan_tilanne_id`);
 
 --
+-- Indexes for table `yhteydenottopyynnot`
+--
+ALTER TABLE `yhteydenottopyynnot`
+  ADD PRIMARY KEY (`yhteydenottopyynto_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -326,13 +356,13 @@ ALTER TABLE `tyontekijat`
 -- AUTO_INCREMENT for table `asukkaat`
 --
 ALTER TABLE `asukkaat`
-  MODIFY `asukas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `asukas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `isannoitsijat`
 --
 ALTER TABLE `isannoitsijat`
-  MODIFY `isannoitsija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `isannoitsija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `kayttajat`
@@ -344,7 +374,7 @@ ALTER TABLE `kayttajat`
 -- AUTO_INCREMENT for table `taloyhtiot`
 --
 ALTER TABLE `taloyhtiot`
-  MODIFY `taloyhtio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `taloyhtio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tehtavan_tilanne`
@@ -362,13 +392,13 @@ ALTER TABLE `tehtavan_tyyppi`
 -- AUTO_INCREMENT for table `tehtavat`
 --
 ALTER TABLE `tehtavat`
-  MODIFY `tehtava_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `tehtava_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tilat`
 --
 ALTER TABLE `tilat`
-  MODIFY `tila_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `tila_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tyontekijan_tilanne`
@@ -381,6 +411,12 @@ ALTER TABLE `tyontekijan_tilanne`
 --
 ALTER TABLE `tyontekijat`
   MODIFY `tyontekija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `yhteydenottopyynnot`
+--
+ALTER TABLE `yhteydenottopyynnot`
+  MODIFY `yhteydenottopyynto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Rajoitteet vedostauluille
