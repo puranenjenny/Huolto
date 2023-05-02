@@ -550,3 +550,46 @@ h2{
     background-size: cover;
     width: 100%;
 }
+
+/* vikailmoitus sivut */
+
+.header_vika{
+    color: white;
+    padding: 1em 0 1em 0 !important;
+    margin: 0 !important;
+    text-decoration: underline;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+}
+
+.lomake_vika {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 5em 0;
+    background-color: rgba(20, 70, 115, 0.8);
+}
+
+#vika{
+    max-width: 30em;
+    min-height: 7em;
+    justify-self: center;
+}
+
+#avain{
+    border-radius: 5px;
+}
+
+/* Toimiston näkymä */
+
+.table-vika {
+    width: 90%;
+}
+
+.table-vika th{
+    color: white !important;
+}
+
+.table-vika td{
+    color: white !important;
+}

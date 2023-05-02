@@ -1,4 +1,4 @@
-<?php require "../config.php"; //yhdistys tietokantaan config tiedoston avulla HUOM ../ alku ?>
+<?php require "config.php"; //yhdistys tietokantaan config tiedoston avulla HUOM ../ alku ?>
 
 <?php 
 if(isset($_SESSION['tunnus'])){ //tarkistetaan onko käyttäjä kirjautunut sisään, eli onko sessiossa jo tunnus

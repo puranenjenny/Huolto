@@ -1,4 +1,4 @@
-<?php require "../config.php"; //yhdistys tietokantaan config tiedoston avulla ?>
+<?php require "config.php"; //yhdistys tietokantaan config tiedoston avulla ?>
 
 <?php 
 if(isset($_SESSION['tunnus'])){ //tarkistetaan onko käyttäjä kirjautunut sisään
