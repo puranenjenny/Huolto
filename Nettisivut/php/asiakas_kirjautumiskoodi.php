@@ -35,22 +35,3 @@ if(isset($_SESSION['tunnus'])){ //tarkistetaan onko käyttäjä kirjautunut sis�
   }
 
 ?>
-
-<!-- 
-<main class="form-signin w-50 m-auto">
-  <form method="POST" action="kirjautumiskoodi.php">
-    <h1 class="h3 mt-5 fw-normal text-center">Hei asiakas! Ole hyvä ja kirjadu </h1>
-
-    <div class="form-floating">
-      <input name="tunnus" type="tunnus" class="form-control" id="floatingInput" placeholder="user.name">
-      <label for="floatingInput">Käyttäjätunnus</label>
-    </div>
-    <div class="form-floating">
-      <input name="salasana" type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">salasana</label>
-    </div>
-
-    <button name="submit" class="w-100 btn btn-lg btn-primary" type="submit">Kirjaudu</button>
-    <h6 class="mt-3">Jos sinulla ei ole käyttäjätunnusta  <a href="register.php">Luo tunnus</a></h6>
-  </form>
-</main>  -->
