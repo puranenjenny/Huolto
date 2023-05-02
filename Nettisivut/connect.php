@@ -5,6 +5,7 @@
 
 <div class="row vali  mx-0"></div>
 <div class="row vali  mx-0"></div>
+<div class="row vali  mx-0"></div>
 
 
   <div class="row  mx-0">
@@ -55,8 +56,6 @@
     <h3>Kun tarvitset kokeneita ja ammattitaitoisia kiinteistöhuoltajia, voit aina luottaa R. Autio Oy:hyn.</h3>
 </div> 
 
-  <div class="row vali  mx-0"></div>
-  <div class="row vali  mx-0"></div>
 </div>
 </div>
 

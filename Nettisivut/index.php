@@ -48,7 +48,7 @@
   <div class="row mx-0"> 
     <div class="col-md-6 order-md-1"><h2>Yhteystiedot</h2><br>
       <p>Voit ottaa yhteyttä asiakaspalveluumme kaikissa kiinteistön ylläpitoon liittyvissä kysymyksissä. Toimimme ammattitaitoisesti ja iloisella mielellä, jotta voimme tarjota sinulle parhaan mahdollisen asiakaspalvelukokemuksen.</p>
-      <p>Päivystys 24/7 040 123 4567<br><br>
+      <p>Päivystys 24/7 040 4545 669<br><br>
       Toimisto 09 4545 6699<br>
       Osoite Sofiankatu 4, 00170 Helsinki<br>
       Sähköposti toimisto@rautio.fi</p>

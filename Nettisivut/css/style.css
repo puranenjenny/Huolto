@@ -221,7 +221,7 @@ body{
     padding-left: 0px;
     padding-right: 0px;
     color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -486,6 +486,10 @@ h2{
     align-items: center;
     font-weight: bolder;
     margin: 0;
+}
+
+.kommentti4{
+    font-size: large;
 }
 
 /*yhteystiedot, referenssit ja palvelut sivun säädöt*/
