@@ -6,11 +6,11 @@ if(isset($_SESSION['tunnus'])){ //tarkistetaan onko käyttäjä kirjautunut sis�
 }
 
   if(isset($_POST['submit'])){ //tarkistetaan onko submit painettu
-    if($_POST['tunnus'] == "" OR $_POST['salasana'] == ""){ //tarkistetaan onko kentät tyhjiä
+    if($_POST['tunnus'] == "" OR $_POST['asiakas_salasana'] == ""){ //tarkistetaan onko kentät tyhjiä
       echo "Täytä kaikki tarvittavat tiedot!"; //jos kentät ovat tyhjiä, niin tulostetaan virheilmoitus
     }else{ //jos kentät eivät ole tyhjiä, niin suoritetaan alla oleva koodi
       $tunnus = $_POST['tunnus']; 
-      $salasana = $_POST['salasana'];
+      $asiakas_salasana = $_POST['asiakas_salasana'];
 
       $komento = "SELECT * FROM kayttajat WHERE tunnus = '$tunnus'"; //haetaan tietokannasta käyttäjätunnus
       $kirjaudu = $yhteys->prepare($komento); //valmistellaan kysely "komento"
@@ -18,15 +18,15 @@ if(isset($_SESSION['tunnus'])){ //tarkistetaan onko käyttäjä kirjautunut sis�
       $data = $kirjaudu->fetch(PDO::FETCH_ASSOC); //haetaan tietokannasta käyttäjätunnus data muuttujaan
 
       if($kirjaudu->rowCount() > 0){ //rowcount on yli 0, niin käyttäjätunnus on olemassa
-        if(password_verify($salasana, $data['salasana'])){ //tarkistetaan onko salasana oikein, jos on oikein, niin suoritetaan alla oleva koodi
-          //echo "Kirjautuminen onnistui!"; //jos salasana on oikein, niin tulostetaan ilmoitus
+        if(password_verify($asiakas_salasana, $data['asiakas_salasana'])){ //tarkistetaan onko asiakas_salasana oikein, jos on oikein, niin suoritetaan alla oleva koodi
+          //echo "Kirjautuminen onnistui!"; //jos asiakas_salasana on oikein, niin tulostetaan ilmoitus
 
             $_SESSION['tunnus'] = $data['tunnus']; //tallennetaan sessioon käyttäjätunnus
             header("location: index.php"); //ohjataan käyttäjä etusivulle header komennolla
 
 
         }else{
-          echo "Tunnus ja tai salasana on väärin!"; //jos salasana on väärin, niin tulostetaan virheilmoitus
+          echo "Tunnus ja tai asiakas_salasana on väärin!"; //jos asiakas_salasana on väärin, niin tulostetaan virheilmoitus
         }
     }else {
       echo "Käyttäjätunnusta ei löydy!"; //jos käyttäjätunnusta ei löydy, niin tulostetaan virheilmoitus
@@ -36,10 +36,9 @@ if(isset($_SESSION['tunnus'])){ //tarkistetaan onko käyttäjä kirjautunut sis�
 
 ?>
 
-
+<!-- 
 <main class="form-signin w-50 m-auto">
   <form method="POST" action="asiakas_kirjautumiskoodi.php">
-    <!-- <img class="mb-4 text-center" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
     <h1 class="h3 mt-5 fw-normal text-center">Hei asiakas! Ole hyvä ja kirjadu </h1>
 
     <div class="form-floating">
@@ -47,11 +46,11 @@ if(isset($_SESSION['tunnus'])){ //tarkistetaan onko käyttäjä kirjautunut sis�
       <label for="floatingInput">Käyttäjätunnus</label>
     </div>
     <div class="form-floating">
-      <input name="salasana" type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">Salasana</label>
+      <input name="asiakas_salasana" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">asiakas_salasana</label>
     </div>
 
     <button name="submit" class="w-100 btn btn-lg btn-primary" type="submit">Kirjaudu</button>
     <h6 class="mt-3">Jos sinulla ei ole käyttäjätunnusta  <a href="register.php">Luo tunnus</a></h6>
   </form>
-</main>
+</main>  -->
