@@ -1,5 +1,7 @@
 
 <?php include 'header.php';?>
+<?php include 'config.php';?>
+<?php include 'php/tyontekijalistaus.php';?> 
 
 
 <div class="container2">
@@ -18,8 +20,9 @@
     <div class="row vali mx-0"></div>
     <div class="row vali mx-0"></div>
     <div class="row vali mx-0"></div>
+    
+    
 
-   
     <div class="row tyontekijat text-center mx-0">
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2"><img src="img/henkilot/henkilo2.jpg" class="img-fluid henkilo2 rounded-circle" alt="henkilo2">
         <p><br>Sari Lahti<br>
@@ -46,6 +49,7 @@
             puh 0400 454 969<br>
            <b>Toimistosihteeri</b></p></div>
     </div>
+    
     <div class="row vali mx-0"></div>
     <div class="row vali mx-0"></div>
     <div class="row vali mx-0"></div>
