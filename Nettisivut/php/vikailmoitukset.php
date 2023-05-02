@@ -20,7 +20,7 @@ while($row = $data->fetch(PDO::FETCH_ASSOC)){
 $JSON_vika.=']}';
 $yhteys = null;
 
-$handler = fopen("../viat.json", "w");
+$handler = fopen("viat.json", "w");
 fwrite($handler,  $JSON_vika);
 fclose($handler);
 //echo $JSON_vika;
