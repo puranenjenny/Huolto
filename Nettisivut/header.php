@@ -16,6 +16,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,500&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <!--Oma CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/header.js"></script>
@@ -59,7 +62,7 @@
                                                     <a class="nav-link" href="yhteystiedot.php">YHTEYSTIEDOT</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link"  href="connect.php">OTA YHTEYTTÄ</a>
+                                                    <a class="nav-link"  href="otayhteytta.php">OTA YHTEYTTÄ</a>
                                                 </li>
                                                 <!--alasvetovalikko hover -->
                                                 <!-- <li class="nav-item dropdown">
@@ -78,9 +81,9 @@
                                                 <div class="dropdown">
                                                     <button onclick="showDropDown()" class="dropbtn nav-link">KIRJAUDU </button>
                                                     <div id="myDropdown" class="dropdown-content bubble">
-                                                            <a  href="#">ASUKAS</a>
+                                                            <a  href="kirjaudu_asukas.php">ASUKAS</a>
                                                             <a  href="#">ISÄNNÖITSIJÄ</a>
-                                                            <a  href="#">ASIAKAS</a>
+                                                            <a  href="kirjaudu_asiakas.php">ASIAKAS</a>
                                                             <a  href="#">TYÖNTEKIJÄ</a>
                                                     </div>
                                                 </div>
