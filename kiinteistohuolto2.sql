@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 01.05.2023 klo 18:00
+-- Generation Time: 02.05.2023 klo 10:22
 -- Palvelimen versio: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -61,7 +61,8 @@ CREATE TABLE `isannoitsijat` (
 --
 
 INSERT INTO `isannoitsijat` (`isannoitsija_id`, `etunimi`, `sukunimi`, `email`, `puhelin`, `kayttaja_id`) VALUES
-(4, 'Jouni', 'M', '', '', 1);
+(4, 'Jouni', 'Meikäläinen', 'jouni.meikalainen@isanta.fi', '0400 456 123', 4),
+(5, 'Kari', 'Jaartinen', 'kari.jaartinen@isanta.fi', '050 467 832', 4);
 
 -- --------------------------------------------------------
 
@@ -72,16 +73,20 @@ INSERT INTO `isannoitsijat` (`isannoitsija_id`, `etunimi`, `sukunimi`, `email`, 
 CREATE TABLE `kayttajat` (
   `kayttaja_id` int(11) NOT NULL,
   `tunnus` varchar(50) NOT NULL,
-  `salasana` varchar(50) NOT NULL
+  `salasana` varchar(50) NOT NULL,
+  `kayttaja` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Vedos taulusta `kayttajat`
 --
 
-INSERT INTO `kayttajat` (`kayttaja_id`, `tunnus`, `salasana`) VALUES
-(1, 'test', 'test'),
-(2, 'test1', 'test1');
+INSERT INTO `kayttajat` (`kayttaja_id`, `tunnus`, `salasana`, `kayttaja`) VALUES
+(1, 'test', 'test', ''),
+(2, 'test1', 'test1', ''),
+(3, 'tyontekija', 'tyontekija', 'Työntekijä'),
+(4, 'isannoitsija', 'isannoitsija', 'isännöitsijä'),
+(5, 'asukas', 'asukas', 'Asukas');
 
 -- --------------------------------------------------------
 
@@ -98,6 +103,13 @@ CREATE TABLE `taloyhtiot` (
   `isannoitsija_id` int(11) DEFAULT NULL,
   `kayttaja_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Vedos taulusta `taloyhtiot`
+--
+
+INSERT INTO `taloyhtiot` (`taloyhtio_id`, `osoite`, `kaupunki`, `postinumero`, `nimi`, `isannoitsija_id`, `kayttaja_id`) VALUES
+(3, 'Nallekarhuntie 65', 'Helsinki', 170, 'asunto-osakeyhtiö Karhunpesä', NULL, 4);
 
 -- --------------------------------------------------------
 
@@ -207,6 +219,32 @@ CREATE TABLE `tyontekijat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Vedos taulusta `tyontekijat`
+--
+
+INSERT INTO `tyontekijat` (`tyontekija_id`, `etunimi`, `sukunimi`, `puhelin`, `email`, `tyontekijatcol`, `kayttaja_id`, `tyontekijan_tilanne_id`) VALUES
+(1, 'Mikko', 'Virtanen', '0400 454 969', 'mikko.virtanen@huolto.fi', NULL, 3, 1),
+(2, 'Sari ', 'Lahti', '045 344 8999', 'sari.lahti@huolto.fi', NULL, 3, 1),
+(3, 'Juho', 'Nieminen', '040 111 7689', 'juho.nieminen@huolto.fi', NULL, 3, 1),
+(4, 'Markus', 'Ranta', '0400 245 919', 'markus.ranta@huolto.fi', NULL, 3, 1),
+(5, 'Anna', 'Kivelä', '045 633 9791', 'anna.kivelä@huolto.fi', NULL, 3, 1),
+(6, 'Ville', 'Laine', '0400 454 969', 'ville.laine@huolto.fi', NULL, 3, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Rakenne taululle `yhteydenottopyynnot`
+--
+
+CREATE TABLE `yhteydenottopyynnot` (
+  `yhteydenottopyynto_id` int(11) DEFAULT NULL,
+  `yp_nimi` varchar(20) NOT NULL,
+  `yp_email` varchar(30) NOT NULL,
+  `yp_numero` int(20) NOT NULL,
+  `yp_viesti` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
 -- Indexes for dumped tables
 --
 
@@ -294,19 +332,19 @@ ALTER TABLE `asukkaat`
 -- AUTO_INCREMENT for table `isannoitsijat`
 --
 ALTER TABLE `isannoitsijat`
-  MODIFY `isannoitsija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `isannoitsija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `kayttajat`
 --
 ALTER TABLE `kayttajat`
-  MODIFY `kayttaja_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `kayttaja_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `taloyhtiot`
 --
 ALTER TABLE `taloyhtiot`
-  MODIFY `taloyhtio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `taloyhtio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tehtavan_tilanne`
@@ -342,7 +380,7 @@ ALTER TABLE `tyontekijan_tilanne`
 -- AUTO_INCREMENT for table `tyontekijat`
 --
 ALTER TABLE `tyontekijat`
-  MODIFY `tyontekija_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `tyontekija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Rajoitteet vedostauluille
