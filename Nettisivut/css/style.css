@@ -439,7 +439,7 @@ h2{
 
 
 
-/*connect sivun säädöt*/
+/*otayhteyttä sivun säädöt*/
 
 .connect_tausta { 
     background-color: #F2F2F2;
@@ -450,6 +450,10 @@ h2{
     width: auto;
     font-family: 'Poppins', sans-serif;
     }
+
+#taustakuva1 {
+    background: url(../img/helsinki13.jpg)
+}
 
 .helsinki13 {
     width: auto;
@@ -512,7 +516,37 @@ h2{
 
 .container3 {
     width: 100%;
-    height: auto;
-    padding: 4em;
+    height: 500px;
+    padding: 0px;
 }
+
+.lomake_tausta2 {
+    padding: 8em 8em 8em 8em;
+    background-color: rgba(20, 70, 115, 0.8);
+    color: white;
+    text-align: center;
+    height: auto;
+    width: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+#taustakuva2 {
+    background: url(../img/helsinki141.jpg);
+    /* background-repeat: repeat-x;  */
+    background-position: left;
+    width: 100%;
+}
+
+/* #taustakuva2::after {   -------------ei toimi
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0; 
+    bottom: 0;
+    width: auto;
+    height: auto;
+    background: url(../img/helsinki141.jpg);
+    background-repeat: repeat-x;
+    background-position: right;
+  } */
 

@@ -22,7 +22,7 @@
 <div class="row vali  mx-0"></div>
 <div class="row vali  mx-0"></div>
 
-<div style="background: url(img/helsinki13.jpg)" class="bg-cover text-white d-flex align-items-center">
+<div class="bg-cover text-white d-flex align-items-center" id="taustakuva1">
   <div class="container1">
     <div class="row justify-content-center">
       <div class="text-center lomake_tausta">
