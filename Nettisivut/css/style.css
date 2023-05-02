@@ -278,7 +278,7 @@ body{
 }
 
 
-/*sivun sisällön säädöt*/
+/*index sivun sisällön säädöt*/
 
  .btn1 {
     background-color: #04BFBF;
@@ -315,9 +315,6 @@ h3 {
     padding: auto;
 }
 
-/* img {
-    padding: 0.8em;
-} */
 
 .repair4 {
     border-radius: 5em;
@@ -341,7 +338,6 @@ h3 {
 .esittely {
     font-family: 'Poppins', sans-serif;
     padding-top: 3em;
-    /* background-color: #aeffff;  */
     background-color: #F2F2F2; 
     margin: 0px;
 }
@@ -397,6 +393,7 @@ h2{
 }
 
 /*kartta*/
+
 .sijaintikartalla{
     display: flex;
     justify-content: center;
@@ -419,7 +416,6 @@ h2{
     color: white;
     text-align: center;
     width: auto;
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     font-family: 'Poppins', sans-serif;
     }
 
@@ -452,7 +448,9 @@ h2{
     }
 
 #taustakuva1 {
-    background: url(../img/helsinki13.jpg)
+    background: url(../img/helsinki13.jpg);
+    background-size: cover;
+    width: 100%;
 }
 
 .helsinki13 {
@@ -532,21 +530,13 @@ h2{
 
 #taustakuva2 {
     background: url(../img/helsinki141.jpg);
-    /* background-repeat: repeat-x;  */
-    background-position: left;
+    background-size: cover;
     width: 100%;
 }
 
-/* #taustakuva2::after {   -------------ei toimi
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0; 
-    bottom: 0;
-    width: auto;
-    height: auto;
-    background: url(../img/helsinki141.jpg);
-    background-repeat: repeat-x;
-    background-position: right;
-  } */
 
+#taustakuva3 {
+    background: url(../img/helsinki141.jpg);
+    background-size: cover;
+    width: 100%;
+}
