@@ -23,7 +23,7 @@
   <div class="container1">
     <div class="row justify-content-center">
       <div class="text-center lomake_tausta">
-        <form class="form">
+        <form class="form" action="insert.php" method="post">
           <div class="form-group">
             <label for="name">Sinun nimesi / Yrityksesi nimi *</label>
             <input id="name" type="text" name="name" required class="form-control"><br>
@@ -33,12 +33,12 @@
             <input id="email" type="text" name="email" required class="form-control"><br>
           </div>
           <div class="form-group">
-            <label for="puh">Puhelinnumero</label>
-            <input id="puh" type="text" name="puh" class="form-control"><br>
+            <label for="numero">Puhelinnumero</label>
+            <input id="numero" type="text" name="numero" class="form-control"><br>
           </div>
           <div class="form-group">
-            <label id="contect" for="content">Viesti</label>
-            <textarea name="content" id="content" cols="50" rows="8" class="form-control"></textarea><br>
+            <label id="viesti" for="viesti">Viesti</label>
+            <textarea name="viesti" id="viesti" cols="50" rows="8" class="form-control"></textarea><br>
           </div>
           <button type="submit" class="btn btn1">Lähetä</button>
         </form>
