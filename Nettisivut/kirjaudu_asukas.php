@@ -28,13 +28,13 @@
         <form method="POST" action="php/asukas_kirjautumiskoodi.php" class="form">
           <div class="form-group">
             <label for="tunnus">Tunnus *</label>
-            <input id="tunnus" type="tunnus" name="tunnus" required class="form-control text-center" placeholder="mmeikalainen"><br>
+            <input id="tunnus" type="text" name="tunnus" required class="form-control text-center" placeholder="mmeikalainen"><br>
           </div>
           <div class="form-group">
             <label for="salasana">Salasana *</label>
-            <input id="salasana" type="salasana" name="salasana" required class="form-control text-center" placeholder="salasana123"><br>
+            <input id="salasana" type="password" name="salasana" required class="form-control text-center" placeholder="salasana123"><br>
           </div>
-          <button type="submit" class="btn btn1">Kirjaudu</button>
+          <button type="submit" value="Submit" class="btn btn1">Kirjaudu</button>
           <div class="row vali  mx-0"></div>
           <div class="row vali  mx-0"></div>
           <p>Jos sinulla ei ole käyttäjätunnusta, ota yhteys toimistoomme toimisto@rautio.fi</p>

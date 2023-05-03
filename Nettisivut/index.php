@@ -1,7 +1,9 @@
 
 <?php include 'header.php';?>
+<?php include 'php/session.php';?>
 
-<?php  echo "Hei " . $_SESSION['tunnus'] . "!"; //tulostetaan Hei käyttäjänimi?>
+<h1 class="text-center">Tervetuloa omalle sivulle <?php echo $login_session; ?></h1> 
+<h2><a href = "php/logout.php">Kirjaudu ulos</a></h2>
 
 <!--tästä alkaa sivun kontentti-->
  <div id="kontentti"> 
