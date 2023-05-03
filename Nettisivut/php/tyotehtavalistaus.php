@@ -1,7 +1,5 @@
 <?php 
 
-
-
 include("config.php"); 
 
 $kysely = "SELECT tehtava_id, kuvaus, korjaustoimenpide, tila, tyyppi, tila_id, yleisavaimen_kaytto, tehtavan_tyyppi_id, tyontekija_id, tehtavan_tilanne_id FROM tehtavat"; 
@@ -24,8 +22,6 @@ $yhteys = null;
 $handler = fopen("tyotehtavat.json", "w"); 
 fwrite($handler, $JSON);
 fclose($handler);
-
-
 
 
 ?>

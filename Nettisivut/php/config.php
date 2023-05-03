@@ -1,5 +1,4 @@
 <?php
-   // header("Content-Type: text/html; charset=utf-8"); //tarviiko asettaa erikseen UTF-8?
 
 try{
     $palvelin = "localhost";

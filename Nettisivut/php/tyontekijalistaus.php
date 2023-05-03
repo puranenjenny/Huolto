@@ -1,7 +1,5 @@
 <?php 
 
-
-
 include("config.php"); 
 
 $kysely = "SELECT etunimi, sukunimi, puhelin, email FROM tyontekijat"; 
@@ -24,8 +22,6 @@ $yhteys = null;
 $handler = fopen("tyontekijat.json", "w"); 
 fwrite($handler, $JSON);
 fclose($handler);
-
-
 
 
 ?>

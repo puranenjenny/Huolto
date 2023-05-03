@@ -1,4 +1,3 @@
-
 <?php include 'header.php';?>
 <?php include 'php/session.php';?>
 
@@ -79,7 +78,6 @@
 
 
 <!--kontentti loppuu-->
-
 
 
 <?php include 'footer.php';?>

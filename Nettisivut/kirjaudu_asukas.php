@@ -1,4 +1,3 @@
-
 <?php include 'header.php';?>
 
 <div class="connect_tausta">
@@ -35,6 +34,14 @@
             <input id="salasana" type="password" name="salasana" required class="form-control text-center" placeholder="salasana123"><br>
           </div>
           <button type="submit" value="Submit" class="btn btn1">Kirjaudu</button>
+                    <!-- error viesti jos sellainen on -->
+                    <?php if (isset($_SESSION['error'])): ?>
+                    <div class="alert alert-danger mt-3" role="alert">
+                        <?php echo $_SESSION['error']; ?>
+                    </div>
+                    <?php unset($_SESSION['error']); // poistetaan errorviesti sessiosta kun se on näytetty ?>
+                    <?php endif; ?>
+                    <!-- ... -->
           <div class="row vali  mx-0"></div>
           <div class="row vali  mx-0"></div>
           <p>Jos sinulla ei ole käyttäjätunnusta, ota yhteys toimistoomme toimisto@rautio.fi</p>

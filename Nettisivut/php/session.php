@@ -5,7 +5,11 @@ if(!isset($_SESSION)){  //jos session ei ole jo käynnissä, käynnistä se
 session_start(); 
 }
 
-$user_check = $_SESSION['login_user'];
+if (isset($_SESSION['login_user'])) {
+    $user_check = $_SESSION['login_user'] ?? ''; // ?? '' lisätään tyhjä string jos login_user on tyhjä
+} else {
+    $user_check = '';
+}
 
 $pdo = new PDO("mysql:host=$palvelin; dbname=$tietokanta", $tunnus, $salasana);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -16,10 +20,15 @@ $kirjaudu->execute(['user_check' => $user_check]);
 
 $row = $kirjaudu->fetch(PDO::FETCH_ASSOC);
 
-$login_session = $row['tunnus'];
+if ($row) {
+    $login_session = $row['tunnus'];
+} else {
+    $login_session = '';
+}
 
-   if(!isset($_SESSION['login_user'])){
-      header("location: asukas_kirjautuskoodi.php");
-      die();
-   }
+
+if(!isset($_SESSION['login_user'])){
+header("location: asukas_kirjautumiskoodi.php");
+die();
+}
 ?>

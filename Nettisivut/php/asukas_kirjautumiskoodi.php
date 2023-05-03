@@ -1,4 +1,3 @@
-
 <?php
 include("config.php");
 
@@ -22,10 +21,10 @@ if(!isset($_SESSION)){  //jos session ei ole käynnissä, käynnistä se
          $_SESSION['login_user'] = $tunnus;
          header("location: ../index.php"); //siirrytään indexiin - myöhemmin luultavasti vikailmoitukseen/työpöydälle
       }else {
-         $error = "Kirjautuminen ei onnistunut";
+         $_SESSION['error'] = "Kirjautuminen ei onnistunut";
+         header("location: ../kirjaudu_asukas.php");
       }
    }
 
 
 ?>
-

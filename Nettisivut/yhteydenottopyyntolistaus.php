@@ -1,7 +1,5 @@
 <?php 
 
-
-
 include("php/config.php"); 
 
 $kysely = "SELECT yhteydenottopyynto_id, yp_nimi, yp_email, yp_numero, yp_viesti FROM yhteydenottopyynnot"; 
@@ -24,8 +22,6 @@ $yhteys = null;
 $handler = fopen("yhteydenottopyynnot.json", "w"); 
 fwrite($handler, $JSON);
 fclose($handler);
-
-
 
 
 ?>

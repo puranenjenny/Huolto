@@ -1,6 +1,5 @@
 <?php include("php/config.php");
-      include 'header.php';
-?>
+      include 'header.php';?>
  
 <head>
     <title>Onnistunut lisäys</title>
