@@ -1,6 +1,7 @@
 <?php
 include("config.php");
 
+
 if(!isset($_SESSION)){  //jos session ei ole käynnissä, käynnistä se
   session_start(); 
 }
@@ -19,10 +20,12 @@ if(!isset($_SESSION)){  //jos session ei ole käynnissä, käynnistä se
 		
       if($count == 1) {
          $_SESSION['login_user'] = $tunnus;
-         header("location: ../index.php"); //siirrytään indexiin - myöhemmin luultavasti vikailmoitukseen/työpöydälle
+         header("location: ../vikalomake.php"); //siirrytään indexiin - myöhemmin luultavasti vikailmoitukseen/työpöydälle
       }else {
-         $_SESSION['error'] = "Kirjautuminen ei onnistunut";
+         $_SESSION['error'] = "<b>Kirjautuminen ei onnistunut!<br> 
+         Tarvittaessa ota yhteys toimistoomme toimisto@rautio.fi</b>"; //errorviesti jos kirjautuminen ei onnistu
          header("location: ../kirjaudu_asukas.php");
+         
       }
    }
 

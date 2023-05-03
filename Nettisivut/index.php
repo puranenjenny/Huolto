@@ -2,7 +2,7 @@
 <?php include 'php/session.php';?>
 
 <h1 class="text-center">Tervetuloa omalle sivulle <?php echo $login_session; ?></h1> 
-<h2><a href = "php/logout.php">Kirjaudu ulos</a></h2>
+<h2><a href = "php/logout.php">Kirjaudu ulos</a></h2> 
 
 <!--tästä alkaa sivun kontentti-->
  <div id="kontentti"> 
