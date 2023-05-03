@@ -23,27 +23,35 @@
     
 
     <div class="row tyontekijat text-center mx-0">
-        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2"><img src="img/henkilot/henkilo2.jpg" class="img-fluid henkilo2 rounded-circle" alt="henkilo2">
-        <p><br>Sari Lahti<br>
-            puh 045 344 8999<br>
-           <b>Työnjohtaja</b></p></div>
-        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2"><img src="img/henkilot/henkilo1.jpg" class="img-fluid henkilo1 rounded-circle" alt="henkilo1"><br>
+        <div class="col-12">
+            <h3>Huoltohenkilöt:<br><br></h3>
+        </div>
+
+        <div class="col-sm-12 col-md-6  col-xl-3"><img src="img/henkilot/henkilo1.jpg" class="img-fluid henkilo1 rounded-circle" alt="henkilo1"><br>
         <p><br>Mikko Virtanen<br>
             puh 0400 454 969<br>
            <b>Huoltohenkilö</b></p></div>
-        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2"><img src="img/henkilot/henkilo3.jpg" class="img-fluid henkilo3 rounded-circle" alt="henkilo3">
+        <div class="col-sm-12 col-md-6  col-xl-3"><img src="img/henkilot/henkilo3.jpg" class="img-fluid henkilo3 rounded-circle" alt="henkilo3">
         <p><br>Juho Nieminenn<br>
             puh 040 111 7689<br>
            <b>Huoltohenkilö</b></p></div>
-        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2"><img src="img/henkilot/henkilo4.jpg" class="img-fluid henkilo4 rounded-circle" alt="henkilo4">
+        <div class="col-sm-12 col-md-6  col-xl-3"><img src="img/henkilot/henkilo4.jpg" class="img-fluid henkilo4 rounded-circle" alt="henkilo4">
         <p><br>Markus Ranta<br>
             puh 0400 245 919<br>
            <b>Huoltohenkilö</b></p></div>
-        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2"><img src="img/henkilot/henkilo5.jpg" class="img-fluid henkilo5 rounded-circle" alt="henkilo5">
+        <div class="col-sm-12 col-md-6  col-xl-3"><img src="img/henkilot/henkilo5.jpg" class="img-fluid henkilo5 rounded-circle" alt="henkilo5">
         <p><br>Anna Kivelä<br>
             puh 045 633 9791<br>
            <b>Huoltohenkilö</b></p></div>
-        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2"><img src="img/henkilot/henkilo6.jpg" class="img-fluid henkilo6 rounded-circle" alt="henkilo6">
+           <div class="row vali mx-0"></div>
+        <div class="col-12">
+            <h3>Toimisto:<br><br></h3>
+        </div>
+        <div class="col-sm-12 col-md-6  col-xl-3"><img src="img/henkilot/henkilo2.jpg" class="img-fluid henkilo2 rounded-circle" alt="henkilo2">
+        <p><br>Sari Lahti<br>
+            puh 045 344 8999<br>
+           <b>Työnjohtaja</b></p></div>
+        <div class="col-sm-12 col-md-6  col-xl-3"><img src="img/henkilot/henkilo6.jpg" class="img-fluid henkilo6 rounded-circle" alt="henkilo6">
         <p><br>Ville Laine<br>
             puh 0400 454 969<br>
            <b>Toimistosihteeri</b></p></div>

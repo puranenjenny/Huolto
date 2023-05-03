@@ -50,7 +50,7 @@
       Sähköposti toimisto@rautio.fi</p>
       <p>Asiakaspalvelu avoinna 8.00-16.00<br>
       Kello 16.00 jälkeen puhelu ohjautuu päivystykseen.</p>
-      <p><a href="connect.php" class="btn btn1">Ota yhteyttä</a></p>
+      <p><a href="otayhteytta.php" class="btn btn1">Ota yhteyttä</a></p>
     </div>
     <div class="col-md-6 order-md-2"><img src="img/repair2.png" class="img-fluid repair2 img-rounded" alt="repair2"></div>
   </div>
