@@ -50,7 +50,7 @@
                         <div class="collapse navbar-collapse d-lg-flex justify-content-end align-items-center" id="navbarNavDropdown">
                                   <ul class="navbar-nav">
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href ="php/logout.php">KIRJAUDU ULOS</a>
+                                                    <a class="nav-link" href = "php/logout.php">KIRJAUDU ULOS</a>
                                                 </li>
                                     </ul>
                           </div>
@@ -72,7 +72,7 @@
     <div class="bg-cover text-white d-flex align-items-center">
         <div class="container1">
             <div class="row justify-content-center mx-0">
-            <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Vikailmoituslomake asukkaille</h3>
+            <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Vikailmoituslomake isännöitsijöille</h3>
             <div class="text-center lomake_tausta lomake_vika">
                 <form class="form" action="lisaaVikailmoitus.php" method="POST">
                 <div class="form-group">
@@ -81,18 +81,19 @@
                     <br>
                 </div>
                 <div class="form-group">
-                    <label for="avain">Yleisavaimen käyttö:</label>
-                    <select id="avain" name="avain">
-                        <option value="kyllä">Saa käyttää</option>
-                        <option value="ei">Asukas avaa oven</option>
-                        <option value="muu">Sovittava erikseen</option>
+                    <label for="taloyhtio">Valitse taloyhtiö: </label>
+                    <select id="taloyhtio" name="taloyhtio">
+                        <option value="#">tähän taloyhtiöt</option>
                     </select>
                 </div>
                 <br>
                 <div class="form-group">
-                      <label for="numero">Puhelinnumero</label>
-                      <input id="numero" type="text" name="numero" required class="form-control"><br>
+                    <label for="tila">Valitse tila: </label>
+                    <select id="tila" name="tila">
+                        <option value="#">tähän esim rappukäytävä</option>
+                    </select>
                 </div>
+                <br>
                 <button type="submit" class="btn btn1">Lähetä</button>
                 </form>
             </div>
@@ -110,4 +111,3 @@
 </div>
 
 <?php include 'footer.php';?>
-

@@ -19,7 +19,9 @@ session_start();
 		
       if($count == 1) {
          $_SESSION['login_user'] = $tunnus;
-         header("location: ../vikalomake.php"); //siirrytään vikailmoitukseen/työpöydälle
+         header("location: ../ui_toimisto.php"); //siirrytään vikailmoitukseen/työpöydälle
+        //Tähän lisättävä ehtoja ja ohjaus sen mukaan onko toimistotyöntekijä vai huoltohenkilö
+
       }else {
          $error = "Kirjautuminen ei onnistunut";
       }

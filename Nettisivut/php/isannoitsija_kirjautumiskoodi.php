@@ -19,7 +19,7 @@ session_start();
 		
       if($count == 1) {
          $_SESSION['login_user'] = $tunnus;
-         header("location: ../index.php"); //siirrytään indexiin - myöhemmin luultavasti vikailmoitukseen/työpöydälle
+         header("location: ../vikalomake_isannoitsija.php"); //siirrytään vikailmoitukseen/työpöydälle
       }else {
          $error = "Kirjautuminen ei onnistunut";
       }

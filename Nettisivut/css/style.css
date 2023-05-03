@@ -556,7 +556,7 @@ h2{
 
 .header_vika{
     color: white;
-    padding: 1em 0 1em 0 !important;
+    padding: 3em 0 1em 0 !important;
     margin: 0 !important;
     text-decoration: underline;
     font-family: 'Rubik', sans-serif;
@@ -584,7 +584,7 @@ h2{
 /* Toimiston näkymä */
 
 .table-vika {
-    width: 90%;
+    max-width: 90%;
 }
 
 .table-vika th{
@@ -595,6 +595,31 @@ h2{
     color: white !important;
 }
 
+.viimeinen {
+    margin-right: 3em;
+}
+
+@media (max-width:890px){
+.table-yhteys{
+    transform: scale(0.8);
+    max-width: 100%;
+    height: 100%;
+}}
+
+@media (max-width:690px){
+    .table-yhteys{
+        transform: scale(0.6);
+    }}
+
+    @media (max-width:540px){
+        .table-yhteys{
+            transform: scale(0.5);
+        }}
+
+    @media (max-width:440px){
+        .table-yhteys{
+            transform: scale(0.4);
+        }}    
 /* ota yhteytta -> insert sivun näkymä */
 
 .container4 {
