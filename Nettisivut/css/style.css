@@ -593,3 +593,13 @@ h2{
 .table-vika td{
     color: white !important;
 }
+
+/* ota yhteytta -> insert sivun näkymä */
+
+.container4 {
+    width: 100%;
+    height: 500px;
+    padding: 200px;
+    background-color: #F2F2F2;
+    text-align: center;
+}

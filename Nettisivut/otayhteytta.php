@@ -23,7 +23,7 @@
   <div class="container1">
     <div class="row justify-content-center">
       <div class="text-center lomake_tausta">
-        <form class="form" action="insert.php" method="post">
+        <form class="form" action="otayhteytta_toiminto.php" method="post">
           <div class="form-group">
             <label for="name">Sinun nimesi / Yrityksesi nimi *</label>
             <input id="name" type="text" name="name" required class="form-control"><br>
