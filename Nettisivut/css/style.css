@@ -629,3 +629,9 @@ h2{
     background-color: #F2F2F2;
     text-align: center;
 }
+
+/*scrollauskaaos*/
+
+html {
+    scroll-behavior: auto;
+  }
