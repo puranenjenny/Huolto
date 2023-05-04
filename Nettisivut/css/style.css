@@ -657,7 +657,17 @@ h2{
 }
 
 /*scrollauskaaos*/
+/*Näillä toimii */
 
-/* html {
-    scroll-behavior: auto;
-  } */
+html {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+}
