@@ -74,15 +74,15 @@
             <div class="row justify-content-center mx-0">
             <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Vikailmoituslomake asukkaille</h3>
             <div class="text-center lomake_tausta lomake_vika">
-                <form class="form" action="lisaaVikailmoitus.php" method="POST">
+                <form class="form" action="vikalomake_asiakas_toiminto.php" method="POST">
                 <div class="form-group">
-                    <label for="vika">Viesti/vian kuvaus:</label>
-                    <textarea id="vika" type="textarea" name="vika" required class="form-control" placeholder="Kerro ongelmasta"></textarea>
+                    <label for="kuvaus">Viesti/vian kuvaus:</label>
+                    <textarea id="kuvaus" type="textarea" name="kuvaus" required class="form-control" placeholder="Kerro ongelmasta"></textarea>
                     <br>
                 </div>
                 <div class="form-group">
-                    <label for="avain">Yleisavaimen käyttö:</label>
-                    <select id="avain" name="avain">
+                    <label for="yleisavaimen_kaytto">Yleisavaimen käyttö:</label>
+                    <select id="yleisavaimen_kaytto" name="yleisavaimen_kaytto">
                         <option value="kyllä">Saa käyttää</option>
                         <option value="ei">Asukas avaa oven</option>
                         <option value="muu">Sovittava erikseen</option>
