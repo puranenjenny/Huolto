@@ -19,13 +19,14 @@ session_start();
 		
       if($count == 1) {
          $_SESSION['login_user'] = $tunnus;
-         header("location: ../ui_toimisto.php"); //siirrytään vikailmoitukseen/työpöydälle
+         header("location: ../ui_toimisto.php"); //siirrytään työpöydälle
         //Tähän lisättävä ehtoja ja ohjaus sen mukaan onko toimistotyöntekijä vai huoltohenkilö
 
       }else {
-         $error = "Kirjautuminen ei onnistunut";
+         $_SESSION['error'] = "<b>Kirjautuminen ei onnistunut!<br> 
+         Tarvittaessa ota yhteys toimistoomme toimisto@rautio.fi</b>"; //errorviesti jos kirjautuminen ei onnistu
+         header("location: ../kirjaudu_asukas.php");
       }
    }
-
 
 ?>

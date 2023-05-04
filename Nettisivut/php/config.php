@@ -1,4 +1,7 @@
 <?php
+if(!isset($_SESSION)){  //jos session ei ole käynnissä, käynnistä se
+    session_start(); 
+}
 
 try{
     $palvelin = "localhost";
