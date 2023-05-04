@@ -14,9 +14,11 @@ include 'header.php';
         $tehtava_id = NULL; 
         $kuvaus = $_REQUEST['kuvaus'];// Arvot otetaan lomakkeesta
         $yleisavaimen_kaytto = $_REQUEST['yleisavaimen_kaytto'];
+        $numero = $_REQUEST['numero'];
+        $tehtavan_tilanne_id = 1;
         
         //lisäyskysely
-        $sql = "INSERT INTO tehtavat (kuvaus, yleisavaimen_kaytto) VALUES ('$kuvaus', '$yleisavaimen_kaytto')";
+        $sql = "INSERT INTO tehtavat (kuvaus, yleisavaimen_kaytto, numero, tehtavan_tilanne_id) VALUES ('$kuvaus', '$yleisavaimen_kaytto', '$numero', '$tehtavan_tilanne_id')";
 
         $lataa = $yhteys->prepare($sql);
 

@@ -1,4 +1,5 @@
 <?php include 'php/session.php';?>
+<?php include 'php/hae_isannoitsijan_nimi.php';?> 
 
 <!doctype html>
 <html>
@@ -63,43 +64,54 @@
 
 <div class="row vali  mx-0"></div>
   <div class="row  mx-0 text-center">
-       <div class="col text-center"> <h3>Tervetuloa omalle sivulle <?php echo $login_session; ?></h3></div> <!--tulostetaan Hei käyttäjänimi -->
+  <h3>Tervetuloa omalle sivullesi <?php echo htmlspecialchars($etunimi . " " . $sukunimi . "!"); ?></h3> <!--tulostetaan Hei etunimi sukunimi -->
 
   </div>
 
 <div class="row vali  mx-0"></div>
 
-    <div class="bg-cover text-white d-flex align-items-center">
-        <div class="container1">
-            <div class="row justify-content-center mx-0">
+<div class="bg-cover text-white d-flex align-items-center">
+    <div class="container1">
+        <div class="row justify-content-center mx-0">
             <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Vikailmoituslomake isännöitsijöille</h3>
             <div class="text-center lomake_tausta lomake_vika">
                 <form class="form" action="lisaaVikailmoitus.php" method="POST">
-                <div class="form-group">
-                    <label for="vika">Viesti/vian kuvaus:</label>
-                    <textarea id="vika" type="textarea" name="vika" required class="form-control" placeholder="Kerro ongelmasta"></textarea>
+                    <div class="form-group form-floating">
+                        <div class="label-wrapper">
+                            <label for="vika">Viesti/vian kuvaus:</label>
+                        </div>
+                        <textarea id="vika" type="textarea" name="vika" required class="form-control rounded-select" placeholder="Kerro ongelmasta"></textarea>
+                        <br>
+                    </div>
+                    <div class="form-group form-floating">
+                        <div class="label-wrapper">
+                            <label for="taloyhtio">Valitse taloyhtiö:</label>
+                        </div>
+                        <div class="select-wrapper text-center">
+                            <select id="taloyhtio" name="taloyhtio" class="rounded-select">
+                                <option value="#">&nbsp;tähän taloyhtiöt&nbsp;</option>
+                            </select>
+                        </div>
+                    </div>
                     <br>
-                </div>
-                <div class="form-group">
-                    <label for="taloyhtio">Valitse taloyhtiö: </label>
-                    <select id="taloyhtio" name="taloyhtio">
-                        <option value="#">tähän taloyhtiöt</option>
-                    </select>
-                </div>
-                <br>
-                <div class="form-group">
-                    <label for="tila">Valitse tila: </label>
-                    <select id="tila" name="tila">
-                        <option value="#">tähän esim rappukäytävä</option>
-                    </select>
-                </div>
-                <br>
-                <button type="submit" class="btn btn1">Lähetä</button>
+                    <div class="form-group form-floating">
+                        <div class="label-wrapper">
+                            <label for="tila">Valitse tila:</label>
+                        </div>
+                        <div class="select-wrapper text-center">
+                            <select id="tila" name="tila" class="rounded-select">
+                                <option value="#">&nbsp;tähän esim rappukäytävä&nbsp;</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn1">Lähetä</button>
                 </form>
-            </div>
             </div>
         </div>
     </div>
+</div>
+
 
     <div class="row vali  mx-0"></div>
     <div class="row  mx-0 text-center">

@@ -580,6 +580,10 @@ h2{
     border-radius: 5px;
 }
 
+.rounded-select {
+    border-radius: 7px; /* avainvalikon reunojen pyöristys jne */
+    }
+
 /* Toimiston näkymä */
 
 .table-vika {
@@ -631,6 +635,6 @@ h2{
 
 /*scrollauskaaos*/
 
-html {
+/* html {
     scroll-behavior: auto;
-  }
+  } */
