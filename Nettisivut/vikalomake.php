@@ -1,4 +1,5 @@
 <?php include 'php/session.php';?>
+<?php include 'php/hae_asukkaan_nimi.php';?> 
 
 <!doctype html>
 <html>
@@ -62,36 +63,43 @@
 <div class="connect_tausta">
 
 <div class="row vali  mx-0"></div>
+<div class="row vali  mx-0"></div>
   <div class="row  mx-0 text-center">
-       <div class="col text-center"> <h3>Tervetuloa omalle sivulle <?php echo $login_session; ?></h3></div> <!--tulostetaan Hei käyttäjänimi -->
+  <div class="col text-center">
+  <h3>Tervetuloa omalle sivullesi <?php echo htmlspecialchars($etunimi . " " . $sukunimi . "!"); ?></h3>
+</div><!--tulostetaan Hei etunimi sukunimi -->
 
   </div>
-
+<div class="row vali  mx-0"></div>
 <div class="row vali  mx-0"></div>
 
     <div class="bg-cover text-white d-flex align-items-center">
         <div class="container1">
             <div class="row justify-content-center mx-0">
-            <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Vikailmoituslomake asukkaille</h3>
+            <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Vikailmoituslomake asukkaille<br><br></h3>
             <div class="text-center lomake_tausta lomake_vika">
-                <form class="form" action="vikalomake_asiakas_toiminto.php" method="POST">
+                <form class="form" action="vikalomake_asukas_toiminto.php" method="POST">
                 <div class="form-group">
-                    <label for="kuvaus">Viesti/vian kuvaus:</label>
+                    <label for="kuvaus">Viesti/vian kuvaus</label>
                     <textarea id="kuvaus" type="textarea" name="kuvaus" required class="form-control" placeholder="Kerro ongelmasta"></textarea>
                     <br>
                 </div>
-                <div class="form-group">
-                    <label for="yleisavaimen_kaytto">Yleisavaimen käyttö:</label>
-                    <select id="yleisavaimen_kaytto" name="yleisavaimen_kaytto">
-                        <option value="kyllä">Saa käyttää</option>
-                        <option value="ei">Asukas avaa oven</option>
-                        <option value="muu">Sovittava erikseen</option>
+                <div class="form-group form-floating">
+                  <div class="label-wrapper">
+                    <label for="yleisavaimen_kaytto">Yleisavaimen käyttö</label>
+                  </div>
+                  <div class="select-wrapper text-center">
+                    <select id="yleisavaimen_kaytto" name="yleisavaimen_kaytto" class="rounded-select">
+                      <option value="kyllä">&nbsp;Saa käyttää&nbsp;</option>
+                      <option value="ei">&nbsp;Asukas avaa oven&nbsp;</option>
+                      <option value="sovi">&nbsp;Sovittava erikseen&nbsp;</option>
                     </select>
+                  </div>
                 </div>
                 <br>
                 <div class="form-group">
                       <label for="numero">Puhelinnumero</label>
-                      <input id="numero" type="text" name="numero" required class="form-control"><br>
+                      <input id="numero" type="text" name="numero" required class="form-control" placeholder="+358 45 123 4567"><br>
                 </div>
                 <button type="submit" class="btn btn1">Lähetä</button>
                 </form>

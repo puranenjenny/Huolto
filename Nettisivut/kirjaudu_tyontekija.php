@@ -13,7 +13,7 @@ if (!isset($_SESSION)) {
 
 
   <div class="row  mx-0 text-center">
-      <div class="col text-center"> <h3>Hei! Ole hyvä ja kirjaudu!<br><br></h3></div>
+      <div class="col text-center"> <h3>Hei työntekijä! Ole hyvä ja kirjaudu!<br><br></h3></div>
 
   </div>
 
