@@ -602,6 +602,21 @@ h2{
     margin-right: 3em;
 }
 
+.nappi {
+    text-decoration: none;
+    color: white;
+}
+
+.nappi:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+@media (max-width:1200px){
+.viimeinen {
+    margin-right: 0 !important;
+}}
+
 @media (max-width:890px){
 .table-yhteys{
     transform: scale(0.8);

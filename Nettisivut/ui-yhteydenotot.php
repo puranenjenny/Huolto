@@ -1,10 +1,12 @@
 <?php include 'header_ui_toimisto.php';?>
+<?php include 'php/hae_tyontekijan_nimi.php';?>
+<script src="js/kirjautumiserror.js"></script>
 
 <div class="connect_tausta">
 
 <div class="row vali  mx-0"></div>
   <div class="row  mx-0 text-center">
-      <div class="col text-center"> <h3><h3>Tervetuloa omalle työpöydälle <?php echo $login_session; ?></h3></h3></div>
+  <h3>Tervetuloa omalle työpöydälle <?php echo htmlspecialchars($etunimi . " " . $sukunimi . "!"); ?></h3> <!--tulostetaan Hei etunimi sukunimi -->
 
   </div>
 
@@ -38,7 +40,7 @@
                                                      <td><?php echo $member['Email']; ?></td>
                                                      <td><?php echo $member['Numero']; ?></td>
                                                      <td><?php echo $member['Viesti']; ?></td>
-                                                     <td><a href="#" class="btn btn-danger">Poista</a></td>
+                                                     <td><button class="btn btn-danger" onclick="saveScrollPosition()"><?php echo '<a class="nappi" href="php/poista_yhteydenotto.php?id='.$member['id'].'">Poista</a>'; ?></button></td>
                                                      </tr>
                                              <?php
                                              }
