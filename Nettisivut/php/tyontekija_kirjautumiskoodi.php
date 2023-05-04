@@ -19,9 +19,12 @@ $count = $kirjaudu->rowCount();
 
 if($count == 1) {
    $kayttaja = $kirjaudu->fetch();
-   if($kayttaja['rooli_id'] == '2') { // 1=toimistohenkilo, 2=huoltohenkilo, 3=isannoitsija, 4=asukas
+   if($kayttaja['rooli_id'] == '1') { // 1=toimistohenkilo, 2=huoltohenkilo, 3=isannoitsija, 4=asukas
       $_SESSION['login_user'] = $tunnus;
-      header("location: ../vikalomake.php"); //siirrytään vikailmoitukseen
+      header("location: ../ui_toimisto.php"); //siirrytään toimiston käyttöliittymään
+   } elseif($kayttaja['rooli_id'] == '2') { // 1=toimistohenkilo, 2=huoltohenkilo, 3=isannoitsija, 4=asukas
+      $_SESSION['login_user'] = $tunnus;
+      header("location: ../ui_huolto.php"); //siirrytään huollon käyttöliittymään
    } else {
       $_SESSION['error'] = "<b>Kirjautuminen ei onnistunut!<br> 
       Tarvittaessa ota yhteys toimistoomme toimisto@rautio.fi</b>"; //errorviesti jos kirjautuminen ei onnistu
