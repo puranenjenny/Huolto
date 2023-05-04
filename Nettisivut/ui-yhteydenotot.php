@@ -2,15 +2,6 @@
 <?php include 'php/hae_tyontekijan_nimi.php';?>
 <script src="js/kirjautumiserror.js"></script>
 
-<div class="connect_tausta">
-
-<div class="row vali  mx-0"></div>
-  <div class="row  mx-0 text-center">
-  <h3>Tervetuloa omalle työpöydälle <?php echo htmlspecialchars($etunimi . " " . $sukunimi . "!"); ?></h3> <!--tulostetaan Hei etunimi sukunimi -->
-
-  </div>
-
-<div class="row vali mx-0"></div>
 
     <div class="bg-cover text-white d-flex align-items-center">
         <div class="container1 container_table">

@@ -53,10 +53,10 @@
                                                     <a class="nav-link" href="ui_toimisto.php">VIKAILMOITUKSET</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="#">HUOLTOHENKILÖT</a>
+                                                    <a class="nav-link" href="ui-huoltohenkilot.php">HUOLTOHENKILÖT</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="#">KÄYTTÄJIEN HALLINTA</a>
+                                                    <a class="nav-link" href="ui-naytakayttajat.php">KÄYTTÄJIEN HALLINTA</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="ui-yhteydenotot.php">YHTEYDENOTOT</a>

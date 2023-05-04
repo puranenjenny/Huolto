@@ -612,6 +612,14 @@ h2{
     color: white;
 }
 
+.napit_kayttaja {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 2em 0;
+    background-color: rgba(20, 70, 115, 0.8);
+}
+
 @media (max-width:1200px){
 .viimeinen {
     margin-right: 0 !important;

@@ -15,7 +15,7 @@
     <div class="bg-cover text-white d-flex align-items-center">
         <div class="container1">
             <div class="row justify-content-center mx-0">
-                <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Vikailmoitukset</h3>
+                <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Saapuneet vikailmoitukset</h3>
                 <div class="text-center lomake_tausta lomake_vika">
                             <table class="table table-striped table-vika">
                                 <tr>
