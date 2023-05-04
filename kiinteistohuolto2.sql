@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2023 at 06:02 PM
+-- Generation Time: May 04, 2023 at 05:31 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -41,9 +41,9 @@ CREATE TABLE `asukkaat` (
 INSERT INTO `asukkaat` (`asukas_id`, `etunimi`, `sukunimi`, `kayttaja_id`) VALUES
 (5, 'Mira', 'Hosio', 5),
 (7, 'Jenny', 'Puranen', 5),
-(8, 'Diego', 'Puranen', 5),
-(9, 'Rollo', 'Puranen', 5),
-(10, 'Antti', 'Salminen', 5);
+(8, 'Diego', 'Puranen', 8),
+(9, 'Rollo', 'Puranen', 9),
+(10, 'Antti', 'Salminen', 10);
 
 -- --------------------------------------------------------
 
@@ -65,10 +65,10 @@ CREATE TABLE `isannoitsijat` (
 --
 
 INSERT INTO `isannoitsijat` (`isannoitsija_id`, `etunimi`, `sukunimi`, `email`, `puhelin`, `kayttaja_id`) VALUES
-(4, 'Jouni', 'Meikäläinen', 'jouni.meikalainen@isanta.fi', '0400 456 123', 4),
-(5, 'Kari', 'Jaartinen', 'kari.jaartinen@isanta.fi', '050 467 832', 4),
-(6, 'Tuula', 'Toimistotäti', 'tuula.toimisto@jotain.fi', '044 456789', 4),
-(7, 'Hannu', 'Hosari', 'hannu.hosari@jotain.fi', '045 2381892', 4);
+(4, 'Jouni', 'Meikäläinen', 'jouni.meikalainen@isanta.fi', '0400 456 123', 11),
+(5, 'Kari', 'Jaartinen', 'kari.jaartinen@isanta.fi', '050 467 832', 12),
+(6, 'Tuula', 'Toimistotäti', 'tuula.toimisto@jotain.fi', '044 456789', 13),
+(7, 'Hannu', 'Hosari', 'hannu.hosari@jotain.fi', '045 2381892', 14);
 
 -- --------------------------------------------------------
 
@@ -89,13 +89,24 @@ CREATE TABLE `kayttajat` (
 --
 
 INSERT INTO `kayttajat` (`kayttaja_id`, `tunnus`, `salasana`, `kayttaja`, `rooli_id`) VALUES
-(1, 'taloyhtio', 'taloyhtio', 'Taloyhtio', 4),
+(1, 'toimistohenkilo', 'toimistohenkilo', 'toimisto', 1),
 (3, 'tyontekija', 'tyontekija', 'Työntekijä', 2),
 (4, 'isannoitsija', 'isannoitsija', 'Isännöitsijä', 3),
-(5, 'asukas', 'asukas', 'Asukas', 1),
-(6, 'jpuranen', 'jpuranen', 'koodari', 1),
-(8, 'dpuranen', 'dpuranen', 'kissa', 4),
-(9, 'rpuranen', 'rpuranen', 'kissa', 4);
+(5, 'asukas', 'asukas', 'Asukas', 4),
+(6, 'jpuranen', 'jpuranen', 'toimisto', 1),
+(8, 'dpuranen', 'dpuranen', 'asukas', 4),
+(9, 'rpuranen', 'rpuranen', 'asukas', 4),
+(10, 'asalminen', 'asalminen', 'asukas', 4),
+(11, 'jmeikalainen', 'jmeikalainen', 'isännöitsijä', 3),
+(12, 'kjaartinen', 'kjaartinen', 'isännöitsijä', 3),
+(13, 'ttoimisto', 'ttoimisto', 'isännöitsijä', 3),
+(14, 'hhosari', 'hhosari', 'isännöitsijä', 3),
+(15, 'slahti', 'slahti', 'toimisto', 1),
+(16, 'vlaine', 'vlaine', 'toimisto', 1),
+(17, 'mvirtanen', 'mvirtanen', 'huolto', 2),
+(18, 'jnieminen', 'jnieminen', 'huolto', 2),
+(19, 'mranta', 'mranta', 'huolto', 2),
+(20, 'akivela', 'akivela', 'huolto', 2);
 
 -- --------------------------------------------------------
 
@@ -160,9 +171,10 @@ CREATE TABLE `tehtavan_tilanne` (
 --
 
 INSERT INTO `tehtavan_tilanne` (`tehtavan_tilanne_id`, `tehtavan_tilanne`) VALUES
-(1, 'Avoin'),
-(2, 'Työn alla'),
-(3, 'Valmis');
+(1, 'Käsittelemättä'),
+(2, 'Avoin'),
+(3, 'Työn alla'),
+(4, 'Valmis');
 
 -- --------------------------------------------------------
 
@@ -191,13 +203,14 @@ INSERT INTO `tehtavan_tyyppi` (`tehtavan_tyyppi_id`, `nimi`) VALUES
 
 CREATE TABLE `tehtavat` (
   `tehtava_id` int(11) NOT NULL,
+  `kayttaja_id` int(11) NOT NULL,
   `kuvaus` longtext DEFAULT NULL,
   `korjaustoimenpide` longtext DEFAULT NULL,
   `tila` varchar(45) DEFAULT NULL,
-  `tyyppi` varchar(45) DEFAULT NULL,
-  `tila_id` int(11) NOT NULL,
-  `yleisavaimen_kaytto` tinyint(1) NOT NULL DEFAULT 0,
-  `tehtavan_tyyppi_id` int(11) NOT NULL,
+  `tila_id` int(11) DEFAULT NULL,
+  `yleisavaimen_kaytto` varchar(15) NOT NULL DEFAULT '0',
+  `numero` varchar(15) NOT NULL,
+  `tehtavan_tyyppi_id` int(11) DEFAULT NULL,
   `tyontekija_id` int(11) DEFAULT NULL,
   `tehtavan_tilanne_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
@@ -206,8 +219,11 @@ CREATE TABLE `tehtavat` (
 -- Dumping data for table `tehtavat`
 --
 
-INSERT INTO `tehtavat` (`tehtava_id`, `kuvaus`, `korjaustoimenpide`, `tila`, `tyyppi`, `tila_id`, `yleisavaimen_kaytto`, `tehtavan_tyyppi_id`, `tyontekija_id`, `tehtavan_tilanne_id`) VALUES
-(2, 'testitestitesti toimiiko.', 'testitestitesti toimiiko.', NULL, NULL, 5, 1, 2, NULL, 1);
+INSERT INTO `tehtavat` (`tehtava_id`, `kayttaja_id`, `kuvaus`, `korjaustoimenpide`, `tila`, `tila_id`, `yleisavaimen_kaytto`, `numero`, `tehtavan_tyyppi_id`, `tyontekija_id`, `tehtavan_tilanne_id`) VALUES
+(2, 1, 'testitestitesti toimiiko.', 'testitestitesti toimiiko.', NULL, 5, '1', '', 2, NULL, 1),
+(3, 9, 'Toimiiko uudet muunnokset??', NULL, NULL, NULL, 'sovi', '+358456339709', NULL, NULL, 1),
+(11, 9, 'testing 4366', NULL, NULL, NULL, 'sovi', '0456339709', NULL, NULL, 1),
+(12, 9, 'testing 4366', NULL, NULL, NULL, 'sovi', '0456339709', NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -375,7 +391,8 @@ ALTER TABLE `tehtavat`
   ADD KEY `tila_id` (`tila_id`),
   ADD KEY `tehtavan_tyyppi_id` (`tehtavan_tyyppi_id`),
   ADD KEY `tyontekija_id` (`tyontekija_id`),
-  ADD KEY `tehtavan_tilanne_id` (`tehtavan_tilanne_id`);
+  ADD KEY `tehtavan_tilanne_id` (`tehtavan_tilanne_id`),
+  ADD KEY `kayttaja_id` (`kayttaja_id`);
 
 --
 -- Indexes for table `tilat`
@@ -425,7 +442,7 @@ ALTER TABLE `isannoitsijat`
 -- AUTO_INCREMENT for table `kayttajat`
 --
 ALTER TABLE `kayttajat`
-  MODIFY `kayttaja_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `kayttaja_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `roolit`
@@ -443,7 +460,7 @@ ALTER TABLE `taloyhtiot`
 -- AUTO_INCREMENT for table `tehtavan_tilanne`
 --
 ALTER TABLE `tehtavan_tilanne`
-  MODIFY `tehtavan_tilanne_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `tehtavan_tilanne_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tehtavan_tyyppi`
@@ -455,7 +472,7 @@ ALTER TABLE `tehtavan_tyyppi`
 -- AUTO_INCREMENT for table `tehtavat`
 --
 ALTER TABLE `tehtavat`
-  MODIFY `tehtava_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `tehtava_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tilat`
@@ -516,6 +533,7 @@ ALTER TABLE `taloyhtiot`
 ALTER TABLE `tehtavat`
   ADD CONSTRAINT `tehtavan_tyyppi_id` FOREIGN KEY (`tehtavan_tyyppi_id`) REFERENCES `tehtavan_tyyppi` (`tehtavan_tyyppi_id`),
   ADD CONSTRAINT `tehtavat_ibfk_1` FOREIGN KEY (`tehtavan_tilanne_id`) REFERENCES `tehtavan_tilanne` (`tehtavan_tilanne_id`),
+  ADD CONSTRAINT `tehtavat_ibfk_2` FOREIGN KEY (`kayttaja_id`) REFERENCES `kayttajat` (`kayttaja_id`),
   ADD CONSTRAINT `tila_id` FOREIGN KEY (`tila_id`) REFERENCES `tilat` (`tila_id`),
   ADD CONSTRAINT `tyontekija_id` FOREIGN KEY (`tyontekija_id`) REFERENCES `tyontekijat` (`tyontekija_id`);
 
