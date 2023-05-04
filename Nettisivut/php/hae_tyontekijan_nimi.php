@@ -5,8 +5,6 @@ $tunnus = $_SESSION['login_user'];
 $etunimi = "";
 $sukunimi = "";
 
-echo "Tunnus: " . $tunnus . "<br>";
-
 $query = "SELECT kayttaja_id FROM kayttajat WHERE tunnus = :tunnus";
 $data = $yhteys->prepare($query);
 $data->bindParam(':tunnus', $tunnus);

@@ -62,3 +62,4 @@ if (!isset($_SESSION)) {
 
 </div>
 </div>
+<?php include 'footer.php';?>
