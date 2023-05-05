@@ -15,12 +15,12 @@ include 'php/hae_kayttajaid.php';
         //$tehtava_id = NULL; 
         $kayttaja_id = $kayttaja_id; //arvo haetaan hae_kayttajaid.php:stä
         $kuvaus = $_REQUEST['kuvaus']; // arvo otetaan lomakkeesta
-        $taloyhtio = $_REQUEST['taloyhtio']; //???????????
-        $tila = $_REQUEST['tila']; //???????????
+        $taloyhtio_id = $_REQUEST['taloyhtio']; //???????????
+        $tila_id = $_REQUEST['tila']; //???????????
         $tehtavan_tilanne_id = 1; //vakio 1 eli käsittelemätön
         
         //lisäyskysely
-        $sql = "INSERT INTO tehtavat (kayttaja_id, kuvaus, taloyhtio, tila, tehtavan_tilanne_id) VALUES ('$kayttaja_id', '$kuvaus', '$taloyhtio', '$tila', '$tehtavan_tilanne_id')";
+        $sql = "INSERT INTO tehtavat (kayttaja_id, kuvaus, taloyhtio, tila, tehtavan_tilanne_id) VALUES ('$kayttaja_id', '$kuvaus', '$taloyhtio_id', '$tila_id', '$tehtavan_tilanne_id')";
 
         $lataa = $yhteys->prepare($sql);
 

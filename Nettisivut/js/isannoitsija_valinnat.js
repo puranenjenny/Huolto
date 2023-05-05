@@ -1,14 +1,14 @@
 $(document).ready(function() {
-    $.getJSON('../php/taloyhtiot.json', function(taloyhtiot){
-        console.log('taloyhtiot', taloyhtiot) //debugging rivi - miksi ei tulosta konsoliin?
+    $.getJSON('php/taloyhtiot.json', function(taloyhtiot){
+        //console.log('taloyhtiot', taloyhtiot) debuggausta varten
       // laitetaan taloyhtiot dropdowniin
       taloyhtiot.forEach(function(taloyhtio) {
-        $('#taloyhtio').append(`<option value="${taloyhtio.taloyhtio_id}">${taloyhtio.osoite}</option>`);
+        $('#taloyhtio').append(`<option value="${taloyhtio.taloyhtio_id}">&nbsp;${taloyhtio.osoite}&nbsp;</option>`);
       });
     });
   
-    $.getJSON('../php/tilat.json', function(tilat) {
-        console.log('tilat', tilat) //debugging rivi - miksi ei tulosta konsoliin?
+    $.getJSON('php/tilat.json', function(tilat) {
+        //console.log('tilat', tilat) debuggausta varten
       // muutetaan tila dropdownin sisältöä aina kun taloyhtio vaihtuu
       $('#taloyhtio').on('change', function() {
         var selectedTaloyhtioId = $(this).val();
@@ -18,11 +18,11 @@ $(document).ready(function() {
           tilat.filter(function(tila) {
             return tila.taloyhtio_id === parseInt(selectedTaloyhtioId);
           }).forEach(function(tila) {
-            $('#tila').append(`<option value="${tila.tila_id}">${tila.nimi}</option>`);
+            $('#tila').append(`<option value="${tila.tila_id}">&nbsp;${tila.nimi}&nbsp;</option>`);
           });
         }
       });
     });
   });
-  
+
   

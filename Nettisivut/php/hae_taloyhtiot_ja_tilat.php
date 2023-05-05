@@ -44,16 +44,14 @@ if ($result) {
 }
 
 //tulostetaan taloyhtiot ja tilat näkyviin testausta varten
-foreach ($taloyhtiot as $taloyhtio) {
-    echo "Taloyhtio ID: " . $taloyhtio['taloyhtio_id'] . " - Osoite: " . $taloyhtio['osoite'] . " - Nimi: " . $taloyhtio['nimi'] . "<br>";
-}
+// foreach ($taloyhtiot as $taloyhtio) {
+//     echo "Taloyhtio ID: " . $taloyhtio['taloyhtio_id'] . " - Osoite: " . $taloyhtio['osoite'] . " - Nimi: " . $taloyhtio['nimi'] . "<br>";
+// }
 
 
-foreach ($tilat as $tila) {
-    echo "Tila ID: " . $tila['tila_id'] . " - Nimi: " . $tila['nimi'] . " - Taloyhtio ID: " . $tila['taloyhtio_id'] . "<br>";
+// foreach ($tilat as $tila) {
+//     echo "Tila ID: " . $tila['tila_id'] . " - Nimi: " . $tila['nimi'] . " - Taloyhtio ID: " . $tila['taloyhtio_id'] . "<br>";
 
-} 
-    echo "<br>";
-    echo "Nämä on täällä vain testausta varten, jotta näkee että tiedot on haettu oikein.";
-    echo "<br>";
+// } 
+
 ?>

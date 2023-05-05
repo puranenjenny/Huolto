@@ -25,7 +25,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/header.js"></script>
     <script src="js/nappi_ylos.js"></script>
-    <script src="isannoitsija_valinnat"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/isannoitsija_valinnat.js"></script>
 
     <title>Vikailmoitus</title>
    
@@ -66,7 +67,7 @@
 
 <div class="row vali  mx-0"></div>
   <div class="row  mx-0 text-center">
-  <h3>Tervetuloa omalle sivullesi <?php echo htmlspecialchars($etunimi . " " . $sukunimi . "!"); ?></h3> <!--tulostetaan Hei etunimi sukunimi -->
+  <h3><br>Tervetuloa omalle sivullesi <?php echo htmlspecialchars($etunimi . " " . $sukunimi . "!"); ?><br><br></h3> <!--tulostetaan Hei etunimi sukunimi -->
 
   </div>
 
@@ -91,7 +92,7 @@
                         </div>
                         <div class="select-wrapper text-center">
                             <select id="taloyhtio" name="taloyhtio" class="rounded-select">
-                                <option value="#">&nbsp;taloyhtiot&nbsp;</option>
+                                <option value="#">&nbsp;Omat taloyhtiot&nbsp;</option>
                             </select>
                         </div>
                     </div>
@@ -102,7 +103,7 @@
                         </div>
                         <div class="select-wrapper text-center">
                             <select id="tila" name="tila" class="rounded-select">
-                                <option value="#">&nbsp;tilat&nbsp;</option>
+                                <option value="#">&nbsp;Tilat&nbsp;</option>
                             </select>
                         </div>
                     </div>
