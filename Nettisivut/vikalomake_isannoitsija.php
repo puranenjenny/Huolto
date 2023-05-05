@@ -1,5 +1,6 @@
 <?php include 'php/session.php';?>
 <?php include 'php/hae_isannoitsijan_nimi.php';?> 
+<?php include 'php/hae_taloyhtiot_ja_tilat.php';?>
 
 <!doctype html>
 <html>
@@ -24,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/header.js"></script>
     <script src="js/nappi_ylos.js"></script>
+    <script src="isannoitsija_valinnat"></script>
 
     <title>Vikailmoitus</title>
    
@@ -89,7 +91,7 @@
                         </div>
                         <div class="select-wrapper text-center">
                             <select id="taloyhtio" name="taloyhtio" class="rounded-select">
-                                <option value="#">&nbsp;tähän taloyhtiöt&nbsp;</option>
+                                <option value="#">&nbsp;taloyhtiot&nbsp;</option>
                             </select>
                         </div>
                     </div>
@@ -100,7 +102,7 @@
                         </div>
                         <div class="select-wrapper text-center">
                             <select id="tila" name="tila" class="rounded-select">
-                                <option value="#">&nbsp;tähän esim rappukäytävä&nbsp;</option>
+                                <option value="#">&nbsp;tilat&nbsp;</option>
                             </select>
                         </div>
                     </div>

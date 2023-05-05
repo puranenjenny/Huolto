@@ -33,11 +33,20 @@
 
 <div class="container-fluid">
    <div class="row mx-0">
-    <div class="ylapalkki d-block d-md-flex">
-        <div class="col-12 col-md-3 col-lg-2 minikuva1"><img class="puhelin minikuva" src="img/puhelin.png" alt="puhelin">09 4545 669</div>
-        <div class="col-12 col-md-3 col-lg-2"><img class="sijainti minikuva" src="img/sijainti.png" alt="sijainti">Sofiankatu 4</div>
-        <div class="col-12 col-md-3 col-lg-2"><img class="email minikuva" src="img/email.png" alt="email">toimisto@rautio.fi</div>
+   <div class="ylapalkki d-block d-md-flex">
+    <div class="col-12 col-md-3 col-lg-2 minikuva1"><img class="puhelin minikuva" src="img/puhelin.png" alt="puhelin">09 4545 669</div>
+    <div class="col-12 col-md-3 col-lg-2">
+        <a href="https://www.google.com/maps?q=Sofiankatu+4" target="_blank">
+            <img class="sijainti minikuva" src="img/sijainti.png" alt="sijainti">Sofiankatu 4
+        </a>
     </div>
+    <div class="col-12 col-md-3 col-lg-2">
+        <a href="otayhteytta.php">
+            <img class="email minikuva" src="img/email.png" alt="email">toimisto@rautio.fi
+        </a>
+    </div>
+</div>
+
     </div>
       <div class="row rowHeader d-lg-flex justify-content-center mx-0">
               <div class="col-lg-10">

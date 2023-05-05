@@ -248,6 +248,17 @@ body{
     margin-right: 0.5em;
 }
 
+.ylapalkki a {
+    color: inherit!important; 
+    text-decoration: none!important; 
+}
+
+.ylapalkki a:hover,
+.ylapalkki a:focus {
+    color: inherit!important;; 
+    outline: none!important; 
+}
+
 @media (max-width:991px){
     .minikuva{margin-left: 2em;}
 

@@ -1,4 +1,4 @@
-<?php //haetaan asukkaan nimi tietokannasta
+<?php //haetaan isännöitsijän nimi tietokannasta
 include("config.php");
 
 $tunnus = $_SESSION['login_user'];
