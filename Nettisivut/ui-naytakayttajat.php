@@ -20,7 +20,6 @@
                                 <th>Sukunimi</th>
                                 <th>Taloyhtiö</th>
                                 <th></th>
-                                <th></th>
                                 </tr>
                                      <?php
                                          include('php/kayttajat_listaus.php');
@@ -36,7 +35,6 @@
                                                      <td><?php echo $member['Sukunimi']; ?></td>
                                                      <td><?php echo $member['Taloyhtio']; ?></td>
                                                      <td><button class="btn btn-warning"><?php echo '<a class="nappi" href="valittuKayttaja.php?id='.$member['id'].'">Muokkaa</a>'; ?></button></td>
-                                                     <td><button class="btn btn-danger" onclick="saveScrollPosition()"><?php echo '<a class="nappi" href="php/poista_kayttaja.php?id='.$member['id'].'">Poista</a>'; ?></button></td>
                                                      </tr>
                                              <?php
                                              }
