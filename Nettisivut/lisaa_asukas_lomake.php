@@ -1,5 +1,5 @@
 <?php include "php/config.php";
-include "header.php";?>
+include 'header_ui_toimisto.php';?>
 
 
 <div class="connect_tausta">

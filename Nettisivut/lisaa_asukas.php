@@ -1,8 +1,7 @@
 <?php 
 session_start();
-include "php/config.php";
-include "header.php";
-?>
+include "php/config.php"; 
+include 'header_ui_toimisto.php';?>
 
 <head>
   <title>lisäys</title>
