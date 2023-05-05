@@ -1,7 +1,7 @@
 <?php 
 session_start();
-include "config.php";
-include "../header.php";
+include "php/config.php";
+include "header.php";
 ?>
 
 <head>
@@ -19,10 +19,10 @@ include "../header.php";
         $osoite = $_POST['osoite'];//taloyhtiöt taulu
         $kaupunki = $_POST['kaupunki'];//taloyhtiöt taulu
         $postinumero = $_POST['postinumero'];//taloyhtiöt taulu
-        $taloyhtio = $_POST['taloyhtio'];//taloyhtiöt taulu=nimi
+        $taloyhtio = !empty($_POST['taloyhtio']) ? $_POST['taloyhtio'] : " ";//taloyhtiöt taulu=nimi // jos ei ole tyhjä, niin tallennetaan muuttujaan, jos on tyhjä, niin tallennetaan NULL
         $tunnus = $_POST['tunnus'];//käyttäjät taulu
         $salasana = $_POST['salasana'];//käyttäjät taulu
-        $kayttaja = $_POST['kayttaja'];//käyttäjät taulu
+        $kayttaja = "Asiakas";//käyttäjät taulu
         $isannoitsija_id = null;
 
         // Aloita transaktio
@@ -55,7 +55,7 @@ include "../header.php";
         $yhteys->commit();
 
         // Näytetään onnistumisviesti
-        echo "Asukkaan lisääminen onnistui!";
+        echo "<h3>Asukkaan lisääminen onnistui!</h3>";
 
       } else {
         echo "Lomaketta ei ole lähetetty.";
@@ -69,7 +69,6 @@ include "../header.php";
     // Suljetaan tietokantayhteys
     $yhteys = null;
     ?>
-
-    <?php include "../footer.php"; ?>
   </div>
 </body>
+    <?php include "footer.php"; ?>

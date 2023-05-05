@@ -687,3 +687,19 @@ body {
     overflow-y: auto;
     width: 100%;
 }
+
+
+/*lisää asukas lomakkeen säädöt*/
+
+.input_label {
+    display: inline-block;
+    width: 150px; 
+    text-align: right;
+    margin-right: 20px;
+  }
+
+#taustakuva4 {
+    background: url(../img/helsinki11.jpg);
+    background-size: cover;
+    width: 100%;
+}

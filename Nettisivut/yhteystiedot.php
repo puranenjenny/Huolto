@@ -24,7 +24,7 @@
 
     <div class="row tyontekijat text-center mx-0">
         <div class="col-12">
-            <h3>Huoltohenkilöt:<br><br></h3>
+            <h3>Huoltohenkilöt<br><br><br></h3>
         </div>
 
         <div class="col-sm-12 col-md-6  col-xl-3"><img src="img/henkilot/henkilo1.jpg" class="img-fluid henkilo1 rounded-circle" alt="henkilo1"><br>
@@ -45,8 +45,9 @@
            <b>Huoltohenkilö</b></p></div>
            <div class="row vali mx-0"></div>
         <div class="col-12">
-            <h3>Toimisto:<br><br></h3>
+            <h3>Toimisto<br><br><br></h3>
         </div>
+        <div class="col-xl-3 "></div>
         <div class="col-sm-12 col-md-6  col-xl-3"><img src="img/henkilot/henkilo2.jpg" class="img-fluid henkilo2 rounded-circle" alt="henkilo2">
         <p><br>Sari Lahti<br>
             puh 045 344 8999<br>
@@ -55,6 +56,7 @@
         <p><br>Ville Laine<br>
             puh 0400 454 969<br>
            <b>Toimistosihteeri</b></p></div>
+           <div class="col-xl-3 "></div>
     </div>
     
     <div class="row vali mx-0"></div>
