@@ -21,8 +21,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <!--Oma CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/header.js"></script>
     <script src="js/nappi_ylos.js"></script>
+    <script src="js/tyontekijan_tilanne2.js"></script>
 
     <title>Työntekijän näkymä</title>
    
@@ -32,13 +34,20 @@
     
 
 <div class="container-fluid">
-   <div class="row mx-0">
+<div class="row mx-0">
     <div class="ylapalkki d-block d-md-flex">
         <div class="col-12 col-md-3 col-lg-2 minikuva1"><img class="puhelin minikuva" src="img/puhelin.png" alt="puhelin">09 4545 669</div>
         <div class="col-12 col-md-3 col-lg-2"><img class="sijainti minikuva" src="img/sijainti.png" alt="sijainti">Sofiankatu 4</div>
         <div class="col-12 col-md-3 col-lg-2"><img class="email minikuva" src="img/email.png" alt="email">toimisto@rautio.fi</div>
+        <div class="d-none d-lg-block col-lg-4"></div>
+        <div class="col-12 col-md-12 col-lg-2 d-flex align-items-center"> 
+        <div class="form-check form-switch">
+  <input class="form-check-input custom-switch" type="checkbox" role="switch" id="tyontekijan_tilanne_checkbox" data-kayttaja-id="<?php echo $kayttaja_id; ?>"/> <!--togglenappi onko varattu vai ei-->
+  <label class="form-check-label custom-switch" for="tyontekijan_tilanne_checkbox">VARATTU</label> 
+</div> &nbsp;&nbsp;VAPAA
+        </div>
     </div>
-    </div>
+</div>
       <div class="row rowHeader d-lg-flex justify-content-center mx-0">
               <div class="col-lg-12">
                 <nav class="navbar navbar-expand-xl mt-0 ml-0">

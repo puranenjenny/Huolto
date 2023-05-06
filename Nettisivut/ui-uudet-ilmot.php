@@ -22,7 +22,7 @@
                 <button  onclick="saveScrollPosition()" class="mx-2 btn btn-warning nappi"><a class="nappi" href="ui-kasittelyssa.php">Käsittelyssä olevat</a></button>
                 <button  class="mx-2 btn btn-warning nappi"><a class="nappi" href="lisaa_vikailmoitus.php">Lisää uusi</a></button>
             </div>
-                <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Kaikki vikailmoitukset</h3>
+                <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Uudet vikailmoitukset</h3>
                 <div class="text-center lomake_tausta lomake_vika">
                             <table class="table table-striped table-vika">
                                 <tr>
@@ -38,7 +38,7 @@
 
                                 </tr>
                                      <?php
-                                         include('php/vikailmoitukset.php');
+                                         include('php/vikailmoitukset_uudet.php');
                                          $members = json_decode($JSON_vika, true);
 
                                          if(count($members) != 0){

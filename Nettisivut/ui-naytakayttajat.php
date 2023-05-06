@@ -10,6 +10,8 @@
                 <button  onclick="saveScrollPosition()" class="mx-2 btn btn-warning nappi"><a class="nappi" href="ui-naytakayttajat.php">Näytä asukkaat</a></button>
                 <button  onclick="saveScrollPosition()" class="mx-2 btn btn-warning nappi"><a class="nappi" href="ui-naytaisannoitsijat.php">Näytä isännöitsijät</a></button>
                 <button  class="mx-2 btn btn-warning nappi"><a class="nappi" href="lisaa_asukas_lomake.php">Lisää asukas</a></button>
+                <button  class="mx-2 btn btn-warning nappi"><a class="nappi" href="#">Lisää isännöitsijä</a></button>
+                <button  class="mx-2 btn btn-warning nappi"><a class="nappi" href="#">Lisää taloyhtiö</a></button>
             </div>
             <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Asukkaat:</h3>
                 <div class="lomake_tausta lomake_vika">
@@ -19,7 +21,6 @@
                                 <th>Etunimi</th>
                                 <th>Sukunimi</th>
                                 <th>Taloyhtiö</th>
-                                <th></th>
                                 <th></th>
                                 </tr>
                                      <?php
@@ -36,7 +37,6 @@
                                                      <td><?php echo $member['Sukunimi']; ?></td>
                                                      <td><?php echo $member['Taloyhtio']; ?></td>
                                                      <td><button class="btn btn-warning"><?php echo '<a class="nappi" href="valittuKayttaja.php?id='.$member['id'].'">Muokkaa</a>'; ?></button></td>
-                                                     <td><button class="btn btn-danger" onclick="saveScrollPosition()"><?php echo '<a class="nappi" href="php/poista_kayttaja.php?id='.$member['id'].'">Poista</a>'; ?></button></td>
                                                      </tr>
                                              <?php
                                              }

@@ -18,7 +18,6 @@
                                 <th>Tila</th>
                                 <th>Rooli</th>
                                 <th></th>
-                                <th></th>
                                 </tr>
                                      <?php
                                          include('php/tyontekijalistaus.php');
@@ -35,7 +34,6 @@
                                                      <td><?php echo $member['Tila']; ?></td>
                                                      <td><?php echo $member['Rooli']; ?></td>
                                                      <td><button class="btn btn-warning"><?php echo '<a class="nappi" href="valittuTyontekija.php?id='.$member['ID'].'">Muokkaa</a>'; ?></button></td>
-                                                     <td><button class="btn btn-danger" onclick="saveScrollPosition()"><?php echo '<a class="nappi" href="php/poista_tyontekija.php?id='.$member['ID'].'">Poista</a>'; ?></button></td>
                                                      </tr>
                                              <?php
                                              }

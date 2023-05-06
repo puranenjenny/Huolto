@@ -620,12 +620,12 @@ h2{
 
 .nappi {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .nappi:hover{
-    text-decoration: underline;
-    color: white;
+    
+    color: black;
 }
 
 .napit_kayttaja {
@@ -661,7 +661,10 @@ h2{
     @media (max-width:440px){
         .table-yhteys{
             transform: scale(0.4);
-        }}    
+        }} 
+  
+        
+
 /* ota yhteytta -> insert sivun näkymä */
 
 .container4 {

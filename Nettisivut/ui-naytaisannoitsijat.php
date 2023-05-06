@@ -21,7 +21,6 @@
                                 <th>Sukunimi</th>
                                 <th>Puhelin</th>
                                 <th></th>
-                                <th></th>
                                 </tr>
                                      <?php
                                          include('php/isannoitsijat_listaus.php');
@@ -37,7 +36,6 @@
                                                      <td><?php echo $member['Sukunimi']; ?></td>
                                                      <td><?php echo $member['Puhelin']; ?></td>
                                                      <td><button class="btn btn-warning"><?php echo '<a class="nappi" href="valittuIsannoitsija.php?id='.$member['id'].'">Muokkaa</a>'; ?></button></td>
-                                                     <td><button class="btn btn-danger" onclick="saveScrollPosition()"><?php echo '<a class="nappi" href="php/poista_isannoitsija.php?id='.$member['id'].'">Poista</a>'; ?></button></td>
                                                      </tr>
                                              <?php
                                              }
