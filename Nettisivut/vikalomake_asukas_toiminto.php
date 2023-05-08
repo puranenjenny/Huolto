@@ -1,6 +1,7 @@
 <?php 
 include 'php/config.php';
 include 'php/hae_kayttajaid.php';
+include 'php/hae_asukkaan_taloyhtio.php';
 ?>
 
 <!doctype html>
@@ -66,13 +67,14 @@ include 'php/hae_kayttajaid.php';
     try{  
         $tehtava_id = NULL; 
         $kayttaja_id = $kayttaja_id; //arvo haetaan hae_kayttajaid.php:stä
+        $taloyhtio_id = $taloyhtio_id; //arvo haetaan hae_asukkaan_taloyhtio.php:stä
         $kuvaus = $_REQUEST['kuvaus']; // arvo otetaan lomakkeesta
         $yleisavaimen_kaytto = $_REQUEST['yleisavaimen_kaytto'];
         $numero = $_REQUEST['numero'];
         $tehtavan_tilanne_id = 1; //vakio 1 eli käsittelemätön
         
         //lisäyskysely
-        $sql = "INSERT INTO tehtavat (kayttaja_id, kuvaus, yleisavaimen_kaytto, numero, tehtavan_tilanne_id) VALUES ('$kayttaja_id', '$kuvaus', '$yleisavaimen_kaytto', '$numero', '$tehtavan_tilanne_id')";
+        $sql = "INSERT INTO tehtavat (kayttaja_id, kuvaus, yleisavaimen_kaytto, numero, tehtavan_tilanne_id, taloyhtio_id) VALUES ('$kayttaja_id', '$kuvaus', '$yleisavaimen_kaytto', '$numero', '$tehtavan_tilanne_id', '$taloyhtio_id')";
 
         $lataa = $yhteys->prepare($sql);
 

@@ -5,9 +5,7 @@
 require "config.php";
 
 $query = "SELECT tehtavat.tehtava_id, tehtavat.kuvaus, taloyhtiot.osoite, tehtavat.jatetty 
-            FROM (tehtavat INNER JOIN kayttajat ON tehtavat.kayttaja_id = kayttajat.kayttaja_id)
-            INNER JOIN asukkaat ON asukkaat.kayttaja_id = kayttajat.kayttaja_id
-            INNER JOIN taloyhtiot ON taloyhtiot.taloyhtio_id = asukkaat.taloyhtio_id
+            FROM tehtavat INNER JOIN taloyhtiot ON tehtavat.taloyhtio_id = taloyhtiot.taloyhtio_id
             WHERE NOT tehtavat.tehtavan_tilanne_id = '1'";
 $data = $yhteys->query($query);
 
