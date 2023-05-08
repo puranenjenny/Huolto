@@ -1,28 +1,14 @@
-$(document).ready(function() {
-    $.getJSON('php/taloyhtiot.json', function(taloyhtiot){
-        //console.log('taloyhtiot', taloyhtiot) debuggausta varten
-      // laitetaan taloyhtiot dropdowniin
-      taloyhtiot.forEach(function(taloyhtio) {
-        $('#taloyhtio').append(`<option value="${taloyhtio.taloyhtio_id}">&nbsp;${taloyhtio.osoite}&nbsp;</option>`);
+// tämä toiminto näyttää vain valitun taloyhtiön tilat
+$(document).ready(function() { 
+  $('#taloyhtio').on('change', function() {
+      var taloyhtio_id = $(this).val();
+      $('#tila option').each(function() {
+          if ($(this).data('taloyhtio-id') == taloyhtio_id || $(this).val() == '') {
+              $(this).show();
+          } else {
+              $(this).hide();
+          }
       });
-    });
-  
-    $.getJSON('php/tilat.json', function(tilat) {
-        //console.log('tilat', tilat) debuggausta varten
-      // muutetaan tila dropdownin sisältöä aina kun taloyhtio vaihtuu
-      $('#taloyhtio').on('change', function() {
-        var selectedTaloyhtioId = $(this).val();
-        $('#tila').html('<option value="#">&nbsp;tilat&nbsp;</option>');
-  
-        if (selectedTaloyhtioId !== '#') {
-          tilat.filter(function(tila) {
-            return tila.taloyhtio_id === parseInt(selectedTaloyhtioId);
-          }).forEach(function(tila) {
-            $('#tila').append(`<option value="${tila.tila_id}">&nbsp;${tila.nimi}&nbsp;</option>`);
-          });
-        }
-      });
-    });
+      $('#tila').val('');
   });
-
-  
+});

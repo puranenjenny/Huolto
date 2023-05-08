@@ -620,12 +620,12 @@ h2{
 
 .nappi {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .nappi:hover{
-    
-    color: black;
+    text-decoration: underline;
+    color: white;
 }
 
 .napit_kayttaja {
@@ -676,7 +676,6 @@ h2{
 }
 
 /*scrollauskaaos*/
-/*Näillä toimii  JEEEEEEEE <3*/
 
 html {
     height: 100%;
@@ -686,8 +685,9 @@ html {
 
 body {
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    /* overflow-x: hidden; */
+    /* overflow-y: auto; */
+    overflow-y: scroll;
     width: 100%;
 }
 

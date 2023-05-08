@@ -30,6 +30,19 @@
 
     <title>Vikailmoitus</title>
    
+    <script> // varmistetaan, että käyttäjä haluaa poistua sivulta kesken vikailmoituksen jättämisen
+    $(document).ready(function(){
+        $('form').on('submit', function(e) {
+            return;
+        });
+
+        $(window).on('beforeunload', function(e) {
+            if ($('form').find(':focus').attr('type') !== 'submit') {
+                return "Changes that you made may not be saved.";
+            }
+        });
+    });
+    </script> 
     
   </head>
   <body class="justify-content-center"> 
@@ -78,12 +91,12 @@
         <div class="row justify-content-center mx-0">
             <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Vikailmoituslomake isännöitsijöille</h3>
             <div class="text-center lomake_tausta lomake_vika">
-                <form class="form" action="lisaaVikailmoitus.php" method="POST">
+                <form class="form" action="vikalomake_isannoitsija_toiminto.php" method="POST">
                     <div class="form-group form-floating">
                         <div class="label-wrapper">
-                            <label for="vika">Viesti/vian kuvaus:</label>
+                            <label for="kuvaus">Viesti/vian kuvaus:</label>
                         </div>
-                        <textarea id="vika" type="textarea" name="vika" required class="form-control rounded-select" placeholder="Kerro ongelmasta"></textarea>
+                        <textarea id="vika" type="textarea" name="kuvaus" required class="form-control rounded-select" placeholder="Kerro ongelmasta"></textarea>
                         <br>
                     </div>
                     <div class="form-group form-floating">
@@ -91,9 +104,15 @@
                             <label for="taloyhtio">Valitse taloyhtiö:</label>
                         </div>
                         <div class="select-wrapper text-center">
-                            <select id="taloyhtio" name="taloyhtio" class="rounded-select">
-                                <option value="#">&nbsp;Omat taloyhtiot&nbsp;</option>
-                            </select>
+                        <select id="taloyhtio" name="taloyhtio" class="rounded-select">
+                            <option value="">&nbsp;Omat taloyhtiot&nbsp;</option>
+                            <?php foreach ($taloyhtiot as $taloyhtio): ?>
+                                <option value="<?php echo $taloyhtio['taloyhtio_id']; ?>">
+                                    <?php echo '&nbsp;' . $taloyhtio['nimi'] . ' - ' . $taloyhtio['osoite'] . '&nbsp;'; ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+
                         </div>
                     </div>
                     <br>
@@ -102,9 +121,15 @@
                             <label for="tila">Valitse tila:</label>
                         </div>
                         <div class="select-wrapper text-center">
-                            <select id="tila" name="tila" class="rounded-select">
-                                <option value="#">&nbsp;Tilat&nbsp;</option>
-                            </select>
+                        <select id="tila" name="tila" class="rounded-select">
+                            <option value="">&nbsp;Tilat&nbsp;</option>
+                            <?php foreach ($tilat as $tila): ?>
+                                <option value="<?php echo $tila['tila_id']; ?>" data-taloyhtio-id="<?php echo $tila['taloyhtio_id']; ?>">
+                                    <?php echo '&nbsp;' . $tila['nimi'] . '&nbsp;'; ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+
                         </div>
                     </div>
                     <br>

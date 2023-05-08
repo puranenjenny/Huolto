@@ -1,5 +1,6 @@
+// nappi joka vie sivun ylös
 
-window.onscroll = function() {scrollFunction()};
+window.addEventListener("wheel", scrollFunction);
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -13,5 +14,3 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
-

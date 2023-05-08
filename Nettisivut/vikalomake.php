@@ -22,12 +22,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <!--Oma CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/header.js"></script>
     <script src="js/nappi_ylos.js"></script>
+    
+
 
     <title>Vikailmoitus</title>
    
-    
+    <script> // varmistetaan, että käyttäjä haluaa poistua sivulta kesken vikailmoituksen jättämisen
+    $(document).ready(function(){
+        $('form').on('submit', function(e) {
+            return;
+        });
+
+        $(window).on('beforeunload', function(e) {
+            if ($('form').find(':focus').attr('type') !== 'submit') {
+                return "Changes that you made may not be saved.";
+            }
+        });
+    });
+    </script> 
+
   </head>
   <body class="justify-content-center"> 
     
