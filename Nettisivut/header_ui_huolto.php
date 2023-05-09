@@ -1,4 +1,6 @@
-<?php include 'php/session.php';?>
+<?php include 'php/session.php';
+include 'php/config.php';
+include 'php/hae_kayttajaid.php';?>
 
 <!doctype html>
 <html>
@@ -24,11 +26,28 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/header.js"></script>
     <script src="js/nappi_ylos.js"></script>
-    <script src="js/tyontekijan_tilanne2.js"></script>
+    <script src="js/tyontekijan_tilanne.js"></script>
 
     <title>Työntekijän näkymä</title>
    
-    
+
+<?php
+// haetaan työntekijän tilanne kirjautuneelta käyttäjältä
+$tyontekijan_tilanne_query = $yhteys->prepare("SELECT tyontekijan_tilanne_id FROM tyontekijat WHERE kayttaja_id = :kayttaja_id");
+$tyontekijan_tilanne_query->bindParam(':kayttaja_id', $kayttaja_id);
+$tyontekijan_tilanne_query->execute();
+$tyontekijan_tilanne_result = $tyontekijan_tilanne_query->fetch(PDO::FETCH_ASSOC);
+
+if ($tyontekijan_tilanne_result) { // jos työntekijän tilanne löytyy
+    $tyontekijan_tilanne = $tyontekijan_tilanne_result['tyontekijan_tilanne_id']; // asetetaan se muuttujaan
+} else {
+    // Jos työntekijän tilannetta ei löydy, asetetaan se oletuksena vapaaksi
+    $tyontekijan_tilanne = 1;
+}
+
+// määritetään napin teksti työntekijän tilan mukaan
+$button_text = ($tyontekijan_tilanne == 1) ? "VAPAA" : "VARATTU";
+?>
   </head>
   <body class="justify-content-center"> 
     
@@ -41,10 +60,12 @@
         <div class="col-12 col-md-3 col-lg-2"><img class="email minikuva" src="img/email.png" alt="email">toimisto@rautio.fi</div>
         <div class="d-none d-lg-block col-lg-4"></div>
         <div class="col-12 col-md-12 col-lg-2 d-flex align-items-center"> 
-        <div class="form-check form-switch">
-  <input class="form-check-input custom-switch" type="checkbox" role="switch" id="tyontekijan_tilanne_checkbox" data-kayttaja-id="<?php echo $kayttaja_id; ?>"/> <!--togglenappi onko varattu vai ei-->
-  <label class="form-check-label custom-switch" for="tyontekijan_tilanne_checkbox">VARATTU</label> 
-</div> &nbsp;&nbsp;VAPAA
+          <div> <!-- Työntekijän tilanne -nappi -->
+          <button class="btn btn2 btn-info" id="tyontekijan_tilanne_button" data-kayttaja-id="<b><?php echo$kayttaja_id; ?></b>"><!-- data-kayttaja-id on käyttäjän id, jota käytetään ajax-kutsussa -->
+          <?php echo $button_text; ?>
+          </button>
+
+          </div>
         </div>
     </div>
 </div>

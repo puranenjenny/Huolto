@@ -197,7 +197,7 @@ body{
     background-color: #00b6c5;
     padding: 1.4em;
     margin-right: 0.2em;
-    border-radius: 0.5em; /*pyöristin vähä reunoja t.jenny*/
+    border-radius: 0.5em;
     }
         
 .logo {
@@ -692,6 +692,7 @@ h2{
 
 .btn2 {
     color: white!important;
+    font-weight: bold;
 } 
 
 .container5 table {
