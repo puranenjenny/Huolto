@@ -13,7 +13,7 @@
 <div class="row vali mx-0"></div>
 
 <div class="bg-cover text-white d-flex align-items-center">
-    <div class="container1 lomake_tausta3">
+    <div class="container5 lomake_tausta3">
         <div class="row justify-content-center mx-0">
             <h3>Avoimet tiketit</h3><br><br><br></div>
                 <div class="row justify-content-center mx-0">

@@ -2,13 +2,21 @@
 
 require "config.php";
 
-$query = "SELECT t.tehtava_id, tt.tehtavan_tilanne, t.kuvaus, CONCAT(a.etunimi, ' ', a.sukunimi) AS Jattaja, th.osoite, a.rappu, t.yleisavaimen_kaytto, t.numero, ti.nimi AS tilan_nimi, ty.etunimi AS tyontekijan_etunimi, ty.sukunimi AS tyontekijan_sukunimi
+$query = "SELECT t.tehtava_id, tt.tehtavan_tilanne, t.kuvaus, CONCAT(u.etunimi, ' ', u.sukunimi) AS Jattaja, th.osoite, a.rappu, t.yleisavaimen_kaytto, t.numero, ti.nimi AS tilan_nimi, ty.etunimi AS tyontekijan_etunimi, ty.sukunimi AS tyontekijan_sukunimi
           FROM tehtavat t
-          JOIN asukkaat a ON t.kayttaja_id = a.kayttaja_id
+          JOIN kayttajat k ON t.kayttaja_id = k.kayttaja_id
+          JOIN (
+                SELECT asukas_id AS id, kayttaja_id, etunimi, sukunimi FROM asukkaat
+                UNION ALL
+                SELECT tyontekija_id AS id, kayttaja_id, etunimi, sukunimi FROM tyontekijat
+                UNION ALL
+                SELECT isannoitsija_id AS id, kayttaja_id, etunimi, sukunimi FROM isannoitsijat
+               ) u ON k.kayttaja_id = u.kayttaja_id
           JOIN taloyhtiot th ON t.taloyhtio_id = th.taloyhtio_id
           JOIN tehtavan_tilanne tt ON t.tehtavan_tilanne_id = tt.tehtavan_tilanne_id
           LEFT JOIN tilat ti ON t.tila_id = ti.tila_id
           LEFT JOIN tyontekijat ty ON t.tyontekija_id = ty.tyontekija_id
+          LEFT JOIN asukkaat a ON u.kayttaja_id = a.kayttaja_id
           WHERE t.tehtavan_tilanne_id <> 4";
 
 $data = $yhteys->query($query);
