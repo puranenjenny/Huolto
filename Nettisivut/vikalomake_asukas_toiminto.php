@@ -65,7 +65,6 @@ include 'php/hae_asukkaan_taloyhtio.php';
   <div class="text-center container4 center">
    <?php 
     try{  
-        $tehtava_id = NULL; 
         $kayttaja_id = $kayttaja_id; //arvo haetaan hae_kayttajaid.php:stä
         $taloyhtio_id = $taloyhtio_id; //arvo haetaan hae_asukkaan_taloyhtio.php:stä
         $kuvaus = $_REQUEST['kuvaus']; // arvo otetaan lomakkeesta

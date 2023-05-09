@@ -36,7 +36,7 @@ include 'header_ui_toimisto.php';?>
   <input type="password" id="salasana" name="salasana"></div><br>
 
   <div class="form-group">
-    <label class="input_label2" for="taloyhtio" require>Valitse taloyhtiö:</label>
+    <label class="input_label" for="taloyhtio" require>Valitse taloyhtiö:</label>
     <select id="taloyhtio" name="taloyhtio">
         <option value="">&nbsp;Taloyhtiö&nbsp;</option>
         <?php foreach ($taloyhtiot as $taloyhtio): ?>

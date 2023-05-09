@@ -97,7 +97,7 @@
                 <form class="form" action="vikalomake_asukas_toiminto.php" method="POST">
                 <div class="form-group">
                     <label for="kuvaus">Viesti/vian kuvaus</label>
-                    <textarea id="kuvaus" type="textarea" name="kuvaus" required class="form-control" placeholder="Kerro ongelmasta"></textarea>
+                    <textarea id="kuvaus" type="textarea" name="kuvaus" required class="form-control rounded-select" placeholder="Kerro ongelmasta"></textarea>
                     <br>
                 </div>
                 <div class="form-group form-floating">

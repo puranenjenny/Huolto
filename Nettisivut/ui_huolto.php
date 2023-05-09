@@ -12,36 +12,46 @@
 
 <div class="row vali mx-0"></div>
 
-    <div class="bg-cover text-white d-flex align-items-center">
-        <div class="container1">
-            <div class="row justify-content-center mx-0">
-                <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Omat työtehtävät</h3>
-                <div class="text-center lomake_tausta lomake_vika">
-                            <table class="table table-striped table-vika">
+<div class="bg-cover text-white d-flex align-items-center">
+    <div class="container1 lomake_tausta3">
+        <div class="row justify-content-center mx-0">
+            <h3>Avoimet tiketit</h3><br><br><br></div>
+                <div class="row justify-content-center mx-0">
+                 <div class="col-lg-12 text-center">
+                    
+                            <table class="table table-striped">
                                 <tr>
-                                <th>ID</th>
+                                <th>ID</th> 
+                                <th>Tila</th>
                                 <th>Viankuvaus</th>
-                                <!-- <th>Tila</th>
-                                <th>Osoite</th>
                                 <th>Ilmoittaja</th>
-                                <th>Puh.nro</th> -->
-                                <th></th>
+                                <th>Osoite</th>
+                                <th>Rappu / Tila</th>
+                                <th>Yleisavain</th>
+                                <th>Puh. numero</th>
+                                <th>Työntekijä</th>
                                 <th></th>
                                 </tr>
                                      <?php
-                                         include('php/vikailmoitukset.php');
+                                         include('php/vikailmoitukset2.php');
                                          $members = json_decode($JSON_vika, true);
 
                                          if(count($members) != 0){
                                          foreach($members as $key){
                                              foreach($key as $member){
                                              ?>
-                                                     <tr>
-                                                     <td><?php echo $member['ID']; ?></td>
-                                                     <td><?php echo $member['Viankuvaus']; ?></td>
-                                                     <td><a href="#" class="btn btn-warning">Muokkaa</a></td>
-                                                     <td><a href="#" class="btn btn-danger">Poista</a></td>
-                                                     </tr>
+                                                <tr>
+                                                <td><?php echo $member['ID']; ?></td>
+                                                <td><?php echo $member['Tilanne']; ?></td>
+                                                <td><?php echo $member['Viankuvaus']; ?></td>
+                                                <td><?php echo $member['Jattaja']; ?></td>
+                                                <td><?php echo $member['Osoite']; ?></td>
+                                                <td><?php echo $member['Tila']; ?></td>
+                                                <td><?php echo $member['Yleisavaimen_kaytto']; ?></td>
+                                                <td><?php echo $member['Numero']; ?></td>
+                                                <td><?php echo $member['Tyontekija']; ?></td>
+                                                <td><a href="#" class="btn btn-warning">Muokkaa</a></td>  
+                                                </tr>
                                              <?php
                                              }
                                          }
@@ -49,14 +59,24 @@
                                     ?>
 
                             </table>
+                 </div>
+                </div>
                 </div>
             </div>
         </div>
     </div>
+                <div class="col-lg-4 lomake_tausta3">
+                <div class="row justify-content-center mx-0">
+            <h3>Omat tehtävät</h3><br><br><br></div>
+                <div class="row justify-content-center mx-0"> </div>
+
+                </div>
+
+
+<div class="row vali mx-0"></div>
 
 
 
-</div>
-</div>
+
 
 <?php include 'footer.php';?>

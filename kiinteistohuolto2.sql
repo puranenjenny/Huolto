@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 09, 2023 at 12:27 PM
+-- Generation Time: May 09, 2023 at 03:49 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -41,11 +41,11 @@ CREATE TABLE `asukkaat` (
 --
 
 INSERT INTO `asukkaat` (`asukas_id`, `etunimi`, `sukunimi`, `kayttaja_id`, `taloyhtio_id`, `rappu`) VALUES
-(5, 'Mira', 'Hosio', 5, 4, NULL),
-(7, 'Jenny', 'Puranen', 5, 3, NULL),
-(8, 'Diego', 'Puranen', 8, 5, NULL),
-(9, 'Rollo', 'Puranen', 9, 5, NULL),
-(10, 'Antti', 'Salminen', 10, 4, NULL),
+(5, 'Mira', 'Hosio', 5, 4, 'C 4'),
+(7, 'Jenny', 'Puranen', 5, 3, 'D 30'),
+(8, 'Diego', 'Puranen', 8, 5, 'A 12'),
+(9, 'Rollo', 'Puranen', 9, 5, 'A 12'),
+(10, 'Antti', 'Salminen', 10, 4, 'B 3'),
 (11, 'Antti', 'Kortelainen', 21, 6, NULL),
 (13, 'Maija', 'Mehilainen', 26, 20, NULL),
 (14, 'Kerttu', 'Mehilainen', 27, 7, NULL),
@@ -230,7 +230,7 @@ INSERT INTO `tehtavan_tyyppi` (`tehtavan_tyyppi_id`, `nimi`) VALUES
 CREATE TABLE `tehtavat` (
   `tehtava_id` int(11) NOT NULL,
   `kayttaja_id` int(11) NOT NULL,
-  `kuvaus` longtext DEFAULT NULL,
+  `kuvaus` varchar(200) DEFAULT NULL,
   `korjaustoimenpide` longtext DEFAULT NULL,
   `tila` varchar(45) DEFAULT NULL,
   `taloyhtio_id` int(11) DEFAULT NULL,
@@ -248,18 +248,19 @@ CREATE TABLE `tehtavat` (
 --
 
 INSERT INTO `tehtavat` (`tehtava_id`, `kayttaja_id`, `kuvaus`, `korjaustoimenpide`, `tila`, `taloyhtio_id`, `tila_id`, `yleisavaimen_kaytto`, `numero`, `tehtavan_tyyppi_id`, `tyontekija_id`, `tehtavan_tilanne_id`, `jatetty`) VALUES
-(2, 1, 'testitestitesti toimiiko.', 'testitestitesti toimiiko.', NULL, NULL, 5, '1', '', 2, NULL, 1, '2023-05-08 14:34:10'),
-(3, 9, 'Toimiiko uudet muunnokset??', NULL, NULL, NULL, NULL, 'sovi', '+358456339709', NULL, NULL, 1, '2023-05-08 14:34:10'),
-(11, 9, 'testing 4366', NULL, NULL, NULL, NULL, 'sovi', '0456339709', NULL, NULL, 1, '2023-05-08 14:34:10'),
-(13, 9, 'sefujesf', NULL, NULL, NULL, NULL, 'ei', '387347843', NULL, NULL, 1, '2023-05-08 14:34:10'),
-(14, 9, 'maijalla oli karitsa', NULL, NULL, NULL, NULL, 'kyllä', '35353543', NULL, NULL, 1, '2023-05-08 14:34:10'),
-(19, 22, 'lamppu palanut', NULL, NULL, 6, 13, '0', '', NULL, NULL, 1, '2023-05-08 14:34:10'),
-(20, 22, 'Ikkunan tiivisteet vuotaa', NULL, NULL, 3, 9, '0', '', NULL, NULL, 1, '2023-05-08 14:34:10'),
-(21, 9, 'pistorasia ei toimi', NULL, NULL, NULL, NULL, 'kyllä', '+34585438', NULL, NULL, 1, '2023-05-08 14:34:10'),
-(22, 9, 'pistorasia ei toimi', NULL, NULL, NULL, NULL, 'kyllä', '+34585438', NULL, NULL, 1, '2023-05-08 14:34:10'),
-(23, 9, 'pistorasia ei toimi', NULL, NULL, NULL, NULL, 'kyllä', '+34585438', NULL, NULL, 1, '2023-05-08 14:34:10'),
-(24, 9, 'pistorasia ei toimi', NULL, NULL, NULL, NULL, 'kyllä', '+34585438', NULL, NULL, 1, '2023-05-08 14:34:10'),
-(25, 22, 'moikkeli', NULL, NULL, 3, 9, '0', '', NULL, NULL, 1, '2023-05-08 14:49:12');
+(3, 9, 'Toimiiko uudet muunnokset??', NULL, NULL, 4, NULL, 'sovi', '+358456339709', NULL, NULL, 1, '2023-05-08 14:34:10'),
+(11, 9, 'testing 4366', NULL, NULL, 20, 8, 'sovi', '0456339709', NULL, NULL, 1, '2023-05-08 14:34:10'),
+(13, 9, 'sefujesf', NULL, NULL, 20, NULL, 'ei', '387347843', NULL, NULL, 1, '2023-05-08 14:34:10'),
+(14, 9, 'maijalla oli karitsa', NULL, NULL, 19, NULL, 'kyllä', '35353543', NULL, NULL, 1, '2023-05-08 14:34:10'),
+(19, 22, 'lamppu palanut', NULL, NULL, 6, 13, 'ei', '3243432443', NULL, NULL, 3, '2023-05-08 14:34:10'),
+(20, 22, 'Ikkunan tiivisteet vuotaa', NULL, NULL, 3, 9, 'sovi', '3333', NULL, 6, 1, '2023-05-08 14:34:10'),
+(21, 9, 'pistorasia ei toimi', NULL, NULL, 6, 11, 'kyllä', '+34585438', NULL, 7, 2, '2023-05-08 14:34:10'),
+(25, 22, 'moikkeli', NULL, NULL, 3, 9, 'ei', '4656464', NULL, NULL, 1, '2023-05-08 14:49:12'),
+(26, 10, 'Pattereita ei saa säädettyä lämpimämmälle.', NULL, NULL, 4, NULL, 'ei', '+358456339709', NULL, 4, 2, '2023-05-09 12:26:59'),
+(27, 21, 'Asunnossa on liian kuuma', NULL, NULL, 6, NULL, 'sovi', '0400454969', NULL, NULL, 1, '2023-05-09 12:28:03'),
+(28, 22, 'Hiekkaa on rapun edessä vielä vaikka kuinka paljon vaikka lakaisuauto kävi jo!', NULL, NULL, 3, 6, 'ei', '', NULL, NULL, 1, '2023-05-09 12:30:23'),
+(30, 22, 'Punttisali haisee, voitteko desinfioida kunnolla', NULL, NULL, 6, 13, 'kyllä', '0401234566', NULL, NULL, 1, '2023-05-09 12:41:43'),
+(31, 22, 'Nurmikko pitäisi ajaa', NULL, NULL, 3, 10, 'kyllä', '0401234566', NULL, NULL, 1, '2023-05-09 12:53:29');
 
 -- --------------------------------------------------------
 
@@ -505,7 +506,7 @@ ALTER TABLE `tehtavan_tyyppi`
 -- AUTO_INCREMENT for table `tehtavat`
 --
 ALTER TABLE `tehtavat`
-  MODIFY `tehtava_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `tehtava_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `tilat`
