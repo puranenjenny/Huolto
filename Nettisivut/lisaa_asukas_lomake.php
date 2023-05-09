@@ -1,5 +1,6 @@
 <?php include "php/config.php";
 include 'header_ui_toimisto.php';?>
+<?php include 'php/hae_taloyhtiot.php';?>
 
 
 <div class="connect_tausta">
@@ -37,8 +38,18 @@ include 'header_ui_toimisto.php';?>
   <div><label class="input_label" for="postinumero" require>Postinumero:</label>
   <input type="text" id="postinumero" name="postinumero"></div><br>
 
-  <div><label class="input_label" for="taloyhtio" >Taloyhtiö:</label>
-  <input type="text" id="taloyhtio" name="taloyhtio" placeholder="ei pakollinen"></div><br>
+  <div class="form-group">
+    <label class="input_label2" for="taloyhtio">Valitse taloyhtiö:</label>
+    <select id="taloyhtio" name="taloyhtio">
+        <option value="">&nbsp;Taloyhtiö&nbsp;</option>
+        <?php foreach ($taloyhtiot as $taloyhtio): ?>
+            <option value="<?php echo $taloyhtio['taloyhtio_id']; ?>">
+                <?php echo '&nbsp;' . $taloyhtio['nimi'] . '&nbsp;'; ?>
+            </option>
+        <?php endforeach; ?>
+    </select>
+  </div>
+  <br>
 
   <div><label class="input_label" for="tunnus" require>Käyttäjätunnus:</label>
   <input type="text" id="tunnus" name="tunnus"></div><br>

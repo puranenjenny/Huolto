@@ -18,7 +18,7 @@ include 'header_ui_toimisto.php';?>
         $osoite = $_POST['osoite'];//taloyhtiöt taulu
         $kaupunki = $_POST['kaupunki'];//taloyhtiöt taulu
         $postinumero = $_POST['postinumero'];//taloyhtiöt taulu
-        $taloyhtio = !empty($_POST['taloyhtio']) ? $_POST['taloyhtio'] : " ";//taloyhtiöt taulu=nimi // jos ei ole tyhjä, niin tallennetaan muuttujaan, jos on tyhjä, niin tallennetaan NULL
+        $taloyhtio = $_POST['taloyhtio'];//taloyhtiöt taulu=nimi taloyhtiöt tauluun
         $tunnus = $_POST['tunnus'];//käyttäjät taulu
         $salasana = $_POST['salasana'];//käyttäjät taulu
         $kayttaja = "Asiakas";//käyttäjät taulu
@@ -44,7 +44,7 @@ include 'header_ui_toimisto.php';?>
         $asukas_id = $yhteys->query("SELECT LAST_INSERT_ID()")->fetchColumn();
 
         // Lisätään uusi taloyhtiö tietokantaan
-        $lisaa_taloyhtio = $yhteys->prepare("INSERT INTO taloyhtiot (osoite, kaupunki, postinumero, nimi, kayttaja_id) VALUES (?, ?, ?, ?, ?)");
+        $lisaa_taloyhtio = $yhteys->prepare("INSERT INTO taloyhtiot (osoite, kaupunki, postinumero, taloyhtio_id, kayttaja_id) VALUES (?, ?, ?, ?, ?)");
         $lisaa_taloyhtio->execute([$osoite, $kaupunki, $postinumero, $taloyhtio, $kayttaja_id]);
         
         $taloyhtio_id = $yhteys->query("SELECT LAST_INSERT_ID()")->fetchColumn();
