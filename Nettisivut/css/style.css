@@ -707,6 +707,14 @@ body {
     width: 100%;
 }
 
+.input_label2 {
+    display: inline-block;
+    width: 150px; 
+    text-align: right;
+    margin-right: 20px;
+   
+}
+
 /* muokkaa tehtävää säädöt*/
 
 .lomake_tehtava{
