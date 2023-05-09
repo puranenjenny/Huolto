@@ -24,22 +24,19 @@ include 'header_ui_toimisto.php';?>
       <form class="form" action="lisaa_asukas.php" method="POST">
       <div class="form-group">
   <div><label class="input_label" for="etunimi" require>Etunimi:</label>
-  <input type="text" id="etunimi" name="etunimi"></div><br>
+  <input type="text" id="etunimi" name="etunimi" placeholder="Matti"></div><br>
  
   <div><label class="input_label" for="sukunimi" require>Sukunimi:</label>
-  <input type="text" id="sukunimi" name="sukunimi"></div><br>
+  <input type="text" id="sukunimi" name="sukunimi" placeholder="Meikäläinen"></div><br>
  
-  <div><label class="input_label" for="osoite" require>Osoite:</label>
-  <input type="text" id="osoite" name="osoite"></div><br>
+  <div><label class="input_label" for="tunnus" require>Käyttäjätunnus:</label>
+  <input type="text" id="tunnus" name="tunnus" placeholder="mmeikalainen"></div><br>
  
-  <div><label class="input_label" for="kaupunki" require>Kaupunki:</label>
-  <input type="text" id="kaupunki" name="kaupunki"></div><br>
-
-  <div><label class="input_label" for="postinumero" require>Postinumero:</label>
-  <input type="text" id="postinumero" name="postinumero"></div><br>
+  <div><label class="input_label" for="salasana" require>Salasana:</label>
+  <input type="password" id="salasana" name="salasana"></div><br>
 
   <div class="form-group">
-    <label class="input_label2" for="taloyhtio">Valitse taloyhtiö:</label>
+    <label class="input_label2" for="taloyhtio" require>Valitse taloyhtiö:</label>
     <select id="taloyhtio" name="taloyhtio">
         <option value="">&nbsp;Taloyhtiö&nbsp;</option>
         <?php foreach ($taloyhtiot as $taloyhtio): ?>
@@ -51,11 +48,10 @@ include 'header_ui_toimisto.php';?>
   </div>
   <br>
 
-  <div><label class="input_label" for="tunnus" require>Käyttäjätunnus:</label>
-  <input type="text" id="tunnus" name="tunnus"></div><br>
- 
-  <div><label class="input_label" for="salasana" require>Salasana:</label>
-  <input type="password" id="salasana" name="salasana"></div><br>
+  <div><label class="input_label" for="rappu" >Rappu ja numero:</label>
+  <input type="text" id="rappu" name="rappu" placeholder=" A 20 "></div><br>
+
+
 
   <div><button type="submit" class="btn btn1" name="submit" value="submit">Lähetä</button></div>
 </form>
@@ -66,7 +62,7 @@ include 'header_ui_toimisto.php';?>
 </div>
 </div>
 <div class="row kommentti2 text-center  mx-0">
-    <h3>Muistithan sulkea kahvinkeittimen! ☺</h3>
+    <h3>Muistathan sulkea toimiston valot lähtiessäsi! ☺</h3>
 </div> 
 
 

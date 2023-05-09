@@ -4,7 +4,7 @@ include "php/config.php";
 include 'header_ui_toimisto.php';?>
 
 <head>
-  <title>asukkaan lisäys</title>
+  <title>Asukkaan lisäys</title>
 </head>
 
 <body>
@@ -15,14 +15,11 @@ include 'header_ui_toimisto.php';?>
         // Otetaan lomakkeelta saadut tiedot talteen
         $etunimi = $_POST['etunimi'];//asukkaat taulu
         $sukunimi = $_POST['sukunimi'];//asukkaat taulu
-        $osoite = $_POST['osoite'];//taloyhtiöt taulu
-        $kaupunki = $_POST['kaupunki'];//taloyhtiöt taulu
-        $postinumero = $_POST['postinumero'];//taloyhtiöt taulu
-        $taloyhtio = !($_POST['taloyhtio']) ? $_POST['taloyhtio'] : " ";//taloyhtiöt taulu=nimi // jos ei ole tyhjä, niin tallennetaan muuttujaan, jos on tyhjä, niin tallennetaan NULL
         $tunnus = $_POST['tunnus'];//käyttäjät taulu
         $salasana = $_POST['salasana'];//käyttäjät taulu
-        $kayttaja = "Asiakas";//käyttäjät taulu
-        $isannoitsija_id = null;
+        $kayttaja = "Asukas";//käyttäjät taulu
+        $taloyhtio = $_POST['taloyhtio'];//asukkaat taulu
+        $rappu = $_POST['rappu'];//asukkaat taulu
 
         // Aloita transaktio
         $yhteys->beginTransaction();
@@ -37,17 +34,11 @@ include 'header_ui_toimisto.php';?>
          $kayttaja_id = $yhteys->query("SELECT LAST_INSERT_ID()")->fetchColumn();
 
         // Lisätään uusi asukas tietokantaan
-        $lisaa_asukas = $yhteys->prepare("INSERT INTO asukkaat (etunimi, sukunimi, kayttaja_id) VALUES (?, ?, ?)");
-        $lisaa_asukas->execute([$etunimi, $sukunimi, $kayttaja_id]);
+        $lisaa_asukas = $yhteys->prepare("INSERT INTO asukkaat (etunimi, sukunimi, kayttaja_id, taloyhtio_id, rappu) VALUES (?, ?, ?, ?, ?)");
+        $lisaa_asukas->execute([$etunimi, $sukunimi, $kayttaja_id, $taloyhtio, $rappu]);
 
          // Haetaan uuden asukkaan id
         $asukas_id = $yhteys->query("SELECT LAST_INSERT_ID()")->fetchColumn();
-
-        // Lisätään uusi taloyhtiö tietokantaan
-        $lisaa_taloyhtio = $yhteys->prepare("INSERT INTO taloyhtiot (osoite, kaupunki, postinumero, nimi, kayttaja_id) VALUES (?, ?, ?, ?, ?)");
-        $lisaa_taloyhtio->execute([$osoite, $kaupunki, $postinumero, $taloyhtio, $kayttaja_id]);
-        
-        $taloyhtio_id = $yhteys->query("SELECT LAST_INSERT_ID()")->fetchColumn();
        
 
         // Sitoudutaan muutoksiin tietokannassa
