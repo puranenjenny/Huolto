@@ -17,7 +17,8 @@ $query = "SELECT t.tehtava_id, tt.tehtavan_tilanne, t.kuvaus, CONCAT(u.etunimi, 
           LEFT JOIN tilat ti ON t.tila_id = ti.tila_id
           LEFT JOIN tyontekijat ty ON t.tyontekija_id = ty.tyontekija_id
           LEFT JOIN asukkaat a ON u.kayttaja_id = a.kayttaja_id
-          WHERE t.tehtavan_tilanne_id <> 4";
+          WHERE t.tehtavan_tilanne_id <> 4 
+          ORDER BY t.tehtava_id DESC";
 
 $data = $yhteys->query($query);
 
