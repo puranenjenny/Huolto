@@ -26,7 +26,7 @@ if(isset($_POST['tallenna'])){
             }
         }
 
-        header("location:../ui_toimisto.php");
+        header("location:../ui-uudet-ilmot.php");
     exit;
 }
 
