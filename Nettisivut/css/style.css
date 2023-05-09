@@ -671,9 +671,19 @@ h2{
     color: white;
     text-align: center;
     height: auto;
-    width: auto;
+    width: 100%;
     font-family: 'Poppins', sans-serif;
-    margin-left: 10px;
+    margin: 20px;
+}
+
+.container5 {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+}
+
+.container5 th td {
+    color: white;
 }
 
 /* .table-vika {
@@ -759,8 +769,7 @@ html {
 body {
     height: 100%;
     /* overflow-x: hidden; */
-    /* overflow-y: auto; */
-    overflow-y: scroll;
+    overflow-y: auto;
     width: 100%;
 }
 
