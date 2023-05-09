@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 09.05.2023 klo 17:14
+-- Generation Time: 09.05.2023 klo 17:18
 -- Palvelimen versio: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
