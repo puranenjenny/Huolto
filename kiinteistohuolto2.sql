@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 08.05.2023 klo 22:47
--- Palvelimen versio: 10.4.27-MariaDB
+-- Generation Time: May 09, 2023 at 12:27 PM
+-- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Rakenne taululle `asukkaat`
+-- Table structure for table `asukkaat`
 --
 
 CREATE TABLE `asukkaat` (
@@ -32,30 +32,31 @@ CREATE TABLE `asukkaat` (
   `etunimi` varchar(45) DEFAULT NULL,
   `sukunimi` varchar(45) DEFAULT NULL,
   `kayttaja_id` int(11) NOT NULL,
-  `taloyhtio_id` int(11) DEFAULT NULL
+  `taloyhtio_id` int(11) DEFAULT NULL,
+  `rappu` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Vedos taulusta `asukkaat`
+-- Dumping data for table `asukkaat`
 --
 
-INSERT INTO `asukkaat` (`asukas_id`, `etunimi`, `sukunimi`, `kayttaja_id`, `taloyhtio_id`) VALUES
-(5, 'Mira', 'Hosio', 5, 4),
-(7, 'Jenny', 'Puranen', 5, 3),
-(8, 'Diego', 'Puranen', 8, 5),
-(9, 'Rollo', 'Puranen', 9, 5),
-(10, 'Antti', 'Salminen', 10, 4),
-(11, 'Antti', 'Kortelainen', 21, 6),
-(13, 'Maija', 'Mehilainen', 26, 12),
-(14, 'Kerttu', 'Mehilainen', 27, 12),
-(19, 'Tuuli', 'Tähtinen', 1, 12),
-(20, 'Henna', 'Kortelainen', 31, NULL),
-(21, 'Pera', 'Hämärä', 32, NULL);
+INSERT INTO `asukkaat` (`asukas_id`, `etunimi`, `sukunimi`, `kayttaja_id`, `taloyhtio_id`, `rappu`) VALUES
+(5, 'Mira', 'Hosio', 5, 4, NULL),
+(7, 'Jenny', 'Puranen', 5, 3, NULL),
+(8, 'Diego', 'Puranen', 8, 5, NULL),
+(9, 'Rollo', 'Puranen', 9, 5, NULL),
+(10, 'Antti', 'Salminen', 10, 4, NULL),
+(11, 'Antti', 'Kortelainen', 21, 6, NULL),
+(13, 'Maija', 'Mehilainen', 26, 20, NULL),
+(14, 'Kerttu', 'Mehilainen', 27, 7, NULL),
+(19, 'Tuuli', 'Tähtinen', 1, 20, 'B 30'),
+(20, 'Jenna', 'Makkara', 31, 13, 'C 1'),
+(24, 'Tuuli', 'Tähtinen', 36, 5, 'A 40');
 
 -- --------------------------------------------------------
 
 --
--- Rakenne taululle `isannoitsijat`
+-- Table structure for table `isannoitsijat`
 --
 
 CREATE TABLE `isannoitsijat` (
@@ -68,7 +69,7 @@ CREATE TABLE `isannoitsijat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Vedos taulusta `isannoitsijat`
+-- Dumping data for table `isannoitsijat`
 --
 
 INSERT INTO `isannoitsijat` (`isannoitsija_id`, `etunimi`, `sukunimi`, `email`, `puhelin`, `kayttaja_id`) VALUES
@@ -76,12 +77,13 @@ INSERT INTO `isannoitsijat` (`isannoitsija_id`, `etunimi`, `sukunimi`, `email`, 
 (5, 'Kari', 'Jaartinen', 'kari.jaartinen@isanta.fi', '050 467 832', 12),
 (6, 'Tuula', 'Toimistotäti', 'tuula.toimisto@jotain.fi', '044 456789', 13),
 (7, 'Hannu', 'Hosari', 'hannu.hosari@jotain.fi', '045 2381892', 14),
-(8, 'Antti', 'Kortelainen', 'antti@jotain.fi', '0401234566', 22);
+(8, 'Antti', 'Kortelainen', 'antti@jotain.fi', '0401234566', 22),
+(9, 'Ei isännöitsijää', NULL, NULL, NULL, 4);
 
 -- --------------------------------------------------------
 
 --
--- Rakenne taululle `kayttajat`
+-- Table structure for table `kayttajat`
 --
 
 CREATE TABLE `kayttajat` (
@@ -93,7 +95,7 @@ CREATE TABLE `kayttajat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Vedos taulusta `kayttajat`
+-- Dumping data for table `kayttajat`
 --
 
 INSERT INTO `kayttajat` (`kayttaja_id`, `tunnus`, `salasana`, `kayttaja`, `rooli_id`) VALUES
@@ -121,16 +123,16 @@ INSERT INTO `kayttajat` (`kayttaja_id`, `tunnus`, `salasana`, `kayttaja`, `rooli
 (24, 'akh', 'akh', 'huolto', 2),
 (26, 'mmehilainen', 'mmehilainen', 'Asiakas', 4),
 (27, 'mmehilainen', 'mmehilainen', 'Asiakas', 4),
-(28, 'mmehilainen', 'mmehilainen', 'Asiakas', 4),
-(29, 'mmehilainen', 'mmehilainen', 'Asiakas', 4),
 (30, 'mmehilainen', 'mmehilainen', 'Asiakas', 4),
-(31, 'henu', 'henu', 'Asiakas', 4),
-(32, 'pera', 'pera', 'Asiakas', 4);
+(31, 'jenna', 'jenna', 'Asiakas', 4),
+(32, 'kerttu', 'kerttu', 'Asiakas', 4),
+(33, 'kerttu', 'kerttu', 'Asiakas', 4),
+(36, 'ttahtinen', 'ttahtinen', 'Asukas', 4);
 
 -- --------------------------------------------------------
 
 --
--- Rakenne taululle `roolit`
+-- Table structure for table `roolit`
 --
 
 CREATE TABLE `roolit` (
@@ -139,7 +141,7 @@ CREATE TABLE `roolit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Vedos taulusta `roolit`
+-- Dumping data for table `roolit`
 --
 
 INSERT INTO `roolit` (`rooli_id`, `rooli`) VALUES
@@ -151,7 +153,7 @@ INSERT INTO `roolit` (`rooli_id`, `rooli`) VALUES
 -- --------------------------------------------------------
 
 --
--- Rakenne taululle `taloyhtiot`
+-- Table structure for table `taloyhtiot`
 --
 
 CREATE TABLE `taloyhtiot` (
@@ -161,12 +163,12 @@ CREATE TABLE `taloyhtiot` (
   `postinumero` int(11) DEFAULT NULL,
   `nimi` varchar(50) NOT NULL,
   `isannoitsija_id` int(11) DEFAULT NULL,
-  `kayttaja_id` int(11) NOT NULL,
+  `kayttaja_id` int(11) DEFAULT NULL,
   `tila_id` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Vedos taulusta `taloyhtiot`
+-- Dumping data for table `taloyhtiot`
 --
 
 INSERT INTO `taloyhtiot` (`taloyhtio_id`, `osoite`, `kaupunki`, `postinumero`, `nimi`, `isannoitsija_id`, `kayttaja_id`, `tila_id`) VALUES
@@ -174,15 +176,15 @@ INSERT INTO `taloyhtiot` (`taloyhtio_id`, `osoite`, `kaupunki`, `postinumero`, `
 (4, 'Lumikontie 58', 'Helsinki', 170, 'Omakotitalo, Hannu', 7, 1, ''),
 (5, 'Toimistotie 79 ', 'Helsinki', 170, 'Tuulan Toimistotilat Oy', 6, 1, ''),
 (6, 'Yliskyläntie 7', 'Helsinki', 840, 'Yliskyläntie 7 osakeyhtiö', 8, 1, ''),
-(7, 'Pesäkuja', 'Helsinki', 1000, ' Pesäkuja Osuuskunta', NULL, 26, ''),
-(12, 'Ei taloyhtiötä', NULL, NULL, 'Ei taloyhtiötä', NULL, 27, ''),
-(13, 'Paajalanmäentie 7 B 7', 'Kuopio', 80100, 'Savo2', NULL, 31, ''),
-(14, 'Pajukatu 3', 'Kuopio', 80100, ' ', NULL, 32, '');
+(7, 'Pesäkuja', 'Helsinki', 1000, 'Pesäkuja Osuuskunta', NULL, 26, ''),
+(13, 'Kujapolku', 'Helsinki', 840, 'Omakotitalo Kujapolku', NULL, 31, ''),
+(19, 'Kuurilanpolku 9', 'Kuusamo', 9000, 'Kuurilan Osuuskunta', 5, NULL, ''),
+(20, 'Kuurilanpolku 5', 'Kuusamo', 9000, 'Kuurilan veljen Osuuskunta', 4, NULL, '');
 
 -- --------------------------------------------------------
 
 --
--- Rakenne taululle `tehtavan_tilanne`
+-- Table structure for table `tehtavan_tilanne`
 --
 
 CREATE TABLE `tehtavan_tilanne` (
@@ -191,7 +193,7 @@ CREATE TABLE `tehtavan_tilanne` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Vedos taulusta `tehtavan_tilanne`
+-- Dumping data for table `tehtavan_tilanne`
 --
 
 INSERT INTO `tehtavan_tilanne` (`tehtavan_tilanne_id`, `tehtavan_tilanne`) VALUES
@@ -203,7 +205,7 @@ INSERT INTO `tehtavan_tilanne` (`tehtavan_tilanne_id`, `tehtavan_tilanne`) VALUE
 -- --------------------------------------------------------
 
 --
--- Rakenne taululle `tehtavan_tyyppi`
+-- Table structure for table `tehtavan_tyyppi`
 --
 
 CREATE TABLE `tehtavan_tyyppi` (
@@ -212,7 +214,7 @@ CREATE TABLE `tehtavan_tyyppi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Vedos taulusta `tehtavan_tyyppi`
+-- Dumping data for table `tehtavan_tyyppi`
 --
 
 INSERT INTO `tehtavan_tyyppi` (`tehtavan_tyyppi_id`, `nimi`) VALUES
@@ -222,7 +224,7 @@ INSERT INTO `tehtavan_tyyppi` (`tehtavan_tyyppi_id`, `nimi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Rakenne taululle `tehtavat`
+-- Table structure for table `tehtavat`
 --
 
 CREATE TABLE `tehtavat` (
@@ -232,29 +234,37 @@ CREATE TABLE `tehtavat` (
   `korjaustoimenpide` longtext DEFAULT NULL,
   `tila` varchar(45) DEFAULT NULL,
   `taloyhtio_id` int(11) DEFAULT NULL,
-  `tila_id` int(11) DEFAULT 15,
-  `yleisavaimen_kaytto` varchar(15) NOT NULL DEFAULT 'ei tietoa',
-  `numero` varchar(15) NOT NULL DEFAULT '000-000000',
+  `tila_id` int(11) DEFAULT NULL,
+  `yleisavaimen_kaytto` varchar(15) NOT NULL DEFAULT '0',
+  `numero` varchar(15) NOT NULL,
   `tehtavan_tyyppi_id` int(11) DEFAULT NULL,
-  `tyontekija_id` int(11) DEFAULT 11,
-  `tehtavan_tilanne_id` int(11) NOT NULL DEFAULT 1,
+  `tyontekija_id` int(11) DEFAULT NULL,
+  `tehtavan_tilanne_id` int(11) NOT NULL,
   `jatetty` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Vedos taulusta `tehtavat`
+-- Dumping data for table `tehtavat`
 --
 
 INSERT INTO `tehtavat` (`tehtava_id`, `kayttaja_id`, `kuvaus`, `korjaustoimenpide`, `tila`, `taloyhtio_id`, `tila_id`, `yleisavaimen_kaytto`, `numero`, `tehtavan_tyyppi_id`, `tyontekija_id`, `tehtavan_tilanne_id`, `jatetty`) VALUES
-(34, 21, 'Vesihana vuotaa', NULL, NULL, 6, 15, 'ei', '0407788994', NULL, 11, 2, '2023-05-08 17:31:48'),
-(35, 10, 'ongelmia ilmastoinnin kanssa', NULL, NULL, 4, 15, 'kyllä', '0501234567', NULL, 11, 1, '2023-05-08 17:32:33'),
-(36, 10, 'Rappukäytävä likainen', NULL, NULL, 3, 15, 'ei tietoa', '000-000000', NULL, 11, 1, '2023-05-08 17:34:04'),
-(37, 22, 'Pesutuvan mankeli rikki', NULL, NULL, 3, 9, 'ei tietoa', '000-000000', NULL, 11, 1, '2023-05-08 17:47:07');
+(2, 1, 'testitestitesti toimiiko.', 'testitestitesti toimiiko.', NULL, NULL, 5, '1', '', 2, NULL, 1, '2023-05-08 14:34:10'),
+(3, 9, 'Toimiiko uudet muunnokset??', NULL, NULL, NULL, NULL, 'sovi', '+358456339709', NULL, NULL, 1, '2023-05-08 14:34:10'),
+(11, 9, 'testing 4366', NULL, NULL, NULL, NULL, 'sovi', '0456339709', NULL, NULL, 1, '2023-05-08 14:34:10'),
+(13, 9, 'sefujesf', NULL, NULL, NULL, NULL, 'ei', '387347843', NULL, NULL, 1, '2023-05-08 14:34:10'),
+(14, 9, 'maijalla oli karitsa', NULL, NULL, NULL, NULL, 'kyllä', '35353543', NULL, NULL, 1, '2023-05-08 14:34:10'),
+(19, 22, 'lamppu palanut', NULL, NULL, 6, 13, '0', '', NULL, NULL, 1, '2023-05-08 14:34:10'),
+(20, 22, 'Ikkunan tiivisteet vuotaa', NULL, NULL, 3, 9, '0', '', NULL, NULL, 1, '2023-05-08 14:34:10'),
+(21, 9, 'pistorasia ei toimi', NULL, NULL, NULL, NULL, 'kyllä', '+34585438', NULL, NULL, 1, '2023-05-08 14:34:10'),
+(22, 9, 'pistorasia ei toimi', NULL, NULL, NULL, NULL, 'kyllä', '+34585438', NULL, NULL, 1, '2023-05-08 14:34:10'),
+(23, 9, 'pistorasia ei toimi', NULL, NULL, NULL, NULL, 'kyllä', '+34585438', NULL, NULL, 1, '2023-05-08 14:34:10'),
+(24, 9, 'pistorasia ei toimi', NULL, NULL, NULL, NULL, 'kyllä', '+34585438', NULL, NULL, 1, '2023-05-08 14:34:10'),
+(25, 22, 'moikkeli', NULL, NULL, 3, 9, '0', '', NULL, NULL, 1, '2023-05-08 14:49:12');
 
 -- --------------------------------------------------------
 
 --
--- Rakenne taululle `tilat`
+-- Table structure for table `tilat`
 --
 
 CREATE TABLE `tilat` (
@@ -264,7 +274,7 @@ CREATE TABLE `tilat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Vedos taulusta `tilat`
+-- Dumping data for table `tilat`
 --
 
 INSERT INTO `tilat` (`tila_id`, `nimi`, `taloyhtio_id`) VALUES
@@ -276,13 +286,12 @@ INSERT INTO `tilat` (`tila_id`, `nimi`, `taloyhtio_id`) VALUES
 (10, 'Kellari', 3),
 (11, 'Pyöräkellari', 6),
 (12, 'Hissi', 6),
-(13, 'Punttisali', 6),
-(15, 'ei valittu', 12);
+(13, 'Punttisali', 6);
 
 -- --------------------------------------------------------
 
 --
--- Rakenne taululle `tyontekijan_tilanne`
+-- Table structure for table `tyontekijan_tilanne`
 --
 
 CREATE TABLE `tyontekijan_tilanne` (
@@ -291,7 +300,7 @@ CREATE TABLE `tyontekijan_tilanne` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Vedos taulusta `tyontekijan_tilanne`
+-- Dumping data for table `tyontekijan_tilanne`
 --
 
 INSERT INTO `tyontekijan_tilanne` (`tyontekijan_tilanne_id`, `tyontekijan_tilanne`) VALUES
@@ -301,7 +310,7 @@ INSERT INTO `tyontekijan_tilanne` (`tyontekijan_tilanne_id`, `tyontekijan_tilann
 -- --------------------------------------------------------
 
 --
--- Rakenne taululle `tyontekijat`
+-- Table structure for table `tyontekijat`
 --
 
 CREATE TABLE `tyontekijat` (
@@ -316,7 +325,7 @@ CREATE TABLE `tyontekijat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Vedos taulusta `tyontekijat`
+-- Dumping data for table `tyontekijat`
 --
 
 INSERT INTO `tyontekijat` (`tyontekija_id`, `etunimi`, `sukunimi`, `puhelin`, `email`, `tyontekijatcol`, `kayttaja_id`, `tyontekijan_tilanne_id`) VALUES
@@ -328,13 +337,12 @@ INSERT INTO `tyontekijat` (`tyontekija_id`, `etunimi`, `sukunimi`, `puhelin`, `e
 (6, 'Ville', 'Laine', '0400 454 969', 'ville.laine@huolto.fi', NULL, 16, 1),
 (7, 'Jenny', 'Puranen', '0456339709', 'puranenjenny@gmail.com', '', 6, 2),
 (9, 'Antti', 'Kortelainen', '0401234566', 'antti@jotain.fi', NULL, 24, 1),
-(10, 'Antti', 'Kortelainen', '0401234566', 'antti@jotain.fi', NULL, 23, 1),
-(11, 'ei valittu', 'ei valittu', 'ei valittu', 'ei valittu', 'ei valittu', 23, 1);
+(10, 'Antti', 'Kortelainen', '0401234566', 'antti@jotain.fi', NULL, 23, 1);
 
 -- --------------------------------------------------------
 
 --
--- Rakenne taululle `yhteydenottopyynnot`
+-- Table structure for table `yhteydenottopyynnot`
 --
 
 CREATE TABLE `yhteydenottopyynnot` (
@@ -346,7 +354,7 @@ CREATE TABLE `yhteydenottopyynnot` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Vedos taulusta `yhteydenottopyynnot`
+-- Dumping data for table `yhteydenottopyynnot`
 --
 
 INSERT INTO `yhteydenottopyynnot` (`yhteydenottopyynto_id`, `yp_nimi`, `yp_email`, `yp_numero`, `yp_viesti`) VALUES
@@ -455,19 +463,19 @@ ALTER TABLE `yhteydenottopyynnot`
 -- AUTO_INCREMENT for table `asukkaat`
 --
 ALTER TABLE `asukkaat`
-  MODIFY `asukas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `asukas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `isannoitsijat`
 --
 ALTER TABLE `isannoitsijat`
-  MODIFY `isannoitsija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `isannoitsija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `kayttajat`
 --
 ALTER TABLE `kayttajat`
-  MODIFY `kayttaja_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `kayttaja_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `roolit`
@@ -479,7 +487,7 @@ ALTER TABLE `roolit`
 -- AUTO_INCREMENT for table `taloyhtiot`
 --
 ALTER TABLE `taloyhtiot`
-  MODIFY `taloyhtio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `taloyhtio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `tehtavan_tilanne`
@@ -497,13 +505,13 @@ ALTER TABLE `tehtavan_tyyppi`
 -- AUTO_INCREMENT for table `tehtavat`
 --
 ALTER TABLE `tehtavat`
-  MODIFY `tehtava_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `tehtava_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `tilat`
 --
 ALTER TABLE `tilat`
-  MODIFY `tila_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `tila_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tyontekijan_tilanne`
@@ -515,7 +523,7 @@ ALTER TABLE `tyontekijan_tilanne`
 -- AUTO_INCREMENT for table `tyontekijat`
 --
 ALTER TABLE `tyontekijat`
-  MODIFY `tyontekija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `tyontekija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `yhteydenottopyynnot`
@@ -524,37 +532,37 @@ ALTER TABLE `yhteydenottopyynnot`
   MODIFY `yhteydenottopyynto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- Rajoitteet vedostauluille
+-- Constraints for dumped tables
 --
 
 --
--- Rajoitteet taululle `asukkaat`
+-- Constraints for table `asukkaat`
 --
 ALTER TABLE `asukkaat`
   ADD CONSTRAINT `asukkaat_ibfk_1` FOREIGN KEY (`kayttaja_id`) REFERENCES `kayttajat` (`kayttaja_id`),
   ADD CONSTRAINT `asukkaat_ibfk_2` FOREIGN KEY (`taloyhtio_id`) REFERENCES `taloyhtiot` (`taloyhtio_id`);
 
 --
--- Rajoitteet taululle `isannoitsijat`
+-- Constraints for table `isannoitsijat`
 --
 ALTER TABLE `isannoitsijat`
   ADD CONSTRAINT `kayttaja_id` FOREIGN KEY (`kayttaja_id`) REFERENCES `kayttajat` (`kayttaja_id`);
 
 --
--- Rajoitteet taululle `kayttajat`
+-- Constraints for table `kayttajat`
 --
 ALTER TABLE `kayttajat`
   ADD CONSTRAINT `kayttajat_ibfk_1` FOREIGN KEY (`rooli_id`) REFERENCES `roolit` (`rooli_id`);
 
 --
--- Rajoitteet taululle `taloyhtiot`
+-- Constraints for table `taloyhtiot`
 --
 ALTER TABLE `taloyhtiot`
   ADD CONSTRAINT `taloyhtiot_ibfk_1` FOREIGN KEY (`kayttaja_id`) REFERENCES `kayttajat` (`kayttaja_id`),
   ADD CONSTRAINT `taloyhtiot_ibfk_2` FOREIGN KEY (`isannoitsija_id`) REFERENCES `isannoitsijat` (`isannoitsija_id`);
 
 --
--- Rajoitteet taululle `tehtavat`
+-- Constraints for table `tehtavat`
 --
 ALTER TABLE `tehtavat`
   ADD CONSTRAINT `tehtavan_tyyppi_id` FOREIGN KEY (`tehtavan_tyyppi_id`) REFERENCES `tehtavan_tyyppi` (`tehtavan_tyyppi_id`),
@@ -565,13 +573,13 @@ ALTER TABLE `tehtavat`
   ADD CONSTRAINT `tyontekija_id` FOREIGN KEY (`tyontekija_id`) REFERENCES `tyontekijat` (`tyontekija_id`);
 
 --
--- Rajoitteet taululle `tilat`
+-- Constraints for table `tilat`
 --
 ALTER TABLE `tilat`
   ADD CONSTRAINT `taloyhtio_id` FOREIGN KEY (`taloyhtio_id`) REFERENCES `taloyhtiot` (`taloyhtio_id`);
 
 --
--- Rajoitteet taululle `tyontekijat`
+-- Constraints for table `tyontekijat`
 --
 ALTER TABLE `tyontekijat`
   ADD CONSTRAINT `tyontekijan_tilanne_id` FOREIGN KEY (`tyontekijan_tilanne_id`) REFERENCES `tyontekijan_tilanne` (`tyontekijan_tilanne_id`),
