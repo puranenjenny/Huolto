@@ -1,35 +1,30 @@
-<?php
-include("config.php");
+<?php 
 
-$tyontekijat = [];
+include("config.php"); 
 $rooli_id = '2';
 
-$query = "SELECT kayttaja_id 
-FROM kayttajat WHERE rooli_id = :rooli_id";
-//echo $kayttaja_id;
-$data = $yhteys->prepare($query);
-$data->bindParam(':rooli_id', $rooli_id);
-$data->execute();
-$result = $data->fetch(PDO::FETCH_ASSOC);
+$kysely = "SELECT tyontekijat.tyontekija_id, tyontekijat.etunimi, tyontekijat.sukunimi, kayttajat.rooli_id 
+FROM tyontekijat INNER JOIN kayttajat ON tyontekijat.kayttaja_id = kayttajat.kayttaja_id
+ WHERE rooli_id = $rooli_id"; 
+$data = $yhteys->query($kysely); 
 
-if ($result) {
-    $kayttaja_id = $result['kayttaja_id'];
+$JSON_tyontekijat = '{"tyontekijat":['; 
+$laskuri = 0; 
+$riveja = $data->rowCount(); 
 
-    $query2 = "SELECT tyontekija_id, etunimi, sukunimi FROM tyontekijat WHERE kayttaja_id = :kayttaja_id";
-    //echo $isannoitsija_id;
-    $data2 = $yhteys->prepare($query2);
-    $data2->bindParam(':kayttaja_id', $kayttaja_id);
-    $data2->execute();
+while($rivi = $data->fetch(PDO::FETCH_ASSOC)){ 
+    $laskuri++; 
+    $JSON_tyontekijat.= '{"ID":"' .$rivi['tyontekija_id'] . '", "Etunimi":"' .$rivi['etunimi'] . '", "Sukunimi":"' . $rivi['sukunimi'] . '"}';
+    if($laskuri < $riveja) $JSON_tyontekijat.= ","; 
+}
 
-    while ($result2 = $data2->fetch(PDO::FETCH_ASSOC)) {
-        $tyontekijat[] = [
-            'etunimi' => $result2['etunimi'],
-            'sukunimi' => $result2['sukunimi']
-        ];
-        
-        
-        $tyontekija_id = $result2['tyontekija_id'];
-        
-    }}
+$JSON_tyontekijat.= ']}'; 
+
+$yhteys = null; 
+
+$handler = fopen("tyontekijat.json", "w"); 
+fwrite($handler, $JSON_tyontekijat);
+fclose($handler);
+
 
 ?>

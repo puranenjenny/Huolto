@@ -24,56 +24,74 @@ include 'header_ui_toimisto.php';?>
                 $JSON_paivita = file_get_contents("php/valittuVika.json");
                 $users = json_decode($JSON_paivita, true);
 
-                //I don't know if this is really nessessary, but this was the way I got this to work as I wanted.
                 if(count($users) != 0){
                     foreach($users as $key1){
                         foreach($key1 as $user){
 
                             ?>
-                            <form class="lomake_tehtava" action="php/teePaivitys.php" method="POST">
+                            <form class="lomake_tehtava" action="php/teePaivitysVikaIlmo.php" method="POST">
                             <tr>
                                 <td>Viankuvaus</td><br>
-                                <td><textarea class="kuvaus" type="textarea" name="Viankuvaus" required value=""><?php echo $user['Viankuvaus']; ?></textarea></td>
+                                <td><textarea class="kuvaus" type="textarea" name="viankuvaus" required value=""><?php echo $user['Viankuvaus']; ?></textarea></td>
                             </tr>
                             <br>
                             <tr>
                                 <td>Osoite</td><br>
-                                <td><input type="text" name="Osoite" value="<?php echo $user['Osoite']; ?>"></td>
+                                <td><input type="text" name="osoite" value="<?php echo $user['Osoite']; ?>"></td>
                             </tr>
                             <br>
                             <tr>
                                 <td>Yleisavaimen käyttö</td><br>
-                                <td><input type="text" name="Yleisavain" value="<?php echo $user['Yleisavain']; ?>"></td>
+                                <td><input type="text" name="yleisavain" value="<?php echo $user['Yleisavain']; ?>"></td>
                             </tr>
                             <br>
                             <tr>
                                 <td>Puhelinnumero:</td><br>
-                                <td><input type="text" name="Puhelin" value="<?php echo $user['Puhelin']; ?>"></td>
+                                <td><input type="text" name="puhelin" value="<?php echo $user['Puhelin']; ?>"></td>
                             </tr>
                             <br>
                             <tr>
                                 <td>Tilanne:</td><br>
-                                <td><input type="text" name="Puhelin" value="<?php echo $user['Tilanne']; ?>"></td>
+                                <td><select id="Tilanne" name="tilanne" >
+                                        <option value="<?php echo $user['TilaID']; ?>"><?php echo $user['Tilanne']; ?></option>
+                                        <option value="1">Käsittelemättä</option>
+                                        <option value="2">Avoin</option>
+                                        <option value="3">Työn alla</option>
+                                        <option value="4">Valmis</option>                                   
+                                    </select></td></td>
                             </tr>
                             <br>
                             <tr>
                                 <td>Työntekija:</td><br>
                                 <td>
-                                    <select id="Tyontekija" name="taloyhtio" class="rounded-select">
-                                        <option value="">&nbsp;Työntekijät&nbsp;</option>
-                                            <?php foreach ($tyontekijat as $tyontekija): ?>
-                                                <option value="<?php echo $tyontekija['tyontekija_id']; ?>">
-                                            <?php echo '&nbsp;' . $tyontekija['etunimi'] . ' ' .$tyontekija['sukunimi'] . '&nbsp;'; ?>
-                                            </option>
-                                             <?php endforeach; ?>
+                                    <select id="Tyontekija" name="tyontekija" >
+                                        <option value="">&nbsp;Valitse huoltohenkilö&nbsp;</option>
+                                        <?php
+                                                $JSON_tyontekijat = file_get_contents("tyontekijat.json");
+                                                $tyontekijat = json_decode($JSON_tyontekijat, true);
+
+
+                                                if(count($tyontekijat) != 0){
+                                                    foreach($tyontekijat as $tyontekija){
+                                                        foreach($tyontekija as $user1){
+
+                                        ?>
+                                        <option value="<?php echo$user1['ID']; ?>"><?php echo '&nbsp;' . $user1['ID'] . ' ' . $user1['Etunimi'] . ' ' .$user1['Sukunimi'] . '&nbsp;'; ?></option>        
+                                        <?php
+                        }
+                    }
+                }
+            ?>
+                                    
                                     </select></td>
                             </tr>
-                            <br>
+                            <br><br>
                             <tr>
-                                <td></td><br>
-                                <td><button href="ui_toimisto.php" name="takaisin" class="btn btn-primary">Takaisin</button></td>
-                                <td><button name="tallenna" type="submit" class="mx-3 btn btn-warning">Tallenna</button></td>
-                                <td><button href="#" name="poista" type="submit" class="btn btn-danger">Poista</button></td>
+                                <td>
+                                <button class="btn btn-primary nappi"><a class="nappi" href="ui_toimisto.php">Takaisin</a></button>
+                                <button name="tallenna" type="submit" class="mx-3 btn btn-warning nappi">Tallenna</button>
+                                <button class="btn btn-danger nappi"><?php echo '<a href="php/poistaVikaIlmo.php?tehtava_id='.$user['ID'].'" class="nappi">Poista</a>'; ?></button>
+                                </td><br>
                             </tr>
                             </form>
                             <?php
