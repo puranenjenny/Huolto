@@ -33,7 +33,7 @@
                                                      <td><?php echo $member['Sukunimi']; ?></td>
                                                      <td><?php echo $member['Tila']; ?></td>
                                                      <td><?php echo $member['Rooli']; ?></td>
-                                                     <td><button class="btn btn-warning"><?php echo '<a class="nappi" href="valittuTyontekija.php?id='.$member['ID'].'">Muokkaa</a>'; ?></button></td>
+                                                     <td><button class="nappi btn btn-warning"><?php echo '<a class="nappi" href="valittuTyontekija.php?id='.$member['ID'].'">Muokkaa</a>'; ?></button></td>
                                                      </tr>
                                              <?php
                                              }

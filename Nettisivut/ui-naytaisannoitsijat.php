@@ -8,9 +8,11 @@
             <div class="row justify-content-center mx-0">
                 <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Käyttäjien hallinta</h3>
             <div class=" col-lg-3 lomake_tausta napit_kayttaja">
-                <button  onclick="saveScrollPosition()" class="mx-2 btn btn-warning nappi"><a class="nappi" href="ui-naytakayttajat.php">Näytä asukkaat</a></button>
+            <button  onclick="saveScrollPosition()" class="mx-2 btn btn-warning nappi"><a class="nappi" href="ui-naytakayttajat.php">Näytä asukkaat</a></button>
                 <button  onclick="saveScrollPosition()" class="mx-2 btn btn-warning nappi"><a class="nappi" href="ui-naytaisannoitsijat.php">Näytä isännöitsijät</a></button>
-                <button  class="mx-2 btn btn-warning nappi"><a class="nappi" href="#">Lisää käyttäjä</a></button>
+                <button  class="mx-2 btn btn-warning nappi"><a class="nappi" href="lisaa_asukas_lomake.php">Lisää asukas</a></button>
+                <button  class="mx-2 btn btn-warning nappi"><a class="nappi" href="#">Lisää isännöitsijä</a></button>
+                <button  class="mx-2 btn btn-warning nappi"><a class="nappi" href="#">Lisää taloyhtiö</a></button>
             </div>
                 <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Isännöitsijät:</h3>
                 <div class="lomake_tausta lomake_vika">

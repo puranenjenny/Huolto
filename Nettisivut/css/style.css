@@ -707,10 +707,27 @@ body {
     width: 100%;
 }
 
-.input_label2 {
-    display: inline-block;
-    width: 150px; 
-    text-align: right;
-    margin-right: 20px;
-   
+/* muokkaa tehtävää säädöt*/
+
+.lomake_tehtava{
+    width: 100%;
+}
+
+.lomake_tausta_tehtava {
+    padding: 2em 0 2em 0;
+    background-color: rgba(20, 70, 115, 0.8);
+    color: white;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.kuvaus {
+    min-width: 12em;
+    min-height: 10em;
+    background-color: white;
+    color: black;
+    font-family: 'Poppins', sans-serif;
 }
