@@ -22,7 +22,7 @@
                 <a onclick="saveScrollPosition()" class="mx-2 btn nappi" href="ui_toimisto.php">Valmiit</a>
                 <a class="mx-2 btn nappi" href="vikalomake_toimisto.php">Lisää uusi</a>
             </div>
-                <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Työn alla olevat vikailmoitukset</h3>
+                <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Käsi vikailmoitukset</h3>
                 <div class="text-center lomake_tausta lomake_vika">
                             <table class="table table-striped table-vika">
                                 <tr>
