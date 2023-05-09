@@ -621,11 +621,16 @@ h2{
 .nappi {
     text-decoration: none;
     color: white;
+    border-color: #04BFBF;
+    background-color: #04BFBF;
+    
 }
 
 .nappi:hover{
-    text-decoration: underline;
+    text-decoration: none;
     color: white;
+    border-color: #03b0b0;
+    background-color: #03b0b0;
 }
 
 .napit_kayttaja {
@@ -806,4 +811,9 @@ body {
     background-color: white;
     color: black;
     font-family: 'Poppins', sans-serif;
+}
+
+input:disabled {
+    background-color: white;
+    color: black;
 }

@@ -19,7 +19,7 @@ if(isset($_POST['tallenna'])){
                 foreach($key1 as $user){
                     $tehtava_id = $user['ID'];
                     
-                        $query = "UPDATE tehtavat SET kuvaus = '$viankuvaus', tehtavan_tilanne_id = '$tilanne', tyontekija_id = '$tyontekija' WHERE tehtava_id  = '$tehtava_id'";
+                        $query = "UPDATE tehtavat SET tehtavan_tilanne_id = '$tilanne', tyontekija_id = '$tyontekija' WHERE tehtava_id  = '$tehtava_id'";
                         $change =  $yhteys->prepare($query);
                         $change->execute();
                 }           

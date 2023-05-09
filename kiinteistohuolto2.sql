@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 09.05.2023 klo 17:18
+-- Generation Time: 09.05.2023 klo 22:12
 -- Palvelimen versio: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -239,7 +239,7 @@ CREATE TABLE `tehtavat` (
   `yleisavaimen_kaytto` varchar(15) NOT NULL DEFAULT 'Ei tietoa',
   `numero` varchar(15) NOT NULL DEFAULT '000-000000',
   `tehtavan_tyyppi_id` int(11) DEFAULT NULL,
-  `tyontekija_id` int(11) DEFAULT 11,
+  `tyontekija_id` int(11) DEFAULT 100,
   `tehtavan_tilanne_id` int(11) NOT NULL DEFAULT 1,
   `jatetty` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
@@ -249,19 +249,15 @@ CREATE TABLE `tehtavat` (
 --
 
 INSERT INTO `tehtavat` (`tehtava_id`, `kayttaja_id`, `kuvaus`, `korjaustoimenpide`, `tila`, `taloyhtio_id`, `tila_id`, `yleisavaimen_kaytto`, `numero`, `tehtavan_tyyppi_id`, `tyontekija_id`, `tehtavan_tilanne_id`, `jatetty`) VALUES
-(3, 9, 'Toimiiko uudet muunnokset??', NULL, NULL, 4, 14, 'sovi', '+358456339709', NULL, 11, 1, '2023-05-08 14:34:10'),
-(11, 9, 'testing 4366', NULL, NULL, 20, 8, 'sovi', '0456339709', NULL, 11, 1, '2023-05-08 14:34:10'),
-(13, 9, 'sefujesf', NULL, NULL, 20, 14, 'ei', '387347843', NULL, 11, 1, '2023-05-08 14:34:10'),
-(14, 9, 'maijalla oli karitsa', NULL, NULL, 19, 14, 'kyllä', '35353543', NULL, 11, 1, '2023-05-08 14:34:10'),
-(19, 22, 'lamppu palanut', NULL, NULL, 6, 13, 'ei', '3243432443', NULL, 11, 3, '2023-05-08 14:34:10'),
-(20, 22, 'Ikkunan tiivisteet vuotaa', NULL, NULL, 3, 9, 'sovi', '3333', NULL, 6, 1, '2023-05-08 14:34:10'),
-(21, 9, 'pistorasia ei toimi', NULL, NULL, 6, 11, 'kyllä', '+34585438', NULL, 7, 2, '2023-05-08 14:34:10'),
-(25, 22, 'moikkeli', NULL, NULL, 3, 9, 'ei', '4656464', NULL, 11, 1, '2023-05-08 14:49:12'),
+(20, 22, 'Ikkunan tiivisteet vuotaa', 'Tiivisteet vaihdettu uusiin.', NULL, 3, 9, 'sovi', '040-1179851', NULL, 3, 4, '2023-05-08 14:34:10'),
+(21, 9, 'pistorasia ei toimi', 'Vaihdettu pistorasia. Työ hankittu alihankintana Sähkötyö Keinäseltä (a 100£). ', NULL, 6, 11, 'kyllä', '+34585438', NULL, 7, 4, '2023-05-08 14:34:10'),
 (26, 10, 'Pattereita ei saa säädettyä lämpimämmälle.', NULL, NULL, 4, 14, 'ei', '+358456339709', NULL, 4, 2, '2023-05-09 12:26:59'),
-(27, 21, 'Asunnossa on liian kuuma', NULL, NULL, 6, 14, 'sovi', '0400454969', NULL, 11, 1, '2023-05-09 12:28:03'),
+(27, 21, 'Asunnossa on liian kuuma', NULL, NULL, 6, 14, 'sovi', '0400454969', NULL, 5, 2, '2023-05-09 12:28:03'),
 (28, 22, 'Hiekkaa on rapun edessä vielä vaikka kuinka paljon vaikka lakaisuauto kävi jo!', NULL, NULL, 3, 6, 'ei', '000-0000000', NULL, 11, 1, '2023-05-09 12:30:23'),
 (30, 22, 'Punttisali haisee, voitteko desinfioida kunnolla', NULL, NULL, 6, 13, 'kyllä', '0401234566', NULL, 11, 1, '2023-05-09 12:41:43'),
-(31, 22, 'Nurmikko pitäisi ajaa', NULL, NULL, 3, 10, 'kyllä', '0401234566', NULL, 11, 1, '2023-05-09 12:53:29');
+(31, 22, 'Nurmikko pitäisi ajaa', NULL, NULL, 3, 10, 'kyllä', '0401234566', NULL, 11, 1, '2023-05-09 12:53:29'),
+(32, 21, 'Naapuri Kuuntelee Käärijän Cha cha Chata ihan liian kovalla.', NULL, NULL, 6, 14, 'ei', '0405566887', NULL, 11, 1, '2023-05-09 19:25:40'),
+(33, 22, 'Onko ylipäätään mahdollista kuunnella Cha cha chata liian kovalla?', NULL, NULL, 6, 12, 'kyllä', '0401234566', NULL, 11, 1, '2023-05-09 19:27:02');
 
 -- --------------------------------------------------------
 
@@ -364,8 +360,7 @@ CREATE TABLE `yhteydenottopyynnot` (
 INSERT INTO `yhteydenottopyynnot` (`yhteydenottopyynto_id`, `yp_nimi`, `yp_email`, `yp_numero`, `yp_viesti`) VALUES
 (1, 'Testiyhteidenotto', 'testi.yhteydenotto@jotain.fi', 401234567, 'Testataan miltä tämä yhteydenottopyyntöhässäkkä näyttää ja toimiiko. '),
 (2, 'Sonera', 'sonera@sonera@sonera.fi', 400454969, 'Halutaan Töölön toimistolle kiinteistöhuoltoa. Pihat saatanan liukkaita talvisin.'),
-(3, 'Karhula', 'karhula@jotain.fi', 400454969, 'Haluttais että tuutte siivoamaan meidän karhunpesän ennen talviunia.'),
-(4, 'war', 'tereryey', 345346737, 'waifgiesuihfuhefsuh');
+(3, 'Karhula', 'karhula@jotain.fi', 400454969, 'Haluttais että tuutte siivoamaan meidän karhunpesän ennen talviunia.');
 
 --
 -- Indexes for dumped tables
@@ -509,7 +504,7 @@ ALTER TABLE `tehtavan_tyyppi`
 -- AUTO_INCREMENT for table `tehtavat`
 --
 ALTER TABLE `tehtavat`
-  MODIFY `tehtava_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `tehtava_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `tilat`

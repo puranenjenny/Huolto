@@ -32,22 +32,22 @@ include 'header_ui_toimisto.php';?>
                             <form class="lomake_tehtava" action="php/teePaivitysVikaIlmo.php" method="POST">
                             <tr>
                                 <td>Viankuvaus</td><br>
-                                <td><textarea class="kuvaus" type="textarea" name="viankuvaus" required value=""><?php echo $user['Viankuvaus']; ?></textarea></td>
+                                <td><textarea disabled class="kuvaus" type="textarea" name="viankuvaus" required value=""><?php echo $user['Viankuvaus']; ?></textarea></td>
                             </tr>
                             <br>
                             <tr>
                                 <td>Osoite</td><br>
-                                <td><input type="text" name="osoite" value="<?php echo $user['Osoite']; ?>"></td>
+                                <td><input disabled type="text" name="osoite" value="<?php echo $user['Osoite']; ?>"></td>
                             </tr>
                             <br>
                             <tr>
                                 <td>Yleisavaimen käyttö</td><br>
-                                <td><input type="text" name="yleisavain" value="<?php echo $user['Yleisavain']; ?>"></td>
+                                <td><input disabled type="text" name="yleisavain" value="<?php echo $user['Yleisavain']; ?>"></td>
                             </tr>
                             <br>
                             <tr>
                                 <td>Puhelinnumero:</td><br>
-                                <td><input type="text" name="puhelin" value="<?php echo $user['Puhelin']; ?>"></td>
+                                <td><input disabled type="text" name="puhelin" value="<?php echo $user['Puhelin']; ?>"></td>
                             </tr>
                             <br>
                             <tr>
@@ -88,9 +88,9 @@ include 'header_ui_toimisto.php';?>
                             <br><br>
                             <tr>
                                 <td>
-                                <button class="btn btn-primary nappi"><a class="nappi" href="ui_toimisto.php">Takaisin</a></button>
-                                <button name="tallenna" type="submit" class="mx-3 btn btn-warning nappi">Tallenna</button>
-                                <button class="btn btn-danger nappi"><?php echo '<a href="php/poistaVikaIlmo.php?tehtava_id='.$user['ID'].'" class="nappi">Poista</a>'; ?></button>
+                                <a class="btn btn-primary" href="ui-uudet-ilmot.php">Takaisin</a>
+                                <button name="tallenna" type="submit" class="mx-3 btn btn-success">Tallenna</button>
+                                <?php echo '<a href="php/poistaVikaIlmo.php?tehtava_id='.$user['ID'].'" class="btn btn-danger">Poista</a>'; ?>
                                 </td><br>
                             </tr>
                             </form>

@@ -7,7 +7,7 @@
             <div class="row justify-content-center mx-0">
                 <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Työntekijöiden hallinta</h3>
             <div class=" col-lg-3 lomake_tausta napit_kayttaja">
-                <button  class="mx-2 btn btn-warning nappi"><a class="nappi" href="#">Lisää työntekijä</a></button>
+                <a class="mx-2 btn nappi" href="#">Lisää työntekijä</a>
             </div>
                 <div class="lomake_tausta lomake_vika">
                             <table class="text-end table table-striped table-vika table-yhteys">
@@ -33,7 +33,7 @@
                                                      <td><?php echo $member['Sukunimi']; ?></td>
                                                      <td><?php echo $member['Tila']; ?></td>
                                                      <td><?php echo $member['Rooli']; ?></td>
-                                                     <td><button class="nappi btn btn-warning"><?php echo '<a class="nappi" href="valittuTyontekija.php?id='.$member['ID'].'">Muokkaa</a>'; ?></button></td>
+                                                     <td><?php echo '<a class="btn btn-warning" href="valittuTyontekija.php?id='.$member['ID'].'">Muokkaa</a>'; ?></td>
                                                      </tr>
                                              <?php
                                              }

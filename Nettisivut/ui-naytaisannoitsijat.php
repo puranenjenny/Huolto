@@ -8,11 +8,11 @@
             <div class="row justify-content-center mx-0">
                 <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Käyttäjien hallinta</h3>
             <div class=" col-lg-3 lomake_tausta napit_kayttaja">
-            <button  onclick="saveScrollPosition()" class="mx-2 btn btn-warning nappi"><a class="nappi" href="ui-naytakayttajat.php">Näytä asukkaat</a></button>
-                <button  onclick="saveScrollPosition()" class="mx-2 btn btn-warning nappi"><a class="nappi" href="ui-naytaisannoitsijat.php">Näytä isännöitsijät</a></button>
-                <button  class="mx-2 btn btn-warning nappi"><a class="nappi" href="lisaa_asukas_lomake.php">Lisää asukas</a></button>
-                <button  class="mx-2 btn btn-warning nappi"><a class="nappi" href="#">Lisää isännöitsijä</a></button>
-                <button  class="mx-2 btn btn-warning nappi"><a class="nappi" href="lisaa_taloyhtio_lomake.php">Lisää taloyhtiö</a></button>
+                <a onclick="saveScrollPosition()" class="mx-2 btn nappi" href="ui-naytakayttajat.php">Näytä asukkaat</a>
+                <a onclick="saveScrollPosition()" class="mx-2 btn nappi" href="ui-naytaisannoitsijat.php">Näytä isännöitsijät</a>
+                <a class="mx-2 btn nappi" href="lisaa_asukas_lomake.php">Lisää asukas</a>
+                <a class="mx-2 btn nappi" href="#">Lisää isännöitsijä</a>
+                <a class="mx-2 btn nappi" href="lisaa_taloyhtio_lomake.php">Lisää taloyhtiö</a>
             </div>
                 <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Isännöitsijät:</h3>
                 <div class="lomake_tausta lomake_vika">
@@ -37,7 +37,7 @@
                                                      <td><?php echo $member['Etunimi']; ?></td>
                                                      <td><?php echo $member['Sukunimi']; ?></td>
                                                      <td><?php echo $member['Puhelin']; ?></td>
-                                                     <td><button class="btn btn-warning"><?php echo '<a class="nappi" href="valittuIsannoitsija.php?id='.$member['id'].'">Muokkaa</a>'; ?></button></td>
+                                                     <td><?php echo '<a class="btn btn-warning" href="valittuIsannoitsija.php?id='.$member['id'].'">Muokkaa</a>'; ?></td>
                                                      </tr>
                                              <?php
                                              }

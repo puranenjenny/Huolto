@@ -22,7 +22,7 @@ if($count == 1) {
    $_SESSION['login_user'] = $tunnus;
 
    if($kayttaja['rooli_id'] == '1') { // 1=toimistohenkilo, 2=huoltohenkilo, 3=isannoitsija, 4=asukas
-     header("location: ../ui_toimisto.php"); //siirrytään työpöydille
+     header("location: ../ui-uudet-ilmot.php"); //siirrytään työpöydille
    } elseif($kayttaja['rooli_id'] == '2') {
      header("location: ../ui_huolto.php");
    } else {

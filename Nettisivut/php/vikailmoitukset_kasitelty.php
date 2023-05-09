@@ -4,9 +4,11 @@
 
 require "config.php";
 
-$query = "SELECT tehtavat.tehtava_id, tehtavat.kuvaus, taloyhtiot.osoite, tehtavat.jatetty 
-            FROM tehtavat INNER JOIN taloyhtiot ON tehtavat.taloyhtio_id = taloyhtiot.taloyhtio_id
-            WHERE NOT tehtavat.tehtavan_tilanne_id = '1'";
+$query = "SELECT tehtavat.tehtava_id, tehtavat.kuvaus, taloyhtiot.osoite, tehtavat.jatetty, tyontekijat.etunimi, tyontekijat.sukunimi 
+            FROM tehtavat 
+            INNER JOIN taloyhtiot ON tehtavat.taloyhtio_id = taloyhtiot.taloyhtio_id
+            INNER JOIN tyontekijat ON tyontekijat.tyontekija_id = tehtavat.tyontekija_id
+            WHERE NOT tehtavat.tehtavan_tilanne_id = '1' OR tehtavat.tehtavan_tilanne_id = '4'";
 $data = $yhteys->query($query);
 
 $JSON_vika = '{"tehtavat":[';
@@ -15,7 +17,7 @@ $rows = $data->rowCount();
 
 while($row = $data->fetch(PDO::FETCH_ASSOC)){
     $counter++;
-    $JSON_vika.= '{"ID":"'.$row['tehtava_id'].'","Viankuvaus":"'.$row['kuvaus'].'","Osoite":"'.$row['osoite'].'","Paivays":"'.$row['jatetty'].'"}';
+    $JSON_vika.= '{"ID":"'.$row['tehtava_id'].'","Viankuvaus":"'.$row['kuvaus'].'","Osoite":"'.$row['osoite'].'","Paivays":"'.$row['jatetty'].'","Etunimi":"'.$row['etunimi'].'","Sukunimi":"'.$row['sukunimi'].'"}';
     if($counter<$rows) $JSON_vika.=",";
 }
 

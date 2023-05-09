@@ -50,7 +50,7 @@
                         <div class="collapse navbar-collapse d-xl-flex justify-content-end align-items-center mr-5" id="navbarNavDropdown">
                                   <ul class="navbar-nav text-center">
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="ui_toimisto.php">VIKAILMOITUKSET</a>
+                                                    <a class="nav-link" href="ui-uudet-ilmot.php">VIKAILMOITUKSET</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="ui-huoltohenkilot.php">HUOLTOHENKILÖT</a>

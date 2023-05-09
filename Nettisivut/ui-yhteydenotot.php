@@ -31,7 +31,7 @@
                                                      <td><?php echo $member['Email']; ?></td>
                                                      <td><?php echo $member['Numero']; ?></td>
                                                      <td><?php echo $member['Viesti']; ?></td>
-                                                     <td><button class="btn btn-danger" onclick="saveScrollPosition()"><?php echo '<a class="nappi" href="php/poista_yhteydenotto.php?id='.$member['id'].'">Poista</a>'; ?></button></td>
+                                                     <td><?php echo '<a onclick="saveScrollPosition()" class="btn btn-danger" href="php/poista_yhteydenotto.php?id='.$member['id'].'">Poista</a>'; ?></td>
                                                      </tr>
                                              <?php
                                              }
