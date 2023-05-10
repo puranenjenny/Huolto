@@ -16,14 +16,13 @@
 
 <div class="row vali  mx-0"></div>
 <div class="row vali  mx-0"></div>
-<div class="row vali  mx-0"></div>
 
 
   <div class="row  mx-0">
       <div class="col text-center"> <h3>Tehtävän päivitys<br><br></h3></div>
   </div>
 
-<div class="row vali  mx-0"></div>
+
 <div class="row vali  mx-0"></div>
 
 <div class="bg-cover text-white d-flex align-items-center" id="taustakuva4">
@@ -73,14 +72,16 @@
 <input type="hidden" name="tehtava_id" value="<?php echo $tehtava_id; ?>">
   <div class="form-group">
     <label class="input_label2" for="korjaustoimenpide">Korjaustoimenpide:</label><br>
-    <textarea rows=5 name="korjaustoimenpide" id="korjaustoimenpide"></textarea>
+    <textarea class="rounded-textarea" rows=5 name="korjaustoimenpide" id="korjaustoimenpide"></textarea>
   </div><br>
   <button type="submit" class="btn btn1" name="laheta" value="submit">Lähetä</button>
 </form>
 </div>
-<div>
-<div class="row kommentti2 text-center  mx-0">
-    
-</div> 
+</div>
+</div>
+</div>
+<div class="row vali  mx-0"></div>
+<div class="row vali  mx-0"></div>
+</div>
 <?php include 'footer.php';?>
-    </div>
+   

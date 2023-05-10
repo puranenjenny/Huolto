@@ -604,7 +604,7 @@ h2{
     border-radius: 7px; /* avainvalikon reunojen pyöristys jne */
     }
 
-.textarea {
+.rounded-textarea {
     border-radius: 7px;
 }
 
