@@ -13,7 +13,7 @@
 <div class="bg-cover text-white d-flex align-items-center">
     <div class="container5 lomake_tausta3">
 
-    <div class="row justify-content-center mx-0 lomake_tausta3" ">
+    <div class="row justify-content-center mx-0 lomake_tausta3">
         <div class="col-lg-7">
                 <div class="row justify-content-center mx-0">
                     <h2>Oma työlista</h2><br><br><br></div>
@@ -45,7 +45,7 @@
                                                 <td><?php echo $member['Tila']; ?></td>
                                                 <td><?php echo $member['Yleisavaimen_kaytto']; ?></td>
                                                 <td><?php echo $member['Numero']; ?></td>
-                                                <td><a href="#" class="btn btn2 btn-info">Muokkaa</a></td>  
+                                                <td><a href="paivita_tehtava_lomake.php?tehtava_id=<?php echo $member['ID']; ?>" class="btn btn2 btn-info">Päivitä</a></td>  
                                                 </tr>
                                              <?php
                                              }
