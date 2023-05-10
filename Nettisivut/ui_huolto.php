@@ -6,17 +6,18 @@
 <div class="connect_tausta">
 
 <div class="row vali  mx-0"></div>
-  <div class="row  mx-0 text-center">
+  <div class="row  mx-0 text-center otsikko">
   <h3>Tervetuloa omalle työpöydälle <?php echo htmlspecialchars($etunimi . " " . $sukunimi . "!"); ?></h3> <!--tulostetaan Hei etunimi sukunimi -->
   </div>
 
-<div class="bg-cover text-white d-flex align-items-center">
-    <div class="container5 lomake_tausta3">
+<div class="bg-cover text-white d-flex">
+    <div class="container5">
 
-    <div class="row justify-content-center mx-0 lomake_tausta3">
-        <div class="col-lg-8">
+    <div class="row justify-content-center mx-0">
+        <div class="col-xl-8 col-lg-8 col-8 table-responsive"><!--table-responsive-->
+        <div class="container6">
                 <div class="row justify-content-center mx-0">
-                    <h2>Oma työlista</h2><br><br><br></div>
+                    <h2 class="avoimet_tiketit">Oma työlista</h2><br><br><br></div>
                 <div class="row justify-content-center mx-0"> 
                 <table class="table table-striped huolto_taulu">
                     <tr>
@@ -38,7 +39,7 @@
                                     foreach($key as $member){
                                         ?>
                                         <tr>
-                                        <td><?php echo $member['ID']; ?></td>
+                                        <td><?php echo "<b>" . $member['ID'] . "</b>"; ?></td>
                                         <td><?php echo $member['Viankuvaus']; ?></td>
                                         <td><?php echo $member['Jattaja']; ?></td>
                                         <td><?php echo $member['Osoite']; ?></td>
@@ -52,9 +53,9 @@
                                             }
                                         }?>
                             </table>
-                </div>
-        </div>
-       <div class="container6 col-lg-4 justify-content-center mx-0 ">     
+                </div></div>
+        </div> <!--table-responsive-->
+       <div class="container7 col-xl-4 col-lg-12 col-12 justify-content-center mx-0 ">     
         <div class="row justify-content-center mx-0">
                     <h2>Tehtävät taloyhtiöittäin</h2><br><br><br></div>
         <!-- Luo taloyhtiöiden valikko -->

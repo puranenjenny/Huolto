@@ -1,3 +1,4 @@
+
 <?php
 require_once "config.php";
 
@@ -19,7 +20,7 @@ try {
 
     $data->execute();
 
-    echo "Tehtävä päivitetty onnistuneesti!";
+    //echo "Tehtävä päivitetty onnistuneesti!";
     
 } catch (PDOException $e) {
     echo "Virhe: " . $e->getMessage();

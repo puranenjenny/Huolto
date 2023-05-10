@@ -683,28 +683,27 @@ h2{
   
 /* Huollon näkymä */
 
-.lomake_tausta3 {
-    padding: 3em;
+/* .lomake_tausta3 {
+    padding: 0;
     background-color: #88A5BF;
     color: white;
     text-align: center;
     height: auto;
-    width: 80%;
+    width: 100%;
     font-family: 'Poppins', sans-serif;
     margin: 20px;
-}
+} */
 .avoimet_tiketit {
-    padding: 1.6em;
+    padding: 1em;
 }
 
 .container5 {
-    width: 98%;
+    width: 100%;
     height: auto;
     padding: 0px;
-    border-radius: 20px;
 }
 
-.container5 th, .container5 td, container5 h3 {
+.container5 th, .container5 td {
     color: white!important;
 }
 
@@ -722,15 +721,37 @@ ul {
   }
 
 .container6 {
-    width: 98%;
+    width: 1200px;
     background-color: #144673;
     height: auto;
     padding: 2em;
-    border-radius: 20px;
-
+    border-radius: 40px;
+    border: solid 20px #F2F2F2;
 }
 
+.container7 {
+    width: 450px;
+    background-color: #144673;
+    height: auto;
+    padding: 2em;
+    border-radius: 40px;
+    border: solid 20px #F2F2F2;
+    margin: 0 50px 50px 50px;
+}
 
+.otsikko {
+    font-weight: bold;
+    padding: 3em;
+}
+
+.container8 {
+    width: auto;
+    background-color: #144673;
+    height: auto;
+    padding: 2em;
+    border-radius: 40px;
+    border: solid 20px #F2F2F2;
+}
 
 /* @media (max-width:1200px){
 .viimeinen {
@@ -757,7 +778,7 @@ ul {
     @media (max-width:440px){
         .table-yhteys{
             transform: scale(0.4);
-        }}  */ */
+        }}   */
 
 
 /* ota yhteytta -> insert sivun näkymä */

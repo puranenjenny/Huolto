@@ -6,15 +6,16 @@
 <div class="connect_tausta">
 
 <div class="row vali  mx-0"></div>
-  <div class="row  mx-0 text-center">
+  <div class="row  mx-0 text-center otsikko">
   <h3>Tervetuloa omalle työpöydälle <?php echo htmlspecialchars($etunimi . " " . $sukunimi . "!"); ?></h3> <!--tulostetaan Hei etunimi sukunimi -->
   </div>
 
 <div class="container5 lomake_tausta3">
         <div class="row justify-content-center mx-0">
-            <h2 class="avoimet_tiketit">Kaikki tehtävät</h2><br><br><br></div>
+            <div class="container8 table-responsive">
+            <h2 class="avoimet_tiketit">Kaikki tehtävät</h2>
                 <div class="row justify-content-center mx-0">
-                 <div class="col-lg-12 text-center huolto_taulu">
+                 <div class="col-12 text-center huolto_taulu ">
                     
                             <table class="table table-striped huolto_taulu">
                                 <tr>
@@ -58,13 +59,16 @@
                             </table>
                  </div>
                 </div>
-                    
+            </div>                
 </div> 
+</div>
+<div class="row vali mx-0"></div>
+<div class="row vali mx-0"></div>
+<div class="row vali mx-0"></div>
 </div>
        
 
 
-<div class="row vali mx-0"></div>
 
 
 
