@@ -20,17 +20,19 @@
 
 
   <div class="row  mx-0">
-      <div class="col text-center"> <h3>Päivitä<br><br></h3></div>
+      <div class="col text-center"> <h3>Tehtävän päivitys<br><br></h3></div>
   </div>
 
-  <div class="row  mx-0">
-    <div class="col text-center"> <p><b>Päivitä tehtävän työntekijä, tilanne ja korjaustoimenpide.</b></p>
-  </div>
+<div class="row vali  mx-0"></div>
+<div class="row vali  mx-0"></div>
 
-
-  <form method="POST" action="php/huolto_muokkaa.php">
+<div class="bg-cover text-white d-flex align-items-center" id="taustakuva4">
+  <div class="container1">
+    <div class="row justify-content-center">
+      <div class="text-center lomake_tausta">
+  <form class="form" method="POST" action="php/huolto_muokkaa.php">
   <div class="form-group">
-    <label class="input_label2" for="tyontekija_valikko">Työntekijä:</label>
+    <div><label class="input_label2" for="tyontekija_valikko">Työntekijä:</label>
     <?php
     // haetaan kaikki työntekijät tietokannasta
     $tyontekija_id = "";
@@ -47,7 +49,7 @@
   <?php echo $tyontekija['tyontekija_id'] . " - " . $tyontekija['etunimi'] . " " . $tyontekija['sukunimi'] . " "; ?>
 </option>
       <?php } ?>
-    </select>
+    </select></div><br>
     <input type="hidden" name="tehtava_id" value="<?php echo $tehtava_id; ?>">
   </div>
   <div class="form-group">
@@ -67,15 +69,18 @@
       <option value="<?php echo $tilanne['tehtavan_tilanne_id']; ?>" <?php if (isset($tehtavan_tilanne_id) && $tilanne['tehtavan_tilanne_id'] == $tehtavan_tilanne_id) echo "selected"; ?>><?php echo $tilanne['tehtavan_tilanne']; ?></option>
     <?php } ?>
   </select>
-</div>
+</div><br>
 <input type="hidden" name="tehtava_id" value="<?php echo $tehtava_id; ?>">
   <div class="form-group">
-    <label class="input_label" for="korjaustoimenpide">Korjaustoimenpide:</label>
-    <textarea name="korjaustoimenpide" id="korjaustoimenpide"></textarea>
-  </div>
+    <label class="input_label2" for="korjaustoimenpide">Korjaustoimenpide:</label><br>
+    <textarea rows=5 name="korjaustoimenpide" id="korjaustoimenpide"></textarea>
+  </div><br>
   <button type="submit" class="btn btn1" name="laheta" value="submit">Lähetä</button>
 </form>
 </div>
-<div class="row vali  mx-0"></div>
-</div>
-</div>
+<div>
+<div class="row kommentti2 text-center  mx-0">
+    
+</div> 
+<?php include 'footer.php';?>
+    </div>
