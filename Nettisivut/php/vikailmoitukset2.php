@@ -18,7 +18,9 @@ $query = "SELECT t.tehtava_id, tt.tehtavan_tilanne, t.kuvaus, CONCAT(u.etunimi, 
           LEFT JOIN tyontekijat ty ON t.tyontekija_id = ty.tyontekija_id
           LEFT JOIN asukkaat a ON u.kayttaja_id = a.kayttaja_id
           WHERE t.tehtavan_tilanne_id <> 4 
-          ORDER BY t.tehtava_id DESC";
+          ORDER BY t.tehtava_id";
+        //ORDER BY tt.tehtavan_tilanne";
+        //ORDER BY tt.tehtavan_tilanne DESC"; --iha miten halutaankaa sortata
 
 $data = $yhteys->query($query);
 
