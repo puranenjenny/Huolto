@@ -14,9 +14,9 @@
         <div class="row justify-content-center mx-0">
             <h2 class="avoimet_tiketit">Kaikki tehtävät</h2><br><br><br></div>
                 <div class="row justify-content-center mx-0">
-                 <div class="col-lg-12 text-center">
+                 <div class="col-lg-12 text-center huolto_taulu">
                     
-                            <table class="table table-striped">
+                            <table class="table table-striped huolto_taulu">
                                 <tr>
                                 <th>ID</th> 
                                 <th>Tila</th>

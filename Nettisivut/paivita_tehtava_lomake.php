@@ -41,13 +41,13 @@
     include('tyontekija_lista2.php');
     $tyontekijat = json_decode($JSON_tyontekijat, true);
     ?>
-    <select class="form-control" name="tyontekija_id" id="tyontekija_id">
+    <select class="rounded-select" name="tyontekija_id" id="tyontekija_id">
       <?php foreach ($tyontekijat as $tyontekija) { ?>
         <option value="<?php echo $tyontekija['tyontekija_id']; ?>" <?php if (isset($tyontekija_id) && $tyontekija['tyontekija_id'] == $tyontekija_id) echo "selected"; ?>>
-  <?php echo $tyontekija['tyontekija_id'] . " - " . $tyontekija['etunimi'] . " " . $tyontekija['sukunimi'] . " "; ?>
+  <?php echo "&nbsp;" . $tyontekija['tyontekija_id'] . " - " . $tyontekija['etunimi'] . " " . $tyontekija['sukunimi'] . "&nbsp;"; ?>
 </option>
       <?php } ?>
-    </select>
+    </select><br><br>
     <input type="hidden" name="tehtava_id" value="<?php echo $tehtava_id; ?>">
   </div>
   <div class="form-group">
@@ -62,11 +62,11 @@
     include('php/hae_tilanteet.php');
     $tilanteet = json_decode($JSON_tilanteet, true);
   ?>
-  <select class="form-control" name="tehtavan_tilanne_id" id="tilanne_select">
+  <select class="rounded-select" name="tehtavan_tilanne_id" id="tilanne_select">
     <?php foreach ($tilanteet as $tilanne) { ?>
-      <option value="<?php echo $tilanne['tehtavan_tilanne_id']; ?>" <?php if (isset($tehtavan_tilanne_id) && $tilanne['tehtavan_tilanne_id'] == $tehtavan_tilanne_id) echo "selected"; ?>><?php echo $tilanne['tehtavan_tilanne']; ?></option>
+      <option value="<?php echo $tilanne['tehtavan_tilanne_id'] ; ?>" <?php if (isset($tehtavan_tilanne_id) && $tilanne['tehtavan_tilanne_id'] == $tehtavan_tilanne_id) echo "selected"; ?>><?php echo "&nbsp;" . $tilanne['tehtavan_tilanne']. "&nbsp;"; ?></option>
     <?php } ?>
-  </select>
+  </select><br><br>
 </div>
 <input type="hidden" name="tehtava_id" value="<?php echo $tehtava_id; ?>">
   <div class="form-group">
@@ -79,3 +79,6 @@
 <div class="row vali  mx-0"></div>
 </div>
 </div>
+
+
+<?php include 'footer.php';?>
