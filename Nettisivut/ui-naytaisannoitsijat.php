@@ -11,7 +11,7 @@
                 <a onclick="saveScrollPosition()" class="mx-2 btn nappi" href="ui-naytakayttajat.php">Näytä asukkaat</a>
                 <a onclick="saveScrollPosition()" class="mx-2 btn nappi" href="ui-naytaisannoitsijat.php">Näytä isännöitsijät</a>
                 <a class="mx-2 btn nappi" href="lisaa_asukas_lomake.php">Lisää asukas</a>
-                <a class="mx-2 btn nappi" href="#">Lisää isännöitsijä</a>
+                <a class="mx-2 btn nappi" href="lisaa_isannoitsija_lomake.php">Lisää isännöitsijä</a>
                 <a class="mx-2 btn nappi" href="lisaa_taloyhtio_lomake.php">Lisää taloyhtiö</a>
             </div>
                 <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Isännöitsijät:</h3>

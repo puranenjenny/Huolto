@@ -20,10 +20,11 @@ try {
     $data->execute();
 
     echo "Tehtävä päivitetty onnistuneesti!";
+    
 } catch (PDOException $e) {
     echo "Virhe: " . $e->getMessage();
 }
-
+header("Location: ../ui_huolto.php");
 $yhteys = null;
 
 ?>
