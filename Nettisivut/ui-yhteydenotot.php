@@ -49,5 +49,7 @@
 
 </div>
 </div>
-
+<div class="row kommentti2 text-center  mx-0">
+    <h3>Muistathan sulkea toimiston valot lähtiessäsi! ☺</h3>
+</div> 
 <?php include 'footer.php';?>

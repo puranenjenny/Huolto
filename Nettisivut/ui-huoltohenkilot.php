@@ -7,9 +7,9 @@
             <div class="row justify-content-center mx-0">
                 <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Työntekijöiden hallinta</h3>
             <div class=" col-lg-3 lomake_tausta napit_kayttaja">
-                <a class="mx-2 btn nappi" href="lisaa_tyontekija_lomake.php">Lisää työntekijä</a>
+                <a class="m-2 btn nappi" href="lisaa_tyontekija_lomake.php">Lisää työntekijä</a>
             </div>
-                <div class="lomake_tausta lomake_vika">
+                <div class="lomake_tausta lomake_vika table-responsive">
                             <table class="text-end table table-striped table-vika table-yhteys">
                                 <tr>
                                 <th>Työntekijän ID</th>
@@ -51,5 +51,7 @@
 
 </div>
 </div>
-
+<div class="row kommentti2 text-center  mx-0">
+    <h3>Muistathan sulkea toimiston valot lähtiessäsi! ☺</h3>
+</div> 
 <?php include 'footer.php';?>

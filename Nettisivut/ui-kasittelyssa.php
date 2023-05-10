@@ -17,16 +17,17 @@
             <div class="row justify-content-center mx-0">
             <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Vikailmoitusten hallinta</h3>
             <div class=" col-lg-3 lomake_tausta napit_kayttaja">
-                <a onclick="saveScrollPosition()" class="mx-2 btn nappi" href="ui-uudet-ilmot.php">Uudet</a>
-                <a onclick="saveScrollPosition()" class="mx-2 btn nappi" href="ui-kasittelyssa.php">Työn alla</a>
-                <a onclick="saveScrollPosition()" class="mx-2 btn nappi" href="ui_toimisto.php">Valmiit</a>
-                <a class="mx-2 btn nappi" href="vikalomake_toimisto.php">Lisää uusi</a>
+                <a onclick="saveScrollPosition()" class="m-2 btn nappi" href="ui-uudet-ilmot.php">Uudet</a>
+                <a onclick="saveScrollPosition()" class="m-2 btn nappi" href="ui-kasittelyssa.php">Työn alla</a>
+                <a onclick="saveScrollPosition()" class="m-2 btn nappi" href="ui_toimisto.php">Valmiit</a>
+                <a class="m-2 btn nappi" href="vikalomake_toimisto.php">Lisää uusi</a>
             </div>
-                <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Käsi vikailmoitukset</h3>
-                <div class="text-center lomake_tausta lomake_vika">
+                <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Työn alla olevat vikailmoitukset</h3>
+                <div class="text-center lomake_tausta lomake_vika table-responsive">
                             <table class="table table-striped table-vika">
                                 <tr>
                                 <th>ID</th>
+                                <th>Ilmoittaja</th>
                                 <th>Viankuvaus</th>
                                 <th>Työntekijä</th>
                                 <th>Tilanne</th>
@@ -48,6 +49,7 @@
                                              ?>
                                                      <tr>
                                                      <td><?php echo $member['ID']; ?></td>
+                                                     <td><?php echo $member['Ilmoittaja']; ?></td>
                                                      <td><?php echo $member['Viankuvaus']; ?></td>
                                                      <td><?php echo $member['Etunimi'] . ' ' .$member['Sukunimi']; ?></td>
                                                      <td><?php echo $member['Tilanne']; ?></td>
@@ -70,5 +72,7 @@
 
 </div>
 </div>
-
+<div class="row kommentti2 text-center  mx-0">
+    <h3>Muistathan sulkea toimiston valot lähtiessäsi! ☺</h3>
+</div> 
 <?php include 'footer.php';?>

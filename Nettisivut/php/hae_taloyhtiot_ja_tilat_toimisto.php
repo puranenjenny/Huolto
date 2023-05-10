@@ -2,13 +2,13 @@
 include("config.php");
 include("session.php");
 
+
 $taloyhtiot = [];
 $tilat = [];
 
-    $query2 = "SELECT taloyhtio_id, osoite, nimi FROM taloyhtiot";
-    //echo $isannoitsija_id;
+
+$query2 = "SELECT taloyhtio_id, osoite, nimi FROM taloyhtiot";
     $data2 = $yhteys->prepare($query2);
-    $data2->bindParam(':isannoitsija_id', $isannoitsija_id);
     $data2->execute();
 
     while ($result2 = $data2->fetch(PDO::FETCH_ASSOC)) {
@@ -17,7 +17,7 @@ $tilat = [];
             'osoite' => $result2['osoite'],
             'nimi' => $result2['nimi']
         ];
-        //echo $result2['osoite'];
+
         $taloyhtio_id = $result2['taloyhtio_id'];
         
 
@@ -36,6 +36,8 @@ $tilat = [];
 
         }
     }
+
+
 
 
 

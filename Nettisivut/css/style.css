@@ -590,6 +590,11 @@ h2{
     background-color: rgba(20, 70, 115, 0.8);
 }
 
+@media (max-width:640px){
+    .lomake_vika {
+        flex-direction: column;
+    }}
+
 #vika{
     max-width: 30em;
     min-height: 7em;
@@ -655,34 +660,10 @@ h2{
     justify-content: center;
     padding: 0 0 2em 0;
     background-color: rgba(20, 70, 115, 0.8);
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-@media (max-width:1200px){
-.viimeinen {
-    margin-right: 0 !important;
-}}
-
-@media (max-width:890px){
-.table-yhteys{
-    transform: scale(0.8);
-    max-width: 100%;
-    height: 100%;
-}}
-
-@media (max-width:690px){
-    .table-yhteys{
-        transform: scale(0.6);
-    }}
-
-    @media (max-width:540px){
-        .table-yhteys{
-            transform: scale(0.5);
-        }}
-
-    @media (max-width:440px){
-        .table-yhteys{
-            transform: scale(0.4);
-        }} 
   
 /* Huollon näkymä */
 
@@ -852,6 +833,15 @@ body {
 }
 
 input:disabled {
-    background-color: white;
-    color: black;
+    background-color: white !important;
+    color: black !important;
+}
+
+textarea:disabled {
+    background-color: white !important;
+    color: black !important;
+}
+
+.leveys-select {
+    min-width: 15em;
 }

@@ -9,6 +9,6 @@ if(isset($_GET['tehtava_id'])){
     $delete->execute();
 }
 
-header("location:../ui_toimisto.php");
+header("location:../ui-uudet-ilmot.php");
 
 ?>
