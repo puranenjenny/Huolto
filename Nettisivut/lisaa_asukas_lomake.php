@@ -7,14 +7,12 @@ include 'header_ui_toimisto.php';?>
 
 <div class="row vali  mx-0"></div>
 <div class="row vali  mx-0"></div>
-<div class="row vali  mx-0"></div>
 
 
   <div class="row  mx-0">
       <div class="col text-center"> <h3>Asukkaan lisäyslomake<br><br></h3></div>
   </div>
 
-<div class="row vali  mx-0"></div>
 <div class="row vali  mx-0"></div>
 
 <div class="bg-cover text-white d-flex align-items-center" id="taustakuva4">
@@ -24,20 +22,20 @@ include 'header_ui_toimisto.php';?>
       <form class="form" action="lisaa_asukas.php" method="POST">
       <div class="form-group">
   <div><label class="input_label" for="etunimi" require>Etunimi:</label>
-  <input type="text" id="etunimi" name="etunimi" placeholder="Matti"></div><br>
+  <input class="rounded-input" type="text" id="etunimi" name="etunimi" placeholder="&nbsp;Matti"></div><br>
  
   <div><label class="input_label" for="sukunimi" require>Sukunimi:</label>
-  <input type="text" id="sukunimi" name="sukunimi" placeholder="Meikäläinen"></div><br>
+  <input class="rounded-input" type="text" id="sukunimi" name="sukunimi" placeholder="&nbsp;Meikäläinen"></div><br>
  
   <div><label class="input_label" for="tunnus" require>Käyttäjätunnus:</label>
-  <input type="text" id="tunnus" name="tunnus" placeholder="mmeikalainen"></div><br>
+  <input class="rounded-input" type="text" id="tunnus" name="tunnus" placeholder="&nbsp;mmeikalainen"></div><br>
  
   <div><label class="input_label" for="salasana" require>Salasana:</label>
-  <input type="password" id="salasana" name="salasana"></div><br>
+  <input class="rounded-input" type="password" id="salasana" name="salasana"></div><br>
 
   <div class="form-group">
     <label class="input_label" for="taloyhtio" require>Valitse taloyhtiö:</label>
-    <select id="taloyhtio" name="taloyhtio">
+    <select class="rounded-select" id="taloyhtio" name="taloyhtio">
         <option value="">&nbsp;Taloyhtiö&nbsp;</option>
         <?php foreach ($taloyhtiot as $taloyhtio): ?>
             <option value="<?php echo $taloyhtio['taloyhtio_id']; ?>">
@@ -49,7 +47,7 @@ include 'header_ui_toimisto.php';?>
   <br>
 
   <div><label class="input_label" for="rappu" >Rappu ja numero:</label>
-  <input type="text" id="rappu" name="rappu" placeholder=" A 20 "></div><br>
+  <input class="rounded-input" type="text" id="rappu" name="rappu" placeholder="&nbsp;A 20 "></div><br>
 
 
 
