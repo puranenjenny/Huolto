@@ -12,7 +12,7 @@
                 <a class="mx-2 btn nappi" href="lisaa_asukas_lomake.php">Lisää asukas</a>
                 <a class="mx-2 btn nappi" href="lisaa_isannoitsija_lomake.php">Lisää isännöitsijä</a>
                 <a class="mx-2 btn nappi" href="lisaa_taloyhtio_lomake.php">Lisää taloyhtiö</a>
-                <a class="mx-2 btn nappi" href="lisaa_tyontekija_lomake.php">Lisää työntekijä</a>
+                
             </div>
             <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Asukkaat:</h3>
                 <div class="lomake_tausta lomake_vika">
