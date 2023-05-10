@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 09.05.2023 klo 22:12
+-- Generation Time: 10.05.2023 klo 16:51
 -- Palvelimen versio: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -239,7 +239,7 @@ CREATE TABLE `tehtavat` (
   `yleisavaimen_kaytto` varchar(15) NOT NULL DEFAULT 'Ei tietoa',
   `numero` varchar(15) NOT NULL DEFAULT '000-000000',
   `tehtavan_tyyppi_id` int(11) DEFAULT NULL,
-  `tyontekija_id` int(11) DEFAULT 100,
+  `tyontekija_id` int(11) DEFAULT NULL,
   `tehtavan_tilanne_id` int(11) NOT NULL DEFAULT 1,
   `jatetty` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
@@ -254,10 +254,12 @@ INSERT INTO `tehtavat` (`tehtava_id`, `kayttaja_id`, `kuvaus`, `korjaustoimenpid
 (26, 10, 'Pattereita ei saa säädettyä lämpimämmälle.', NULL, NULL, 4, 14, 'ei', '+358456339709', NULL, 4, 2, '2023-05-09 12:26:59'),
 (27, 21, 'Asunnossa on liian kuuma', NULL, NULL, 6, 14, 'sovi', '0400454969', NULL, 5, 2, '2023-05-09 12:28:03'),
 (28, 22, 'Hiekkaa on rapun edessä vielä vaikka kuinka paljon vaikka lakaisuauto kävi jo!', NULL, NULL, 3, 6, 'ei', '000-0000000', NULL, 11, 1, '2023-05-09 12:30:23'),
-(30, 22, 'Punttisali haisee, voitteko desinfioida kunnolla', NULL, NULL, 6, 13, 'kyllä', '0401234566', NULL, 11, 1, '2023-05-09 12:41:43'),
+(30, 22, 'Punttisali haisee, voitteko desinfioida kunnolla', NULL, NULL, 6, 13, 'kyllä', '0401234566', NULL, 3, 3, '2023-05-09 12:41:43'),
 (31, 22, 'Nurmikko pitäisi ajaa', NULL, NULL, 3, 10, 'kyllä', '0401234566', NULL, 11, 1, '2023-05-09 12:53:29'),
 (32, 21, 'Naapuri Kuuntelee Käärijän Cha cha Chata ihan liian kovalla.', NULL, NULL, 6, 14, 'ei', '0405566887', NULL, 11, 1, '2023-05-09 19:25:40'),
-(33, 22, 'Onko ylipäätään mahdollista kuunnella Cha cha chata liian kovalla?', NULL, NULL, 6, 12, 'kyllä', '0401234566', NULL, 11, 1, '2023-05-09 19:27:02');
+(33, 22, 'Onko ylipäätään mahdollista kuunnella Cha cha chata liian kovalla?', NULL, NULL, 6, 12, 'kyllä', '0401234566', NULL, 11, 1, '2023-05-09 19:27:02'),
+(39, 21, 'afdbab', NULL, NULL, 6, 14, 'ei', '3736573657', NULL, NULL, 1, '2023-05-10 14:45:59'),
+(40, 22, 'afdbadfg', NULL, NULL, 3, 8, 'kyllä', '0401234566', NULL, NULL, 1, '2023-05-10 14:46:26');
 
 -- --------------------------------------------------------
 
@@ -360,7 +362,8 @@ CREATE TABLE `yhteydenottopyynnot` (
 INSERT INTO `yhteydenottopyynnot` (`yhteydenottopyynto_id`, `yp_nimi`, `yp_email`, `yp_numero`, `yp_viesti`) VALUES
 (1, 'Testiyhteidenotto', 'testi.yhteydenotto@jotain.fi', 401234567, 'Testataan miltä tämä yhteydenottopyyntöhässäkkä näyttää ja toimiiko. '),
 (2, 'Sonera', 'sonera@sonera@sonera.fi', 400454969, 'Halutaan Töölön toimistolle kiinteistöhuoltoa. Pihat saatanan liukkaita talvisin.'),
-(3, 'Karhula', 'karhula@jotain.fi', 400454969, 'Haluttais että tuutte siivoamaan meidän karhunpesän ennen talviunia.');
+(3, 'Karhula', 'karhula@jotain.fi', 400454969, 'Haluttais että tuutte siivoamaan meidän karhunpesän ennen talviunia.'),
+(22, 'Pentti Halme', 'pena@jotain.fi', 401155997, 'Kesämökkini Ivalossa kaipaa kiinteistönhuolto. ');
 
 --
 -- Indexes for dumped tables
@@ -504,7 +507,7 @@ ALTER TABLE `tehtavan_tyyppi`
 -- AUTO_INCREMENT for table `tehtavat`
 --
 ALTER TABLE `tehtavat`
-  MODIFY `tehtava_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `tehtava_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `tilat`
@@ -528,7 +531,7 @@ ALTER TABLE `tyontekijat`
 -- AUTO_INCREMENT for table `yhteydenottopyynnot`
 --
 ALTER TABLE `yhteydenottopyynnot`
-  MODIFY `yhteydenottopyynto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `yhteydenottopyynto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- Rajoitteet vedostauluille

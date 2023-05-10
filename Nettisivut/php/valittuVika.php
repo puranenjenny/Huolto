@@ -4,11 +4,10 @@ require "config.php";
 
 if(isset($_GET['tehtava_id'])){
     $tehtava_id = $_GET['tehtava_id'];
-    $query = "SELECT tehtavat.tehtava_id, tehtavat.kuvaus, taloyhtiot.osoite, tehtavat.yleisavaimen_kaytto, tehtavat.numero, tehtavat.tehtavan_tilanne_id, tehtavan_tilanne.tehtavan_tilanne, tehtavat.tyontekija_id, tehtavat.jatetty 
+    $query = "SELECT tehtavat.tehtava_id, tehtavat.kuvaus, taloyhtiot.osoite, tehtavat.yleisavaimen_kaytto, tehtavat.numero, tehtavat.tehtavan_tilanne_id, tehtavan_tilanne.tehtavan_tilanne, tehtavat.jatetty 
     FROM tehtavat
     INNER JOIN taloyhtiot ON taloyhtiot.taloyhtio_id = tehtavat.taloyhtio_id
     INNER JOIN tehtavan_tilanne ON tehtavan_tilanne.tehtavan_tilanne_id = tehtavat.tehtavan_tilanne_id
-    INNER JOIN tyontekijat ON tyontekijat.tyontekija_id = tehtavat.tyontekija_id
     WHERE tehtava_id = '$tehtava_id'";
     $data = $yhteys->query($query);
     
