@@ -607,7 +607,8 @@ h2{
 
 .rounded-select {
     border-radius: 7px; /* avainvalikon reunojen pyöristys jne */
-    }
+}
+
 .rounded-input {
     border-radius: 7px;
 }

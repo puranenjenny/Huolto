@@ -21,6 +21,7 @@ if($count == 1) {
    $kayttaja = $kirjaudu->fetch();
    if($kayttaja['rooli_id'] == '4') { // 1=toimistohenkilo, 2=huoltohenkilo, 3=isannoitsija, 4=asukas
       $_SESSION['login_user'] = $tunnus;
+      $_SESSION['rooli_id'] = $kayttaja['rooli_id']; //---tallennetaan myös rooli_id sessioon
       header("location: ../vikalomake.php"); //siirrytään vikailmoitukseen
    } else {
       $_SESSION['error'] = "<b>Kirjautuminen ei onnistunut!<br> 
