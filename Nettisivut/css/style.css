@@ -35,12 +35,17 @@ body{
     font-size: 1.2em;
 }
 
-@media (max-width:992px){
+.viimeinen {
+    margin: 0 3em 0 0;
+}
+
+@media (max-width:1200px){
     .nav-link {
         text-align: center;
         padding: 0 !important;
         font-size: 1.3em;
         border-radius: 0 !important;
+        width: 100% !important;
     }
 
     .dropdown {
@@ -70,7 +75,13 @@ body{
     .bubble:after {
         display: none;
     }
+
+    .viimeinen{
+        margin: 0 !important;
+    }
 }
+
+
         
 .navbar .navbar-nav .nav-link {
     font-weight: 700;  
@@ -576,7 +587,7 @@ h2{
 
 .header_vika{
     color: white;
-    padding: 3em 0 1em 0 !important;
+    padding: 1em 0 1em 0 !important;
     margin: 0 !important;
     text-decoration: underline;
     font-family: 'Rubik', sans-serif;
@@ -591,10 +602,7 @@ h2{
     background-color: rgba(20, 70, 115, 0.8);
 }
 
-@media (max-width:640px){
-    .lomake_vika {
-        flex-direction: column;
-    }}
+
 
 #vika{
     max-width: 30em;
@@ -624,6 +632,57 @@ h2{
 }
 
 /* Toimiston näkymä */
+.container9 {
+    width: 95%;
+    background-color: #144673;
+    height: auto;
+    padding: 0.5em;
+    border-radius: 40px;
+    border: solid 20px #F2F2F2;
+}
+
+.container10 {
+    width: 100%;
+    background-color:  #F2F2F2
+}
+
+.container11 {
+    max-width: 55em;
+    background-color: #144673;
+    height: auto;
+    padding: 1em;
+    border-radius: 40px;
+    border: solid 20px #F2F2F2;
+}
+
+@media (max-width:1000px){
+    .lomake_vika {
+        flex-direction: column;
+        padding-left: 3em;
+    }
+    .container9 {
+        width: 100%;
+        height: auto;
+        padding: 0.5em;
+        border-radius:0px;
+        border: 0px #F2F2F2;
+    }
+}
+
+@media (max-width:500px){
+    .lomake_vika {
+        flex-direction: column;
+        padding-left: 0.2em;
+    }}
+
+@media screen and (max-width: 500px) {
+    .container11 {
+        max-width: 100%;
+        margin: 0em;
+        border: none;
+        border-radius: 0;
+    }
+  }
 
 .table-vika {
     max-width: 90%;
@@ -635,10 +694,6 @@ h2{
 
 .table-vika td{
     color: white !important;
-}
-
-.viimeinen {
-    margin-right: 3em;
 }
 
 .nappi {
@@ -660,7 +715,7 @@ h2{
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 0 0 2em 0;
+    padding: 0 0 0.5em 0;
     background-color: rgba(20, 70, 115, 0.8);
     flex-direction: row;
     flex-wrap: wrap;
@@ -845,5 +900,5 @@ textarea:disabled {
 }
 
 .leveys-select {
-    min-width: 15em;
+    max-width: 20em;
 }

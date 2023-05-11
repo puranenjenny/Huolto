@@ -53,7 +53,9 @@ include 'php/hae_roolit.php';?>
 
 
 
-  <div><button type="submit" class="btn btn1" name="submit" value="submit">Lähetä</button></div>
+  <div>
+  <a class="btn btn1" href="ui-huoltohenkilot.php">Takaisin</a>
+  <button type="submit" class="btn btn1" name="submit" value="submit">Lähetä</button></div>
 </form>
 
 

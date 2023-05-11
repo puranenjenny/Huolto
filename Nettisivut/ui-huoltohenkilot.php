@@ -2,8 +2,8 @@
 <?php include 'php/hae_tyontekijan_nimi.php';?>
 <script src="js/kirjautumiserror.js"></script>
 
-    <div class="bg-cover text-white d-flex align-items-center">
-        <div class="container1 container_table">
+    <div class="container10 bg-cover text-white d-flex justify-content-center align-items-center">
+        <div class="container9 container_table">
             <div class="row justify-content-center mx-0">
                 <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Työntekijöiden hallinta</h3>
             <div class=" col-lg-3 lomake_tausta napit_kayttaja">

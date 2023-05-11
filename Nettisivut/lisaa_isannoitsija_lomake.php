@@ -40,7 +40,9 @@ include 'header_ui_toimisto.php';?>
 
 
 
-  <div><button type="submit" class="btn btn1" name="submit" value="submit">Lähetä</button></div>
+  <div>
+  <a class="btn btn1" href="ui-naytaisannoitsijat.php">Takaisin</a>
+  <button type="submit" class="btn btn1" name="submit" value="submit">Lähetä</button></div>
 </form>
 
 

@@ -61,8 +61,8 @@
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="ui-yhteydenotot.php">YHTEYDENOTOT</a>
                                                 </li>
-                                                <li class="nav-item viimeinen">
-                                                    <a class="nav-link" href="php/logout.php">KIRJAUDU ULOS</a>
+                                                <li class="mr-3 nav-item">
+                                                    <a class="viimeinen nav-link" href="php/logout.php">KIRJAUDU ULOS</a>
                                                 </li>
                                     </ul>
                           </div>

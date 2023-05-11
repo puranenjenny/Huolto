@@ -12,8 +12,8 @@
 
 <div class="row vali mx-0"></div>
 
-    <div class="bg-cover text-white d-flex align-items-center">
-        <div class="container1">
+    <div class="bg-cover text-white d-flex justify-content-center align-items-center">
+        <div class="container9">
             <div class="row justify-content-center mx-0">
             <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Vikailmoitusten hallinta</h3>
             <div class=" col-lg-3 lomake_tausta napit_kayttaja">
