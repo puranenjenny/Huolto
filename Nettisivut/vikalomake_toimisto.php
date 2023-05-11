@@ -1,9 +1,12 @@
+
 <?php 
 include "php/config.php";
 include 'header_ui_toimisto.php';
 include 'php/hae_taloyhtiot_ja_tilat_toimisto.php';
+include 'php/hae_tyontekijat.php'
 ?>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/isannoitsija_valinnat.js"></script>
 
 <div class="bg-cover text-white d-flex align-items-center">
     <div class="container1">
@@ -23,13 +26,13 @@ include 'php/hae_taloyhtiot_ja_tilat_toimisto.php';
                             <label for="taloyhtio">Taloyhtiöt:</label>
                         </div>
                         <div class="select-wrapper text-center">
-                        <select id="taloyhtio" name="taloyhtio" class="rounded-select">
+                        <select required id="taloyhtio" name="taloyhtio" class="rounded-select">
                             <option value="">&nbsp;Valitse taloyhtiö&nbsp;</option>
                             <?php foreach ($taloyhtiot as $taloyhtio): ?>
                                 <option value="<?php echo $taloyhtio['taloyhtio_id']; ?>">
                                     <?php echo '&nbsp;' . $taloyhtio['nimi'] . ' - ' . $taloyhtio['osoite'] . '&nbsp;'; ?>
                                 </option>
-                            <?php endforeach; ?>
+                            <?php endforeach; print $taloyhtio_id; ?>
                         </select>
 
                         </div>
@@ -41,7 +44,7 @@ include 'php/hae_taloyhtiot_ja_tilat_toimisto.php';
                         </div>
                         <div class="select-wrapper text-center">
                         <select id="tila" name="tila" class="rounded-select leveys-select">
-                            <option value="">&nbsp;Tilat&nbsp;</option>
+                            <option value="14">&nbsp;Tilat&nbsp;</option>
                             <?php foreach ($tilat as $tila): ?>
                                 <option value="<?php echo $tila['tila_id']; ?>" data-taloyhtio-id="<?php echo $tila['taloyhtio_id']; ?>">
                                     <?php echo '&nbsp;' . $tila['nimi'] . '&nbsp;'; ?>
@@ -58,7 +61,7 @@ include 'php/hae_taloyhtiot_ja_tilat_toimisto.php';
                     </div>
                     <div class="select-wrapper text-center">
                         <select id="Tilanne" name="Tilanne" class="rounded-select leveys-select">
-                                        <option value="" disabled selected hidden>Valitse työn tilanne</option>
+                                        <option value="1" selected hidden>Valitse työn tilanne</option>
                                         <option value="1">Käsittelemättä</option>
                                         <option value="2">Avoin</option>
                                         <option value="3">Työn alla</option>
@@ -71,7 +74,7 @@ include 'php/hae_taloyhtiot_ja_tilat_toimisto.php';
                             <label for="Tilanne">Työntekija:</label>
                         </div>
                         <div class="select-wrapper text-center">
-                        <select id="Tyontekija" name="tyontekija" class="rounded-select leveys-select">
+                        <select required id="Tyontekija" name="tyontekija" class="rounded-select leveys-select">
                         <option value="" disabled selected hidden>&nbsp;Valitse huoltohenkilö&nbsp;</option>
                                         <?php
                                                 $JSON_tyontekijat = file_get_contents("tyontekijat.json");

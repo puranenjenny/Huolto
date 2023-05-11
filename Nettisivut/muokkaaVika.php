@@ -18,42 +18,49 @@ include 'header_ui_toimisto.php';?>
                                     foreach($users as $key1){
                                         foreach($key1 as $user){
                                 ?>
-                    <div class="form-group form-floating">
+                    <div class="my-2 form-group form-floating">
                         <div class="label-wrapper">
                             <label for="jattaja">Ilmoituksen jättäjä:</label>
                         </div>
                         <input class="rounded-input leveys-select" disabled type="text" name="jattaja" value="<?php echo $user['Ilmoittaja']; ?>">
                         <br>
                     </div>
-                    <div class="form-group form-floating">
+                    <div class="my-2 form-group form-floating">
                         <div class="label-wrapper">
                             <label for="kuvaus">Vian kuvaus:</label>
                         </div>
                         <textarea disabled id="vika" type="textarea" name="kuvaus" required class="form-control rounded-select" required value=""><?php echo $user['Viankuvaus']; ?></textarea>
-                        <br>
+                        
                     </div>
-                    <div class="form-group form-floating">
+                    <div class="my-2 form-group form-floating">
                         <div class="label-wrapper">
                             <label for="osoite">Osoite:</label>
                         </div>
                         <input class="rounded-input leveys-select" disabled type="text" name="osoite" value="<?php echo $user['Osoite']; ?>">
                         <br>
                     </div>
-                    <div class="form-group form-floating">
+                    <div class="my-2 form-group form-floating">
+                        <div class="label-wrapper">
+                            <label for="Tila">Tila:</label>
+                        </div>
+                        <input class="rounded-input leveys-select" disabled type="text" name="Tila" value="<?php echo $user['Tila']; ?>">
+                        <br>
+                    </div>
+                    <div class="my-2 form-group form-floating">
                         <div class="label-wrapper">
                             <label for="yleisavain">Yleisavaimen käyttö:</label>
                         </div>
                         <input class="rounded-input leveys-select" disabled type="text" name="yleisavain" value="<?php echo $user['Yleisavain']; ?>">
                         <br>
                     </div>
-                    <div class="form-group form-floating">
+                    <div class="my-2 form-group form-floating">
                         <div class="label-wrapper">
                             <label for="puhelin">Puhelinnumero:</label>
                         </div>
                         <input class="rounded-input leveys-select" disabled type="text" name="puhelin" value="<?php echo $user['Puhelin']; ?>">
                         <br>
                     </div>
-                    <div class="form-group form-floating">
+                    <div class="my-2 form-group form-floating">
                         <div class="label-wrapper">
                             <label for="Tilanne">Tilanne:</label>
                     </div>
@@ -66,7 +73,7 @@ include 'header_ui_toimisto.php';?>
                                         <option value="4">Valmis</option>                                   
                         </select>
                     </div>
-                    <div class="form-group form-floating">
+                    <div class="my-2 form-group form-floating">
                         <div class="label-wrapper">
                             <label for="Tilanne">Työntekija:</label>
                     </div>

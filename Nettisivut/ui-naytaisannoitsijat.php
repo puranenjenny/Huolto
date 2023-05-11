@@ -37,7 +37,7 @@
                                                      <td><?php echo $member['Etunimi']; ?></td>
                                                      <td><?php echo $member['Sukunimi']; ?></td>
                                                      <td><?php echo $member['Puhelin']; ?></td>
-                                                     <td><?php echo '<a class="btn btn-warning" href="valittuIsannoitsija.php?id='.$member['id'].'">Muokkaa</a>'; ?></td>
+                                                     <td><?php echo '<a class="btn btn-warning" href="php/valittuIsannoitsija.php?id='.$member['id'].'">Muokkaa</a>'; ?></td>
                                                      </tr>
                                              <?php
                                              }
