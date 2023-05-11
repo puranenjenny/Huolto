@@ -232,7 +232,7 @@ body{
     align-items: center;
     margin: 0px;
     box-sizing: content-box;
-
+    position: relative;
 }
 
 .mini {
@@ -255,6 +255,7 @@ body{
 
 #tyontekijan_tilanne_button {
     margin-right: 70px;
+    position: fixed;
 }
 
 .ylapalkki a {

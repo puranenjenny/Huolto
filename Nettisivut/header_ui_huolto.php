@@ -59,7 +59,7 @@ $button_text = ($tyontekijan_tilanne == 1) ? "VAPAA" : "VARATTU";
         <div class="col-12 col-md-3 col-lg-2"><img class="sijainti minikuva" src="img/sijainti.png" alt="sijainti">Sofiankatu 4</div>
         <div class="col-12 col-md-3 col-lg-2"><img class="email minikuva" src="img/email.png" alt="email">toimisto@rautio.fi</div>
         <div class="d-none d-lg-block col-lg-4"></div>
-        <div class="col-12 col-md-12 col-lg-2 d-flex align-items-center justify-content-end "> 
+        <div class="col-12 col-md-3 col-lg-2 d-flex align-items-center justify-content-end "> 
           <div> <!-- Työntekijän tilanne -nappi -->
           <button class="btn btn2 btn-info" id="tyontekijan_tilanne_button" data-kayttaja-id="<b><?php echo$kayttaja_id; ?></b>"><!-- data-kayttaja-id on käyttäjän id, jota käytetään ajax-kutsussa -->
           <?php echo $button_text; ?>

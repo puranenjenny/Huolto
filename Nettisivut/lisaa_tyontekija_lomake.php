@@ -1,5 +1,6 @@
 <?php include "php/config.php";
-include 'header_ui_toimisto.php';?>
+include 'header_ui_toimisto.php';
+include 'php/hae_roolit.php';?>
 
 
 <div class="connect_tausta">
@@ -37,6 +38,18 @@ include 'header_ui_toimisto.php';?>
  
   <div><label class="input_label" for="salasana" require>Salasana:</label>
   <input class="rounded-input" type="password" id="salasana" name="salasana"></div><br>
+
+  <div class="form-group">
+    <label class="input_label2" for="rooli_id">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Valitse rooli: &nbsp;&nbsp;</label>
+    <select class="rounded-select" id="rooli" name="rooli_id">
+    <option value="">&nbsp;Rooli&nbsp;</option>
+    <?php foreach ($roolit as $rooli): ?>
+        <option value="<?php echo $rooli['rooli_id']; ?>">
+            <?php echo '&nbsp;' . $rooli['rooli'] . '&nbsp;'; ?>
+        </option>
+    <?php endforeach; ?>
+</select>
+</div><br>
 
 
 

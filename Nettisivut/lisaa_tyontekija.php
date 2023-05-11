@@ -21,6 +21,7 @@ include 'header_ui_toimisto.php';?>
         $salasana = $_POST['salasana'];//käyttäjät taulu
         $kayttaja = "Työntekijä";//käyttäjät taulu
         $tyontekijan_tilanne_id = 1;
+        $rooli_id = $_POST['rooli_id'];//käyttäjät taulu
 
         
         // Aloita transaktio
@@ -30,7 +31,7 @@ include 'header_ui_toimisto.php';?>
 
          // Lisätään uusi käyttäjä tietokantaan
          $lisaa_tyontekija = $yhteys->prepare("INSERT INTO kayttajat (tunnus, salasana, kayttaja, rooli_id) VALUES (?, ?, ?, ?)");
-         $lisaa_tyontekija->execute([$tunnus, $salasana, $kayttaja, 2]);
+         $lisaa_tyontekija->execute([$tunnus, $salasana, $kayttaja, $rooli_id]);
  
          // Haetaan uuden käyttäjän id
          $kayttaja_id = $yhteys->query("SELECT LAST_INSERT_ID()")->fetchColumn();
