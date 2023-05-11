@@ -46,7 +46,7 @@
                                         <td><?php echo $member['Tila']; ?></td>
                                         <td><?php echo $member['Yleisavaimen_kaytto']; ?></td>
                                         <td><?php echo $member['Numero']; ?></td>
-                                        <td><a href="paivita_tehtava_lomake.php?tehtava_id=<?php echo $member['ID']; ?>" class="btn btn2 btn-info">Päivitä</a></td>  
+                                        <td><a href="paivita_tehtava_lomake2.php?tehtava_id=<?php echo $member['ID']; ?>" class="btn btn2 btn-info">Päivitä</a></td>  
                                         </tr>
                                          <?php
                                             }
