@@ -1,3 +1,7 @@
+<?php
+$allowed_roles = array('1');
+include("php/rooli_check.php");
+?>
 <?php include 'header_ui_toimisto.php';?>
 <?php include 'php/hae_tyontekijan_nimi.php';?>
 

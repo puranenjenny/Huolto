@@ -26,6 +26,7 @@ $tyontekija_id = null; // !!!!alustetaan $tyontekija_id-muuttuja, jotta se on va
 if($count == 1) {
   $kayttaja = $kirjaudu->fetch();
   $_SESSION['login_user'] = $tunnus;
+  $_SESSION['rooli_id'] = $kayttaja['rooli_id']; //---tallennetaan myös rooli_id sessioon
 
   if($kayttaja['rooli_id'] == '1') { // 1=toimistohenkilo, 2=huoltohenkilo, 3=isannoitsija, 4=asukas
     header("location: ../ui-uudet-ilmot.php"); //siirrytään työpöydille
