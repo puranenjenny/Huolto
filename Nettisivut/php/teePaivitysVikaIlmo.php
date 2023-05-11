@@ -30,5 +30,5 @@ if(isset($_POST['tallenna'])){
     exit;
 }
 
-$connection = null;
+$yhteys = null;
 ?>
