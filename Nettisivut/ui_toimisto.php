@@ -67,6 +67,7 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
+                                <td></td>
                                 <td>Laskuta nappi <br>poistaa vikailmoituksen</td></tr>
                             </table>
                             

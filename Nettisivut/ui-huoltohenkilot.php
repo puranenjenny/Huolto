@@ -10,7 +10,7 @@
                 <a class="m-2 btn nappi" href="lisaa_tyontekija_lomake.php">Lisää työntekijä</a>
             </div>
                 <div class="lomake_tausta lomake_vika table-responsive">
-                            <table class="text-end table table-striped table-vika table-yhteys">
+                            <table class="text-center table table-striped table-vika table-yhteys">
                                 <tr>
                                 <th>Työntekijän ID</th>
                                 <th>Etunimi</th>

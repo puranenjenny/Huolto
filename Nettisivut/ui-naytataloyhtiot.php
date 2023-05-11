@@ -18,7 +18,7 @@ include 'header_ui_toimisto.php';
             </div>
             <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Taloyhtiöt:</h3>
                 <div class="lomake_tausta lomake_vika table-responsive">
-                            <table class="text-end table table-striped table-vika table-yhteys">
+                            <table class="text-center table table-striped table-vika table-yhteys">
                                 <tr>
                                 <th>Taloyhtiönumero</th>
                                 <th>Nimi</th>
