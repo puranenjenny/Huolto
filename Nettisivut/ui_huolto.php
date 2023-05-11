@@ -31,7 +31,7 @@
                     <th></th>
                     </tr>
                             <?php
-                            include('php/vikailmoitukset2.php');
+                            include('php/vikailmoitukset_omat.php');
                             $members = json_decode($JSON_vika, true);
 
                             if(count($members) != 0){
