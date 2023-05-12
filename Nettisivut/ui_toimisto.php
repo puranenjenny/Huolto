@@ -1,11 +1,17 @@
 <?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+
 $allowed_roles = array('1');
 include("php/rooli_check.php");
-?>
+?> 
+
+
 <?php include 'header_ui_toimisto.php';?>
 <?php include 'php/hae_tyontekijan_nimi.php';?>
 
-
+<?php //echo "Rooli ID: " . $_SESSION['rooli_id']; ?>
 <div class="connect_tausta">
 
 <div class="row vali  mx-0"></div>

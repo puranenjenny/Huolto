@@ -29,6 +29,9 @@ if($count == 1) {
   $_SESSION['rooli_id'] = $kayttaja['rooli_id']; //---tallennetaan myös rooli_id sessioon
 
   if($kayttaja['rooli_id'] == '1') { // 1=toimistohenkilo, 2=huoltohenkilo, 3=isannoitsija, 4=asukas
+    // echo "Rooli ID: " . $_SESSION['rooli_id'] . "<br>";
+    // echo "Redirecting to: " . "desired_page" . "<br>";
+    // exit;
     header("location: ../ui-uudet-ilmot.php"); //siirrytään työpöydille
   } elseif($kayttaja['rooli_id'] == '2') {
     $tyontekija_id = $kayttaja['tyontekija_id']; //!!!! haetaan työntekijän id
