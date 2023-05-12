@@ -14,8 +14,9 @@
     <div class="container5">
 
     <div class="row justify-content-center mx-0">
-        <div class="col-xl-8 col-lg-8 col-8 table-responsive"><!--table-responsive-->
-        <div class="container6">
+        <div class="col-xl-8 col-lg-8 col-8">
+            <div class="table-responsive"><!--table-responsive-->
+                <div class="container6">
                 <div class="row justify-content-center mx-0">
                     <h2 class="avoimet_tiketit">Oma työlista</h2><br><br><br></div>
                 <div class="row justify-content-center mx-0"> 
@@ -54,7 +55,8 @@
                                         }?>
                             </table>
                 </div></div>
-        </div> <!--table-responsive-->
+            </div><!--table-responsive-->
+        </div> 
        <div class="container7 col-xl-4 col-lg-12 col-12 justify-content-center mx-0 ">     
         <div class="row justify-content-center mx-0">
                     <h2>Tehtävät taloyhtiöittäin</h2><br><br><br></div>

@@ -1,5 +1,7 @@
 <?php
 include 'header_ui_huolto.php';
+include 'php/hae_tyontekijan_nimi.php';
+//include 'php/hae_tehtavan_tiedot.php';
 
 $tehtava_id = isset($_POST['tehtava_id']) ? $_POST['tehtava_id'] : $_GET['tehtava_id'];
 $tyontekija_id = isset($_SESSION['tyontekija_id']) ? $_SESSION['tyontekija_id'] : '';
@@ -27,7 +29,7 @@ $tilanteet = json_decode($JSON_tilanteet, true);
                 <div class="text-center lomake_tausta">
                     <form class="form" method="POST" action="php/huolto_muokkaa.php">
                         <div class="form-group">
-                        <label class="input_label2" for="tyontekija_id">Työntekijä ID:<br><?php echo $tyontekija_id; ?>   </label><br>
+                        <label class="input_label2" for="tyontekija_id">Työntekijä:<br><?php echo $tyontekija_id ." ". $etunimi ." ". $sukunimi ?>   </label><br>
                             <input type="hidden" name="tyontekija_id" value="<?php echo $tyontekija_id; ?>">
                         </div><br>
                         <div class="form-group">
