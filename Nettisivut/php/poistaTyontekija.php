@@ -9,6 +9,6 @@ if(isset($_GET['id'])){
     $delete->execute();
 }
 
-header("location:../ui-huoltohenkilot.php.php");
+header("location:../ui-huoltohenkilot.php");
 
 ?>

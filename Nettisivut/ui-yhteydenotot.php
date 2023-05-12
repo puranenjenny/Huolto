@@ -3,12 +3,12 @@
 <script src="js/kirjautumiserror.js"></script>
 
 
-    <div class="bg-cover text-white d-flex align-items-center">
-        <div class="container1 container_table">
+    <div class="container10 bg-cover text-white d-flex justify-content-center align-items-center">
+        <div class="container9 container_table">
             <div class="row justify-content-center mx-0">
                 <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Saapuneet yhteydenottopyynnöt</h3>
-                <div class="lomake_tausta lomake_vika">
-                            <table class="text-end table table-striped table-vika table-yhteys">
+                <div class="lomake_tausta lomake_vika table-responsive">
+                            <table class="text-center table table-striped table-vika table-yhteys">
                                 <tr>
                                 <th>ID</th>
                                 <th>Nimi</th>

@@ -3,7 +3,7 @@ include 'header_ui_toimisto.php';?>
 <?php include 'php/hae_taloyhtiot.php';?>
 
 
-<div class="connect_tausta">
+<div class="container10 connect_tausta">
 
 <div class="row vali  mx-0"></div>
 <div class="row vali  mx-0"></div>
@@ -51,7 +51,9 @@ include 'header_ui_toimisto.php';?>
 
 
 
-  <div><button type="submit" class="btn btn1" name="submit" value="submit">Lähetä</button></div>
+  <div>
+  <a class="btn btn1" href="ui-naytakayttajat.php">Takaisin</a>
+  <button type="submit" class="btn btn1" name="submit" value="submit">Lähetä</button></div>
 </form>
 
 

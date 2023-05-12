@@ -2,15 +2,15 @@
 <?php include 'php/hae_tyontekijan_nimi.php';?>
 <script src="js/kirjautumiserror.js"></script>
 
-    <div class="bg-cover text-white d-flex align-items-center">
-        <div class="container1 container_table">
+    <div class="container10 bg-cover text-white d-flex justify-content-center align-items-center">
+        <div class="container9 container_table">
             <div class="row justify-content-center mx-0">
                 <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Työntekijöiden hallinta</h3>
             <div class=" col-lg-3 lomake_tausta napit_kayttaja">
                 <a class="m-2 btn nappi" href="lisaa_tyontekija_lomake.php">Lisää työntekijä</a>
             </div>
                 <div class="lomake_tausta lomake_vika table-responsive">
-                            <table class="text-end table table-striped table-vika table-yhteys">
+                            <table class="text-center table table-striped table-vika table-yhteys">
                                 <tr>
                                 <th>Työntekijän ID</th>
                                 <th>Etunimi</th>

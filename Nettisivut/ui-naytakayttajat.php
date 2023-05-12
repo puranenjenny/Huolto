@@ -2,13 +2,14 @@
 <?php include 'php/hae_tyontekijan_nimi.php';?>
 <script src="js/kirjautumiserror.js"></script>
 
-    <div class="bg-cover text-white d-flex align-items-center">
-        <div class="container1 container_table">
+    <div class="container10 bg-cover text-white d-flex justify-content-center align-items-center">
+        <div class="container9 container_table">
             <div class="row justify-content-center mx-0">
                 <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Käyttäjien hallinta</h3>
             <div class="d-flex lomake_tausta napit_kayttaja">
                 <a onclick="saveScrollPosition()" class="m-2 btn nappi" href="ui-naytakayttajat.php">Näytä asukkaat</a>
                 <a onclick="saveScrollPosition()" class="m-2 btn nappi" href="ui-naytaisannoitsijat.php">Näytä isännöitsijät</a>
+                <a onclick="saveScrollPosition()" class="m-2 btn nappi" href="ui-naytataloyhtiot.php">Näytä taloyhtiöt</a>                
                 <a class="m-2 btn nappi" href="lisaa_asukas_lomake.php">Lisää asukas</a>
                 <a class="m-2 btn nappi" href="lisaa_isannoitsija_lomake.php">Lisää isännöitsijä</a>
                 <a class="m-2 btn nappi" href="lisaa_taloyhtio_lomake.php">Lisää taloyhtiö</a>
@@ -16,7 +17,7 @@
             </div>
             <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Asukkaat:</h3>
                 <div class="lomake_tausta lomake_vika table-responsive">
-                            <table class="text-end table table-striped table-vika table-yhteys">
+                            <table class="text-center table table-striped table-vika table-yhteys">
                                 <tr>
                                 <th>Asukasnumero</th>
                                 <th>Etunimi</th>

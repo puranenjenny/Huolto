@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"tehtavat":[{"ID":"80","Viankuvaus":"Pesuhuoneen viemäri tukossa","Osoite":"Lumikontie 58","Paivays":"2023-05-11 17:49:44","Ilmoittaja":"Antti Kortelainen"}]}
-=======
-{"tehtavat":[{"ID":"20","Viankuvaus":"Ikkunan tiivisteet vuotaa","Korjaustoimenpide":"Tiivisteet vaihdettu uusiin.","Osoite":"Nallekarhuntie 65","Paivays":"2023-05-08 17:34:10","Ilmoittaja":"Antti Kortelainen"},{"ID":"21","Viankuvaus":"pistorasia ei toimi","Korjaustoimenpide":"Vaihdettu pistorasia. Työ hankittu alihankintana Sähkötyö Keinäseltä (a 100£). ","Osoite":"Yliskyläntie 7","Paivays":"2023-05-08 17:34:10","Ilmoittaja":"Rollo Puranen"}]}
->>>>>>> 9513759ba07ac16f397ce583c72df332a24772df
+{"tehtavat":[{"ID":"80","Viankuvaus":"Pesuhuoneen viemäri tukossa","Jattaja":"Antti Kortelainen","Rappu":"C 22","Osoite":"Lumikontie 58","Yleisavaimen_kaytto":"kyllä","Numero":"09 4545 669","Tilanne":"Työn alla","Tila":"Pesutupa","Tyontekija":"Antti Matti Kortelainen"},{"ID":"87","Viankuvaus":"Naapuri soittaa käärijää ihan täysillä","Jattaja":"Antti Kortelainen","Rappu":"","Osoite":"Nallekarhuntie 65","Yleisavaimen_kaytto":"kyllä","Numero":"09 4545 669","Tilanne":"Avoin","Tila":"Rappu B","Tyontekija":"Antti Matti Kortelainen"}]}

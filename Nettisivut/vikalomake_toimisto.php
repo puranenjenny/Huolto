@@ -9,8 +9,9 @@ include 'php/hae_tyontekijat.php'
 <script src="js/isannoitsija_valinnat.js"></script>
 
 <div class="bg-cover text-white d-flex align-items-center">
-    <div class="container1">
+    <div class="container10">
         <div class="row justify-content-center mx-0">
+            <div class="container11">
             <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Vikailmoituslomake</h3>
             <div class="text-center lomake_tausta lomake_vika">
                 <form class="form" action="vikalomake_toimisto_toiminto.php" method="POST">
@@ -26,11 +27,11 @@ include 'php/hae_tyontekijat.php'
                             <label for="taloyhtio">Taloyhtiöt:</label>
                         </div>
                         <div class="select-wrapper text-center">
-                        <select required id="taloyhtio" name="taloyhtio" class="rounded-select">
+                        <select required id="taloyhtio" name="taloyhtio" class="rounded-select leveys-select">
                             <option value="">&nbsp;Valitse taloyhtiö&nbsp;</option>
                             <?php foreach ($taloyhtiot as $taloyhtio): ?>
                                 <option value="<?php echo $taloyhtio['taloyhtio_id']; ?>">
-                                    <?php echo '&nbsp;' . $taloyhtio['nimi'] . ' - ' . $taloyhtio['osoite'] . '&nbsp;'; ?>
+                                    <?php echo '&nbsp;' . $taloyhtio['nimi'] . '&nbsp;'; ?>
                                 </option>
                             <?php endforeach; print $taloyhtio_id; ?>
                         </select>
@@ -99,10 +100,11 @@ include 'php/hae_tyontekijat.php'
                     <button type="submit" class="btn btn1">Lähetä</button>
                 </form>
             </div>
+            </div>
         </div>
     </div>
 </div>
-<div class="row vali  mx-0"></div>
+
 
 <div class="row kommentti2 text-center  mx-0">
     <h3>Muistathan sulkea toimiston valot lähtiessäsi! ☺</h3>
