@@ -12,7 +12,7 @@ if (!isset($_SESSION['rooli_id']) || !in_array($_SESSION['rooli_id'], $allowed_r
     $log_msg = "Rooli ID: " . $_SESSION['rooli_id'] . PHP_EOL;
     $log_msg .= "Allowed Roles: " . implode(", ", $allowed_roles) . PHP_EOL;
     $log_msg .= "Redirecting to index.php" . PHP_EOL;
-    file_put_contents('rooli_check.log', $log_msg, FILE_APPEND);
+    file_put_contents('rooli_check.log', $log_msg, FILE_APPEND); //nämä on tarkoitettu debuggaamiseen
     header("Location: index.php");
     exit();
 }

@@ -264,10 +264,9 @@ body{
     margin-right: 0.5em;
 }
 
-#tyontekijan_tilanne_button {
+ #tyontekijan_tilanne_button {
     margin-right: 70px;
-    position: fixed;
-}
+} 
 
 .ylapalkki a {
     color: inherit!important; 
