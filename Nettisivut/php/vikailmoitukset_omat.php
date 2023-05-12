@@ -35,11 +35,11 @@ $query = "SELECT t.tehtava_id, tt.tehtavan_tilanne, t.kuvaus, CONCAT(u.etunimi, 
           $data->bindParam(':tyontekija_id', $_SESSION['tyontekija_id']);
           $data->execute();
         } catch(PDOException $e) {
-          die("Tapahtui virhe: " . $e->getMessage());
+          echo("Tapahtui virhe: " . $e->getMessage());
         }
         
         if ($data->rowCount() < 1) {
-          die("Ei omia työtehtäviä tällähetkellä.");
+          echo ("Ei omia työtehtäviä tällähetkellä.");
         }
 
 $JSON_vika = '{"tehtavat":[';
