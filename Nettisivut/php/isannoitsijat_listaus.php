@@ -21,7 +21,7 @@ $JSON_isannoitsijat.= ']}';
 
 $yhteys = null; 
 
-$handler = fopen("isannoitsijat.json", "w"); 
+$handler = fopen("php/isannoitsijat_listaus.json", "w"); 
 fwrite($handler, $JSON_isannoitsijat);
 fclose($handler);
 

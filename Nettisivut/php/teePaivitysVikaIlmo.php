@@ -3,10 +3,6 @@
 require "config.php";
 
 if(isset($_POST['tallenna'])){
-    $viankuvaus =   $_POST['viankuvaus']; //<--'on nimi'
-    $osoite =       $_POST['osoite'];
-    $yleisavain =   $_POST['yleisavain'];
-    $puhelin =      $_POST['puhelin'];
     $tilanne =      $_POST['tilanne'];
     $tyontekija =   $_POST['tyontekija'];
     

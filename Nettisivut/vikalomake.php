@@ -93,7 +93,7 @@
   <div class="container1">
     <div class="row justify-content-center">
       <div class="text-center lomake_vika2 justify-content-center">
-        <form class="form" action="vikalomake_isannoitsija_toiminto.php" method="POST">
+        <form class="form" action="vikalomake_asukas_toiminto.php" method="POST">
           <div class="form-group">
           <h2>Vikailmoituslomake asukas</h2><br><br><br>
             <label for="kuvaus">Viesti/vian kuvaus</label>

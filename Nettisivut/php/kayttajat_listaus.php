@@ -22,7 +22,7 @@ $JSON_kayttaja.= ']}';
 
 $yhteys = null; 
 
-$handler = fopen("kayttajat.json", "w"); 
+$handler = fopen("php/kayttajat_listaus.json", "w"); 
 fwrite($handler, $JSON_kayttaja);
 fclose($handler);
 
