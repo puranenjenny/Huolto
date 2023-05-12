@@ -82,56 +82,57 @@
 <div class="row vali  mx-0"></div>
   <div class="row  mx-0 text-center">
   <div class="col text-center">
-  <h3>Tervetuloa omalle sivullesi <?php echo htmlspecialchars($etunimi . " " . $sukunimi . "!"); ?></h3>
+  <h3>Tervetuloa omalle sivullesi asukas <?php echo htmlspecialchars($etunimi . " " . $sukunimi . "!"); ?></h3>
 </div><!--tulostetaan Hei etunimi sukunimi -->
 
   </div>
 <div class="row vali  mx-0"></div>
 <div class="row vali  mx-0"></div>
 
-    <div class="bg-cover text-white d-flex align-items-center">
-        <div class="container1">
-            <div class="row justify-content-center mx-0">
-            <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Vikailmoituslomake asukkaille<br><br></h3>
-            <div class="text-center lomake_tausta lomake_vika">
-                <form class="form" action="vikalomake_asukas_toiminto.php" method="POST">
-                <div class="form-group">
-                    <label for="kuvaus">Viesti/vian kuvaus</label>
-                    <textarea id="kuvaus" type="textarea" name="kuvaus" required class="form-control rounded-select" placeholder="Kerro ongelmasta"></textarea>
-                    <br>
-                </div>
-                <div class="form-group form-floating">
-                  <div class="label-wrapper">
-                    <label for="yleisavaimen_kaytto">Yleisavaimen käyttö</label>
-                  </div>
-                  <div class="select-wrapper text-center">
-                    <select id="yleisavaimen_kaytto" name="yleisavaimen_kaytto" class="rounded-select">
-                      <option value="kyllä">&nbsp;Saa käyttää&nbsp;</option>
-                      <option value="ei">&nbsp;Asukas avaa oven&nbsp;</option>
-                      <option value="sovi">&nbsp;Sovittava erikseen&nbsp;</option>
-                    </select>
-                  </div>
-                </div>
-                <br>
-                <div class="form-group">
-                      <label for="numero">Puhelinnumero</label>
-                      <input id="numero" type="text" name="numero" required class="form-control" placeholder="+358 45 123 4567"><br>
-                </div>
-                <button type="submit" class="btn btn1">Lähetä</button>
-                </form>
+<div class="bg-cover text-white d-flex align-items-center" id="taustakuva4">
+  <div class="container1">
+    <div class="row justify-content-center">
+      <div class="text-center lomake_vika2 justify-content-center">
+        <form class="form" action="vikalomake_isannoitsija_toiminto.php" method="POST">
+          <div class="form-group">
+          <h2>Vikailmoituslomake isännöitsijä</h2><br><br><br>
+            <label for="kuvaus">Viesti/vian kuvaus</label>
+            <textarea id="kuvaus" type="textarea" name="kuvaus" required class="form-control rounded-select" rows="5" cols="20" placeholder="Kerro ongelmasta"></textarea>
+            <br>
+          </div>         
+          <div class="form-group">
+            <label for="numero">Puhelinnumero</label>
+            <input id="numero" type="text" name="numero" required class="form-control" placeholder="+358 45 123 4567"><br>
+          </div>
+          <div class="form-group">
+            <div class="label-wrapper">
+              <label for="yleisavaimen_kaytto">Yleisavaimen käyttö</label>
             </div>
+            <div class="select-wrapper text-center">
+              <select id="yleisavaimen_kaytto" name="yleisavaimen_kaytto" class="rounded-select">
+                <option value="kyllä">&nbsp;Saa käyttää&nbsp;</option>
+                <option value="ei">&nbsp;Asukas avaa oven&nbsp;</option>
+                <option value="sovi">&nbsp;Sovittava erikseen&nbsp;</option>
+              </select>
             </div>
-        </div>
+          </div>
+          <br><br>
+          <button type="submit" class="btn btn1">Lähetä</button>
+        </form>
+      </div>
+      </div>
     </div>
-
-    <div class="row vali  mx-0"></div>
-    <div class="row  mx-0 text-center">
-    <div class="col text-center"> <p><b>Täytä tämä vikailmoitus kiireettömistä ongelmista, jotka käsitellään ja korjataan normaalina työaikana klo 08.00-16.00 <br><br>
-    Jos tilanne vaatii välitöntä huomiotamme - kuten vesivuodot, viemäritukokset tai sähköviat - soita 24/7 päivystysnumeroomme 040 4545 669</b></p></div>
-    <div class="row vali  mx-0"></div>
+  </div>
 
 </div>
+<div class="row vali  mx-0"></div>
+<div class="row  mx-0 text-center">
+  <div class="col text-center"> <p><b>Täytä tämä vikailmoitus kiireettömistä ongelmista, jotka käsitellään ja korjataan normaalina työaikana klo 08.00-16.00 <br><br>
+  Jos tilanne vaatii välitöntä huomiotamme - kuten vesivuodot, viemäritukokset tai sähköviat - soita 24/7 päivystysnumeroomme 040 4545 669</b></p></div>
+  <div class="row vali  mx-0"></div>
 </div>
+</div>
+
 
 <?php include 'footer.php';?>
 

@@ -86,19 +86,17 @@
 
 <div class="row vali  mx-0"></div>
 
-<div class="bg-cover text-white d-flex align-items-center">
-    <div class="container1">
-        <div class="row justify-content-center mx-0">
-            <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Vikailmoituslomake isännöitsijöille</h3>
-            <div class="text-center lomake_tausta lomake_vika">
-                <form class="form" action="vikalomake_isannoitsija_toiminto.php" method="POST">
-                    <div class="form-group form-floating">
-                        <div class="label-wrapper">
-                            <label for="kuvaus">Viesti/vian kuvaus:</label>
-                        </div>
-                        <textarea id="vika" type="textarea" name="kuvaus" required class="form-control rounded-select" placeholder="Kerro ongelmasta"></textarea>
-                        <br>
-                    </div>
+<div class="bg-cover text-white d-flex align-items-center" id="taustakuva4">
+  <div class="container1">
+    <div class="row justify-content-center">
+      <div class="text-center lomake_vika2 justify-content-center">
+        <form class="form" action="vikalomake_isannoitsija_toiminto.php" method="POST">
+          <div class="form-group">
+          <h2>Vikailmoituslomake isännöitsijä</h2><br><br><br>
+            <label for="kuvaus">Viesti/vian kuvaus</label>
+            <textarea id="kuvaus" type="textarea" name="kuvaus" required class="form-control rounded-select" rows="5" cols="20" placeholder="Kerro ongelmasta"></textarea>
+            <br>
+          </div>
                     <div class="form-group form-floating">
                         <div class="label-wrapper">
                             <label for="taloyhtio">Valitse taloyhtiö:</label>
