@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2023 at 01:59 PM
+-- Generation Time: May 12, 2023 at 02:13 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -267,8 +267,8 @@ INSERT INTO `tehtavat` (`tehtava_id`, `kayttaja_id`, `kuvaus`, `korjaustoimenpid
 (31, 22, 'Nurmikko pitäisi ajaa', NULL, NULL, 3, 10, 'kyllä', '0401234566', NULL, 11, 1, '2023-05-09 12:53:29'),
 (32, 21, 'Naapuri Kuuntelee Käärijän Cha cha Chata ihan liian kovalla.', NULL, NULL, 6, 14, 'ei', '0405566887', NULL, 11, 1, '2023-05-09 19:25:40'),
 (33, 22, 'Onko ylipäätään mahdollista kuunnella Cha cha chata liian kovalla?', NULL, NULL, 6, 12, 'kyllä', '0401234566', NULL, 11, 1, '2023-05-09 19:27:02'),
-(39, 21, 'afdbab', NULL, NULL, 6, 14, 'ei', '3736573657', NULL, NULL, 1, '2023-05-10 14:45:59'),
-(40, 22, 'afdbadfg', 'wadawdwad', NULL, 3, 8, 'kyllä', '0401234566', NULL, 3, 4, '2023-05-10 14:46:26');
+(39, 21, 'Hissi on pysähtynyt toistuvasti kerrosten välissä ja tarvitsee huoltoa.', NULL, NULL, 6, 12, 'ei', '3736573657', NULL, NULL, 1, '2023-05-10 14:45:59'),
+(40, 41, 'Vesihana vuotaa keittiössä, vaatii korjausta.', 'Vaihdettu tiiviste Oras X hinta 5,90€', NULL, 3, 8, 'kyllä', '0401234566', NULL, 3, 4, '2023-05-10 14:46:26');
 
 -- --------------------------------------------------------
 
@@ -348,7 +348,7 @@ INSERT INTO `tyontekijat` (`tyontekija_id`, `etunimi`, `sukunimi`, `puhelin`, `e
 (7, 'Jenny', 'Puranen', '0456339709', 'puranenjenny@gmail.com', '', 6, 2),
 (9, 'Antti', 'Kortelainen', '0401234566', 'antti@jotain.fi', NULL, 24, 2),
 (10, 'Antti', 'Kortelainen', '0401234566', 'antti@jotain.fi', NULL, 23, 1),
-(11, 'ei valittu', 'ei valittu', 'ei valittu', 'ei valittu', 'ei valittu', 23, 1),
+(11, 'Ei ', 'valittu', 'ei valittu', 'ei valittu', 'ei valittu', 23, 1),
 (12, 'Sonja', 'Fall', '0405059544', 'sonja@jotain.fi', NULL, 38, 1),
 (13, 'Heli', 'Apell', '04563983893', 'heli@jotain.fi', NULL, 39, 1),
 (14, 'Heikki', 'Uolinen', '0507227272', 'huolinen@jotain.fi', NULL, 45, 1),
