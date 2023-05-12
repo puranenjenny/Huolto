@@ -1,5 +1,10 @@
+<?php include 'header_ui_huolto.php';?>
 <?php
-include 'header_ui_huolto.php';
+
+  // haetaan kaikki työntekijät tietokannasta
+  include('tyontekija_lista2.php');
+  $tyontekijat = json_decode($JSON_tyontekijat, true);
+
 
 $tehtava_id = isset($_POST['tehtava_id']) ? $_POST['tehtava_id'] : $_GET['tehtava_id'];
 $tyontekija_id = isset($_SESSION['tyontekija_id']) ? $_SESSION['tyontekija_id'] : '';
@@ -29,6 +34,7 @@ $tilanteet = json_decode($JSON_tilanteet, true);
                         <div class="form-group">
                         <label class="input_label2" for="tyontekija_id">Työntekijä ID:<br><?php echo $tyontekija_id; ?>   </label><br>
                             <input type="hidden" name="tyontekija_id" value="<?php echo $tyontekija_id; ?>">
+                            <input type="hidden" name="tehtava_id" value="<?php echo $tehtava_id; ?>";>
                         </div><br>
                         <div class="form-group">
                             <label class="input_label2" for="tilanne_select">Tilanne:</label><br>
