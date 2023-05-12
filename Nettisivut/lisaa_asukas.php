@@ -28,7 +28,7 @@ include 'header_ui_toimisto.php';?>
 
          // Lisätään uusi käyttäjä tietokantaan
          $lisaa_kayttaja = $yhteys->prepare("INSERT INTO kayttajat (tunnus, salasana, kayttaja, rooli_id) VALUES (?, ?, ?, ?)");
-         $kryptattu_salasana = password_hash($salasana, PASSWORD_DEFAULT);
+         $kryptattu_salasana = password_hash($salasana, PASSWORD_DEFAULT); //kryptataan salasana
          $lisaa_kayttaja->execute([$tunnus, $kryptattu_salasana, $kayttaja, 4]);
  
          // Haetaan uuden käyttäjän id

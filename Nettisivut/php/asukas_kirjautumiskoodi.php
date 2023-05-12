@@ -18,7 +18,7 @@ if(!isset($_SESSION)){  //jos session ei ole käynnissä, käynnistä se
 
       if($count == 1) {
          $kayttaja = $kirjaudu->fetch();
-         if(password_verify($salasana, $kayttaja['salasana'])) {
+         if(password_verify($salasana, $kayttaja['salasana'])) { //tarkistetaan salasana
             if($kayttaja['rooli_id'] == '4') { // 1=toimistohenkilo, 2=huoltohenkilo, 3=isannoitsija, 4=asukas
                $_SESSION['login_user'] = $tunnus;
                $_SESSION['rooli_id'] = $kayttaja['rooli_id']; //---tallennetaan myös rooli_id sessioon
@@ -29,7 +29,7 @@ if(!isset($_SESSION)){  //jos session ei ole käynnissä, käynnistä se
                header("location: ../kirjaudu_asukas.php");
             }
          } else {
-            $_SESSION['error'] = "<b>Kirjautuminen ei onnistunut!<br> 
+            $_SESSION['error'] = "<b>Tunnus tai salasana on väärin!<br> 
             Tarvittaessa ota yhteys toimistoomme toimisto@rautio.fi</b>"; //errorviesti jos kirjautuminen ei onnistu
             header("location: ../kirjaudu_asukas.php");
          }

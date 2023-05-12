@@ -31,7 +31,8 @@ include 'header_ui_toimisto.php';?>
 
          // Lisätään uusi käyttäjä tietokantaan
          $lisaa_tyontekija = $yhteys->prepare("INSERT INTO kayttajat (tunnus, salasana, kayttaja, rooli_id) VALUES (?, ?, ?, ?)");
-         $lisaa_tyontekija->execute([$tunnus, $salasana, $kayttaja, $rooli_id]);
+         $kryptattu_salasana = password_hash($salasana, PASSWORD_DEFAULT); //kryptataan salasana
+         $lisaa_tyontekija->execute([$tunnus, $kryptattu_salasana, $kayttaja, $rooli_id]);
  
          // Haetaan uuden käyttäjän id
          $kayttaja_id = $yhteys->query("SELECT LAST_INSERT_ID()")->fetchColumn();
