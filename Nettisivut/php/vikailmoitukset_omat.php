@@ -39,7 +39,7 @@ $query = "SELECT t.tehtava_id, tt.tehtavan_tilanne, t.kuvaus, CONCAT(u.etunimi, 
         }
         
         if ($data->rowCount() < 1) {
-          die("Ei omia avoimia työtehtäviä tällähetkellä.");
+          die("Ei omia työtehtäviä tällähetkellä.");
         }
 
 $JSON_vika = '{"tehtavat":[';

@@ -2,7 +2,6 @@
 <?php
 include 'header_ui_huolto.php';
 include 'php/hae_tyontekijan_nimi.php';
-//include 'php/hae_tehtavan_tiedot.php';
 
 $tehtava_id = isset($_POST['tehtava_id']) ? $_POST['tehtava_id'] : $_GET['tehtava_id'];
 $tyontekija_id = isset($_SESSION['tyontekija_id']) ? $_SESSION['tyontekija_id'] : '';
