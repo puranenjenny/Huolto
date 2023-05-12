@@ -20,11 +20,10 @@ while($rivi = $data->fetch(PDO::FETCH_ASSOC)){
 
 $JSON_tyontekijat.= ']}'; 
 
-$yhteys = null; 
-
-$handler = fopen("tyontekijat.json", "w"); 
+$handler = fopen("php/hae_tyontekijat.json", "w"); 
 fwrite($handler, $JSON_tyontekijat);
 fclose($handler);
 
+$yhteys = null; 
 
 ?>
