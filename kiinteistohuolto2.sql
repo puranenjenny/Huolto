@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2023 at 01:04 PM
+-- Generation Time: May 12, 2023 at 01:59 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -46,13 +46,13 @@ INSERT INTO `asukkaat` (`asukas_id`, `etunimi`, `sukunimi`, `kayttaja_id`, `talo
 (8, 'Diego', 'Puranen', 8, 5, 'A 12'),
 (9, 'Rollo', 'Puranen', 9, 5, 'A 12'),
 (10, 'Antti', 'Salminen', 10, 4, 'B 3'),
-(11, 'Antti', 'Kortelainen', 21, 6, NULL),
 (13, 'Maija', 'Mehilainen', 26, 20, NULL),
 (14, 'Kerttu', 'Mehilainen', 27, 7, NULL),
 (19, 'Tuuli', 'Tähtinen', 1, 20, 'B 30'),
 (20, 'Jenna', 'Makkara', 31, 13, 'C 1'),
 (24, 'Tuuli', 'Tähtinen', 36, 5, 'A 40'),
-(26, 'Sonja', 'Ahokas', 41, 4, '');
+(26, 'Sonja', 'Ahokas', 41, 4, ''),
+(28, 'Annikki', 'Sukka', 43, 3, 'C 7');
 
 -- --------------------------------------------------------
 
@@ -79,7 +79,8 @@ INSERT INTO `isannoitsijat` (`isannoitsija_id`, `etunimi`, `sukunimi`, `email`, 
 (6, 'Tuula', 'Toimistotäti', 'tuula.toimisto@jotain.fi', '044 456789', 13),
 (7, 'Hannu', 'Hosari', 'hannu.hosari@jotain.fi', '045 2381892', 14),
 (8, 'Antti', 'Kortelainen', 'antti@jotain.fi', '0401234566', 22),
-(9, 'Ei isännöitsijää', NULL, NULL, NULL, 4);
+(9, 'Ei isännöitsijää', NULL, NULL, NULL, 4),
+(10, 'Iiro ', 'Sällinen', 'isallinen@jotain.fi', '0408513555', 44);
 
 -- --------------------------------------------------------
 
@@ -131,7 +132,11 @@ INSERT INTO `kayttajat` (`kayttaja_id`, `tunnus`, `salasana`, `kayttaja`, `rooli
 (36, 'ttahtinen', 'ttahtinen', 'Asukas', 4),
 (38, 'fall', 'fall', 'Työntekijä', 2),
 (39, 'heli', 'heli', 'Työntekijä', 1),
-(41, 'sahokas', '$2y$10$mDhND2810urx4wSwcYg4KeTR9dtZvtKqb.FwuIf5raTujTAE04EvG', 'Asukas', 4);
+(41, 'sahokas', '$2y$10$mDhND2810urx4wSwcYg4KeTR9dtZvtKqb.FwuIf5raTujTAE04EvG', 'Asukas', 4),
+(43, 'asu', '$2y$10$kll1JnECkzOVNpq1CLy5eOmplJCRMO4sHAMW9Kwr3DzmQOJQ6Amo2', 'Asukas', 4),
+(44, 'isa', '$2y$10$5NdiCWeM8gKQGY49JdjW..kLncWaEk/y8Cvy0ifL2hgoBv3qfWy42', 'Isännöitsijä', 3),
+(45, 'huo', '$2y$10$lTFJ1KbfghmtUeJFT4L1R.bcaVNBHgRNschEuhZiHTHTW9x8wVK8S', 'Työntekijä', 2),
+(46, 'toi', '$2y$10$Q2igOCOcWnQW9HKUuWpeBOYqMBwiPam4rKvFat2ScmnzpNZQMkJje', 'Työntekijä', 1);
 
 -- --------------------------------------------------------
 
@@ -345,7 +350,9 @@ INSERT INTO `tyontekijat` (`tyontekija_id`, `etunimi`, `sukunimi`, `puhelin`, `e
 (10, 'Antti', 'Kortelainen', '0401234566', 'antti@jotain.fi', NULL, 23, 1),
 (11, 'ei valittu', 'ei valittu', 'ei valittu', 'ei valittu', 'ei valittu', 23, 1),
 (12, 'Sonja', 'Fall', '0405059544', 'sonja@jotain.fi', NULL, 38, 1),
-(13, 'Heli', 'Apell', '04563983893', 'heli@jotain.fi', NULL, 39, 1);
+(13, 'Heli', 'Apell', '04563983893', 'heli@jotain.fi', NULL, 39, 1),
+(14, 'Heikki', 'Uolinen', '0507227272', 'huolinen@jotain.fi', NULL, 45, 1),
+(15, 'Tiina', 'Oinas', '0459282722', 'toinas@jotain.fi', NULL, 46, 1);
 
 -- --------------------------------------------------------
 
@@ -471,19 +478,19 @@ ALTER TABLE `yhteydenottopyynnot`
 -- AUTO_INCREMENT for table `asukkaat`
 --
 ALTER TABLE `asukkaat`
-  MODIFY `asukas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `asukas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `isannoitsijat`
 --
 ALTER TABLE `isannoitsijat`
-  MODIFY `isannoitsija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `isannoitsija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `kayttajat`
 --
 ALTER TABLE `kayttajat`
-  MODIFY `kayttaja_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `kayttaja_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `roolit`
@@ -531,7 +538,7 @@ ALTER TABLE `tyontekijan_tilanne`
 -- AUTO_INCREMENT for table `tyontekijat`
 --
 ALTER TABLE `tyontekijat`
-  MODIFY `tyontekija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `tyontekija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `yhteydenottopyynnot`
