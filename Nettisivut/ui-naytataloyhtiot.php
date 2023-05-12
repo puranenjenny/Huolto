@@ -20,7 +20,7 @@ include 'header_ui_toimisto.php';
                 <div class="lomake_tausta lomake_vika table-responsive">
                             <table class="text-center table table-striped table-vika table-yhteys">
                                 <tr>
-                                <th>Taloyhtiönumero</th>
+                                <th>Kohdenro</th>
                                 <th>Nimi</th>
                                 <th>Osoite</th>
                                 <th>Postinumero</th>

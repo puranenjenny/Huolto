@@ -5,8 +5,9 @@ include 'header_ui_toimisto.php';?>
 
 
 <div class="bg-cover text-white d-flex align-items-center">
-    <div class="container1">
+    <div class="container10">
         <div class="row justify-content-center mx-0">
+        <div class="container11">
             <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Muokkaa asukkaan tietoja</h3>
       <div class="text-center lomake_tausta lomake_vika">
                 <form class="form" action="php/teePaivitysAsukas.php" method="POST">
@@ -82,6 +83,7 @@ include 'header_ui_toimisto.php';?>
                                                 }
                                             }
                                         ?>   
+             </div>
             </div>
         </div>
     </div>

@@ -5,8 +5,9 @@ include 'header_ui_toimisto.php';?>
 
 
 <div class="bg-cover text-white d-flex align-items-center">
-    <div class="container1">
+    <div class="container10">
         <div class="row justify-content-center mx-0">
+        <div class="container11">
             <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Muokkaa vikailmoitusta</h3>
       <div class="text-center lomake_tausta lomake_vika">
                 <form class="form" action="php/teePaivitysVikaIlmo.php" method="POST">
@@ -65,8 +66,8 @@ include 'header_ui_toimisto.php';?>
                             <label for="Tilanne">Tilanne:</label>
                     </div>
                     <div class="select-wrapper text-center">
-                        <select id="Tilanne" name="Tilanne" class="rounded-select leveys-select">
-                                        <option value="<?php echo $user['TilaID'];?>" disabled selected hidden><?php echo $user['Tilanne']; ?></option>
+                        <select required id="Tilanne" name="Tilanne" class="rounded-select leveys-select">
+                                        <option reguired value="<?php echo $user['TilaID'];?>" selected hidden><?php echo $user['Tilanne']; ?></option>
                                         <option value="1">Käsittelemättä</option>
                                         <option value="2">Avoin</option>
                                         <option value="3">Työn alla</option>
@@ -75,11 +76,11 @@ include 'header_ui_toimisto.php';?>
                     </div>
                     <div class="my-2 form-group form-floating">
                         <div class="label-wrapper">
-                            <label for="Tilanne">Työntekija:</label>
+                            <label for="Tyontekija">Työntekija:</label>
                     </div>
                     <div class="select-wrapper text-center">
-                        <select id="Tyontekija" name="tyontekija" class="rounded-select leveys-select">
-                        <option value="NULL" selected hidden>&nbsp;Valitse huoltohenkilö&nbsp;</option>
+                        <select required id="Tyontekija" name="Tyontekija" class="rounded-select leveys-select">
+                        <option value="" selected hidden>&nbsp;Valitse huoltohenkilö&nbsp;</option>
                                         <?php
                                                 $JSON_tyontekijat = file_get_contents("tyontekijat.json");
                                                 $tyontekijat = json_decode($JSON_tyontekijat, true);
@@ -110,7 +111,8 @@ include 'header_ui_toimisto.php';?>
                                                 }
                                             }
                                         ?>   
-            </div>
+                       </div> 
+        </div>
         </div>
     </div>
 </div>

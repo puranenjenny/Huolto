@@ -23,7 +23,7 @@ $JSON_taloyhtiot.= ']}';
 
 $yhteys = null; 
 
-$handler = fopen("../taloyhtiot.json", "w"); 
+$handler = fopen("taloyhtiot.json", "w"); 
 fwrite($handler, $JSON_taloyhtiot);
 fclose($handler);
 

@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"tehtavat":[{"ID":"","Viankuvaus":"","Osoite":"","Tila":"","Yleisavain":"","Puhelin":"","TilaID":"","Tilanne":"","Paivays":"","Ilmoittaja":""}]}
-=======
-{"tehtavat":[{"ID":"41","Viankuvaus":"Asunnossa on kylmö","Osoite":"Nallekarhuntie 65","Tila":"Rappu B","Yleisavain":"kyllä","Puhelin":"09 4545 669","TilaID":"1","Tilanne":"Käsittelemättä","Paivays":"2023-05-12 20:26:20","Ilmoittaja":"Tiina Oinas"}]}
->>>>>>> beddffd2950a91bdd2563266a1d2b5b92ad6a1b3
+{"tehtavat":[{"ID":"26","Viankuvaus":"Pattereita ei saa säädettyä lämpimämmälle.","Osoite":"Lumikontie 58","Tila":"Ei valittu","Yleisavain":"ei","Puhelin":"+358456339709","TilaID":"3","Tilanne":"Työn alla","Paivays":"2023-05-09 15:26:59","Ilmoittaja":"Antti Salminen"}]}

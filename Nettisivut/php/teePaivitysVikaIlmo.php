@@ -3,8 +3,8 @@
 require "config.php";
 
 if(isset($_POST['tallenna'])){
-    $tilanne =      $_POST['tilanne'];
-    $tyontekija =   $_POST['tyontekija'];
+    $tilanne =      $_POST['Tilanne'];
+    $tyontekija =   $_POST['Tyontekija'];
     
 
     $JSON_paivita = file_get_contents("valittuVika.json");

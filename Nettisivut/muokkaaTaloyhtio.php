@@ -4,10 +4,11 @@ include 'header_ui_toimisto.php';?>
 
 
 <div class="bg-cover text-white d-flex align-items-center">
-    <div class="container1">
+    <div class="container10">
         <div class="row justify-content-center mx-0">
+        <div class="container11">
             <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Muokkaa taloyhtion tietoja</h3>
-      <div class="text-center lomake_tausta lomake_vika">
+            <div class="text-center lomake_tausta lomake_vika">
                 <form class="form" action="php/teePaivitysTaloyhtio.php" method="POST">
                                 <?php
                                 $JSON_paivita_taloyhtio = file_get_contents("php/valittuTaloyhtio.json");
@@ -55,33 +56,39 @@ include 'header_ui_toimisto.php';?>
                     <div class="my-2 form-group form-floating">
                         <div class="label-wrapper">
                             <label for="isannoitsija_id">Isannöitsijä:</label>
-                    </div>
-                    <div class="select-wrapper text-center">
-                        <select id="isannoitsija_id" name="isannoitsija_id" class="rounded-select leveys-select">
-                                <option value="<?php echo $user['isannoitsija_id'];?>"selected hidden><?php echo $user['Etunimi']. ' ' . $user['Sukunimi']; ?></option>
-                                        <?php
-                                                $JSON_isannoitsijat = file_get_contents("isannoitsijat.json");
-                                                $isannoitsijat = json_decode($JSON_isannoitsijat, true);
+                        </div>
+                        <div class="select-wrapper text-center">
+                                <select id="isannoitsija_id" name="isannoitsija_id" class="rounded-select leveys-select">
+                                        <option value="<?php echo $user['isannoitsija_id'];?>"selected hidden><?php echo $user['Etunimi']. ' ' . $user['Sukunimi']; ?></option>
+                                                <?php
+                                                        $JSON_isannoitsijat = file_get_contents("php/isannoitsijat_listaus.json");
+                                                        $isannoitsijat = json_decode($JSON_isannoitsijat, true);
 
 
-                                                if(count($isannoitsijat) != 0){
-                                                    foreach($isannoitsijat as $isannoitsija){
-                                                        foreach($isannoitsija as $user1){
+                                                        if(count($isannoitsijat) != 0){
+                                                            foreach($isannoitsijat as $isannoitsija){
+                                                                foreach($isannoitsija as $user1){
 
-                                        ?>
-                                        <option value="<?php echo$user1['id']; ?>"><?php echo '&nbsp;' . $user1['id'] . '. ' . $user1['Etunimi'] . ' ' .$user1['Sukunimi'] . '&nbsp;'; ?></option>        
-                                        <?php
+                                                ?>
+                                                <option value="<?php echo$user1['id']; ?>"><?php echo '&nbsp;' . $user1['id'] . '. ' . $user1['Etunimi'] . ' ' .$user1['Sukunimi'] . '&nbsp;'; ?></option>        
+                                                <?php
+                                                            }
+                                                        }
                                                     }
-                                                }
-                                            }
-                                        ?>             
-                    </select>
-                    </div>
+                                                ?>             
+                                </select>
+                        </div>
                     </div>
                     <br>
-                    <a class="btn btn-primary" href="ui-huoltohenkilot.php">Takaisin</a>
+                    <div class="select-wrapper">
+                    <a class="btn btn-warning" href="#">Muokaa yleisiätiloja</a>
+                    </div>
+                    <br>
+                    <div class="select-wrapper">
+                    <a class="btn btn-primary" href="ui-naytataloyhtiot.php">Takaisin</a>
                     <button name="tallenna" type="submit" class="mx-3 btn btn-success">Tallenna</button>
                     <?php echo '<a href="php/poistaTaloyhtio.php?id='.$user['ID'].'" class="btn btn-danger">Poista</a>'; ?>
+                    </div>
                 </form>
                 <?php
                                                     }
@@ -92,6 +99,8 @@ include 'header_ui_toimisto.php';?>
         </div>
     </div>
 </div>
+</div>
+
 <div class="row vali  mx-0"></div>
 
 <div class="row kommentti2 text-center  mx-0">
