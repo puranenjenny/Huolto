@@ -1,3 +1,4 @@
+<?php include 'header_ui_huolto.php';?>
 <?php
 include 'header_ui_huolto.php';
 include 'php/hae_tyontekijan_nimi.php';
@@ -31,6 +32,7 @@ $tilanteet = json_decode($JSON_tilanteet, true);
                         <div class="form-group">
                         <label class="input_label2" for="tyontekija_id">Työntekijä:<br><?php echo $tyontekija_id ." ". $etunimi ." ". $sukunimi ?>   </label><br>
                             <input type="hidden" name="tyontekija_id" value="<?php echo $tyontekija_id; ?>">
+                            <input type="hidden" name="tehtava_id" value="<?php echo $tehtava_id; ?>";>
                         </div><br>
                         <div class="form-group">
                             <label class="input_label2" for="tilanne_select">Tilanne:</label><br>
