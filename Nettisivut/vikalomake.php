@@ -95,7 +95,7 @@
       <div class="text-center lomake_vika2 justify-content-center">
         <form class="form" action="vikalomake_asukas_toiminto.php" method="POST">
           <div class="form-group">
-          <h2>Vikailmoituslomake asukkaalle</h2><br><br><br>
+          <h2>Vikailmoituslomake asukas</h2><br><br><br>
             <label for="kuvaus">Viesti/vian kuvaus</label>
             <textarea id="kuvaus" type="textarea" name="kuvaus" required class="form-control rounded-select" rows="5" cols="20" placeholder="Kerro ongelmasta"></textarea>
             <br>

@@ -592,6 +592,11 @@ h2{
     font-family: 'Poppins', sans-serif;
 }
 
+#taustakuva5 {
+    background: url(../img/helsinki16.jpg); /*tällä voi muuttaa vikailmoitus asukas ja isännöitsijä kuvan*/
+    background-size: cover;
+    width: 100%;
+}
 
 #vika{
     max-width: 30em;
