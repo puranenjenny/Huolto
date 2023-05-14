@@ -81,7 +81,7 @@ include 'header_ui_toimisto.php';?>
                     </div>
                     <br>
                     <div class="select-wrapper">
-                    <a class="btn btn-warning" href="#">Muokaa yleisiätiloja</a>
+                    <a class="btn btn-warning" href="php/tila_listaus.php">Muokaa yleisiätiloja</a>
                     </div>
                     <br>
                     <div class="select-wrapper">
