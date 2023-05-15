@@ -1,3 +1,12 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+$allowed_roles = array('1');
+include("php/rooli_check.php");
+?> 
+
 <?php include 'php/session.php';?>
 
 <!doctype html>
@@ -22,7 +31,6 @@
     <!--Oma CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/header.js"></script>
-    <script src="js/nappi_ylos.js"></script>
 
     <title>Työntekijän näkymä</title>
    

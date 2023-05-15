@@ -45,7 +45,7 @@ include 'header_ui_toimisto.php';?>
                         <input class="rounded-input" type="password" id="salasana" name="salasana">
                     </div>
                     <a class="btn btn1" href="ui-naytaisannoitsijat.php">Takaisin</a>
-                    <button type="submit" class="btn btn1">Lähetä</button>
+                    <button type="submit" name="submit" class="btn btn1">Lähetä</button>
                 </form>
             </div>
             </div>

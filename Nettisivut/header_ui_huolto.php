@@ -1,3 +1,12 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+$allowed_roles = array('2');
+include("php/rooli_check.php");
+?> 
+
 <?php include 'php/session.php';
 include 'php/config.php';
 include 'php/hae_kayttajaid.php';?>
@@ -25,7 +34,6 @@ include 'php/hae_kayttajaid.php';?>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/header.js"></script>
-    <script src="js/nappi_ylos.js"></script>
     <script src="js/tyontekijan_tilanne.js"></script>
 
     <title>Työntekijän näkymä</title>

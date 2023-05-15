@@ -1,3 +1,12 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+$allowed_roles = array('4'); // kaikki paitsi isännöitsijä
+include("php/rooli_check.php");
+?> 
+
 <?php include 'php/session.php';?>
 <?php include 'php/hae_asukkaan_nimi.php';?> 
 
@@ -97,7 +106,7 @@
           <div class="form-group">
           <h2>Vikailmoituslomake asukas</h2><br><br><br>
             <label for="kuvaus">Viesti/vian kuvaus</label>
-            <textarea id="kuvaus" type="textarea" name="kuvaus" required class="form-control rounded-select" rows="5" cols="20" placeholder="Kerro ongelmasta"></textarea>
+            <textarea id="kuvaus" type="textarea" name="kuvaus" required class="form-control rounded-select" rows="5" cols="20" placeholder=" Kerro ongelmasta"></textarea>
             <br>
           </div>         
           <div class="form-group">

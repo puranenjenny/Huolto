@@ -1,20 +1,20 @@
-<?php include "php/config.php";
-include 'header_ui_toimisto.php';
-include 'php/hae_taloyhtiot.php';?>
+<?php include "php/config.php"; // yhteys tietokantaan
+include 'header_ui_toimisto.php'; // toimiston header, joka lisää navigoinnin sekä roolin tarkistuksen sivulle
+include 'php/hae_taloyhtiot.php';?> <!-- hakee taloyhtiöt tietokannasta -->
 
 
-<div class="bg-cover text-white d-flex align-items-center">
+<div class="bg-cover text-white d-flex align-items-center"> 
     <div class="container10">
-        <div class="row justify-content-center mx-0">
+        <div class="row justify-content-center mx-0"> <!-- sivun asettelun määrittelyä -->
             <div class="container11">
             <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Asukkaan lisäyslomake</h3>
             <div class="text-center lomake_tausta lomake_vika">
-                <form class="form" action="lisaa_asukas.php" method="POST">
-                    <div class="my-2 form-group form-floating">
+                <form class="form" action="lisaa_asukas.php" method="POST"> <!-- lomake, joka lähettää tiedot lisaa_asukas.php tiedostoon POST metodilla -->
+                    <div class="my-2 form-group form-floating"> 
                         <div class="label-wrapper">
-                          <label for="etunimi" require>Etunimi:</label>
+                          <label for="etunimi" require>Etunimi:</label> <!-- input kenttä, johon kirjoitetaan uuden asukkaan etunimi -->
                         </div>
-                        <input class="rounded-input" type="text" id="etunimi" name="etunimi" placeholder=" Matti">
+                        <input class="rounded-input" type="text" id="etunimi" name="etunimi" placeholder=" Matti"> <!-- kentän määrittely, name kentän avulla tieto lähetetään lisaa_asukas.php tiedostoon -->
                     </div>
                     <div class="my-2 form-group form-floating">
                         <div class="label-wrapper">
@@ -36,14 +36,14 @@ include 'php/hae_taloyhtiot.php';?>
                     </div>
                     <div class="my-2 form-group form-floating">
                         <div class="label-wrapper">
-                        <label for="taloyhtio" require>Valitse taloyhtiö:</label>
+                        <label for="taloyhtio" require>Valitse taloyhtiö:</label> <!-- alasvetovalikko, josta valitaan taloyhtiö -->
                         </div>
                         <div class="select-wrapper text-center">
-                        <select class="rounded-select" id="taloyhtio" name="taloyhtio">
-                            <option value="">&nbsp;Taloyhtiö&nbsp;</option>
-                            <?php foreach ($taloyhtiot as $taloyhtio): ?>
-                                <option value="<?php echo $taloyhtio['taloyhtio_id']; ?>">
-                                    <?php echo '&nbsp;' . $taloyhtio['nimi'] . '&nbsp;'; ?>
+                        <select class="rounded-select" id="taloyhtio" name="taloyhtio"> <!-- kentän määrittely -->
+                            <option value="">&nbsp;Taloyhtiö&nbsp;</option> <!-- oletusarvo -->
+                            <?php foreach ($taloyhtiot as $taloyhtio): ?> <!-- hakee taloyhtiöt tietokannasta hyödyntäen hae_taloyhtiot.php tiedostoa -->
+                                <option value="<?php echo $taloyhtio['taloyhtio_id']; ?>"> <!-- listaa taloyhtiön id:n ... -->
+                                    <?php echo '&nbsp;' . $taloyhtio['nimi'] . '&nbsp;'; ?> <!--... ja taloyhtiön nimen -->
                                 </option>
                             <?php endforeach; ?>
                         </select>
@@ -56,7 +56,7 @@ include 'php/hae_taloyhtiot.php';?>
                         <input class="rounded-input" type="text" id="rappu" name="rappu" placeholder="&nbsp;A 20 ">
                     </div>
                     <a class="btn btn1" href="ui-naytakayttajat.php">Takaisin</a>
-                    <button type="submit" class="btn btn1">Lähetä</button>
+                    <button type="submit" name="submit" class="btn btn1">Lähetä</button> <!-- lähetä nappi, joka lähettää tiedot lisaa_asukas.php tiedostoon -->
                 </form>
             </div>
             </div>
@@ -71,8 +71,4 @@ include 'php/hae_taloyhtiot.php';?>
 
 
 
-
-  
-
-
-<?php include 'footer.php';?>
+<?php include 'footer.php';?> <!-- footer, joka sisältää muotoilut -->
