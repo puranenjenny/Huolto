@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2023 at 12:58 PM
+-- Generation Time: May 15, 2023 at 01:43 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -41,17 +41,7 @@ CREATE TABLE `asukkaat` (
 --
 
 INSERT INTO `asukkaat` (`asukas_id`, `etunimi`, `sukunimi`, `kayttaja_id`, `taloyhtio_id`, `rappu`) VALUES
-(5, 'Mira', 'Hosio', 5, 4, 'C 4'),
-(7, 'Jenny', 'Puranen', 5, 3, 'D 30'),
-(8, 'Diego', 'Puranen', 8, 5, 'A 12'),
-(9, 'Rollo', 'Puranen', 9, 5, 'A 12'),
-(10, 'Antti', 'Salminen', 10, 4, 'B 3'),
-(13, 'Maija', 'Mehilainen', 26, 20, NULL),
-(14, 'Kerttu', 'Mehilainen', 27, 7, NULL),
-(19, 'Tuuli', 'Tähtinen', 1, 20, 'B 30'),
-(24, 'Tuuli', 'Tähtinen', 36, 5, 'A 40'),
 (26, 'Sonja', 'Ahokas', 41, 4, ''),
-(28, 'Annikki', 'Sukka', 43, 3, 'C 7'),
 (29, 'Matilda', 'Korhonen', 47, 3, 'F 5'),
 (30, 'Marco', 'Kolehmainen', 50, 6, 'F 18');
 
@@ -75,12 +65,6 @@ CREATE TABLE `isannoitsijat` (
 --
 
 INSERT INTO `isannoitsijat` (`isannoitsija_id`, `etunimi`, `sukunimi`, `email`, `puhelin`, `kayttaja_id`) VALUES
-(4, 'Jouni', 'Meikäläinen', 'jouni.meikalainen@isanta.fi', '0400 456 123', 11),
-(5, 'Kari', 'Jaartinen', 'kari.jaartinen@isanta.fi', '050 467 832', 12),
-(6, 'Tuula', 'Toimistotäti', 'tuula.toimisto@jotain.fi', '044 456789', 13),
-(7, 'Hannu', 'Hosari', 'hannu.hosari@jotain.fi', '045 2381892', 14),
-(8, 'Antti', 'Kortelainen', 'antti@jotain.fi', '0401234566', 22),
-(9, 'Ei isännöitsijää', NULL, NULL, NULL, 4),
 (10, 'Iiro ', 'Sällinen', 'isallinen@jotain.fi', '0408513555', 44),
 (11, 'Benjamin', 'Mattila', 'bmattila@jotain.fi', '04008282765', 49);
 
@@ -103,37 +87,6 @@ CREATE TABLE `kayttajat` (
 --
 
 INSERT INTO `kayttajat` (`kayttaja_id`, `tunnus`, `salasana`, `kayttaja`, `rooli_id`) VALUES
-(1, 'toimistohenkilo', 'toimistohenkilo', 'toimisto', 1),
-(3, 'tyontekija', 'tyontekija', 'Työntekijä', 2),
-(4, 'isannoitsija', 'isannoitsija', 'Isännöitsijä', 3),
-(5, 'asukas', 'asukas', 'Asukas', 4),
-(6, 'jpuranen', 'jpuranen', 'toimisto', 1),
-(8, 'dpuranen', 'dpuranen', 'asukas', 4),
-(9, 'rpuranen', 'rpuranen', 'asukas', 4),
-(10, 'asalminen', 'asalminen', 'asukas', 4),
-(11, 'jmeikalainen', 'jmeikalainen', 'isännöitsijä', 3),
-(12, 'kjaartinen', 'kjaartinen', 'isännöitsijä', 3),
-(13, 'ttoimisto', 'ttoimisto', 'isännöitsijä', 3),
-(14, 'hhosari', 'hhosari', 'isännöitsijä', 3),
-(15, 'slahti', 'slahti', 'toimisto', 1),
-(16, 'vlaine', 'vlaine', 'toimisto', 1),
-(17, 'mvirtanen', 'mvirtanen', 'huolto', 2),
-(18, 'jnieminen', 'jnieminen', 'huolto', 2),
-(19, 'mranta', 'mranta', 'huolto', 2),
-(20, 'akivela', 'akivela', 'huolto', 2),
-(21, 'aka', 'aka', 'asukas', 4),
-(22, 'aki', 'aki', 'isännöitsijä', 3),
-(23, 'akt', 'akt', 'työntekijä', 1),
-(24, 'akh', 'akh', 'huolto', 2),
-(26, 'mmehilainen', 'mmehilainen', 'Asiakas', 4),
-(27, 'mmehilainen', 'mmehilainen', 'Asiakas', 4),
-(30, 'mmehilainen', 'mmehilainen', 'Asiakas', 4),
-(31, 'jenna', 'jenna', 'Asiakas', 4),
-(32, 'kerttu', 'kerttu', 'Asiakas', 4),
-(33, 'kerttu', 'kerttu', 'Asiakas', 4),
-(36, 'ttahtinen', 'ttahtinen', 'Asukas', 4),
-(38, 'fall', 'fall', 'Työntekijä', 2),
-(39, 'heli', 'heli', 'Työntekijä', 1),
 (41, 'sahokas', '$2y$10$mDhND2810urx4wSwcYg4KeTR9dtZvtKqb.FwuIf5raTujTAE04EvG', 'Asukas', 4),
 (43, 'asu', '$2y$10$kll1JnECkzOVNpq1CLy5eOmplJCRMO4sHAMW9Kwr3DzmQOJQ6Amo2', 'Asukas', 4),
 (44, 'isa', '$2y$10$5NdiCWeM8gKQGY49JdjW..kLncWaEk/y8Cvy0ifL2hgoBv3qfWy42', 'Isännöitsijä', 3),
@@ -188,16 +141,16 @@ CREATE TABLE `taloyhtiot` (
 --
 
 INSERT INTO `taloyhtiot` (`taloyhtio_id`, `osoite`, `kaupunki`, `postinumero`, `nimi`, `isannoitsija_id`, `kayttaja_id`, `tila_id`) VALUES
-(3, 'Nallekarhuntie 65', 'Helsinki', 1700, 'Asunto-osakeyhtiö Karhunpesä', 8, 1, ''),
-(4, 'Lumikontie 58', 'Helsinki', 170, 'Omakotitalo, Hannu', 7, 1, ''),
-(5, 'Toimistotie 79 ', 'Helsinki', 170, 'Tuulan Toimistotilat Oy', 6, 1, ''),
-(6, 'Yliskyläntie 7', 'Helsinki', 840, 'Yliskyläntie 7 osakeyhtiö', 8, 1, ''),
-(7, 'Pesäkuja', 'Helsinki', 1000, 'Pesäkuja Osuuskunta', NULL, 26, ''),
-(13, 'Kujapolku', 'Helsinki', 840, 'Omakotitalo Kujapolku', NULL, 31, ''),
-(19, 'Kuurilanpolku 9', 'Kuusamo', 9000, 'Kuurilan Osuuskunta', 5, NULL, ''),
-(20, 'Kuurilanpolku 5', 'Kuusamo', 9000, 'Kuurilan veljen Osuuskunta', 4, NULL, ''),
-(21, 'Ei taloyhtiötä', NULL, NULL, 'Ei taloyhtiötä', NULL, 23, ''),
-(22, 'Marjapuuntie 8', 'Helsinki', 370, 'Taloyhtiö Marjapuu', 11, NULL, '');
+(3, 'Nallekarhuntie 65', 'Helsinki', 1700, 'Asunto-osakeyhtiö Karhunpesä', NULL, NULL, ''),
+(4, 'Lumikontie 58', 'Helsinki', 170, 'Omakotitalo, Hannu', NULL, NULL, ''),
+(5, 'Toimistotie 79 ', 'Helsinki', 170, 'Tuulan Toimistotilat Oy', NULL, NULL, ''),
+(6, 'Yliskyläntie 7', 'Helsinki', 840, 'Yliskyläntie 7 osakeyhtiö', NULL, NULL, ''),
+(7, 'Pesäkuja', 'Helsinki', 1000, 'Pesäkuja Osuuskunta', NULL, NULL, ''),
+(13, 'Kujapolku', 'Helsinki', 840, 'Omakotitalo Kujapolku', NULL, NULL, ''),
+(19, 'Kuurilanpolku 9', 'Kuusamo', 9000, 'Kuurilan Osuuskunta', NULL, NULL, ''),
+(20, 'Kuurilanpolku 5', 'Kuusamo', 9000, 'Kuurilan veljen Osuuskunta', NULL, NULL, ''),
+(21, 'Ei taloyhtiötä', NULL, NULL, 'Ei taloyhtiötä', NULL, NULL, ''),
+(22, 'Marjapuuntie 8', 'Helsinki', 370, 'Taloyhtiö Marjapuu', NULL, NULL, '');
 
 -- --------------------------------------------------------
 
@@ -266,17 +219,17 @@ CREATE TABLE `tehtavat` (
 --
 
 INSERT INTO `tehtavat` (`tehtava_id`, `kayttaja_id`, `kuvaus`, `korjaustoimenpide`, `tila`, `taloyhtio_id`, `tila_id`, `yleisavaimen_kaytto`, `numero`, `tehtavan_tyyppi_id`, `tyontekija_id`, `tehtavan_tilanne_id`, `jatetty`) VALUES
-(20, 22, 'Ikkunan tiivisteet vuotaa', 'Tiivisteet vaihdettu uusiin.', NULL, 3, 9, 'sovi', '040-1179851', NULL, 3, 4, '2023-05-08 14:34:10'),
-(21, 9, 'pistorasia ei toimi', 'Vaihdettu pistorasia. Työ hankittu alihankintana Sähkötyö Keinäseltä (a 100£). ', NULL, 6, 11, 'kyllä', '+34585438', NULL, 7, 4, '2023-05-08 14:34:10'),
-(26, 10, 'Pattereita ei saa säädettyä lämpimämmälle.', NULL, NULL, 4, 14, 'ei', '+358456339709', NULL, 4, 2, '2023-05-09 12:26:59'),
-(27, 21, 'Asunnossa on liian kuuma', NULL, NULL, 6, 14, 'sovi', '0400454969', NULL, 5, 2, '2023-05-09 12:28:03'),
-(28, 22, 'Hiekkaa on rapun edessä vielä vaikka kuinka paljon vaikka lakaisuauto kävi jo!', '', NULL, 3, 6, 'ei', '000-0000000', NULL, 14, 3, '2023-05-09 12:30:23'),
-(30, 22, 'Punttisali haisee, voitteko desinfioida kunnolla', '', NULL, 6, 13, 'kyllä', '0401234566', NULL, 9, 2, '2023-05-09 12:41:43'),
-(31, 22, 'Nurmikko pitäisi ajaa', NULL, NULL, 3, 10, 'kyllä', '0401234566', NULL, 11, 1, '2023-05-09 12:53:29'),
-(32, 21, 'Naapuri Kuuntelee Käärijän Cha cha Chata ihan liian kovalla.', NULL, NULL, 6, 14, 'ei', '0405566887', NULL, 11, 1, '2023-05-09 19:25:40'),
-(33, 22, 'Onko ylipäätään mahdollista kuunnella Cha cha chata liian kovalla?', NULL, NULL, 6, 12, 'kyllä', '0401234566', NULL, 11, 1, '2023-05-09 19:27:02'),
-(39, 21, 'Hissi on pysähtynyt toistuvasti kerrosten välissä ja tarvitsee huoltoa.', NULL, NULL, 6, 12, 'ei', '3736573657', NULL, NULL, 1, '2023-05-10 14:45:59'),
-(40, 41, 'Vesihana vuotaa keittiössä, vaatii korjausta.', 'Vaihdettu tiiviste Oras X hinta 5,90€', NULL, 3, 8, 'kyllä', '0401234566', NULL, 3, 4, '2023-05-10 14:46:26');
+(20, 47, 'Ikkunan tiivisteet vuotaa', 'Tiivisteet vaihdettu uusiin.', NULL, 3, 9, 'sovi', '040-1179851', NULL, 17, 4, '2023-05-08 14:34:10'),
+(21, 50, 'pistorasia ei toimi', 'Vaihdettu pistorasia. Työ hankittu alihankintana Sähkötyö Keinäseltä (a 100£). ', NULL, 6, 11, 'kyllä', '+34585438', NULL, 17, 4, '2023-05-08 14:34:10'),
+(26, 47, 'Pattereita ei saa säädettyä lämpimämmälle.', NULL, NULL, 4, 14, 'ei', '+358456339709', NULL, 17, 2, '2023-05-09 12:26:59'),
+(27, 50, 'Asunnossa on liian kuuma', NULL, NULL, 6, 14, 'sovi', '0400454969', NULL, NULL, 2, '2023-05-09 12:28:03'),
+(28, 47, 'Hiekkaa on rapun edessä vielä vaikka kuinka paljon vaikka lakaisuauto kävi jo!', '', NULL, 3, 6, 'ei', '000-0000000', NULL, 17, 3, '2023-05-09 12:30:23'),
+(30, 47, 'Punttisali haisee, voitteko desinfioida kunnolla', '', NULL, 6, 13, 'kyllä', '0401234566', NULL, 17, 2, '2023-05-09 12:41:43'),
+(31, 47, 'Nurmikko pitäisi ajaa', NULL, NULL, 3, 10, 'kyllä', '0401234566', NULL, NULL, 1, '2023-05-09 12:53:29'),
+(32, 47, 'Naapuri Kuuntelee Käärijän Cha cha Chata ihan liian kovalla.', NULL, NULL, 6, 14, 'ei', '0405566887', NULL, NULL, 1, '2023-05-09 19:25:40'),
+(33, 47, 'Onko ylipäätään mahdollista kuunnella Cha cha chata liian kovalla?', NULL, NULL, 6, 12, 'kyllä', '0401234566', NULL, NULL, 1, '2023-05-09 19:27:02'),
+(39, 47, 'Hissi on pysähtynyt toistuvasti kerrosten välissä ja tarvitsee huoltoa.', NULL, NULL, 6, 12, 'ei', '3736573657', NULL, NULL, 1, '2023-05-10 14:45:59'),
+(40, 50, 'Vesihana vuotaa keittiössä, vaatii korjausta.', 'Vaihdettu tiiviste Oras X hinta 5,90€', NULL, 3, 8, 'kyllä', '0401234566', NULL, NULL, 4, '2023-05-10 14:46:26');
 
 -- --------------------------------------------------------
 
@@ -347,18 +300,6 @@ CREATE TABLE `tyontekijat` (
 --
 
 INSERT INTO `tyontekijat` (`tyontekija_id`, `etunimi`, `sukunimi`, `puhelin`, `email`, `tyontekijatcol`, `kayttaja_id`, `tyontekijan_tilanne_id`) VALUES
-(1, 'Mikko', 'Virtanen', '0400 454 969', 'mikko.virtanen@huolto.fi', NULL, 17, 1),
-(2, 'Sari ', 'Lahti', '045 344 8999', 'sari.lahti@huolto.fi', NULL, 15, 1),
-(3, 'Juho', 'Nieminen', '040 111 7689', 'juho.nieminen@huolto.fi', NULL, 18, 1),
-(4, 'Markus', 'Ranta', '0400 245 919', 'markus.ranta@huolto.fi', NULL, 19, 1),
-(5, 'Anna', 'Kivelä', '045 633 9791', 'anna.kivelä@huolto.fi', NULL, 20, 1),
-(6, 'Ville', 'Laine', '0400 454 969', 'ville.laine@huolto.fi', NULL, 16, 1),
-(7, 'Jenny', 'Puranen', '0456339709', 'puranenjenny@gmail.com', '', 6, 2),
-(9, 'Antti', 'Kortelainen', '0401234566', 'antti@jotain.fi', NULL, 24, 2),
-(10, 'Antti', 'Kortelainen', '0401234566', 'antti@jotain.fi', NULL, 23, 1),
-(11, 'Ei ', 'valittu', 'ei valittu', 'ei valittu', 'ei valittu', 23, 1),
-(12, 'Sonja', 'Fall', '0405059544', 'sonja@jotain.fi', NULL, 38, 1),
-(13, 'Heli', 'Apell', '04563983893', 'heli@jotain.fi', NULL, 39, 1),
 (14, 'Heikki', 'Uolinen', '0507227272', 'huolinen@jotain.fi', NULL, 45, 2),
 (15, 'Tiina', 'Oinas', '0459282722', 'toinas@jotain.fi', NULL, 46, 1),
 (16, 'Tuomas', 'Kivelä', '0418577399', 'tkivela@jotain.fi', NULL, 48, 1),
@@ -511,7 +452,7 @@ ALTER TABLE `roolit`
 -- AUTO_INCREMENT for table `taloyhtiot`
 --
 ALTER TABLE `taloyhtiot`
-  MODIFY `taloyhtio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `taloyhtio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `tehtavan_tilanne`
@@ -535,7 +476,7 @@ ALTER TABLE `tehtavat`
 -- AUTO_INCREMENT for table `tilat`
 --
 ALTER TABLE `tilat`
-  MODIFY `tila_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `tila_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `tyontekijan_tilanne`
@@ -600,7 +541,7 @@ ALTER TABLE `tehtavat`
 -- Constraints for table `tilat`
 --
 ALTER TABLE `tilat`
-  ADD CONSTRAINT `taloyhtio_id` FOREIGN KEY (`taloyhtio_id`) REFERENCES `taloyhtiot` (`taloyhtio_id`);
+  ADD CONSTRAINT `taloyhtio_id` FOREIGN KEY (`taloyhtio_id`) REFERENCES `taloyhtiot` (`taloyhtio_id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `tyontekijat`
