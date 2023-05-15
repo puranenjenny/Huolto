@@ -31,11 +31,5 @@ if(isset($_POST['tallenna'])){
     exit;
 }
 
-$connection = null;
-?>
-                    
-        header("location:../lisaa_yleisiatiloja.php");
-    exit;
-    
 $yhteys = null;
 ?>
