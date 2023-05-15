@@ -3,7 +3,7 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
-$allowed_roles = array('1', '2', '4'); // kaikki paitsi isännöitsijä
+$allowed_roles = array('4'); // kaikki paitsi isännöitsijä
 include("php/rooli_check.php");
 ?> 
 
