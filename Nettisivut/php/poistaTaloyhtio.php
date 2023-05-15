@@ -11,4 +11,6 @@ if(isset($_GET['id'])){
 
 header("location:../ui-naytataloyhtiot.php");
 
+$yhteys = null;
+
 ?>

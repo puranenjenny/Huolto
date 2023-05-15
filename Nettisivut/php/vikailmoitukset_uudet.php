@@ -1,6 +1,4 @@
 <?php
-// php code for fetchin data from the db for main screen
-
 
 require "config.php";
 
@@ -33,6 +31,5 @@ $yhteys = null;
 $handler = fopen("viat.json", "w");
 fwrite($handler,  $JSON_vika);
 fclose($handler);
-//echo $JSON_vika;
 
 ?>

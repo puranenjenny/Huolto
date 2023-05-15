@@ -1,5 +1,6 @@
-<?php include "php/config.php" ?>
-	<?php
+<?php 
+include "php/config.php"; 
+
 	if(isset($_POST['taloyhtio'])) {
         $taloyhtio_id = $_POST['taloyhtio'];
         $query = "SELECT tehtavat.*, tilat.nimi AS tila_nimi, tehtavan_tilanne.tehtavan_tilanne AS tehtavan_tilanne, yleisavaimen_kaytto AS yleisavaimen_kaytto FROM tehtavat 
@@ -20,4 +21,5 @@
     } catch(PDOException $e) {
         echo "Virhe: " . $e->getMessage();
     }
-    ?>
+    $yhteys = null;
+?>

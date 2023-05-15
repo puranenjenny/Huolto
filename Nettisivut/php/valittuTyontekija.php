@@ -25,7 +25,6 @@ if(isset($_GET['id'])){
     fclose($handler);
 }
 
-$yhteys = null;
 header("location:../muokkaaTyontekija.php");
 
 ?>

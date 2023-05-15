@@ -18,4 +18,6 @@ if(isset($_GET['id'])){
 
 header("location:../ui-huoltohenkilot.php");
 
+$yhteys = null;
+
 ?>

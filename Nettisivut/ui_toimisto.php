@@ -1,6 +1,6 @@
-
 <?php include 'header_ui_toimisto.php';?>
 <?php include 'php/hae_tyontekijan_nimi.php';?>
+<script src="js/kirjautumiserror.js"></script>
 
 <?php //echo "Rooli ID: " . $_SESSION['rooli_id']; ?>
 <div class="connect_tausta">

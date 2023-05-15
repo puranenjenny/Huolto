@@ -11,4 +11,6 @@ if(isset($_GET['tehtava_id'])){
 
 header("location:../ui-uudet-ilmot.php");
 
+$yhteys = null;
+
 ?>

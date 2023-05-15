@@ -33,7 +33,7 @@ if(isset($_GET['tehtava_id'])){
     fclose($handler);
 }
 
-$yhteys = null;
+
 header("location:../muokkaaVika.php");
 
 ?>

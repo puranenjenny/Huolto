@@ -39,6 +39,5 @@ $yhteys = null;
 $handler = fopen("viat.json", "w");
 fwrite($handler,  $JSON_vika);
 fclose($handler);
-//echo $JSON_vika;
 
 ?>

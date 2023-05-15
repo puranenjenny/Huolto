@@ -1,5 +1,6 @@
 <?php include 'header_ui_toimisto.php';?>
 <?php include 'php/hae_tyontekijan_nimi.php';?>
+<script src="js/kirjautumiserror.js"></script>
 
 
 <div class="connect_tausta">

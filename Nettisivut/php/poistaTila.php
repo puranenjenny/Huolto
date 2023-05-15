@@ -11,4 +11,6 @@ if(isset($_GET['id'])){
 
 header("location:tila_listaus.php");
 
+$yhteys = null;
+
 ?>
