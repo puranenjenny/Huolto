@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2023 at 02:13 PM
+-- Generation Time: May 15, 2023 at 12:06 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -49,10 +49,11 @@ INSERT INTO `asukkaat` (`asukas_id`, `etunimi`, `sukunimi`, `kayttaja_id`, `talo
 (13, 'Maija', 'Mehilainen', 26, 20, NULL),
 (14, 'Kerttu', 'Mehilainen', 27, 7, NULL),
 (19, 'Tuuli', 'Tähtinen', 1, 20, 'B 30'),
-(20, 'Jenna', 'Makkara', 31, 13, 'C 1'),
 (24, 'Tuuli', 'Tähtinen', 36, 5, 'A 40'),
 (26, 'Sonja', 'Ahokas', 41, 4, ''),
-(28, 'Annikki', 'Sukka', 43, 3, 'C 7');
+(28, 'Annikki', 'Sukka', 43, 3, 'C 7'),
+(29, 'Matilda', 'Korhonen', 47, 3, 'F 5'),
+(30, 'Marco', 'Kolehmainen', 50, 6, 'F 18');
 
 -- --------------------------------------------------------
 
@@ -80,7 +81,8 @@ INSERT INTO `isannoitsijat` (`isannoitsija_id`, `etunimi`, `sukunimi`, `email`, 
 (7, 'Hannu', 'Hosari', 'hannu.hosari@jotain.fi', '045 2381892', 14),
 (8, 'Antti', 'Kortelainen', 'antti@jotain.fi', '0401234566', 22),
 (9, 'Ei isännöitsijää', NULL, NULL, NULL, 4),
-(10, 'Iiro ', 'Sällinen', 'isallinen@jotain.fi', '0408513555', 44);
+(10, 'Iiro ', 'Sällinen', 'isallinen@jotain.fi', '0408513555', 44),
+(11, 'Benjamin', 'Mattila', 'bmattila@jotain.fi', '04008282765', 49);
 
 -- --------------------------------------------------------
 
@@ -136,7 +138,12 @@ INSERT INTO `kayttajat` (`kayttaja_id`, `tunnus`, `salasana`, `kayttaja`, `rooli
 (43, 'asu', '$2y$10$kll1JnECkzOVNpq1CLy5eOmplJCRMO4sHAMW9Kwr3DzmQOJQ6Amo2', 'Asukas', 4),
 (44, 'isa', '$2y$10$5NdiCWeM8gKQGY49JdjW..kLncWaEk/y8Cvy0ifL2hgoBv3qfWy42', 'Isännöitsijä', 3),
 (45, 'huo', '$2y$10$lTFJ1KbfghmtUeJFT4L1R.bcaVNBHgRNschEuhZiHTHTW9x8wVK8S', 'Työntekijä', 2),
-(46, 'toi', '$2y$10$Q2igOCOcWnQW9HKUuWpeBOYqMBwiPam4rKvFat2ScmnzpNZQMkJje', 'Työntekijä', 1);
+(46, 'toi', '$2y$10$Q2igOCOcWnQW9HKUuWpeBOYqMBwiPam4rKvFat2ScmnzpNZQMkJje', 'Työntekijä', 1),
+(47, 'mkorhonen', '$2y$10$9lHvM/ry/t1I1VdjFCwUJOiiqpHLkTeOH2FChmbdczT04rsOY.z/S', 'Asukas', 4),
+(48, 'tkivela', '$2y$10$FxKpKi05HcqV7BAdW6hMyeAyY5TePhQp1FS5cGi.wC2zBJpMkYDcy', 'Työntekijä', 1),
+(49, 'bmattila', '$2y$10$DCNBAhRDjvnb3YmnaQwo3exEDS8I3G6IQqtuKWcWCxdE4yZlRMpXi', 'Isännöitsijä', 3),
+(50, 'mkole', '$2y$10$6UriUlRGalm7HadxGfnw3OGu2f9M9tw6Bw7evy0s5SdEmPGUwiypy', 'Asukas', 4),
+(51, 'tkuusela', '$2y$10$9fdP/qK0TNn87yKOKTXhLuZrD2.z4TgeE9OvYeKu1p25SP0GBVT1K', 'Työntekijä', 2);
 
 -- --------------------------------------------------------
 
@@ -189,7 +196,8 @@ INSERT INTO `taloyhtiot` (`taloyhtio_id`, `osoite`, `kaupunki`, `postinumero`, `
 (13, 'Kujapolku', 'Helsinki', 840, 'Omakotitalo Kujapolku', NULL, 31, ''),
 (19, 'Kuurilanpolku 9', 'Kuusamo', 9000, 'Kuurilan Osuuskunta', 5, NULL, ''),
 (20, 'Kuurilanpolku 5', 'Kuusamo', 9000, 'Kuurilan veljen Osuuskunta', 4, NULL, ''),
-(21, 'Ei taloyhtiötä', NULL, NULL, 'Ei taloyhtiötä', NULL, 23, '');
+(21, 'Ei taloyhtiötä', NULL, NULL, 'Ei taloyhtiötä', NULL, 23, ''),
+(22, 'Marjapuuntie 8', 'Helsinki', 370, 'Taloyhtiö Marjapuu', 11, NULL, '');
 
 -- --------------------------------------------------------
 
@@ -262,7 +270,7 @@ INSERT INTO `tehtavat` (`tehtava_id`, `kayttaja_id`, `kuvaus`, `korjaustoimenpid
 (21, 9, 'pistorasia ei toimi', 'Vaihdettu pistorasia. Työ hankittu alihankintana Sähkötyö Keinäseltä (a 100£). ', NULL, 6, 11, 'kyllä', '+34585438', NULL, 7, 4, '2023-05-08 14:34:10'),
 (26, 10, 'Pattereita ei saa säädettyä lämpimämmälle.', NULL, NULL, 4, 14, 'ei', '+358456339709', NULL, 4, 2, '2023-05-09 12:26:59'),
 (27, 21, 'Asunnossa on liian kuuma', NULL, NULL, 6, 14, 'sovi', '0400454969', NULL, 5, 2, '2023-05-09 12:28:03'),
-(28, 22, 'Hiekkaa on rapun edessä vielä vaikka kuinka paljon vaikka lakaisuauto kävi jo!', NULL, NULL, 3, 6, 'ei', '000-0000000', NULL, 11, 1, '2023-05-09 12:30:23'),
+(28, 22, 'Hiekkaa on rapun edessä vielä vaikka kuinka paljon vaikka lakaisuauto kävi jo!', '', NULL, 3, 6, 'ei', '000-0000000', NULL, 14, 3, '2023-05-09 12:30:23'),
 (30, 22, 'Punttisali haisee, voitteko desinfioida kunnolla', '', NULL, 6, 13, 'kyllä', '0401234566', NULL, 9, 2, '2023-05-09 12:41:43'),
 (31, 22, 'Nurmikko pitäisi ajaa', NULL, NULL, 3, 10, 'kyllä', '0401234566', NULL, 11, 1, '2023-05-09 12:53:29'),
 (32, 21, 'Naapuri Kuuntelee Käärijän Cha cha Chata ihan liian kovalla.', NULL, NULL, 6, 14, 'ei', '0405566887', NULL, 11, 1, '2023-05-09 19:25:40'),
@@ -351,8 +359,10 @@ INSERT INTO `tyontekijat` (`tyontekija_id`, `etunimi`, `sukunimi`, `puhelin`, `e
 (11, 'Ei ', 'valittu', 'ei valittu', 'ei valittu', 'ei valittu', 23, 1),
 (12, 'Sonja', 'Fall', '0405059544', 'sonja@jotain.fi', NULL, 38, 1),
 (13, 'Heli', 'Apell', '04563983893', 'heli@jotain.fi', NULL, 39, 1),
-(14, 'Heikki', 'Uolinen', '0507227272', 'huolinen@jotain.fi', NULL, 45, 1),
-(15, 'Tiina', 'Oinas', '0459282722', 'toinas@jotain.fi', NULL, 46, 1);
+(14, 'Heikki', 'Uolinen', '0507227272', 'huolinen@jotain.fi', NULL, 45, 2),
+(15, 'Tiina', 'Oinas', '0459282722', 'toinas@jotain.fi', NULL, 46, 1),
+(16, 'Tuomas', 'Kivelä', '0418577399', 'tkivela@jotain.fi', NULL, 48, 1),
+(17, 'Tuomo', 'Kuusela', '0507889898', 'tkuusela@jotain.fi', NULL, 51, 1);
 
 -- --------------------------------------------------------
 
@@ -373,7 +383,6 @@ CREATE TABLE `yhteydenottopyynnot` (
 --
 
 INSERT INTO `yhteydenottopyynnot` (`yhteydenottopyynto_id`, `yp_nimi`, `yp_email`, `yp_numero`, `yp_viesti`) VALUES
-(1, 'Testiyhteidenotto', 'testi.yhteydenotto@jotain.fi', 401234567, 'Testataan miltä tämä yhteydenottopyyntöhässäkkä näyttää ja toimiiko. '),
 (2, 'Sonera', 'sonera@sonera@sonera.fi', 400454969, 'Halutaan Töölön toimistolle kiinteistöhuoltoa. Pihat saatanan liukkaita talvisin.'),
 (3, 'Karhula', 'karhula@jotain.fi', 400454969, 'Haluttais että tuutte siivoamaan meidän karhunpesän ennen talviunia.'),
 (22, 'Pentti Halme', 'pena@jotain.fi', 401155997, 'Kesämökkini Ivalossa kaipaa kiinteistönhuolto. ');
@@ -478,19 +487,19 @@ ALTER TABLE `yhteydenottopyynnot`
 -- AUTO_INCREMENT for table `asukkaat`
 --
 ALTER TABLE `asukkaat`
-  MODIFY `asukas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `asukas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `isannoitsijat`
 --
 ALTER TABLE `isannoitsijat`
-  MODIFY `isannoitsija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `isannoitsija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `kayttajat`
 --
 ALTER TABLE `kayttajat`
-  MODIFY `kayttaja_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `kayttaja_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `roolit`
@@ -502,7 +511,7 @@ ALTER TABLE `roolit`
 -- AUTO_INCREMENT for table `taloyhtiot`
 --
 ALTER TABLE `taloyhtiot`
-  MODIFY `taloyhtio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `taloyhtio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `tehtavan_tilanne`
@@ -538,7 +547,7 @@ ALTER TABLE `tyontekijan_tilanne`
 -- AUTO_INCREMENT for table `tyontekijat`
 --
 ALTER TABLE `tyontekijat`
-  MODIFY `tyontekija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `tyontekija_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `yhteydenottopyynnot`
