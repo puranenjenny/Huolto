@@ -56,7 +56,7 @@ include 'php/hae_taloyhtiot.php';?>
                         <input class="rounded-input" type="text" id="rappu" name="rappu" placeholder="&nbsp;A 20 ">
                     </div>
                     <a class="btn btn1" href="ui-naytakayttajat.php">Takaisin</a>
-                    <button type="submit" class="btn btn1">Lähetä</button>
+                    <button type="submit" name="submit" class="btn btn1">Lähetä</button>
                 </form>
             </div>
             </div>
