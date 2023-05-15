@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2023 at 03:47 PM
+-- Generation Time: May 15, 2023 at 04:05 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -237,7 +237,7 @@ INSERT INTO `tehtavan_tyyppi` (`tehtavan_tyyppi_id`, `nimi`) VALUES
 
 CREATE TABLE `tehtavat` (
   `tehtava_id` int(11) NOT NULL,
-  `kayttaja_id` int(11) NOT NULL,
+  `kayttaja_id` int(11) DEFAULT NULL,
   `kuvaus` varchar(200) DEFAULT NULL,
   `korjaustoimenpide` longtext DEFAULT NULL,
   `tila` varchar(45) DEFAULT NULL,
@@ -614,8 +614,8 @@ ALTER TABLE `taloyhtiot`
 ALTER TABLE `tehtavat`
   ADD CONSTRAINT `tehtavan_tyyppi_id` FOREIGN KEY (`tehtavan_tyyppi_id`) REFERENCES `tehtavan_tyyppi` (`tehtavan_tyyppi_id`) ON DELETE CASCADE,
   ADD CONSTRAINT `tehtavat_ibfk_1` FOREIGN KEY (`tehtavan_tilanne_id`) REFERENCES `tehtavan_tilanne` (`tehtavan_tilanne_id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `tehtavat_ibfk_2` FOREIGN KEY (`kayttaja_id`) REFERENCES `kayttajat` (`kayttaja_id`),
-  ADD CONSTRAINT `tehtavat_ibfk_3` FOREIGN KEY (`taloyhtio_id`) REFERENCES `taloyhtiot` (`taloyhtio_id`),
+  ADD CONSTRAINT `tehtavat_ibfk_3` FOREIGN KEY (`taloyhtio_id`) REFERENCES `taloyhtiot` (`taloyhtio_id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `tehtavat_ibfk_4` FOREIGN KEY (`kayttaja_id`) REFERENCES `kayttajat` (`kayttaja_id`) ON DELETE SET NULL,
   ADD CONSTRAINT `tila_id` FOREIGN KEY (`tila_id`) REFERENCES `tilat` (`tila_id`),
   ADD CONSTRAINT `tyontekija_id` FOREIGN KEY (`tyontekija_id`) REFERENCES `tyontekijat` (`tyontekija_id`);
 
