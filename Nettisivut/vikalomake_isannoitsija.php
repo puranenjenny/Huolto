@@ -1,3 +1,12 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+$allowed_roles = array('1', '2', '3'); // kaikki paitsi asukas
+include("php/rooli_check.php");
+?> 
+
 <?php include 'php/session.php';?>
 <?php include 'php/hae_isannoitsijan_nimi.php';?> 
 <?php include 'php/hae_taloyhtiot_ja_tilat.php';?>

@@ -20,7 +20,6 @@
     <!--Oma CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/header.js"></script>
-    <script src="js/nappi_ylos.js"></script>
     <script src="js/scrollaus.js"></script>
 
 
