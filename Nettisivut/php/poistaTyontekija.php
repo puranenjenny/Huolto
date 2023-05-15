@@ -2,10 +2,17 @@
 require "config.php";
 
 if(isset($_GET['id'])){
-    $tyontekija_id = $_GET['id'];
-    $query = "DELETE FROM tyontekijat WHERE tyontekija_id = :tyontekija_id";
+    $kayttaja_id = $_GET['id'];
+
+    $query = "DELETE FROM kayttajat WHERE kayttaja_id=:kayttaja_id";
     $delete = $yhteys->prepare($query);
-    $delete->bindValue(':tyontekija_id', $tyontekija_id, PDO::PARAM_STR);
+    $delete->bindValue(':kayttaja_id', $kayttaja_id, PDO::PARAM_STR);
+    $delete->execute();
+
+
+    $query = "DELETE FROM tyontekijat WHERE kayttaja_id=:kayttaja_id";
+    $delete = $yhteys->prepare($query);
+    $delete->bindValue(':kayttaja_id', $kayttaja_id, PDO::PARAM_STR);
     $delete->execute();
 }
 

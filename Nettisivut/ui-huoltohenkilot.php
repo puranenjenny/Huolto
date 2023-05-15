@@ -6,7 +6,7 @@
         <div class="container9 container_table">
             <div class="row justify-content-center mx-0">
                 <h3 class="col-lg-12 lomake_tausta lomake_vika header_vika">Työntekijöiden hallinta</h3>
-            <div class=" col-lg-3 lomake_tausta napit_kayttaja">
+            <div class=" col-lg-3 lomake_tausta napit_kayttaja_tt">
                 <a class="m-2 btn nappi" href="lisaa_tyontekija_lomake.php">Lisää työntekijä</a>
             </div>
                 <div class="lomake_tausta lomake_vika table-responsive">

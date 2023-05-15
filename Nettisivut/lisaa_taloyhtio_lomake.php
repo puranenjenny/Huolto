@@ -39,7 +39,7 @@
                         </div>
                         <div class="select-wrapper text-center">
                         <select class="rounded-select" id="isannoitsija" name="isannoitsija_id">
-                            <option value="">&nbsp;Isännöitsijä&nbsp;</option>
+                            <option value="12">&nbsp;Isännöitsijä&nbsp;</option>
                             <?php foreach ($isannoitsijat as $isannoitsija): ?>
                                 <option value="<?php echo $isannoitsija['isannoitsija_id']; ?>">
                                     <?php echo '&nbsp;' . $isannoitsija['etunimi'] . ' ' . $isannoitsija['sukunimi'] . '&nbsp;'; ?>

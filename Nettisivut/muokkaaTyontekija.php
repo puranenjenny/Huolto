@@ -80,7 +80,7 @@ include 'header_ui_toimisto.php';?>
                     <br>
                     <a class="btn btn-primary" href="ui-huoltohenkilot.php">Takaisin</a>
                     <button name="tallenna" type="submit" class="mx-3 btn btn-success">Tallenna</button>
-                    <?php echo '<a href="php/poistaTyontekija.php?id='.$user['id'].'" class="btn btn-danger">Poista</a>'; ?>
+                    <?php echo '<a href="php/poistaTyontekija.php?id='.$user['Kayttaja_id'].'" class="btn btn-danger">Poista</a>'; ?>
                 </form>
                 <?php
                                                     }

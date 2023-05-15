@@ -78,7 +78,7 @@ include 'php/hae_tyontekijat.php'
                         <select required id="Tyontekija" name="tyontekija" class="rounded-select leveys-select">
                         <option value="" disabled selected hidden>&nbsp;Valitse huoltohenkilö&nbsp;</option>
                                         <?php
-                                                $JSON_tyontekijat = file_get_contents("tyontekijat.json");
+                                                $JSON_tyontekijat = file_get_contents("php/hae_tyontekijat.json");
                                                 $tyontekijat = json_decode($JSON_tyontekijat, true);
 
 

@@ -82,7 +82,7 @@ include 'header_ui_toimisto.php';?>
                         <select required id="Tyontekija" name="Tyontekija" class="rounded-select leveys-select">
                         <option value="" selected hidden>&nbsp;Valitse huoltohenkilö&nbsp;</option>
                                         <?php
-                                                $JSON_tyontekijat = file_get_contents("tyontekijat.json");
+                                                $JSON_tyontekijat = file_get_contents("php/hae_tyontekijat.json");
                                                 $tyontekijat = json_decode($JSON_tyontekijat, true);
 
 

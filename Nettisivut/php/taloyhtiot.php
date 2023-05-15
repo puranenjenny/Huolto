@@ -6,6 +6,7 @@ include("config.php");
 $kysely = "SELECT taloyhtiot.taloyhtio_id, taloyhtiot.osoite, taloyhtiot.nimi, taloyhtiot.kaupunki, taloyhtiot.postinumero, taloyhtiot.isannoitsija_id, isannoitsijat.etunimi, isannoitsijat.sukunimi 
 FROM taloyhtiot
 INNER JOIN isannoitsijat ON isannoitsijat.isannoitsija_id = taloyhtiot.isannoitsija_id
+WHERE NOT taloyhtio_id = '21'
 ";
 $data = $yhteys->query($kysely); 
 

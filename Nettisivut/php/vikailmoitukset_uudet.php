@@ -14,7 +14,7 @@ $query = "SELECT tehtavat.tehtava_id, tehtavat.kuvaus, taloyhtiot.osoite, tehtav
                     SELECT kayttaja_id, etunimi, sukunimi FROM isannoitsijat
                 ) u ON kayttajat.kayttaja_id = u.kayttaja_id
             INNER JOIN taloyhtiot ON tehtavat.taloyhtio_id = taloyhtiot.taloyhtio_id
-            WHERE tehtavat.tehtavan_tilanne_id = '1'";
+            WHERE tehtavat.tehtavan_tilanne_id = '1' OR tehtavat.tyontekija_id = ''";
 $data = $yhteys->query($query);
 
 $JSON_vika = '{"tehtavat":[';

@@ -2,10 +2,16 @@
 require "config.php";
 
 if(isset($_GET['id'])){
-    $asukas_id = $_GET['id'];
-    $query = "DELETE FROM asukkaat WHERE asukas_id=:asukas_id";
+    $kayttaja_id = $_GET['id'];
+
+    $query = "DELETE FROM kayttajat WHERE kayttaja_id=:kayttaja_id";
     $delete = $yhteys->prepare($query);
-    $delete->bindValue(':asukas_id', $asukas_id, PDO::PARAM_STR);
+    $delete->bindValue(':kayttaja_id', $kayttaja_id, PDO::PARAM_STR);
+    $delete->execute();
+
+    $query = "DELETE FROM asukkaat WHERE kayttaja_id=:kayttaja_id";
+    $delete = $yhteys->prepare($query);
+    $delete->bindValue(':kayttaja_id', $kayttaja_id, PDO::PARAM_STR);
     $delete->execute();
 }
 

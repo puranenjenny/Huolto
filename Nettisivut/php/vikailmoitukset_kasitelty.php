@@ -14,7 +14,7 @@ $query = "SELECT tehtavat.tehtava_id, tehtavat.kuvaus, taloyhtiot.osoite, tehtav
                     SELECT kayttaja_id, etunimi, sukunimi FROM isannoitsijat
                 ) u ON kayttajat.kayttaja_id = u.kayttaja_id
             INNER JOIN taloyhtiot ON tehtavat.taloyhtio_id = taloyhtiot.taloyhtio_id
-            INNER JOIN tyontekijat ON tyontekijat.tyontekija_id = tehtavat.tyontekija_id
+            LEFT JOIN tyontekijat ON tyontekijat.tyontekija_id = tehtavat.tyontekija_id
             INNER JOIN tehtavan_tilanne ON tehtavat.tehtavan_tilanne_id = tehtavan_tilanne.tehtavan_tilanne_id
             WHERE tehtavat.tehtavan_tilanne_id = '2' OR tehtavat.tehtavan_tilanne_id = '3'";
 $data = $yhteys->query($query);
@@ -25,7 +25,11 @@ $rows = $data->rowCount();
 
 while($row = $data->fetch(PDO::FETCH_ASSOC)){
     $counter++;
-    $JSON_vika.= '{"ID":"'.$row['tehtava_id'].'","Viankuvaus":"'.$row['kuvaus'].'","Osoite":"'.$row['osoite'].'","Tilanne":"'.$row['tehtavan_tilanne'].'","Paivays":"'.$row['jatetty'].'","Etunimi":"'.$row['etunimi'].'","Sukunimi":"'.$row['sukunimi'].'","Ilmoittaja":"'.$row['ilmoittaja'].'"}';
+
+    $tyontekijan_etunimi = $row['etunimi'] ? $row['etunimi'] : 'Ei määritelty';
+    $tyontekijan_sukunimi = $row['sukunimi'] ? $row['sukunimi'] : '';
+
+    $JSON_vika.= '{"ID":"'.$row['tehtava_id'].'","Viankuvaus":"'.$row['kuvaus'].'","Osoite":"'.$row['osoite'].'","Tilanne":"'.$row['tehtavan_tilanne'].'","Paivays":"'.$row['jatetty'].'","Tyontekija":"'.$tyontekijan_etunimi.' '.$tyontekijan_sukunimi.'","Ilmoittaja":"'.$row['ilmoittaja'].'"}';
     if($counter<$rows) $JSON_vika.=",";
 }
 

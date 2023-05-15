@@ -51,7 +51,7 @@
                                                      <td><?php echo $member['ID']; ?></td>
                                                      <td><?php echo $member['Ilmoittaja']; ?></td>
                                                      <td><?php echo $member['Viankuvaus']; ?></td>
-                                                     <td><?php echo $member['Etunimi'] . ' ' .$member['Sukunimi']; ?></td>
+                                                     <td><?php echo $member['Tyontekija']; ?></td>
                                                      <td><?php echo $member['Tilanne']; ?></td>
                                                      <td><?php echo $member['Paivays']; ?></td>
                                                      <td><a href="php/valittuVika.php?tehtava_id=<?php echo $member['ID']; ?>" class="btn btn-warning">Muokkaa</a></td>

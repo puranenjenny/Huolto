@@ -4,7 +4,7 @@ require "config.php";
 
 if(isset($_GET['id'])){
     $asukas_id = $_GET['id'];
-    $query = "SELECT asukkaat.asukas_id , asukkaat.etunimi, asukkaat.sukunimi, asukkaat.taloyhtio_id, taloyhtiot.nimi, asukkaat.rappu
+    $query = "SELECT asukkaat.asukas_id , asukkaat.etunimi, asukkaat.sukunimi, asukkaat.taloyhtio_id, taloyhtiot.nimi, asukkaat.rappu, asukkaat.kayttaja_id
     FROM asukkaat
     INNER JOIN taloyhtiot ON asukkaat.taloyhtio_id = taloyhtiot.taloyhtio_id
     WHERE asukas_id = '$asukas_id'";
@@ -13,7 +13,7 @@ if(isset($_GET['id'])){
     $JSON_paivita_asukas = '{"Asukas":[';
     $rivi = $data->fetch(PDO::FETCH_ASSOC);
 
-    $JSON_paivita_asukas.= '{"id":"' .$rivi['asukas_id'] . '", "Etunimi":"' . $rivi['etunimi'] . '", "Sukunimi":"' . $rivi['sukunimi'] . '", "Taloyhtio-ID":"' . $rivi['taloyhtio_id'] . '", "Taloyhtio":"' . $rivi['nimi'] . '", "Rappu":"' . $rivi['rappu'] . '"}]}';
+    $JSON_paivita_asukas.= '{"id":"' .$rivi['asukas_id'] . '", "Etunimi":"' . $rivi['etunimi'] . '", "Sukunimi":"' . $rivi['sukunimi'] . '", "Taloyhtio-ID":"' . $rivi['taloyhtio_id'] . '", "Taloyhtio":"' . $rivi['nimi'] . '", "Rappu":"' . $rivi['rappu'] . '", "Kayttaja_id":"' . $rivi['kayttaja_id'] . '"}]}';
         
 
     $yhteys = null;

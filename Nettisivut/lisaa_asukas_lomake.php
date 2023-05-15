@@ -40,7 +40,7 @@ include 'php/hae_taloyhtiot.php';?> <!-- hakee taloyhtiöt tietokannasta -->
                         </div>
                         <div class="select-wrapper text-center">
                         <select class="rounded-select" id="taloyhtio" name="taloyhtio"> <!-- kentän määrittely -->
-                            <option value="">&nbsp;Taloyhtiö&nbsp;</option> <!-- oletusarvo -->
+                            <option value="21" selected hidden>&nbsp;Taloyhtiö&nbsp;</option> <!-- oletusarvo -->
                             <?php foreach ($taloyhtiot as $taloyhtio): ?> <!-- hakee taloyhtiöt tietokannasta hyödyntäen hae_taloyhtiot.php tiedostoa -->
                                 <option value="<?php echo $taloyhtio['taloyhtio_id']; ?>"> <!-- listaa taloyhtiön id:n ... -->
                                     <?php echo '&nbsp;' . $taloyhtio['nimi'] . '&nbsp;'; ?> <!--... ja taloyhtiön nimen -->

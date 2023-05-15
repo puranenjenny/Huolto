@@ -3,7 +3,9 @@
 include("config.php"); 
 
 $kysely1 = "SELECT isannoitsija_id, etunimi, sukunimi, puhelin 
-FROM isannoitsijat ORDER BY sukunimi;";
+FROM isannoitsijat
+WHERE NOT isannoitsija_id = '12' 
+ORDER BY sukunimi;";
  
 $data = $yhteys->query($kysely1); 
 
