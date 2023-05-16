@@ -61,7 +61,7 @@ include("php/rooli_check.php");
                                                     <a class="nav-link" href="ui-uudet-ilmot.php">VIKAILMOITUKSET</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="ui-huoltohenkilot.php">HUOLTOHENKILÖT</a>
+                                                    <a class="nav-link" href="ui-huoltohenkilot.php">TYÖNTEKIJÄT</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="ui-naytakayttajat.php">KÄYTTÄJIEN HALLINTA</a>
