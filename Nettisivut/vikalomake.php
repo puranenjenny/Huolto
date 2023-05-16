@@ -3,12 +3,12 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
-$allowed_roles = array('4'); // kaikki paitsi isännöitsijä
-include("php/rooli_check.php");
+$allowed_roles = array('4'); // asukas
+include("php/rooli_check.php"); //tarkistetaan onko käyttäjä kirjautunut sisään ja onko käyttäjällä oikea rooli
 ?> 
 
-<?php include 'php/session.php';?>
-<?php include 'php/hae_asukkaan_nimi.php';?> 
+<?php include 'php/session.php';?> 
+<?php include 'php/hae_asukkaan_nimi.php';?> <!--haetaan asukkaan nimi-->
 
 <!doctype html>
 <html>
@@ -102,7 +102,7 @@ include("php/rooli_check.php");
   <div class="container1">
     <div class="row justify-content-center">
       <div class="text-center lomake_vika2 justify-content-center">
-        <form class="form" action="vikalomake_asukas_toiminto.php" method="POST">
+        <form class="form" action="vikalomake_asukas_toiminto.php" method="POST"> <!-- lomake vikailmoituksen jättämiseen -->
           <div class="form-group">
           <h2>Vikailmoituslomake asukas</h2><br><br><br>
             <label for="kuvaus">Viesti/vian kuvaus</label>

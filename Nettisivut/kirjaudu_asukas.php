@@ -1,9 +1,9 @@
 <?php
-if (!isset($_SESSION)) {
+if (!isset($_SESSION)) { //jos session ei ole käynnissä, käynnistä se
     session_start();
 }?>
-<?php include 'header.php';?>
-<script src="js/kirjautumiserror.js"></script>
+<?php include 'header.php';?> <!-- sisällytetään headeri -->
+<script src="js/kirjautumiserror.js"></script> <!-- sisällytetään kirjautumiserror.js joka palauttaa sivun scrollauskohdan jos kirjautuminen epäonnistuu -->
 
 <div class="connect_tausta">
 
@@ -25,23 +25,23 @@ if (!isset($_SESSION)) {
 <div class="row vali  mx-0"></div>
 <div class="row vali  mx-0"></div>
 
-<div  class="bg-cover text-white d-flex align-items-center" id="taustakuva3">
+<div  class="bg-cover text-white d-flex align-items-center" id="taustakuva3"> <!-- muotoiluja -->
   <div class="container3">
     <div class="row justify-content-center">
       <div class="text-center lomake_tausta2">
-        <form method="POST" action="php/asukas_kirjautumiskoodi.php" class="form" onsubmit="saveScrollPosition()">
-          <div class="form-group">
+        <form method="POST" action="php/asukas_kirjautumiskoodi.php" class="form" onsubmit="saveScrollPosition()"> <!-- lähetetään tiedot asukas_kirjautumiskoodi.php:lle -->
+          <div class="form-group"> <!-- käyttäjätunnus -->
             <label for="tunnus">Tunnus *</label>
             <input id="tunnus" type="text" name="tunnus" required class="form-control text-center" placeholder="mmeikalainen"><br>
           </div>
-          <div class="form-group">
+          <div class="form-group"> <!-- salasana -->
             <label for="salasana">Salasana *</label>
             <input id="salasana" type="password" name="salasana" required class="form-control text-center" placeholder="salasana123"><br>
           </div>
-          <button type="submit" value="Submit" class="btn btn1">Kirjaudu</button>
+          <button type="submit" value="Submit" class="btn btn1">Kirjaudu</button> <!-- lähetysnappi -->
                     <!-- error viesti jos tulee -->
                     <?php if (isset($_SESSION['error'])): ?>
-                    <div class="alert alert-danger mt-3" role="alert" id="login_error">
+                    <div class="alert alert-danger mt-3" role="alert" id="login_error"> 
                         <?php echo $_SESSION['error']; ?>
                     </div>
                     <?php unset($_SESSION['error']); // poistetaan errorviesti sessiosta kun se on näytetty ?>

@@ -1,4 +1,4 @@
-<?php
+<?php //tämä tiedosto tarkistaa asukkaan taloyhtiön
 include("config.php");
 include("hae_kayttajaid.php");
 

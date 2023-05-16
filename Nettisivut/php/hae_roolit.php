@@ -1,4 +1,4 @@
-<?php
+<?php //tämä tiedosto hakee roolit
 include("config.php");
 include("session.php");
 

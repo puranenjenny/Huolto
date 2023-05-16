@@ -1,5 +1,4 @@
-
-<?php
+ <?php //tämä tiedosto päivittää tehtävän tiedot
 require_once "config.php";
 
 $tyontekija_id = $_POST['tyontekija_id'];
