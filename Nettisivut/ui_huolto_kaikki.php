@@ -44,7 +44,7 @@
                                                 <td><?php echo $member['Viankuvaus']; ?></td>
                                                 <td><?php echo $member['Jattaja']; ?></td>
                                                 <td><?php echo $member['Osoite']; ?></td>
-                                                <td><?php echo $member['Tila']; ?></td>
+                                                <td><?php echo $member['Rappu_tilan_nimi']; ?></td>
                                                 <td><?php echo $member['Yleisavaimen_kaytto']; ?></td>
                                                 <td><?php echo $member['Numero']; ?></td>
                                                 <td><?php echo $member['Tyontekija']; ?></td>

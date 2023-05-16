@@ -1,4 +1,4 @@
-<?php 
+<?php //tämä tiedosto hakee työntekijät
 
 include("config.php"); 
 $rooli_id = '2';

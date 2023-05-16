@@ -1,4 +1,4 @@
-<?php
+<?php //tämä tiedosto hakee käyttäjän id:n
 include("config.php");
 
 $tunnus = $_SESSION['login_user'];

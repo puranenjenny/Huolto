@@ -1,9 +1,9 @@
 <?php
-if (!isset($_SESSION)) {
+if (!isset($_SESSION)) { //jos session ei ole käynnissä, käynnistä se
     session_start();
 }?>
 <?php include 'header.php';?>
-<script src="js/kirjautumiserror.js"></script>
+<script src="js/kirjautumiserror.js"></script> <!-- virheilmoitus jos kirjautuminen ei onnistu -->
 
 <div class="connect_tausta">
 
@@ -29,7 +29,7 @@ if (!isset($_SESSION)) {
   <div class="container3">
     <div class="row justify-content-center">
       <div class="text-center lomake_tausta2">
-        <form method="POST" action="php\isannoitsija_kirjautumiskoodi.php" class="form" onsubmit="saveScrollPosition()">
+        <form method="POST" action="php\isannoitsija_kirjautumiskoodi.php" class="form" onsubmit="saveScrollPosition()"> <!-- lähetetään tiedot isannoitsija_kirjautumiskoodi tiedostoon ja tallennetaan sivun skrollaus -->
           <div class="form-group">
             <label for="tunnus">Tunnus *</label>
             <input id="tunnus" type="text" name="tunnus" required class="form-control text-center" placeholder="mmeikalainen"><br>

@@ -1,4 +1,4 @@
-<?php
+<?php //tämä tiedosto hakee taloyhtiöt ja tilat toimiston käyttöön
 include("config.php");
 include("session.php");
 

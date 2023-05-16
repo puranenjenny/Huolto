@@ -1,8 +1,7 @@
-<?php
-
+<?php 
 require "config.php";
 
-$query = "SELECT t.tehtava_id, tt.tehtavan_tilanne, t.kuvaus, CONCAT(u.etunimi, ' ', u.sukunimi) AS Jattaja, th.osoite, a.rappu, t.yleisavaimen_kaytto, t.numero, ti.nimi AS tilan_nimi, ty.etunimi AS tyontekijan_etunimi, ty.sukunimi AS tyontekijan_sukunimi
+$query = "SELECT t.tehtava_id, tt.tehtavan_tilanne, t.kuvaus, CONCAT(u.etunimi, ' ', u.sukunimi) AS Jattaja, th.osoite, a.rappu, t.yleisavaimen_kaytto, t.numero, ti.nimi AS tilan_nimi, ty.etunimi AS tyontekijan_etunimi, ty.sukunimi AS tyontekijan_sukunimi 
           FROM tehtavat t
           JOIN kayttajat k ON t.kayttaja_id = k.kayttaja_id
           JOIN (
@@ -18,34 +17,27 @@ $query = "SELECT t.tehtava_id, tt.tehtavan_tilanne, t.kuvaus, CONCAT(u.etunimi, 
           LEFT JOIN tyontekijat ty ON t.tyontekija_id = ty.tyontekija_id
           LEFT JOIN asukkaat a ON u.kayttaja_id = a.kayttaja_id
           WHERE t.tehtavan_tilanne_id <> 4 
-          ORDER BY t.tehtava_id";
-        //ORDER BY tt.tehtavan_tilanne";
-        //ORDER BY tt.tehtavan_tilanne DESC"; --iha miten halutaankaa sortata
+          ORDER BY t.tehtava_id"; // CONCAT yhdistää etunimen ja sukunimen yhdeksi nimeksi - UNION ALL yhdistää kolme taulua yhdeksi tauluksi, jossa on kaikki kolmen taulun tiedot
 
 $data = $yhteys->query($query);
 
 $JSON_vika = '{"tehtavat":[';
-$counter = 0;
-$rows = $data->rowCount();
+$laskuri = 0;
+$rivit = $data->rowCount();
 
-while($row = $data->fetch(PDO::FETCH_ASSOC)){
-    $counter++;
-    $tilan_nimi = $row['tilan_nimi'] ? $row['tilan_nimi'] : 'Ei määritelty';
-    $tyontekijan_etunimi = $row['tyontekijan_etunimi'] ? $row['tyontekijan_etunimi'] : 'Ei määritelty';
-    $tyontekijan_sukunimi = $row['tyontekijan_sukunimi'] ? $row['tyontekijan_sukunimi'] : '';
+while ($rivi = $data->fetch(PDO::FETCH_ASSOC)) {
+  $laskuri++;
+  $tilan_nimi = $rivi['tilan_nimi'] ? $rivi['tilan_nimi'] : 'Ei määritelty';
+  $tyontekijan_etunimi = $rivi['tyontekijan_etunimi'] ? $rivi['tyontekijan_etunimi'] : 'Ei määritelty';
+  $tyontekijan_sukunimi = $rivi['tyontekijan_sukunimi'] ? $rivi['tyontekijan_sukunimi'] : '';
 
-    $JSON_vika.= '{"ID":"'.$row['tehtava_id'].'","Viankuvaus":"'.$row['kuvaus'].'","Jattaja":"'.$row['Jattaja'].'","Rappu":"'.$row['rappu'].'","Osoite":"'.$row['osoite'].'","Yleisavaimen_kaytto":"'.$row['yleisavaimen_kaytto'].'","Numero":"'.$row['numero'].'","Tilanne":"'.$row['tehtavan_tilanne'].'","Tila":"'.$tilan_nimi.'","Tyontekija":"'.$tyontekijan_etunimi.' '.$tyontekijan_sukunimi.'"}';
-    if($counter<$rows) $JSON_vika.=",";
+  $rappu_tilan_nimi = $rivi['rappu'] ? $rivi['rappu'] : ($tilan_nimi ? $tilan_nimi : 'Ei määritelty'); // näytä joko rappu tai tilan nimi, jos kumpikaan ei ole määritelty, näytä "Ei määritelty"
+
+  $JSON_vika .= '{"ID":"' . $rivi['tehtava_id'] . '","Viankuvaus":"' . $rivi['kuvaus'] . '","Jattaja":"' . $rivi['Jattaja'] . '","Rappu_tilan_nimi":"' . $rappu_tilan_nimi . '","Osoite":"' . $rivi['osoite'] . '","Yleisavaimen_kaytto":"' . $rivi['yleisavaimen_kaytto'] . '","Numero":"' . $rivi['numero'] . '","Tilanne":"' . $rivi['tehtavan_tilanne'] . '","Tyontekija":"' . $tyontekijan_etunimi . ' ' . $tyontekijan_sukunimi . '"}';
+  if ($laskuri < $rivit) {
+      $JSON_vika .= ',';
+  }
 }
-
-$JSON_vika.=']}';
-$yhteys = null;
-
-$handler = fopen("viat.json", "w");
-fwrite($handler,  $JSON_vika);
-fclose($handler);
-
-
+$JSON_vika .= ']}';
 ?>
-
 
