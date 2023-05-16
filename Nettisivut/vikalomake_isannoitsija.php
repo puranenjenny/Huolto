@@ -103,7 +103,7 @@ include("php/rooli_check.php");
           <div class="form-group">
           <h2>Vikailmoituslomake isännöitsijä</h2><br><br><br>
             <label for="kuvaus">Viesti/vian kuvaus</label>
-            <textarea id="kuvaus" type="textarea" name="kuvaus" required class="form-control rounded-select" rows="5" cols="20" placeholder="Kerro ongelmasta"></textarea>
+            <textarea id="kuvaus" type="textarea" name="kuvaus" required class="form-control rounded-select" rows="5" cols="20" placeholder=" Kerro ongelmasta"></textarea>
             <br>
           </div>
                     <div class="form-group form-floating">
@@ -112,10 +112,10 @@ include("php/rooli_check.php");
                         </div>
                         <div class="select-wrapper text-center">
                         <select id="taloyhtio" name="taloyhtio" class="rounded-select">
-                            <option value="">&nbsp;Omat taloyhtiot&nbsp;</option>
+                            <option  value="">&nbsp;Omat taloyhtiot&nbsp;</option>
                             <?php foreach ($taloyhtiot as $taloyhtio): ?>
                                 <option value="<?php echo $taloyhtio['taloyhtio_id']; ?>">
-                                    <?php echo '&nbsp;' . $taloyhtio['nimi'] . ' - ' . $taloyhtio['osoite'] . '&nbsp;'; ?>
+                                    <?php echo '&nbsp;' . $taloyhtio['nimi'] . '&nbsp;'; ?>
                                 </option>
                             <?php endforeach; ?>
                         </select>
