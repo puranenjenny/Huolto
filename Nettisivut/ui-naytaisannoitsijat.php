@@ -25,27 +25,28 @@
                                 <th>Puhelin</th>
                                 <th></th>
                                 </tr>
-                                     <?php
-                                         include('php/isannoitsijat_listaus.php');
-                                         $members = json_decode($JSON_isannoitsijat, true);
+                                <?php
+                                    include('php/isannoitsijat_listaus.php');
+                                    $members = json_decode($JSON_isannoitsijat, true);
 
-                                         if(count($members) != 0){
-                                         foreach($members as $key){
-                                             foreach($key as $member){
-                                             ?>
-                                                     <tr>
-                                                     <td><?php echo $member['id']; ?></td>   
-                                                     <td><?php echo $member['Etunimi']; ?></td>
-                                                     <td><?php echo $member['Sukunimi']; ?></td>
-                                                     <td><?php echo $member['Puhelin']; ?></td>
-                                                     <td><?php echo '<a class="btn btn-warning" href="php/valittuIsannoitsija.php?id='.$member['id'].'">Muokkaa</a>'; ?></td>
-                                                     </tr>
-                                             <?php
-                                             }
-                                         }
-                                         }
+                                    if (count($members) != 0) {
+                                        foreach ($members as $key) {
+                                            foreach ($key as $member) {
+                                                if ($member['id'] != 12) { // tarkistetaan että "ei isännöitsijää näytetä"
+                                                    ?>
+                                                    <tr>
+                                                        <td><?php echo $member['id']; ?></td>
+                                                        <td><?php echo $member['Etunimi']; ?></td>
+                                                        <td><?php echo $member['Sukunimi']; ?></td>
+                                                        <td><?php echo $member['Puhelin']; ?></td>
+                                                        <td><?php echo '<a class="btn btn-warning" href="php/valittuIsannoitsija.php?id=' . $member['id'] . '">Muokkaa</a>'; ?></td>
+                                                    </tr>
+                                                    <?php
+                                                }
+                                            }
+                                        }
+                                    }
                                     ?>
-
                             </table>
                 </div>
             </div>

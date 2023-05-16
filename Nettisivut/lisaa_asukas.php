@@ -5,7 +5,7 @@ include 'header_ui_toimisto.php';?> <!-- toimiston header -->
 
 <head>
   <title>Asukkaan lisäys</title>
-  <meta http-equiv="refresh" content="2;url=http://localhost/fullstack/Huolto/Nettisivut/ui-naytakayttajat.php" />
+  <meta http-equiv="refresh" content="2;url=ui-naytakayttajat.php" />
 </head>
 
 <body>
