@@ -59,7 +59,7 @@ include 'header_ui_toimisto.php';?>
                         </div>
                         <div class="select-wrapper text-center">
                                 <select id="isannoitsija_id" name="isannoitsija_id" class="rounded-select leveys-select">
-                                        <option value="<?php echo $user['isannoitsija_id'];?>"selected hidden><?php echo $user['Etunimi']. ' ' . $user['Sukunimi']; ?></option>
+                                        <option value="<?php echo $user['isannoitsija_id'];?>"selected hidden><?php echo $user['Isannoitsija']; ?></option>
                                                 <?php
                                                         $JSON_isannoitsijat = file_get_contents("php/isannoitsijat_listaus.json");
                                                         $isannoitsijat = json_decode($JSON_isannoitsijat, true);

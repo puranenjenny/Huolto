@@ -42,7 +42,7 @@ include 'header_ui_toimisto.php';
                                                      <td><?php echo $member['Osoite']; ?></td>
                                                      <td><?php echo $member['Postinumero']; ?></td>
                                                      <td><?php echo $member['Kaupunki']; ?></td>
-                                                     <td><?php echo $member['Etunimi'].' '.$member['Sukunimi']; ?></td>
+                                                     <td><?php echo $member['Isannoitsija']; ?></td>
                                                      <td><?php echo '<a class="btn btn-warning" href="php/valittuTaloyhtio.php?id='.$member['ID'].'">Muokkaa</a>'; ?></td>
                                                      </tr>
                                              <?php
